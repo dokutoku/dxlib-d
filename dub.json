@@ -1,0 +1,8 @@
+{
+	"name": "dxlib-d",
+	"authors": ["dokutoku"],
+	"copyright": "Copyright © 2020, dokutoku",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"targetType": "sourceLibrary"
+}

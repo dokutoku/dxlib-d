@@ -1,0 +1,93 @@
+{
+	"name": "minimum",
+	"authors": ["dokutoku"],
+	"copyright": "Copyright © 2020, dokutoku",
+	"description": "dxlib-d minimum sample.",
+	"license": "proprietary",
+	"dependencies":
+	{
+		"dxlib-d": {"path": "../../"}
+	},
+	"buildTypes":
+	{
+		"debug": {"buildOptions": ["betterC", "debugMode", "debugInfo"]},
+		"release": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline"]},
+		"release-debug": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline", "debugInfo"]},
+		"release-nobounds": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline", "noBoundsCheck"]}
+	},
+	"configurations":
+	[
+		{
+			"name": "Unicode-x86-debug",
+			"platforms": ["x86"],
+			"targetType": "executable",
+			"targetPath": "bin/Unicode/x86/debug/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_vs2015_x86_MTd", "../../lib/windows-vc/DxLibW_vs2015_x86_MTd", "../../lib/windows-vc/DxUseCLibW_vs2015_x86_MTd", "../../lib/windows-vc/celt_vs2015_x86_MTd", "../../lib/windows-vc/libbulletcollision_vs2015_x86_MTd", "../../lib/windows-vc/libbulletdynamics_vs2015_x86_MTd", "../../lib/windows-vc/libbulletmath_vs2015_x86_MTd", "../../lib/windows-vc/libjpeg_vs2015_x86_MTd", "../../lib/windows-vc/libpng_vs2015_x86_MTd", "../../lib/windows-vc/libtheora_static_d", "../../lib/windows-vc/libtiff_vs2015_x86_MTd", "../../lib/windows-vc/ogg_static_vs2015_x86_MTd", "../../lib/windows-vc/opus_vs2015_x86_MTd", "../../lib/windows-vc/opusfile_vs2015_x86_MTd", "../../lib/windows-vc/silk_common_vs2015_x86_MTd", "../../lib/windows-vc/vorbis_static_vs2015_x86_MTd", "../../lib/windows-vc/vorbisfile_static_vs2015_x86_MTd", "../../lib/windows-vc/zlib_vs2015_x86_MTd", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmt.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["Unicode", "DX_MAKE"]
+		},
+		{
+			"name": "Unicode-x86-release",
+			"platforms": ["x86"],
+			"targetType": "executable",
+			"targetPath": "bin/Unicode/x86/debug/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_vs2015_x86_MT", "../../lib/windows-vc/DxLibW_vs2015_x86_MT", "../../lib/windows-vc/DxUseCLibW_vs2015_x86_MT", "../../lib/windows-vc/celt_vs2015_x86_MT", "../../lib/windows-vc/libbulletcollision_vs2015_x86_MT", "../../lib/windows-vc/libbulletdynamics_vs2015_x86_MT", "../../lib/windows-vc/libbulletmath_vs2015_x86_MT", "../../lib/windows-vc/libjpeg_vs2015_x86_MT", "../../lib/windows-vc/libpng_vs2015_x86_MT", "../../lib/windows-vc/libtheora_static", "../../lib/windows-vc/libtiff_vs2015_x86_MT", "../../lib/windows-vc/ogg_static_vs2015_x86_MT", "../../lib/windows-vc/opus_vs2015_x86_MT", "../../lib/windows-vc/opusfile_vs2015_x86_MT", "../../lib/windows-vc/silk_common_vs2015_x86_MT", "../../lib/windows-vc/vorbis_static_vs2015_x86_MT", "../../lib/windows-vc/vorbisfile_static_vs2015_x86_MT", "../../lib/windows-vc/zlib_vs2015_x86_MT", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmtd.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["Unicode", "DX_MAKE"]
+		},
+		{
+			"name": "Unicode-x86_64-debug",
+			"platforms": ["x86_64"],
+			"targetType": "executable",
+			"targetPath": "bin/Unicode/x86_64/release/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_x64_d", "../../lib/windows-vc/DxLibW_vs2015_x64_MTd", "../../lib/windows-vc/DxUseCLibW_vs2015_x64_MTd", "../../lib/windows-vc/celt_vs2015_x64_MTd", "../../lib/windows-vc/libtiff_vs2015_x64_MTd", "../../lib/windows-vc/libbulletcollision_vs2015_x64_MTd", "../../lib/windows-vc/libbulletdynamics_vs2015_x64_MTd", "../../lib/windows-vc/libbulletmath_vs2015_x64_MTd", "../../lib/windows-vc/libjpeg_vs2015_x64_MTd", "../../lib/windows-vc/libpng_vs2015_x64_MTd", "../../lib/windows-vc/libtheora_static_x64_d", "../../lib/windows-vc/ogg_static_vs2015_x64_MTd", "../../lib/windows-vc/opus_vs2015_x64_MTd", "../../lib/windows-vc/opusfile_vs2015_x64_MTd", "../../lib/windows-vc/silk_common_vs2015_x64_MTd", "../../lib/windows-vc/vorbis_static_vs2015_x64_MTd", "../../lib/windows-vc/vorbisfile_static_vs2015_x64_MTd", "../../lib/windows-vc/zlib_vs2015_x64_MTd", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmt.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["Unicode", "DX_MAKE"]
+		},
+		{
+			"name": "Unicode-x86_64-release",
+			"platforms": ["x86_64"],
+			"targetType": "executable",
+			"targetPath": "bin/Unicode/x86_64/release/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_vs2015_x64_MT", "../../lib/windows-vc/DxLibW_vs2015_x64_MT", "../../lib/windows-vc/DxUseCLibW_vs2015_x64_MT", "../../lib/windows-vc/celt_vs2015_x64_MT", "../../lib/windows-vc/libbulletcollision_vs2015_x64_MT", "../../lib/windows-vc/libbulletdynamics_vs2015_x64_MT", "../../lib/windows-vc/libbulletmath_vs2015_x64_MT", "../../lib/windows-vc/libjpeg_vs2015_x64_MT", "../../lib/windows-vc/libpng_vs2015_x64_MT", "../../lib/windows-vc/libtheora_static_x64", "../../lib/windows-vc/libtiff_vs2015_x64_MT", "../../lib/windows-vc/ogg_static_vs2015_x64_MT", "../../lib/windows-vc/opus_vs2015_x64_MT", "../../lib/windows-vc/opusfile_vs2015_x64_MT", "../../lib/windows-vc/silk_common_vs2015_x64_MT", "../../lib/windows-vc/vorbis_static_vs2015_x64_MT", "../../lib/windows-vc/vorbisfile_static_vs2015_x64_MT", "../../lib/windows-vc/zlib_vs2015_x64_MT", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmtd.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["Unicode", "DX_MAKE"]
+		},
+		{
+			"name": "ANSI-x86-debug",
+			"platforms": ["x86"],
+			"targetType": "executable",
+			"targetPath": "bin/ANSI/x86/debug/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_vs2015_x86_MTd", "../../lib/windows-vc/DxLib_vs2015_x86_MTd", "../../lib/windows-vc/DxUseCLib_vs2015_x86_MTd", "../../lib/windows-vc/celt_vs2015_x86_MTd", "../../lib/windows-vc/libbulletcollision_vs2015_x86_MTd", "../../lib/windows-vc/libbulletdynamics_vs2015_x86_MTd", "../../lib/windows-vc/libbulletmath_vs2015_x86_MTd", "../../lib/windows-vc/libjpeg_vs2015_x86_MTd", "../../lib/windows-vc/libpng_vs2015_x86_MTd", "../../lib/windows-vc/libtheora_static_d", "../../lib/windows-vc/libtiff_vs2015_x86_MTd", "../../lib/windows-vc/ogg_static_vs2015_x86_MTd", "../../lib/windows-vc/opus_vs2015_x86_MTd", "../../lib/windows-vc/opusfile_vs2015_x86_MTd", "../../lib/windows-vc/silk_common_vs2015_x86_MTd", "../../lib/windows-vc/vorbis_static_vs2015_x86_MTd", "../../lib/windows-vc/vorbisfile_static_vs2015_x86_MTd", "../../lib/windows-vc/zlib_vs2015_x86_MTd", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmt.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["ANSI", "DX_MAKE"]
+		},
+		{
+			"name": "ANSI-x86-release",
+			"platforms": ["x86"],
+			"targetType": "executable",
+			"targetPath": "bin/ANSI/x86/release/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_vs2015_x86_MT", "../../lib/windows-vc/DxLib_vs2015_x86_MT", "../../lib/windows-vc/DxUseCLib_vs2015_x86_MT", "../../lib/windows-vc/celt_vs2015_x86_MT", "../../lib/windows-vc/libbulletcollision_vs2015_x86_MT", "../../lib/windows-vc/libbulletdynamics_vs2015_x86_MT", "../../lib/windows-vc/libbulletmath_vs2015_x86_MT", "../../lib/windows-vc/libjpeg_vs2015_x86_MT", "../../lib/windows-vc/libpng_vs2015_x86_MT", "../../lib/windows-vc/libtheora_static", "../../lib/windows-vc/libtiff_vs2015_x86_MT", "../../lib/windows-vc/ogg_static_vs2015_x86_MT", "../../lib/windows-vc/opus_vs2015_x86_MT", "../../lib/windows-vc/opusfile_vs2015_x86_MT", "../../lib/windows-vc/silk_common_vs2015_x86_MT", "../../lib/windows-vc/vorbis_static_vs2015_x86_MT", "../../lib/windows-vc/vorbisfile_static_vs2015_x86_MT", "../../lib/windows-vc/zlib_vs2015_x86_MT", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmtd.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["ANSI", "DX_MAKE"]
+		},
+		{
+			"name": "ANSI-x86_64-debug",
+			"platforms": ["x86_64"],
+			"targetType": "executable",
+			"targetPath": "bin/ANSI/x86_64/debug/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_x64_d", "../../lib/windows-vc/DxLib_vs2015_x64_MTd", "../../lib/windows-vc/DxUseCLib_vs2015_x64_MTd", "../../lib/windows-vc/celt_vs2015_x64_MTd", "../../lib/windows-vc/libtiff_vs2015_x64_MTd", "../../lib/windows-vc/libbulletcollision_vs2015_x64_MTd", "../../lib/windows-vc/libbulletdynamics_vs2015_x64_MTd", "../../lib/windows-vc/libbulletmath_vs2015_x64_MTd", "../../lib/windows-vc/libjpeg_vs2015_x64_MTd", "../../lib/windows-vc/libpng_vs2015_x64_MTd", "../../lib/windows-vc/libtheora_static_x64_d", "../../lib/windows-vc/ogg_static_vs2015_x64_MTd", "../../lib/windows-vc/opus_vs2015_x64_MTd", "../../lib/windows-vc/opusfile_vs2015_x64_MTd", "../../lib/windows-vc/silk_common_vs2015_x64_MTd", "../../lib/windows-vc/vorbis_static_vs2015_x64_MTd", "../../lib/windows-vc/vorbisfile_static_vs2015_x64_MTd", "../../lib/windows-vc/zlib_vs2015_x64_MTd", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmt.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["ANSI", "DX_MAKE"]
+		},
+		{
+			"name": "ANSI-x86_64-release",
+			"platforms": ["x86_64"],
+			"targetType": "executable",
+			"targetPath": "bin/ANSI/x86_64/release/",
+			"libs-windows": ["../../lib/windows-vc/DxDrawFunc_vs2015_x64_MT", "../../lib/windows-vc/DxLib_vs2015_x64_MT", "../../lib/windows-vc/DxUseCLib_vs2015_x64_MT", "../../lib/windows-vc/celt_vs2015_x64_MT", "../../lib/windows-vc/libbulletcollision_vs2015_x64_MT", "../../lib/windows-vc/libbulletdynamics_vs2015_x64_MT", "../../lib/windows-vc/libbulletmath_vs2015_x64_MT", "../../lib/windows-vc/libjpeg_vs2015_x64_MT", "../../lib/windows-vc/libpng_vs2015_x64_MT", "../../lib/windows-vc/libtheora_static_x64", "../../lib/windows-vc/libtiff_vs2015_x64_MT", "../../lib/windows-vc/ogg_static_vs2015_x64_MT", "../../lib/windows-vc/opus_vs2015_x64_MT", "../../lib/windows-vc/opusfile_vs2015_x64_MT", "../../lib/windows-vc/silk_common_vs2015_x64_MT", "../../lib/windows-vc/vorbis_static_vs2015_x64_MT", "../../lib/windows-vc/vorbisfile_static_vs2015_x64_MT", "../../lib/windows-vc/zlib_vs2015_x64_MT", "advapi32", "advapi32", "gdi32", "kernel32", "shell32", "user32", "user32"],
+			"lflags-windows": ["/NODEFAULTLIB:libcmtd.lib", "/NODEFAULTLIB:libc.lib", "/NODEFAULTLIB:libcd.lib"],
+			"versions-windows": ["ANSI", "DX_MAKE"]
+		}
+	]
+}
