@@ -2,7 +2,7 @@
 	"name": "dxlib-d",
 	"authors": ["dokutoku"],
 	"copyright": "Copyright © 2020, dokutoku",
-	"description": "A minimal D application.",
+	"description": "D language binding for Dxlib.",
 	"license": "proprietary",
 	"targetType": "sourceLibrary"
 }
