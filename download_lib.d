@@ -80,38 +80,38 @@ struct download_info
 
 static immutable download_info windows_vc_info =
 {
-	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_VC3_22a.zip`,
-	sha512_hash: `ecf6e02163c7f40c0a7661453f2c068fc420422a658a319b96f0ca72d3c87615bb64daa85f1623aa826266cbaa2318d4b3ea46e21a5708839c688bf6a71ef8f5`,
+	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_VC3_22c.zip`,
+	sha512_hash: `1af5ee1c96221db199b4a376df846ede048698488317db7508aec2b4da66356295f8432b4abd6db0b4e29d1524ee15a656e8870fe032d073d85537b6b82b6e67`,
 };
 
 static immutable download_info windows_bcc_info =
 {
-	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_BCC3_22a.zip`,
-	sha512_hash: `2ecb3169410ed698ce3f987ff6dc0afb0eddcf5b7e41d1f43fa737bb3a1bb3b3355c76c6f1ea92cedf18bbe8bb537b506208247030c27e060e33319efb3501eb`,
+	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_BCC3_22c.zip`,
+	sha512_hash: `00211f9ac32c4ac3646b72fbfd53a4ebff02f27ca72531e6248c600a18f52b2e414b9a98b382420a6274d97753ad29f112af9d0fe35282086a5c1040f898e366`,
 };
 
 static immutable download_info windows_bcc2_info =
 {
-	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_BCC23_22a.zip`,
-	sha512_hash: `b682344aa8b88b95daafea96282444b36f0861ca56fe0b96d1fcb9a10aa80f0e8ae10a3c097016fcfcee321196b3b61c5c2aea6a8d0d8a276db2231789aa2930`,
+	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_BCC23_22c.zip`,
+	sha512_hash: `0f7232d51ef720b9e3d32821d81cc27808d9417cf38845982a75e05adf7c67dc5dcb1eec2646e5aa394f1914d193ee77852f9e41417c4ee0f93fcfd96ddb29da`,
 };
 
 static immutable download_info windows_gcc_info =
 {
-	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_GCC3_22a.zip`,
-	sha512_hash: `6b625a23b6e723bf5a26d6c71ae2d48cbd79e820adeccd26096fd56e2dbaaee5e08095968d68155b62e27756b5ff43d43385740fa79d072ef0488bc901fd66dc`,
+	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_GCC3_22c.zip`,
+	sha512_hash: `479632f1602a09fd122be54c650310855e07cd998d4d90b174e9b41293dbc9eec4aacd8243a22f7b1c68e26a2f04d5ee54fdb027009fdf3bc41a9fb24a74f22d`,
 };
 
 static immutable download_info android_info =
 {
-	uri: `https://dxlib.xsrv.jp/DxLib_Android3_22a.zip`,
-	sha512_hash: `cbc8c444cd43aba385ce2705a29d0f01ab1637ee01514ab2b9b4112f896b6cf069049724f653de63eb922aa8466bc4afcab1e323b9aae5492332446c5096edd8`,
+	uri: `https://dxlib.xsrv.jp/DxLib_Android3_22c.zip`,
+	sha512_hash: `a6a757d9f7df859f7fd181db4263d6903f2daea05edd2bc8b27df1492ca45f855d9d0de7f0548791a7198e8f06ea33c9b5ce6b5efa42ae168ab51c6d9aa4d8e6`,
 };
 
 static immutable download_info ios_info =
 {
-	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_iOS3_22a.zip`,
-	sha512_hash: `4cc6e46e592e38ec91bcd981e0f8fa5235e6297a905281cd5f6984496f4830aa6dd4b15b8b44b0b2a4d10a12d83b05c9c9705debc64c30726139d32ea1c0892a`,
+	uri: `https://dxlib.xsrv.jp/DxLib/DxLib_iOS3_22c.zip`,
+	sha512_hash: `e18eb3138ec89f79f3835d17f269e4f74a9fd4f2654afe3df6c98e6f29544dc33d0043c14ba5de26a0b617290b7f3b25817198100af631f06e6070e4da6f76ff`,
 };
 
 void main(string[] argv)

@@ -2,7 +2,7 @@
 //
 //         DXライブラリ        ヘッダファイル
 //
-//                 Ver 3.22a
+//                 Ver 3.22c
 //
 // -------------------------------------------------------------------------------
 module dxlib_d.dxlib;
@@ -20,15 +20,15 @@ nothrow @nogc:
 /**
  * DXライブラリのバージョン
  */
-enum DXLIB_VERSION = 0x322A;
+enum DXLIB_VERSION = 0x322C;
 
 version (Unicode) {
-	enum DXLIB_VERSION_STR_T = "3.22a"w;
+	enum DXLIB_VERSION_STR_T = "3.22c"w;
 } else {
-	enum DXLIB_VERSION_STR_T = "3.22a";
+	enum DXLIB_VERSION_STR_T = "3.22c";
 }
 
-enum DXLIB_VERSION_STR_W = "3.22a"w;
+enum DXLIB_VERSION_STR_W = "3.22c"w;
 
 // 設定 -----------------------------------------------------------------------
 
@@ -12289,7 +12289,7 @@ extern (C++, DxLib) {
 			extern const (.BASEIMAGE)* GetMovieBaseImageToGraph(int GraphHandle, int* ImageUpdateFlag = null, int ImageUpdateFlagSetOnly = dxlib_d.dxdatatype.FALSE);
 
 			/**
-			 * 動画ファイルの総フレーム数を得る( Ogg Theora でのみ有効 )
+			 * 動画ファイルの総フレーム数を得る( Ogg Theora と mp4 でのみ有効 )
 			 */
 			extern int GetMovieTotalFrameToGraph(int GraphHandle);
 
