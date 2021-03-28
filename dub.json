@@ -3,6 +3,7 @@
 	"authors": ["dokutoku"],
 	"copyright": "Copyright © 2020, dokutoku",
 	"description": "D language binding for Dxlib.",
+	"homepage": "https://gitlab.com/dokutoku/dxlib-d",
 	"license": "proprietary",
 	"targetType": "sourceLibrary"
 }
