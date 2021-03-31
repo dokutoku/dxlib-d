@@ -26,6 +26,7 @@ public import dxlib_d.dxcompileconfig;
 +/
 
 private static import core.stdc.stddef;
+private static import core.stdcpp.xutility;
 private static import core.sys.windows.windef;
 private static import core.sys.windows.wingdi;
 private static import core.sys.windows.winnt;
@@ -41,10 +42,8 @@ version (DX_MAKE) {
 		} else {
 			version (DX_SRC_COMPILE) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								//  描画部分の抜き出し
@@ -119,9 +118,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										//  描画部分の抜き出し
@@ -131,8 +129,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x64_MDd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x64_ItrDbgLv0_MDd.lib");
 											} else {
@@ -143,8 +140,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x64_MDd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x64_ItrDbgLv0_MDd.lib");
 											} else {
@@ -179,8 +175,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x86_MDd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x86_ItrDbgLv0_MDd.lib");
 											} else {
@@ -191,8 +186,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x86_MDd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x86_ItrDbgLv0_MDd.lib");
 											} else {
@@ -229,8 +223,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x64_MTd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x64_ItrDbgLv0_MTd.lib");
 											} else {
@@ -241,8 +234,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x64_MTd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x64_ItrDbgLv0_MTd.lib");
 											} else {
@@ -277,8 +269,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x86_MTd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x86_ItrDbgLv0_MTd.lib");
 											} else {
@@ -289,8 +280,7 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x86_MTd.lib");
 
-											//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-											version (none) {
+											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x86_ItrDbgLv0_MTd.lib");
 											} else {
@@ -318,9 +308,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									//  描画部分の抜き出し
@@ -330,8 +318,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x64_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2013_x64_ItrDbgLv0_d.lib");
 										} else {
@@ -342,8 +329,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x64_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2013_x64_ItrDbgLv0_d.lib");
 										} else {
@@ -378,8 +364,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x86_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2013_x86_ItrDbgLv0_d.lib");
 										} else {
@@ -390,8 +375,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x86_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2013_x86_ItrDbgLv0_d.lib");
 										} else {
@@ -418,9 +402,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									//  描画部分の抜き出し
@@ -430,8 +412,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x64_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2012_x64_ItrDbgLv0_d.lib");
 										} else {
@@ -442,8 +423,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x64_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2012_x64_ItrDbgLv0_d.lib");
 										} else {
@@ -478,8 +458,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x86_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2012_x86_ItrDbgLv0_d.lib");
 										} else {
@@ -490,8 +469,7 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x86_d.lib");
 
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2012_x86_ItrDbgLv0_d.lib");
 										} else {
@@ -607,10 +585,8 @@ version (DX_MAKE) {
 
 			version (DX_NON_BULLET_PHYSICS) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (DX_USE_VC8_BULLET_PHYSICS_LIB) {
 							version (Win64) {
 								debug {
@@ -673,13 +649,11 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											pragma(lib, "libbulletcollision_vs2015_x64_ItrDbgLv0_MDd.lib");
 											pragma(lib, "libbulletdynamics_vs2015_x64_ItrDbgLv0_MDd.lib");
 											pragma(lib, "libbulletmath_vs2015_x64_ItrDbgLv0_MDd.lib");
@@ -695,8 +669,7 @@ version (DX_MAKE) {
 									}
 								} else {
 									debug {
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											pragma(lib, "libbulletcollision_vs2015_x86_ItrDbgLv0_MDd.lib");
 											pragma(lib, "libbulletdynamics_vs2015_x86_ItrDbgLv0_MDd.lib");
 											pragma(lib, "libbulletmath_vs2015_x86_ItrDbgLv0_MDd.lib");
@@ -714,8 +687,7 @@ version (DX_MAKE) {
 							} else {
 								version (Win64) {
 									debug {
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											pragma(lib, "libbulletcollision_vs2015_x64_ItrDbgLv0_MTd.lib");
 											pragma(lib, "libbulletdynamics_vs2015_x64_ItrDbgLv0_MTd.lib");
 											pragma(lib, "libbulletmath_vs2015_x64_ItrDbgLv0_MTd.lib");
@@ -731,8 +703,7 @@ version (DX_MAKE) {
 									}
 								} else {
 									debug {
-										//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-										version (none) {
+										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 											pragma(lib, "libbulletcollision_vs2015_x86_ItrDbgLv0_MTd.lib");
 											pragma(lib, "libbulletdynamics_vs2015_x86_ItrDbgLv0_MTd.lib");
 											pragma(lib, "libbulletmath_vs2015_x86_ItrDbgLv0_MTd.lib");
@@ -748,13 +719,10 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
-									//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-									version (none) {
+									static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 										pragma(lib, "libbulletcollision_vs2013_x64_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletdynamics_vs2013_x64_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletmath_vs2013_x64_ItrDbgLv0_d.lib");
@@ -770,8 +738,7 @@ version (DX_MAKE) {
 								}
 							} else {
 								debug {
-									//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-									version (none) {
+									static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 										pragma(lib, "libbulletcollision_vs2013_x86_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletdynamics_vs2013_x86_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletmath_vs2013_x86_ItrDbgLv0_d.lib");
@@ -786,13 +753,10 @@ version (DX_MAKE) {
 									pragma(lib, "libbulletmath_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
-									//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-									version (none) {
+									static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 										pragma(lib, "libbulletcollision_vs2012_x64_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletdynamics_vs2012_x64_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletmath_vs2012_x64_ItrDbgLv0_d.lib");
@@ -808,8 +772,7 @@ version (DX_MAKE) {
 								}
 							} else {
 								debug {
-									//#if defined(_ITERATOR_DEBUG_LEVEL) && _ITERATOR_DEBUG_LEVEL == 0
-									version (none) {
+									static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
 										pragma(lib, "libbulletcollision_vs2012_x86_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletdynamics_vs2012_x86_ItrDbgLv0_d.lib");
 										pragma(lib, "libbulletmath_vs2012_x86_ItrDbgLv0_d.lib");
@@ -837,10 +800,8 @@ version (DX_MAKE) {
 
 			version (DX_NON_TIFFREAD) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								// TIFFライブラリ
@@ -859,9 +820,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										// TIFFライブラリ
@@ -898,9 +858,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									// TIFFライブラリ
@@ -918,9 +876,7 @@ version (DX_MAKE) {
 									pragma(lib, "libtiff_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									// TIFFライブラリ
@@ -948,10 +904,8 @@ version (DX_MAKE) {
 
 			version (DX_NON_PNGREAD) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								// PNGライブラリ
@@ -978,9 +932,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										// PNGライブラリ
@@ -1033,9 +986,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									// PNGライブラリ
@@ -1061,9 +1012,7 @@ version (DX_MAKE) {
 									pragma(lib, "zlib_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									// PNGライブラリ
@@ -1101,10 +1050,8 @@ version (DX_MAKE) {
 
 			version (DX_NON_JPEGREAD) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								// JPEGライブラリ
@@ -1123,9 +1070,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										// JPEGライブラリ
@@ -1162,9 +1108,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									// JPEGライブラリ
@@ -1182,9 +1126,7 @@ version (DX_MAKE) {
 									pragma(lib, "libjpeg_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									// JPEGライブラリ
@@ -1213,10 +1155,8 @@ version (DX_MAKE) {
 			// OggVorbisライブラリ
 			version (DX_NON_OGGVORBIS) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								pragma(lib, "ogg_static_x64_d.lib");
@@ -1239,9 +1179,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										pragma(lib, "ogg_static_vs2015_x64_MDd.lib");
@@ -1286,9 +1225,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									pragma(lib, "ogg_static_vs2013_x64_d.lib");
@@ -1310,9 +1247,7 @@ version (DX_MAKE) {
 									pragma(lib, "vorbisfile_static_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									pragma(lib, "ogg_static_vs2012_x64_d.lib");
@@ -1346,10 +1281,8 @@ version (DX_MAKE) {
 			// OggTheoraライブラリ
 			version (DX_NON_OGGTHEORA) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								pragma(lib, "ogg_static_x64_d.lib");
@@ -1380,9 +1313,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										pragma(lib, "ogg_static_vs2015_x64_MDd.lib");
@@ -1443,9 +1375,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									pragma(lib, "ogg_static_vs2013_x64_d.lib");
@@ -1475,9 +1405,7 @@ version (DX_MAKE) {
 									pragma(lib, "libtheora_static_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									pragma(lib, "ogg_static_vs2012_x64_d.lib");
@@ -1521,10 +1449,8 @@ version (DX_MAKE) {
 			// Opusライブラリ
 			version (DX_NON_OPUS) {
 			} else {
-				//#ifdef _MSC_VER
-				version (Windows) {
-					//#if _MSC_VER < 1700
-					version (none) {
+				 static if (__traits(compiles, core.stdcpp.xutility._MSC_VER)) {
+					static if (core.stdcpp.xutility._MSC_VER < 1700) {
 						version (Win64) {
 							debug {
 								pragma(lib, "opus_x64_d.lib");
@@ -1551,9 +1477,8 @@ version (DX_MAKE) {
 							}
 						}
 					} else {
-						//#if _MSC_VER >= 1900
-						version (all) {
-							version (DLL) {
+						static if (core.stdcpp.xutility._MSC_VER >= 1900) {
+							version (_DLL) {
 								version (Win64) {
 									debug {
 										pragma(lib, "opus_vs2015_x64_MDd.lib");
@@ -1606,9 +1531,7 @@ version (DX_MAKE) {
 									}
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1800
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1800) {
 							version (Win64) {
 								debug {
 									pragma(lib, "opus_vs2013_x64_d.lib");
@@ -1634,9 +1557,7 @@ version (DX_MAKE) {
 									pragma(lib, "celt_vs2013_x86.lib");
 								}
 							}
-						} else version (none) {
-							//_MSC_VER >= 1700
-
+						} else static if (core.stdcpp.xutility._MSC_VER >= 1700) {
 							version (Win64) {
 								debug {
 									pragma(lib, "opus_vs2012_x64_d.lib");
