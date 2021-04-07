@@ -33,6 +33,11 @@ private static import core.sys.windows.winnt;
 private static import core.sys.windows.winuser;
 private static import dxlib_d.dxlib;
 
+// DXライブラリに必要な lib ファイルを、プロジェクトのカレントフォルダや
+// コンパイラのデフォルト LIB パスに設定せずに使用される場合は以下の
+// コメントを外してください
+//version = DX_LIB_NOT_DEFAULTPATH;
+
 // ライブラリリンク定義--------------------------------------------------------
 
 version (DX_MAKE) {

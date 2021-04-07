@@ -9,27 +9,15 @@ module dxlib_d.dxdatatype;
 
 
 // インクルード ------------------------------------------------------------------
+public import core.stdc.stdio;
 public import dxlib_d.dxcompileconfig;
 public import dxlib_d.dxdatatype;
-public import core.stdc.stdio;
+public import dxlib_d.dxdatatypeandroid;
+public import dxlib_d.dxdatatypeios;
+public import dxlib_d.dxdatayypewin;
 
-//ifdef WINDOWS_DESKTOP_OS
-//version (Windows) {
-	public import dxlib_d.dxdatayypewin;
-//}
-
-//ifdef __ANDROID__
-//version (Android) {
-	public import dxlib_d.dxdatatypeandroid;
-//}
-
-//#ifdef __APPLE__
 //version (iOS) {
 	//#include "TargetConditionals.h"
-
-	//#if TARGET_OS_IPHONE
-		public import dxlib_d.dxdatatypeios;
-	//#endif
 //}
 
 extern (C++, DxLib) {

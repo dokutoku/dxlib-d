@@ -32,15 +32,10 @@ enum DXLIB_VERSION_STR_W = "3.22c"w;
 
 // 設定 -----------------------------------------------------------------------
 
-// DXライブラリに必要な lib ファイルを、プロジェクトのカレントフォルダや
-// コンパイラのデフォルト LIB パスに設定せずに使用される場合は以下の
-// コメントを外してください
-//#define DX_LIB_NOT_DEFAULTPATH
-
 version (DX_MAKE) {
 } else {
 	// 描画関連の関数を一切使用されない場合は以下のコメントを外して下さい
-	//#define DX_NOTUSE_DRAWFUNCTION
+	//version = DX_NOTUSE_DRAWFUNCTION;
 }
 
 // 定義---------------------------------------------------------------------------
@@ -6842,32 +6837,6 @@ extern (C++, DxLib) {
 
 	public alias IPDATA_IPv6 = .tagIPDATA_IPv6;
 
-/+
-}
-
-// 関数プロトタイプ宣言------------------------------------------------------------------
-
-//#ifdef WINDOWS_DESKTOP_OS
-version (Windows) {
-	public import dxlib_d.dxfunctionwin;
-}
-
-//#ifdef __ANDROID__
-version (Android) {
-	public import dxlib_d.dxfunctionandroid;
-}
-
-//#ifdef __APPLE__
-version (iOS) {
-	//#include "TargetConditionals.h"
-
-	//#if TARGET_OS_IPHONE
-		public import dxlib_d.dxfunctionios;
-	//#endif
-}
-
-extern (C++, DxLib) {
-+/
 	// DxSystem.cpp関数プロトタイプ宣言
 
 	// 初期化終了系関数
@@ -7095,7 +7064,6 @@ extern (C++, DxLib) {
 	 */
 	extern int GetPrivateProfileIntDxForMemWithStrLen(const (dxlib_d.dxdatatype.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.dxdatatype.TCHAR)* KeyName, size_t KeyNameLength, int Default, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
 
-	//#if defined(__APPLE__) || defined(__ANDROID__)
 	version (iOS) {
 		version = ENABLE_MAIL;
 	} else version (Android) {
