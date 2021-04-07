@@ -12,12 +12,7 @@ version (Windows):
 
 nothrow @nogc:
 
-private static import core.sys.windows.basetsd;
-private static import core.sys.windows.basetyps;
-private static import core.sys.windows.windef;
-private static import core.sys.windows.wingdi;
-private static import core.sys.windows.winnt;
-private static import core.sys.windows.winuser;
+private static import dxlib_d.dxdatayypewin;
 private static import dxlib_d.dxlib;
 
 // 関数プロトタイプ宣言------------------------------------------------------------------
@@ -32,36 +27,36 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: -1:失敗  0:成功
 	 */
-	extern int GetResourceInfo(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType, void** DataPointerP, size_t* DataSizeP);
+	extern int GetResourceInfo(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, void** DataPointerP, size_t* DataSizeP);
 
 	/**
 	 * 指定の名前、タイプのリソースのアドレスとサイズを取得する
 	 *
 	 * Returns: -1:失敗  0:成功
 	 */
-	extern int GetResourceInfoWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength, void** DataPointerP, size_t* DataSizeP);
+	extern int GetResourceInfoWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength, void** DataPointerP, size_t* DataSizeP);
 
 	/**
 	 * リソースID値からリソース名を取得する
 	 */
-	extern const (core.sys.windows.winnt.TCHAR)* GetResourceIDString(int ResourceID);
+	extern const (dxlib_d.dxdatayypewin.TCHAR)* GetResourceIDString(int ResourceID);
 
 	// ウインドウ関係情報取得関数
 
 	/**
 	 * GetWindowClientRect の旧名称
 	 */
-	extern int GetWindowCRect(core.sys.windows.windef.RECT* RectBuf);
+	extern int GetWindowCRect(dxlib_d.dxdatayypewin.RECT* RectBuf);
 
 	/**
 	 * メインウインドウのクライアント領域を取得する
 	 */
-	extern int GetWindowClientRect(core.sys.windows.windef.RECT* RectBuf);
+	extern int GetWindowClientRect(dxlib_d.dxdatayypewin.RECT* RectBuf);
 
 	/**
 	 * メインウインドウの枠の部分も含めた全体の領域を取得する
 	 */
-	extern int GetWindowFrameRect(core.sys.windows.windef.RECT* RectBuf);
+	extern int GetWindowFrameRect(dxlib_d.dxdatayypewin.RECT* RectBuf);
 
 	/**
 	 * メインウインドウがアクティブかどうかを取得する
@@ -92,7 +87,7 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウのウインドウハンドルを取得する
 	 */
-	extern core.sys.windows.windef.HWND GetMainWindowHandle();
+	extern dxlib_d.dxdatayypewin.HWND GetMainWindowHandle();
 
 	/**
 	 * ウインドウモードで起動しているかどうかを取得する
@@ -131,7 +126,7 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: 0:一時停止はしていない  1:一時停止していた
 	 */
-	extern int GetNoActiveState(int ResetFlag = core.sys.windows.windef.TRUE);
+	extern int GetNoActiveState(int ResetFlag = dxlib_d.dxdatayypewin.TRUE);
 
 	/**
 	 * マウスポインタを表示するかどうかの設定を取得する
@@ -155,7 +150,7 @@ extern (C++, DxLib) {
 	/**
 	 * PCの情報を取得する
 	 */
-	extern int GetPcInfo(core.sys.windows.winnt.TCHAR* OSString, core.sys.windows.winnt.TCHAR* DirectXString, core.sys.windows.winnt.TCHAR* CPUString, int* CPUSpeed /* 単位MHz */, double* FreeMemorySize /* 単位MByte */, double* TotalMemorySize, core.sys.windows.winnt.TCHAR* VideoDriverFileName, core.sys.windows.winnt.TCHAR* VideoDriverString, double* FreeVideoMemorySize /* 単位MByte */, double* TotalVideoMemorySize);
+	extern int GetPcInfo(dxlib_d.dxdatayypewin.TCHAR* OSString, dxlib_d.dxdatayypewin.TCHAR* DirectXString, dxlib_d.dxdatayypewin.TCHAR* CPUString, int* CPUSpeed /* 単位MHz */, double* FreeMemorySize /* 単位MByte */, double* TotalMemorySize, dxlib_d.dxdatayypewin.TCHAR* VideoDriverFileName, dxlib_d.dxdatayypewin.TCHAR* VideoDriverString, double* FreeVideoMemorySize /* 単位MByte */, double* TotalVideoMemorySize);
 
 	/**
 	 * MMXが使えるかどうかの情報を得る
@@ -180,7 +175,7 @@ extern (C++, DxLib) {
 	/**
 	 * ソフトのインスタンスを取得する
 	 */
-	extern core.sys.windows.windef.HINSTANCE GetTaskInstance();
+	extern dxlib_d.dxdatayypewin.HINSTANCE GetTaskInstance();
 
 	/**
 	 * リージョンを使っているかどうかを取得する
@@ -219,7 +214,7 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウの閉じるボタンが押されたかどうかを取得する
 	 */
-	extern int GetWindowUserCloseFlag(int StateResetFlag = core.sys.windows.windef.FALSE);
+	extern int GetWindowUserCloseFlag(int StateResetFlag = dxlib_d.dxdatayypewin.FALSE);
 
 	/**
 	 * メインウインドウの最大化ボタンが押されたかどうかを取得する、SetWindowMaximizeButtonBehavior( 1 ); が実行されている場合のみ有効な関数
@@ -227,7 +222,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      StateResetFlag = TRUE:押された状態をリセットする   FALSE:押された状態をリセットしない
 	 */
-	extern int CheckWindowMaximizeButtonInput(int StateResetFlag = core.sys.windows.windef.TRUE);
+	extern int CheckWindowMaximizeButtonInput(int StateResetFlag = dxlib_d.dxdatayypewin.TRUE);
 
 	/**
 	 * DXライブラリの描画機能を使うかどうかの設定を取得する
@@ -251,7 +246,7 @@ extern (C++, DxLib) {
 	/**
 	 * 入力されたシステム文字を取得する
 	 */
-	extern core.sys.windows.winnt.TCHAR GetInputSystemChar(int DeleteFlag);
+	extern dxlib_d.dxdatayypewin.TCHAR GetInputSystemChar(int DeleteFlag);
 
 	// 設定系関数
 
@@ -268,12 +263,12 @@ extern (C++, DxLib) {
 	/**
 	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む( FileName に null を渡すことで解除)
 	 */
-	extern int LoadPauseGraph(const (core.sys.windows.winnt.TCHAR)* FileName);
+	extern int LoadPauseGraph(const (dxlib_d.dxdatayypewin.TCHAR)* FileName);
 
 	/**
 	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む( FileName に null を渡すことで解除)
 	 */
-	extern int LoadPauseGraphWithStrLen(const (core.sys.windows.winnt.TCHAR)* FileName, size_t FileNameLength);
+	extern int LoadPauseGraphWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, size_t FileNameLength);
 
 	/**
 	 * アクティブウインドウが他のソフトに移っている際に表示する画像をメモリから読み込む
@@ -296,32 +291,32 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウのウインドウテキストを変更する
 	 */
-	extern int SetWindowText(const (core.sys.windows.winnt.TCHAR)* WindowText);
+	extern int SetWindowText(const (dxlib_d.dxdatayypewin.TCHAR)* WindowText);
 
 	/**
 	 * メインウインドウのウインドウテキストを変更する
 	 */
-	extern int SetWindowTextWithStrLen(const (core.sys.windows.winnt.TCHAR)* WindowText, size_t WindowTextLength);
+	extern int SetWindowTextWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* WindowText, size_t WindowTextLength);
 
 	/**
 	 * SetWindowText の別名関数
 	 */
-	extern int SetMainWindowText(const (core.sys.windows.winnt.TCHAR)* WindowText);
+	extern int SetMainWindowText(const (dxlib_d.dxdatayypewin.TCHAR)* WindowText);
 
 	/**
 	 * SetWindowText の別名関数
 	 */
-	extern int SetMainWindowTextWithStrLen(const (core.sys.windows.winnt.TCHAR)* WindowText, size_t WindowTextLength);
+	extern int SetMainWindowTextWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* WindowText, size_t WindowTextLength);
 
 	/**
 	 * メインウインドウのクラス名を設定する( DxLib_Init の前でのみ使用可能 )
 	 */
-	extern int SetMainWindowClassName(const (core.sys.windows.winnt.TCHAR)* ClassName);
+	extern int SetMainWindowClassName(const (dxlib_d.dxdatayypewin.TCHAR)* ClassName);
 
 	/**
 	 * メインウインドウのクラス名を設定する( DxLib_Init の前でのみ使用可能 )
 	 */
-	extern int SetMainWindowClassNameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ClassName, size_t ClassNameLength);
+	extern int SetMainWindowClassNameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ClassName, size_t ClassNameLength);
 
 	/**
 	 * メインウインドウで使用するアイコンのIDをセットする
@@ -331,7 +326,7 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウで使用するアイコンのハンドルをセットする
 	 */
-	extern int SetWindowIconHandle(core.sys.windows.windef.HICON Icon);
+	extern int SetWindowIconHandle(dxlib_d.dxdatayypewin.HICON Icon);
 
 	/**
 	 * 最大化ボタンやALT+ENTERキーによる非同期なウインドウモードの変更の機能の設定を行う
@@ -346,7 +341,7 @@ extern (C++, DxLib) {
 	/**
 	 * シャットダウンによるソフトの強制終了の際に呼ばれるコールバック関数を登録する( Message はコールバック関数の終了を待つ間表示されるメッセージ )
 	 */
-	extern int SetShutdownCallbackFunction(void function(void*) *CallbackFunction, void* Data, const (core.sys.windows.winnt.TCHAR)* Message);
+	extern int SetShutdownCallbackFunction(void function(void*) *CallbackFunction, void* Data, const (dxlib_d.dxdatayypewin.TCHAR)* Message);
 
 	/**
 	 * メインウインドウのスタイルを変更する
@@ -356,7 +351,7 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウの奥行き位置を変更する
 	 */
-	extern int SetWindowZOrder(int ZType /* = DX_WIN_ZTYPE_TOP 等 */, int WindowActivateFlag = core.sys.windows.windef.TRUE);
+	extern int SetWindowZOrder(int ZType /* = DX_WIN_ZTYPE_TOP 等 */, int WindowActivateFlag = dxlib_d.dxdatayypewin.TRUE);
 
 	/**
 	 * メインウインドウの端を掴んでウインドウのサイズを変更できるようにするかどうかの設定を行う
@@ -365,7 +360,7 @@ extern (C++, DxLib) {
 	 *      Flag = 変更を可能にするかどうか( TRUE:可能にする  FALSE:不可能にする( デフォルト ) )
 	 *      FitScreen = ウインドウのクライアント領域に画面をフィットさせる(拡大させる)かどうか  TRUE:フィットさせる  FALSE:フィットさせない
 	 */
-	extern int SetWindowSizeChangeEnableFlag(int Flag, int FitScreen = core.sys.windows.windef.TRUE);
+	extern int SetWindowSizeChangeEnableFlag(int Flag, int FitScreen = dxlib_d.dxdatayypewin.TRUE);
 
 	/**
 	 * 描画画面のサイズに対するメインウインドウサイズの比率を設定する( ExRateY がマイナスの場合は ExRateX の値が ExRateY にも使用されます )
@@ -395,12 +390,12 @@ extern (C++, DxLib) {
 	/**
 	 * タスクスイッチを有効にするかどうかを設定する
 	 */
-	extern int SetSysCommandOffFlag(int Flag, const (core.sys.windows.winnt.TCHAR)* HookDllPath = null);
+	extern int SetSysCommandOffFlag(int Flag, const (dxlib_d.dxdatayypewin.TCHAR)* HookDllPath = null);
 
 	/**
 	 * タスクスイッチを有効にするかどうかを設定する
 	 */
-	extern int SetSysCommandOffFlagWithStrLen(int Flag, const (core.sys.windows.winnt.TCHAR)* HookDllPath = null, size_t HookDllPathLength = 0);
+	extern int SetSysCommandOffFlagWithStrLen(int Flag, const (dxlib_d.dxdatayypewin.TCHAR)* HookDllPath = null, size_t HookDllPathLength = 0);
 
 	/**
 	 * メインウインドウの最大化ボタンが押されたときの挙動を設定する( BehaviorType 0:標準動作 1:標準動作は行わず、最大化ボタンが押されたかどうかは CheckWindowMaximizeButtonInput で判定する )
@@ -410,7 +405,7 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウへのメッセージをフックするウインドウプロージャを登録する
 	 */
-	extern int SetHookWinProc(core.sys.windows.winuser.WNDPROC WinProc);
+	extern int SetHookWinProc(dxlib_d.dxdatayypewin.WNDPROC WinProc);
 
 	/**
 	 * SetHookWinProc で設定したウインドウプロージャの戻り値を使用するかどうかを設定する、SetHookWinProc で設定したウインドウプロージャの中でのみ使用可能
@@ -438,12 +433,12 @@ extern (C++, DxLib) {
 	/**
 	 * メッセージ処理をDXライブラリに肩代わりしてもらうウインドウを追加する
 	 */
-	extern int AddMessageTakeOverWindow(core.sys.windows.windef.HWND Window);
+	extern int AddMessageTakeOverWindow(dxlib_d.dxdatayypewin.HWND Window);
 
 	/**
 	 * メッセージ処理をDXライブラリに肩代わりしてもらうウインドウを減らす
 	 */
-	extern int SubMessageTakeOverWindow(core.sys.windows.windef.HWND Window);
+	extern int SubMessageTakeOverWindow(dxlib_d.dxdatayypewin.HWND Window);
 
 	/**
 	 * メインウインドウの初期位置を設定する
@@ -485,7 +480,7 @@ extern (C++, DxLib) {
 	/**
 	 * DXライブラリでメッセージ処理を行うダイアログボックスを登録する
 	 */
-	extern int SetDialogBoxHandle(core.sys.windows.windef.HWND WindowHandle);
+	extern int SetDialogBoxHandle(dxlib_d.dxdatayypewin.HWND WindowHandle);
 
 	/**
 	 * メインウインドウを表示するかどうかを設定する
@@ -522,12 +517,12 @@ extern (C++, DxLib) {
 	/**
 	 * DXライブラリで使用するウインドウのハンドルをセットする( DxLib_Init を実行する以前でのみ有効 )
 	 */
-	extern int SetUserWindow(core.sys.windows.windef.HWND WindowHandle);
+	extern int SetUserWindow(dxlib_d.dxdatayypewin.HWND WindowHandle);
 
 	/**
 	 * DXライブラリで使用する表示用の子ウインドウのハンドルをセットする( DxLib_Init を実行する以前でのみ有効 )
 	 */
-	extern int SetUserChildWindow(core.sys.windows.windef.HWND WindowHandle);
+	extern int SetUserChildWindow(dxlib_d.dxdatayypewin.HWND WindowHandle);
 
 	/**
 	 * SetUseWindow で設定したウインドウのメッセージループ処理をDXライブラリで行うかどうかを設定する
@@ -575,7 +570,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      ResourceModule = ?
 	 */
-	extern int SetResourceModule(core.sys.windows.windef.HMODULE ResourceModule);
+	extern int SetResourceModule(dxlib_d.dxdatayypewin.HMODULE ResourceModule);
 
 	/**
 	 * WM_PAINT メッセージが来た際に『DXライブラリの WM_PAINTメッセージが来た際の処理』を行うかどうかを設定する( 別スレッドで描画処理を行う場合などで使用 )
@@ -607,7 +602,7 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: -1:取得できなかった  0:取得できた
 	 */
-	extern int GetDragFilePath(core.sys.windows.winnt.TCHAR* FilePathBuffer);
+	extern int GetDragFilePath(dxlib_d.dxdatayypewin.TCHAR* FilePathBuffer);
 
 	/**
 	 * メインウインドウへドラッグ&ドロップされたファイルの数を取得する
@@ -626,7 +621,7 @@ extern (C++, DxLib) {
 	 *      Pitch = 1ラインあたりのbyteサイズ
 	 *      Byte = 1ドット辺りのbyteサイズ( 対応しているのは 1〜4 )、ドットの数値が0かそれ以外かで判別
 	 */
-	extern core.sys.windows.windef.HRGN CreateRgnFromGraph(int Width, int Height, const (void)* MaskData, int Pitch, int Byte);
+	extern dxlib_d.dxdatayypewin.HRGN CreateRgnFromGraph(int Width, int Height, const (void)* MaskData, int Pitch, int Byte);
 
 	/**
 	 * 任意の基本イメージデータと透過色からRGNハンドルを作成する
@@ -637,17 +632,17 @@ extern (C++, DxLib) {
 	 *      TransColorG = 透過色( 0〜255 )
 	 *      TransColorB = 透過色( 0〜255 )
 	 */
-	extern core.sys.windows.windef.HRGN CreateRgnFromBaseImage(dxlib_d.dxlib.BASEIMAGE* BaseImage, int TransColorR, int TransColorG, int TransColorB);
+	extern dxlib_d.dxdatayypewin.HRGN CreateRgnFromBaseImage(dxlib_d.dxlib.BASEIMAGE* BaseImage, int TransColorR, int TransColorG, int TransColorB);
 
 	/**
 	 * 任意の画像ファイルからRGNをセットする
 	 */
-	extern int SetWindowRgnGraph(const (core.sys.windows.winnt.TCHAR)* FileName);
+	extern int SetWindowRgnGraph(const (dxlib_d.dxdatayypewin.TCHAR)* FileName);
 
 	/**
 	 * 任意の画像ファイルからRGNをセットする
 	 */
-	extern int SetWindowRgnGraphWithStrLen(const (core.sys.windows.winnt.TCHAR)* FileName, size_t FileNameLength);
+	extern int SetWindowRgnGraphWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, size_t FileNameLength);
 
 	/**
 	 * 描画先の画面の透過色の部分を透過させるRGNをセットする( 使用される透過色は関数 SetTransColor で設定した色 )
@@ -664,7 +659,7 @@ extern (C++, DxLib) {
 	 *      DivNum = ボタン画像中のボタンの数
 	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapName に null を渡すとこの引数が使用される
 	 */
-	extern int SetupToolBar(const (core.sys.windows.winnt.TCHAR)* BitmapName, int DivNum, int ResourceID = -1);
+	extern int SetupToolBar(const (dxlib_d.dxdatayypewin.TCHAR)* BitmapName, int DivNum, int ResourceID = -1);
 
 	/**
 	 * ツールバーの準備、BitmapName に null, ResourceID に -1 を渡すとツールバーを解除
@@ -675,7 +670,7 @@ extern (C++, DxLib) {
 	 *      DivNum = ボタン画像中のボタンの数
 	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapName に null を渡すとこの引数が使用される
 	 */
-	extern int SetupToolBarWithStrLen(const (core.sys.windows.winnt.TCHAR)* BitmapName, size_t BitmapNameLength, int DivNum, int ResourceID = -1);
+	extern int SetupToolBarWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* BitmapName, size_t BitmapNameLength, int DivNum, int ResourceID = -1);
 
 	/**
 	 * ツールバーにボタンを追加する
@@ -746,7 +741,7 @@ extern (C++, DxLib) {
 	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
 	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
 	 */
-	extern int AddKeyAccel(const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
+	extern int AddKeyAccel(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
 	 * ショートカットキーを追加する
@@ -760,17 +755,17 @@ extern (C++, DxLib) {
 	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
 	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
 	 */
-	extern int AddKeyAccelWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
+	extern int AddKeyAccelWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
 	 * ショートカットキーを追加する( 各引数の解説は AddKeyAccel と同じ、ItemID が無くなっただけ )
 	 */
-	extern int AddKeyAccel_Name(const (core.sys.windows.winnt.TCHAR)* ItemName, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
+	extern int AddKeyAccel_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
 	 * ショートカットキーを追加する( 各引数の解説は AddKeyAccel と同じ、ItemID が無くなっただけ )
 	 */
-	extern int AddKeyAccel_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
+	extern int AddKeyAccel_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
 	 * ショートカットキーを追加する( 各引数の解説は AddKeyAccel と同じ、ItemName が無くなっただけ )
@@ -793,7 +788,7 @@ extern (C++, DxLib) {
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
 	 */
-	extern int AddMenuItem(int AddType /* MENUITEM_ADD_CHILD等 */, const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID, int SeparatorFlag, const (core.sys.windows.winnt.TCHAR)* NewItemName = null, int NewItemID = -1);
+	extern int AddMenuItem(int AddType /* MENUITEM_ADD_CHILD等 */, const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID, int SeparatorFlag, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName = null, int NewItemID = -1);
 
 	/**
 	 * メニューに項目を追加する
@@ -808,7 +803,7 @@ extern (C++, DxLib) {
 	 *      NewItemNameLength = ?
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
 	 */
-	extern int AddMenuItemWithStrLen(int AddType /* MENUITEM_ADD_CHILD等 */, const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int SeparatorFlag, const (core.sys.windows.winnt.TCHAR)* NewItemName = null, size_t NewItemNameLength = 0, int NewItemID = -1);
+	extern int AddMenuItemWithStrLen(int AddType /* MENUITEM_ADD_CHILD等 */, const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int SeparatorFlag, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName = null, size_t NewItemNameLength = 0, int NewItemID = -1);
 
 	/**
 	 * メニューから選択項目を削除する
@@ -817,7 +812,7 @@ extern (C++, DxLib) {
 	 *      ItemName = 削除する項目の名前( AddMenuItem で NewItemName に渡した名前 )、null を指定すると ItemID が使用される
 	 *      ItemID = 削除する項目の識別番号( AddMenuItem で NewItemID に渡した番号 )、-1 を指定すると ItemName が使用される
 	 */
-	extern int DeleteMenuItem(const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID);
+	extern int DeleteMenuItem(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID);
 
 	/**
 	 * メニューから選択項目を削除する
@@ -827,21 +822,21 @@ extern (C++, DxLib) {
 	 *      ItemNameLength = ?
 	 *      ItemID = 削除する項目の識別番号( AddMenuItem で NewItemID に渡した番号 )、-1 を指定すると ItemName が使用される
 	 */
-	extern int DeleteMenuItemWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
+	extern int DeleteMenuItemWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
 
 	/**
 	 * メニューが選択されたかどうかを取得する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
 	 *
 	 * Returns: 0:選択されていない  1:選択された
 	 */
-	extern int CheckMenuItemSelect(const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID);
+	extern int CheckMenuItemSelect(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID);
 
 	/**
 	 * メニューが選択されたかどうかを取得する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
 	 *
 	 * Returns: 0:選択されていない  1:選択された
 	 */
-	extern int CheckMenuItemSelectWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
+	extern int CheckMenuItemSelectWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
 
 	/**
 	 * メニューの項目を選択出来るかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
@@ -851,7 +846,7 @@ extern (C++, DxLib) {
 	 *      ItemID = ?
 	 *      EnableFlag = 項目が選択できるかどうか( TRUE:選択できる   FALSE:選択できない )
 	 */
-	extern int SetMenuItemEnable(const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID, int EnableFlag);
+	extern int SetMenuItemEnable(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID, int EnableFlag);
 
 	/**
 	 * メニューの項目を選択出来るかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
@@ -862,7 +857,7 @@ extern (C++, DxLib) {
 	 *      ItemID = ?
 	 *      EnableFlag = 項目が選択できるかどうか( TRUE:選択できる   FALSE:選択できない )
 	 */
-	extern int SetMenuItemEnableWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int EnableFlag);
+	extern int SetMenuItemEnableWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int EnableFlag);
 
 	/**
 	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください ) )
@@ -872,7 +867,7 @@ extern (C++, DxLib) {
 	 *      ItemID = ?
 	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等( 解説は #define の定義を参照してください )
 	 */
-	extern int SetMenuItemMark(const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID, int Mark);
+	extern int SetMenuItemMark(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID, int Mark);
 
 	/**
 	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください ) )
@@ -883,7 +878,7 @@ extern (C++, DxLib) {
 	 *      ItemID = ?
 	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等( 解説は #define の定義を参照してください )
 	 */
-	extern int SetMenuItemMarkWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int Mark);
+	extern int SetMenuItemMarkWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int Mark);
 
 	/**
 	 * メニューの項目がどれか選択されたかどうかを取得する
@@ -899,7 +894,7 @@ extern (C++, DxLib) {
 	 *      ParentItemName = 親となる項目の名前、親が持つリストの末端に新しい項目を追加します
 	 *      NewItemName = 新しい項目の名前
 	 */
-	extern int AddMenuItem_Name(const (core.sys.windows.winnt.TCHAR)* ParentItemName, const (core.sys.windows.winnt.TCHAR)* NewItemName);
+	extern int AddMenuItem_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ParentItemName, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName);
 
 	/**
 	 * メニューに選択項目を追加する
@@ -910,7 +905,7 @@ extern (C++, DxLib) {
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemNameLength = ?
 	 */
-	extern int AddMenuItem_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ParentItemName, size_t ParentItemNameLength, const (core.sys.windows.winnt.TCHAR)* NewItemName, size_t NewItemNameLength);
+	extern int AddMenuItem_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ParentItemName, size_t ParentItemNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName, size_t NewItemNameLength);
 
 	/**
 	 * メニューのリストに区切り線を追加する
@@ -918,7 +913,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      ParentItemName = 区切り線を付ける項目リストの親の名前、リストの末端に区切り線を追加します
 	 */
-	extern int AddMenuLine_Name(const (core.sys.windows.winnt.TCHAR)* ParentItemName);
+	extern int AddMenuLine_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ParentItemName);
 
 	/**
 	 * メニューのリストに区切り線を追加する
@@ -927,51 +922,51 @@ extern (C++, DxLib) {
 	 *      ParentItemName = 区切り線を付ける項目リストの親の名前、リストの末端に区切り線を追加します
 	 *      ParentItemNameLength = ?
 	 */
-	extern int AddMenuLine_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ParentItemName, size_t ParentItemNameLength);
+	extern int AddMenuLine_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ParentItemName, size_t ParentItemNameLength);
 
 	/**
 	 * 指定の項目と、指定の項目の一つ上の項目との間に新しい項目を追加する
 	 */
-	extern int InsertMenuItem_Name(const (core.sys.windows.winnt.TCHAR)* ItemName, const (core.sys.windows.winnt.TCHAR)* NewItemName);
+	extern int InsertMenuItem_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName);
 
 	/**
 	 * 指定の項目と、指定の項目の一つ上の項目との間に新しい項目を追加する
 	 */
-	extern int InsertMenuItem_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, const (core.sys.windows.winnt.TCHAR)* NewItemName, size_t NewItemNameLength);
+	extern int InsertMenuItem_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName, size_t NewItemNameLength);
 
 	/**
 	 * 指定の項目と、指定の項目の一つ上の項目との間に区切り線を追加する
 	 */
-	extern int InsertMenuLine_Name(const (core.sys.windows.winnt.TCHAR)* ItemName);
+	extern int InsertMenuLine_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName);
 
 	/**
 	 * 指定の項目と、指定の項目の一つ上の項目との間に区切り線を追加する
 	 */
-	extern int InsertMenuLine_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength);
+	extern int InsertMenuLine_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
 	 * メニューから選択項目を削除する
 	 */
-	extern int DeleteMenuItem_Name(const (core.sys.windows.winnt.TCHAR)* ItemName);
+	extern int DeleteMenuItem_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName);
 
 	/**
 	 * メニューから選択項目を削除する
 	 */
-	extern int DeleteMenuItem_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength);
+	extern int DeleteMenuItem_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
 	 * メニューが選択されたかどうかを取得する
 	 *
 	 * Returns: 0:選択されていない  1:選択された
 	 */
-	extern int CheckMenuItemSelect_Name(const (core.sys.windows.winnt.TCHAR)* ItemName);
+	extern int CheckMenuItemSelect_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName);
 
 	/**
 	 * メニューが選択されたかどうかを取得する
 	 *
 	 * Returns: 0:選択されていない  1:選択された
 	 */
-	extern int CheckMenuItemSelect_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength);
+	extern int CheckMenuItemSelect_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
 	 * メニューの項目を選択出来るかどうかを設定する
@@ -980,7 +975,7 @@ extern (C++, DxLib) {
 	 *      ItemName = ?
 	 *      EnableFlag = 1:選択できる  0:選択できない
 	 */
-	extern int SetMenuItemEnable_Name(const (core.sys.windows.winnt.TCHAR)* ItemName, int EnableFlag);
+	extern int SetMenuItemEnable_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int EnableFlag);
 
 	/**
 	 * メニューの項目を選択出来るかどうかを設定する
@@ -990,7 +985,7 @@ extern (C++, DxLib) {
 	 *      ItemNameLength = ?
 	 *      EnableFlag = 1:選択できる  0:選択できない
 	 */
-	extern int SetMenuItemEnable_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int EnableFlag);
+	extern int SetMenuItemEnable_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int EnableFlag);
 
 	/**
 	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する
@@ -999,7 +994,7 @@ extern (C++, DxLib) {
 	 *      ItemName = ?
 	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等 )
 	 */
-	extern int SetMenuItemMark_Name(const (core.sys.windows.winnt.TCHAR)* ItemName, int Mark);
+	extern int SetMenuItemMark_Name(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int Mark);
 
 	/**
 	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する
@@ -1009,17 +1004,17 @@ extern (C++, DxLib) {
 	 *      ItemNameLength = ?
 	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等 )
 	 */
-	extern int SetMenuItemMark_NameWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength, int Mark);
+	extern int SetMenuItemMark_NameWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength, int Mark);
 
 	/**
 	 * メニューに選択項目を追加する
 	 */
-	extern int AddMenuItem_ID(int ParentItemID, const (core.sys.windows.winnt.TCHAR)* NewItemName, int NewItemID = -1);
+	extern int AddMenuItem_ID(int ParentItemID, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName, int NewItemID = -1);
 
 	/**
 	 * メニューに選択項目を追加する
 	 */
-	extern int AddMenuItem_IDWithStrLen(int ParentItemID, const (core.sys.windows.winnt.TCHAR)* NewItemName, size_t NewItemNameLength, int NewItemID = -1);
+	extern int AddMenuItem_IDWithStrLen(int ParentItemID, const (dxlib_d.dxdatayypewin.TCHAR)* NewItemName, size_t NewItemNameLength, int NewItemID = -1);
 
 	/**
 	 * メニューのリストに区切り線を追加する
@@ -1079,17 +1074,17 @@ extern (C++, DxLib) {
 	/**
 	 * メニューの項目名から項目識別番号を取得する
 	 */
-	extern int GetMenuItemID(const (core.sys.windows.winnt.TCHAR)* ItemName);
+	extern int GetMenuItemID(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName);
 
 	/**
 	 * メニューの項目名から項目識別番号を取得する
 	 */
-	extern int GetMenuItemIDWithStrLen(const (core.sys.windows.winnt.TCHAR)* ItemName, size_t ItemNameLength);
+	extern int GetMenuItemIDWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
 	 * メニューの項目識別番号から項目名を取得する
 	 */
-	extern int GetMenuItemName(int ItemID, core.sys.windows.winnt.TCHAR* NameBuffer);
+	extern int GetMenuItemName(int ItemID, dxlib_d.dxdatayypewin.TCHAR* NameBuffer);
 
 	/**
 	 * メニューをリソースから読み込む
@@ -1104,12 +1099,12 @@ extern (C++, DxLib) {
 	 *      ItemName = ?
 	 *      ItemID = ?
 	 */
-	extern int SetMenuItemSelectCallBackFunction(void function(const (core.sys.windows.winnt.TCHAR)* ItemName, int ItemID) CallBackFunction);
+	extern int SetMenuItemSelectCallBackFunction(void function(const (dxlib_d.dxdatayypewin.TCHAR)* ItemName, int ItemID) CallBackFunction);
 
 	/**
 	 * (古い関数)ウインドウにメニューを設定する
 	 */
-	extern int SetWindowMenu(int MenuID, int function(core.sys.windows.windef.WORD ID) MenuProc);
+	extern int SetWindowMenu(int MenuID, int function(dxlib_d.dxdatayypewin.WORD ID) MenuProc);
 
 	/**
 	 * (古い関数)メニューを表示するかどうかをセットする
@@ -1209,12 +1204,12 @@ extern (C++, DxLib) {
 		/**
 		 * ジョイパッドのGUIDを得る
 		 */
-		extern int GetJoypadGUID(int PadIndex, core.sys.windows.basetyps.GUID* GuidInstanceBuffer, core.sys.windows.basetyps.GUID* GuidProductBuffer = null);
+		extern int GetJoypadGUID(int PadIndex, dxlib_d.dxdatayypewin.GUID* GuidInstanceBuffer, dxlib_d.dxdatayypewin.GUID* GuidProductBuffer = null);
 
 		/**
 		 * ジョイパッドのデバイス登録名と製品登録名を取得する( InstanceNameBuffer, ProductNameBuffer 共に 260 以上のバッファサイズが必要 )
 		 */
-		extern int GetJoypadName(int InputType, core.sys.windows.winnt.TCHAR* InstanceNameBuffer, core.sys.windows.winnt.TCHAR* ProductNameBuffer);
+		extern int GetJoypadName(int InputType, dxlib_d.dxdatayypewin.TCHAR* InstanceNameBuffer, dxlib_d.dxdatayypewin.TCHAR* ProductNameBuffer);
 
 		/**
 		 * DXライブラリのキーコード( KEY_INPUT_A など )に対応する Windows の仮想キーコード( VK_LEFT など ) を取得する
@@ -1259,32 +1254,32 @@ extern (C++, DxLib) {
 		/**
 		 * 画像リソースからグラフィックハンドルを作成する
 		 */
-		extern int LoadGraphToResource(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType);
+		extern int LoadGraphToResource(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType);
 
 		/**
 		 * 画像リソースからグラフィックハンドルを作成する
 		 */
-		extern int LoadGraphToResourceWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength);
+		extern int LoadGraphToResourceWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength);
 
 		/**
 		 * 画像リソースを分割してグラフィックハンドルを作成する
 		 */
-		extern int LoadDivGraphToResource(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
+		extern int LoadDivGraphToResource(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
 
 		/**
 		 * 画像リソースを分割してグラフィックハンドルを作成する
 		 */
-		extern int LoadDivGraphToResourceWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
+		extern int LoadDivGraphToResourceWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
 
 		/**
 		 * 画像リソースを分割してグラフィックハンドルを作成する( float型 )
 		 */
-		extern int LoadDivGraphFToResource(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
+		extern int LoadDivGraphFToResource(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
 		/**
 		 * 画像リソースを分割してグラフィックハンドルを作成する( float型 )
 		 */
-		extern int LoadDivGraphFToResourceWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
+		extern int LoadDivGraphFToResourceWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
 		version (DX_NON_DIRECT3D11) {
 		} else {
@@ -1316,17 +1311,17 @@ extern (C++, DxLib) {
 		/**
 		 * 裏画面の内容を指定のウインドウに転送する
 		 */
-		extern int BltBackScreenToWindow(core.sys.windows.windef.HWND Window, int ClientX, int ClientY);
+		extern int BltBackScreenToWindow(dxlib_d.dxdatayypewin.HWND Window, int ClientX, int ClientY);
 
 		/**
 		 * 裏画面の指定の領域をウインドウのクライアント領域の指定の領域に転送する
 		 */
-		extern int BltRectBackScreenToWindow(core.sys.windows.windef.HWND Window, core.sys.windows.windef.RECT BackScreenRect, core.sys.windows.windef.RECT WindowClientRect);
+		extern int BltRectBackScreenToWindow(dxlib_d.dxdatayypewin.HWND Window, dxlib_d.dxdatayypewin.RECT BackScreenRect, dxlib_d.dxdatayypewin.RECT WindowClientRect);
 
 		/**
 		 * ScreenFlip で画像を転送する先のウインドウを設定する( null を指定すると設定解除 )
 		 */
-		extern int SetScreenFlipTargetWindow(core.sys.windows.windef.HWND TargetWindow, double ScaleX = 1.0, double ScaleY = 1.0);
+		extern int SetScreenFlipTargetWindow(dxlib_d.dxdatayypewin.HWND TargetWindow, double ScaleX = 1.0, double ScaleY = 1.0);
 
 		/**
 		 * デスクトップ画面から指定領域の画像情報をグラフィックハンドルに転送する
@@ -1438,7 +1433,7 @@ extern (C++, DxLib) {
 		/**
 		 * DirectDrawが使用するGUIDを設定する
 		 */
-		extern int SetDDrawUseGuid(const (core.sys.windows.basetyps.GUID)* Guid);
+		extern int SetDDrawUseGuid(const (dxlib_d.dxdatayypewin.GUID)* Guid);
 
 		/**
 		 * 現在使用しているDirectDrawオブジェクトのアドレスを取得する( 戻り値を IDirectDraw7 * にキャストして下さい )
@@ -1448,7 +1443,7 @@ extern (C++, DxLib) {
 		/**
 		 * 有効な DirectDraw デバイスの GUID を取得する
 		 */
-		extern const (core.sys.windows.basetyps.GUID)* GetDirectDrawDeviceGUID(int Number);
+		extern const (dxlib_d.dxdatayypewin.GUID)* GetDirectDrawDeviceGUID(int Number);
 
 		/**
 		 * 有効な DirectDraw デバイスの名前を取得する
@@ -1529,7 +1524,7 @@ extern (C++, DxLib) {
 			/**
 			 * マスクハンドルにBMPデータを転送する
 			 */
-			extern int BmpBltToMask(core.sys.windows.windef.HBITMAP Bmp, int BmpPointX, int BmpPointY, int MaskHandle);
+			extern int BmpBltToMask(dxlib_d.dxdatayypewin.HBITMAP Bmp, int BmpPointX, int BmpPointY, int MaskHandle);
 		}
 	}
 
@@ -1542,38 +1537,38 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: null:失敗  NULL以外:フォントハンドル( WindowsOS のものなので、DXライブラリのフォントハンドルとは別物です )
 		 */
-		extern core.sys.windows.basetsd.HANDLE AddFontFile(const (core.sys.windows.winnt.TCHAR)* FontFilePath);
+		extern dxlib_d.dxdatayypewin.HANDLE AddFontFile(const (dxlib_d.dxdatayypewin.TCHAR)* FontFilePath);
 
 		/**
 		 * 指定のフォントファイルをシステムに追加する
 		 *
 		 * Returns: null:失敗  NULL以外:フォントハンドル( WindowsOS のものなので、DXライブラリのフォントハンドルとは別物です )
 		 */
-		extern core.sys.windows.basetsd.HANDLE AddFontFileWithStrLen(const (core.sys.windows.winnt.TCHAR)* FontFilePath, size_t FontFilePathLength);
+		extern dxlib_d.dxdatayypewin.HANDLE AddFontFileWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FontFilePath, size_t FontFilePathLength);
 
 		/**
 		 * 指定のメモリアドレスに展開したフォントファイルイメージをシステムに追加する )
 		 *
 		 * Returns: null:失敗  NULL以外:フォントハンドル( WindowsOS のものなので、DXライブラリのフォントハンドルとは別物です
 		 */
-		extern core.sys.windows.basetsd.HANDLE AddFontFileFromMem(const (void)* FontFileImage, int FontFileImageSize);
+		extern dxlib_d.dxdatayypewin.HANDLE AddFontFileFromMem(const (void)* FontFileImage, int FontFileImageSize);
 
 		/**
 		 * 指定のフォントハンドルをシステムから削除する( 引数は AddFontFile や AddFontFileFromMem の戻り値 )
 		 */
-		extern int RemoveFontFile(core.sys.windows.basetsd.HANDLE FontHandle);
+		extern int RemoveFontFile(dxlib_d.dxdatayypewin.HANDLE FontHandle);
 
 		version (DX_NON_SAVEFUNCTION) {
 		} else {
 			/**
 			 * フォントデータファイルを作成する
 			 */
-			extern int CreateFontDataFile(const (core.sys.windows.winnt.TCHAR)* SaveFilePath, const (core.sys.windows.winnt.TCHAR)* FontName, int Size, int BitDepth /* DX_FONTIMAGE_BIT_1等 */, int Thick, int Italic = core.sys.windows.windef.FALSE, int CharSet = -1, const (core.sys.windows.winnt.TCHAR)* SaveCharaList = null);
+			extern int CreateFontDataFile(const (dxlib_d.dxdatayypewin.TCHAR)* SaveFilePath, const (dxlib_d.dxdatayypewin.TCHAR)* FontName, int Size, int BitDepth /* DX_FONTIMAGE_BIT_1等 */, int Thick, int Italic = dxlib_d.dxdatayypewin.FALSE, int CharSet = -1, const (dxlib_d.dxdatayypewin.TCHAR)* SaveCharaList = null);
 
 			/**
 			 * フォントデータファイルを作成する
 			 */
-			extern int CreateFontDataFileWithStrLen(const (core.sys.windows.winnt.TCHAR)* SaveFilePath, size_t SaveFilePathLength, const (core.sys.windows.winnt.TCHAR)* FontName, size_t FontNameLength, int Size, int BitDepth /* DX_FONTIMAGE_BIT_1等 */, int Thick, int Italic = core.sys.windows.windef.FALSE, int CharSet = -1, const (core.sys.windows.winnt.TCHAR)* SaveCharaList = null, size_t SaveCharaListLength = 0);
+			extern int CreateFontDataFileWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* SaveFilePath, size_t SaveFilePathLength, const (dxlib_d.dxdatayypewin.TCHAR)* FontName, size_t FontNameLength, int Size, int BitDepth /* DX_FONTIMAGE_BIT_1等 */, int Thick, int Italic = dxlib_d.dxdatayypewin.FALSE, int CharSet = -1, const (dxlib_d.dxdatayypewin.TCHAR)* SaveCharaList = null, size_t SaveCharaListLength = 0);
 		}
 	}
 
@@ -1582,61 +1577,61 @@ extern (C++, DxLib) {
 	/**
 	 * 画像ファイルからDIBデータを作成する
 	 */
-	extern core.sys.windows.windef.HBITMAP CreateDIBGraph(const (core.sys.windows.winnt.TCHAR)* FileName, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern dxlib_d.dxdatayypewin.HBITMAP CreateDIBGraph(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * 画像ファイルからDIBデータを作成する
 	 */
-	extern core.sys.windows.windef.HBITMAP CreateDIBGraphWithStrLen(const (core.sys.windows.winnt.TCHAR)* FileName, size_t FileNameLength, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern dxlib_d.dxdatayypewin.HBITMAP CreateDIBGraphWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, size_t FileNameLength, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * BMPデータからDIBデータクを作成する
 	 */
-	extern core.sys.windows.windef.HBITMAP CreateDIBGraphToMem(const (core.sys.windows.wingdi.BITMAPINFO)* BmpInfo, const (void)* GraphData, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern dxlib_d.dxdatayypewin.HBITMAP CreateDIBGraphToMem(const (dxlib_d.dxdatayypewin.BITMAPINFO)* BmpInfo, const (void)* GraphData, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * 画像ファイルからDIBデータとマスク用DIBデータを作成する
 	 */
-	extern int CreateDIBGraph_plus_Alpha(const (core.sys.windows.winnt.TCHAR)* FileName, core.sys.windows.windef.HBITMAP* RGBBmp, core.sys.windows.windef.HBITMAP* AlphaBmp, int ReverseFlag = core.sys.windows.windef.FALSE, dxlib_d.dxlib.COLORDATA* SrcColor = null);
+	extern int CreateDIBGraph_plus_Alpha(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, dxlib_d.dxdatayypewin.HBITMAP* RGBBmp, dxlib_d.dxdatayypewin.HBITMAP* AlphaBmp, int ReverseFlag = dxlib_d.dxdatayypewin.FALSE, dxlib_d.dxlib.COLORDATA* SrcColor = null);
 
 	/**
 	 * 画像ファイルからDIBデータとマスク用DIBデータを作成する
 	 */
-	extern int CreateDIBGraph_plus_AlphaWithStrLen(const (core.sys.windows.winnt.TCHAR)* FileName, size_t FileNameLength, core.sys.windows.windef.HBITMAP* RGBBmp, core.sys.windows.windef.HBITMAP* AlphaBmp, int ReverseFlag = core.sys.windows.windef.FALSE, dxlib_d.dxlib.COLORDATA* SrcColor = null);
+	extern int CreateDIBGraph_plus_AlphaWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, size_t FileNameLength, dxlib_d.dxdatayypewin.HBITMAP* RGBBmp, dxlib_d.dxdatayypewin.HBITMAP* AlphaBmp, int ReverseFlag = dxlib_d.dxdatayypewin.FALSE, dxlib_d.dxlib.COLORDATA* SrcColor = null);
 
 	/**
 	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージからDIBデータを作成する
 	 */
-	extern core.sys.windows.windef.HBITMAP CreateDIBGraphVer2(const (core.sys.windows.winnt.TCHAR)* FileName, const (void)* MemImage, int MemImageSize, int ImageType, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern dxlib_d.dxdatayypewin.HBITMAP CreateDIBGraphVer2(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, const (void)* MemImage, int MemImageSize, int ImageType, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージからDIBデータを作成する
 	 */
-	extern core.sys.windows.windef.HBITMAP CreateDIBGraphVer2WithStrLen(const (core.sys.windows.winnt.TCHAR)* FileName, size_t FileNameLength, const (void)* MemImage, int MemImageSize, int ImageType, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern dxlib_d.dxdatayypewin.HBITMAP CreateDIBGraphVer2WithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, size_t FileNameLength, const (void)* MemImage, int MemImageSize, int ImageType, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージからDIBデータとマスク用DIBデータを作成する
 	 */
-	extern int CreateDIBGraphVer2_plus_Alpha(const (core.sys.windows.winnt.TCHAR)* FileName, const (void)* MemImage, int MemImageSize, const (void)* AlphaImage, int AlphaImageSize, int ImageType, core.sys.windows.windef.HBITMAP* RGBBmp, core.sys.windows.windef.HBITMAP* AlphaBmp, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern int CreateDIBGraphVer2_plus_Alpha(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, const (void)* MemImage, int MemImageSize, const (void)* AlphaImage, int AlphaImageSize, int ImageType, dxlib_d.dxdatayypewin.HBITMAP* RGBBmp, dxlib_d.dxdatayypewin.HBITMAP* AlphaBmp, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージからDIBデータとマスク用DIBデータを作成する
 	 */
-	extern int CreateDIBGraphVer2_plus_AlphaWithStrLen(const (core.sys.windows.winnt.TCHAR)* FileName, size_t FileNameLength, const (void)* MemImage, int MemImageSize, const (void)* AlphaImage, int AlphaImageSize, int ImageType, core.sys.windows.windef.HBITMAP* RGBBmp, core.sys.windows.windef.HBITMAP* AlphaBmp, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
+	extern int CreateDIBGraphVer2_plus_AlphaWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* FileName, size_t FileNameLength, const (void)* MemImage, int MemImageSize, const (void)* AlphaImage, int AlphaImageSize, int ImageType, dxlib_d.dxdatayypewin.HBITMAP* RGBBmp, dxlib_d.dxdatayypewin.HBITMAP* AlphaBmp, int ReverseFlag, dxlib_d.dxlib.COLORDATA* SrcColor);
 
 	/**
 	 * BMPデータから基本イメージデータを構築する
 	 *
 	 * Returns: 0:正常終了  1:コピーを行った  -1:エラー
 	 */
-	extern int ConvBitmapToGraphImage(const (core.sys.windows.wingdi.BITMAPINFO)* BmpInfo, void* GraphData, dxlib_d.dxlib.BASEIMAGE* GraphImage, int CopyFlag);
+	extern int ConvBitmapToGraphImage(const (dxlib_d.dxdatayypewin.BITMAPINFO)* BmpInfo, void* GraphData, dxlib_d.dxlib.BASEIMAGE* GraphImage, int CopyFlag);
 
 	/**
 	 * 基本イメージデータをBMPデータに変換するGraphImage を BMP に変換する(アルファデータはあっても無視される)
 	 *
 	 * Returns: 0:正常終了  1:コピーを行った  -1:エラー
 	 */
-	extern int ConvGraphImageToBitmap(const (dxlib_d.dxlib.BASEIMAGE)* GraphImage, core.sys.windows.wingdi.BITMAPINFO* BmpInfo, void** GraphData, int CopyFlag, int FullColorConv = core.sys.windows.windef.TRUE);
+	extern int ConvGraphImageToBitmap(const (dxlib_d.dxlib.BASEIMAGE)* GraphImage, dxlib_d.dxdatayypewin.BITMAPINFO* BmpInfo, void** GraphData, int CopyFlag, int FullColorConv = dxlib_d.dxdatayypewin.TRUE);
 
 	// 基本イメージデータ構造体関係
 
@@ -1706,12 +1701,12 @@ extern (C++, DxLib) {
 		/**
 		 * サウンドリソースからサウンドハンドルを作成する
 		 */
-		extern int LoadSoundMemByResource(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType, int BufferNum = 1);
+		extern int LoadSoundMemByResource(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, int BufferNum = 1);
 
 		/**
 		 * サウンドリソースからサウンドハンドルを作成する
 		 */
-		extern int LoadSoundMemByResourceWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength, int BufferNum = 1);
+		extern int LoadSoundMemByResourceWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength, int BufferNum = 1);
 
 		// 設定関係関数
 
@@ -1740,7 +1735,7 @@ extern (C++, DxLib) {
 		 *      DevicePeriod = 再生遅延時間、100ナノ秒単位( 100000 で 10ミリ秒 )、-1でデフォルト値
 		 *      SamplePerSec = サンプリングレート
 		 */
-		extern int SetEnableWASAPIFlag(int Flag, int IsExclusive = core.sys.windows.windef.TRUE, int DevicePeriod = -1, int SamplePerSec = 44100);
+		extern int SetEnableWASAPIFlag(int Flag, int IsExclusive = dxlib_d.dxdatayypewin.TRUE, int DevicePeriod = -1, int SamplePerSec = 44100);
 
 		version (DX_NON_ASIO) {
 		} else {
@@ -1768,21 +1763,21 @@ extern (C++, DxLib) {
 		/**
 		 * リソース上のMIDIファイルからMIDIハンドルを作成する
 		 */
-		extern int LoadMusicMemByResource(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType);
+		extern int LoadMusicMemByResource(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType);
 
 		/**
 		 * リソース上のMIDIファイルからMIDIハンドルを作成する
 		 */
-		extern int LoadMusicMemByResourceWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength);
+		extern int LoadMusicMemByResourceWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength);
 
 		/**
 		 * リソースからMIDIファイルを読み込んで演奏する
 		 */
-		extern int PlayMusicByResource(const (core.sys.windows.winnt.TCHAR)* ResourceName, const (core.sys.windows.winnt.TCHAR)* ResourceType, int PlayType);
+		extern int PlayMusicByResource(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, int PlayType);
 
 		/**
 		 * リソースからMIDIファイルを読み込んで演奏する
 		 */
-		extern int PlayMusicByResourceWithStrLen(const (core.sys.windows.winnt.TCHAR)* ResourceName, size_t ResourceNameLength, const (core.sys.windows.winnt.TCHAR)* ResourceType, size_t ResourceTypeLength, int PlayType);
+		extern int PlayMusicByResourceWithStrLen(const (dxlib_d.dxdatayypewin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.dxdatayypewin.TCHAR)* ResourceType, size_t ResourceTypeLength, int PlayType);
 	}
 }

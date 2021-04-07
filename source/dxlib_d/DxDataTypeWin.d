@@ -30,6 +30,7 @@ private static import core.stdcpp.xutility;
 private static import core.sys.windows.windef;
 private static import core.sys.windows.wingdi;
 private static import core.sys.windows.winnt;
+private static import core.sys.windows.winuser;
 private static import dxlib_d.dxlib;
 
 // ライブラリリンク定義--------------------------------------------------------
@@ -1626,7 +1627,14 @@ extern (C++, DxLib) {
 	alias BYTE = core.sys.windows.windef.BYTE;
 	alias DWORD = core.sys.windows.windef.DWORD;
 	alias FALSE = core.sys.windows.windef.FALSE;
+	alias GUID = core.sys.windows.basetyps.GUID;
+	alias HANDLE = core.sys.windows.basetsd.HANDLE;
 	alias HBITMAP = core.sys.windows.windef.HBITMAP;
+	alias HICON = core.sys.windows.windef.HICON;
+	alias HINSTANCE = core.sys.windows.windef.HINSTANCE;
+	alias HMODULE = core.sys.windows.windef.HMODULE;
+	alias HRGN = core.sys.windows.windef.HRGN;
+	alias HWND = core.sys.windows.windef.HWND;
 	alias LONG = core.sys.windows.windef.LONG;
 	alias LONGLONG = core.sys.windows.winnt.LONGLONG;
 	alias POINT = core.sys.windows.windef.POINT;
@@ -1635,6 +1643,7 @@ extern (C++, DxLib) {
 	alias TCHAR = core.sys.windows.winnt.TCHAR;
 	alias TRUE = core.sys.windows.windef.TRUE;
 	alias ULONGLONG = core.sys.windows.winnt.ULONGLONG;
+	alias WNDPROC = core.sys.windows.winuser.WNDPROC;
 	alias WORD = core.sys.windows.windef.WORD;
 	alias wchar_t = core.stdc.stddef.wchar_t;
 
