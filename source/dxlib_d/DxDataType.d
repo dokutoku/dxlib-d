@@ -5,16 +5,16 @@
 //                 Ver 3.22c
 //
 // -------------------------------------------------------------------------------
-module dxlib_d.dxdatatype;
+module dxlib_d.DxDataType;
 
 
 // インクルード ------------------------------------------------------------------
 public import core.stdc.stdio;
-public import dxlib_d.dxcompileconfig;
-public import dxlib_d.dxdatatype;
-public import dxlib_d.dxdatatypeandroid;
-public import dxlib_d.dxdatatypeios;
-public import dxlib_d.dxdatayypewin;
+public import dxlib_d.DxCompileConfig;
+public import dxlib_d.DxDataType;
+public import dxlib_d.DxDataTypeAndroid;
+public import dxlib_d.DxDataTypeiOS;
+public import dxlib_d.DxDataTypeWin;
 
 //version (iOS) {
 	//#include "TargetConditionals.h"

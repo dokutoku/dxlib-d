@@ -5,7 +5,7 @@
 //                 Ver 3.22c
 //
 // -------------------------------------------------------------------------------
-module dxlib_d.dxfunctionios;
+module dxlib_d.DxFunctioniOS;
 
 
 version (iOS):
@@ -13,8 +13,8 @@ version (iOS):
 nothrow @nogc:
 
 // インクルード ------------------------------------------------------------------
-private static import dxlib_d.dxdatatypeios;
-public import dxlib_d.dxlib;
+private static import dxlib_d.DxDataTypeiOS;
+public import dxlib_d.DxLib;
 
 extern (C++, DxLib) {
 	// マクロ定義---------------------------------------------------------------------
@@ -34,10 +34,10 @@ extern (C++, DxLib) {
 		double Attitude_Roll;
 		double Attitude_Pitch;
 		double Attitude_Yaw;
-		dxlib_d.dxlib.VECTOR_D RotationRate;
-		dxlib_d.dxlib.VECTOR_D Gravity;
-		dxlib_d.dxlib.VECTOR_D UserAcceleration;
-		dxlib_d.dxlib.VECTOR_D MagneticField;
+		dxlib_d.DxLib.VECTOR_D RotationRate;
+		dxlib_d.DxLib.VECTOR_D Gravity;
+		dxlib_d.DxLib.VECTOR_D UserAcceleration;
+		dxlib_d.DxLib.VECTOR_D MagneticField;
 	}
 
 	public alias DEVICEMOTIONINFO_IOS = .tagDEVICEMOTIONINFO_IOS;
@@ -47,22 +47,22 @@ extern (C++, DxLib) {
 	/**
 	 * アプリの外部データ保存用のディレクトリパスを取得する
 	 */
-	extern int GetDocumentsDirPath(dxlib_d.dxdatatypeios.TCHAR* PathBuffer, size_t PathBufferBytes);
+	extern int GetDocumentsDirPath(dxlib_d.DxDataTypeiOS.TCHAR* PathBuffer, size_t PathBufferBytes);
 
 	/**
 	 * アプリのデータ保存用のディレクトリパスを取得する
 	 */
-	extern int GetLibraryPreferencesDirPath(dxlib_d.dxdatatypeios.TCHAR* PathBuffer, size_t PathBufferBytes);
+	extern int GetLibraryPreferencesDirPath(dxlib_d.DxDataTypeiOS.TCHAR* PathBuffer, size_t PathBufferBytes);
 
 	/**
 	 * アプリのキャッシュファイル保存用のディレクトリパスを取得する
 	 */
-	extern int GetLibraryCachesDirPath(dxlib_d.dxdatatypeios.TCHAR* PathBuffer, size_t PathBufferBytes);
+	extern int GetLibraryCachesDirPath(dxlib_d.DxDataTypeiOS.TCHAR* PathBuffer, size_t PathBufferBytes);
 
 	/**
 	 * アプリの一時ファイル保存用のディレクトリパスを取得する
 	 */
-	extern int GetTmpDirPath(dxlib_d.dxdatatypeios.TCHAR* PathBuffer, size_t PathBufferBytes);
+	extern int GetTmpDirPath(dxlib_d.DxDataTypeiOS.TCHAR* PathBuffer, size_t PathBufferBytes);
 
 	/**
 	 * ディスプレイの解像度を取得する
@@ -74,14 +74,14 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: -1:エラー 0以上:言語名文字列の格納に必要なバイト数
 	 */
-	extern int GetLanguage_iOS(dxlib_d.dxdatatypeios.TCHAR* StringBuffer, int StringBufferSize);
+	extern int GetLanguage_iOS(dxlib_d.DxDataTypeiOS.TCHAR* StringBuffer, int StringBufferSize);
 
 	/**
 	 * 端末に設定されている国を取得する
 	 *
 	 * Returns: -1:エラー 0以上:国名文字列の格納に必要なバイト数
 	 */
-	extern int GetCountry_iOS(dxlib_d.dxdatatypeios.TCHAR* StringBuffer, int StringBufferSize);
+	extern int GetCountry_iOS(dxlib_d.DxDataTypeiOS.TCHAR* StringBuffer, int StringBufferSize);
 
 	/**
 	 * 文字列入力ダイアログを出す
@@ -93,7 +93,7 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: 0:成功  2:キャンセルされた  -1:エラー発生
 	 */
-	extern int StartInputStringDialogBox(dxlib_d.dxdatatypeios.TCHAR* StringBuffer, size_t StringBufferBytes, const (dxlib_d.dxdatatypeios.TCHAR)* Title, const (dxlib_d.dxdatatypeios.TCHAR)* Message, int IsBlock);
+	extern int StartInputStringDialogBox(dxlib_d.DxDataTypeiOS.TCHAR* StringBuffer, size_t StringBufferBytes, const (dxlib_d.DxDataTypeiOS.TCHAR)* Title, const (dxlib_d.DxDataTypeiOS.TCHAR)* Message, int IsBlock);
 
 	/**
 	 * 文字列入力ダイアログの処理が終わったかどうかを取得する

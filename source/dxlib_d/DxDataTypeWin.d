@@ -5,7 +5,7 @@
 //                 Ver 3.22c
 //
 // -------------------------------------------------------------------------------
-module dxlib_d.dxdatayypewin;
+module dxlib_d.DxDataTypeWin;
 
 
 version (Windows):
@@ -14,7 +14,7 @@ extern (C):
 nothrow @nogc:
 
 // インクルード ------------------------------------------------------------------
-public import dxlib_d.dxcompileconfig;
+public import dxlib_d.DxCompileConfig;
 
 /+
 #if defined(__c2__) && __clang_major__ == 3 && __clang_minor__ == 8
@@ -31,7 +31,7 @@ private static import core.sys.windows.windef;
 private static import core.sys.windows.wingdi;
 private static import core.sys.windows.winnt;
 private static import core.sys.windows.winuser;
-private static import dxlib_d.dxlib;
+private static import dxlib_d.DxLib;
 
 // DXライブラリに必要な lib ファイルを、プロジェクトのカレントフォルダや
 // コンパイラのデフォルト LIB パスに設定せずに使用される場合は以下の
@@ -1655,22 +1655,22 @@ extern (C++, DxLib) {
 	/**
 	 * ACM を使用した読み込み処理
 	 */
-	enum DX_READSOUNDFUNCTION_ACM = 1 << (dxlib_d.dxlib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 0);
+	enum DX_READSOUNDFUNCTION_ACM = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 0);
 
 	/**
 	 * ACM を使用した MP3 の読み込み処理
 	 */
-	enum DX_READSOUNDFUNCTION_MP3 = 1 << (dxlib_d.dxlib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 1);
+	enum DX_READSOUNDFUNCTION_MP3 = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 1);
 
 	/**
 	 * DirectShow を使用した MP3 の読み込み処理
 	 */
-	enum DX_READSOUNDFUNCTION_DSMP3 = 1 << (dxlib_d.dxlib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 2);
+	enum DX_READSOUNDFUNCTION_DSMP3 = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 2);
 
 	/**
 	 * Media Foundation を使用した読み込み処理
 	 */
-	enum DX_READSOUNDFUNCTION_MF = 1 << (dxlib_d.dxlib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 3);
+	enum DX_READSOUNDFUNCTION_MF = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 3);
 
 	// Direct3D9 用テクスチャフォーマット
 	enum DX_TEXTUREFORMAT_DIRECT3D9_R8G8B8 = 1;

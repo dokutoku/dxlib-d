@@ -10,9 +10,9 @@ version (Windows):
 import core.stdc.math;
 import core.sys.windows.windef;
 import core.sys.windows.winnt;
-import dxlib_d.dxdatatype;
-import dxlib_d.dxfunctionwin;
-import dxlib_d.dxlib;
+import dxlib_d.DxDataType;
+import dxlib_d.DxFunctionWin;
+import dxlib_d.DxLib;
 
 // サウンドノベル風文字列描画、テキストバッファ使用バージョン
 
@@ -106,27 +106,27 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 	do
 	{
 		//WIDTH × HEIGTH, 色ビット深度 16
-		dxlib_d.dxlib.SetGraphMode(WIDTH, HEIGTH, 16);
+		dxlib_d.DxLib.SetGraphMode(WIDTH, HEIGTH, 16);
 
 		//全画面表示にしない
-		dxlib_d.dxfunctionwin.ChangeWindowMode(dxlib_d.dxdatatype.TRUE);
+		dxlib_d.DxFunctionWin.ChangeWindowMode(dxlib_d.DxDataType.TRUE);
 
 		version (ANSI) {
 			version (all) {
 				//UTF-8にする
-				dxlib_d.dxlib.SetUseCharCodeFormat(dxlib_d.dxlib.DX_CHARCODEFORMAT_UTF8);
+				dxlib_d.DxLib.SetUseCharCodeFormat(dxlib_d.DxLib.DX_CHARCODEFORMAT_UTF8);
 			}
 		}
 
 		// DXライブラリ初期化処理
-		if (dxlib_d.dxlib.DxLib_Init() == -1) {
+		if (dxlib_d.DxLib.DxLib_Init() == -1) {
 			// エラーが起きたら直ちに終了
 			return -1;
 		}
 
 		scope (exit) {
 			// DXライブラリ使用の終了処理
-			dxlib_d.dxlib.DxLib_End();
+			dxlib_d.DxLib.DxLib_End();
 		}
 
 		// 描画位置の初期位置セット
@@ -143,35 +143,35 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 		.CP = 0;
 
 		// フォントのサイズセット
-		dxlib_d.dxlib.SetFontSize(.MOJI_SIZE);
+		dxlib_d.DxLib.SetFontSize(.MOJI_SIZE);
 
 		// フォントの太さを変更
-		dxlib_d.dxlib.SetFontThickness(1);
+		dxlib_d.DxLib.SetFontThickness(1);
 
 		// フォントのタイプをアンチエイリアスフォントに変更
-		dxlib_d.dxlib.ChangeFontType(dxlib_d.dxlib.DX_FONTTYPE_ANTIALIASING_EDGE_8X8);
+		dxlib_d.DxLib.ChangeFontType(dxlib_d.DxLib.DX_FONTTYPE_ANTIALIASING_EDGE_8X8);
 
 		// 描画先を裏画面にセット
-		dxlib_d.dxlib.SetDrawScreen(dxlib_d.dxlib.DX_SCREEN_BACK);
+		dxlib_d.DxLib.SetDrawScreen(dxlib_d.DxLib.DX_SCREEN_BACK);
 
 		// フレームカウンタ初期化
 		.Count = 0;
 
 		//文字コード形式の取得
 		version (Unicode) {
-			immutable int code = dxlib_d.dxlib.Get_wchar_t_CharCodeFormat();
+			immutable int code = dxlib_d.DxLib.Get_wchar_t_CharCodeFormat();
 		} else {
-			immutable int code = dxlib_d.dxlib.GetUseCharCodeFormat();
+			immutable int code = dxlib_d.DxLib.GetUseCharCodeFormat();
 		}
 
 		// ループ
-		while ((dxlib_d.dxlib.ProcessMessage() == 0) && (dxlib_d.dxlib.CheckHitKey(dxlib_d.dxlib.KEY_INPUT_ESCAPE) == 0)) {
+		while ((dxlib_d.DxLib.ProcessMessage() == 0) && (dxlib_d.DxLib.CheckHitKey(dxlib_d.DxLib.KEY_INPUT_ESCAPE) == 0)) {
 			// サウンドノベル風文字列描画処理を行う
 			// ただし終了フラグが1だった場合は処理をしない
 			if (.EndFlag == 0) {
 				// ボタン押し待ちフラグがたっていた場合はボタンが押されるまでここで終了
 				if (.KeyWaitFlag == 1) {
-					if ((dxlib_d.dxlib.ProcessMessage() == 0) && (dxlib_d.dxlib.CheckHitKeyAll() != 0)) {
+					if ((dxlib_d.DxLib.ProcessMessage() == 0) && (dxlib_d.DxLib.CheckHitKeyAll() != 0)) {
 						// ボタンが押されていたら解除
 						.KeyWaitFlag = 0;
 					}
@@ -192,7 +192,7 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 						// ボタン押し待ち文字
 						case 'B':
 							// ボタンが離されるまで待つ
-							while ((dxlib_d.dxlib.ProcessMessage() == 0) && (dxlib_d.dxlib.CheckHitKeyAll() != 0)) {
+							while ((dxlib_d.DxLib.ProcessMessage() == 0) && (dxlib_d.DxLib.CheckHitKeyAll() != 0)) {
 							}
 
 							// ボタン押し待ちフラグをたてる
@@ -263,22 +263,22 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 			}
 
 			// 画面のクリア
-			dxlib_d.dxlib.ClsDrawScreen();
+			dxlib_d.DxLib.ClsDrawScreen();
 
 			// 背景エフェクトの描画
 			{
 				int Color = cast(int)(core.stdc.math.sin((.Count / 100.0) * 80.0) + 125.0);
-				dxlib_d.dxlib.DrawBox(0, 0, WIDTH, HEIGTH, dxlib_d.dxlib.GetColor(Color, 0, 0), dxlib_d.dxdatatype.TRUE);
+				dxlib_d.DxLib.DrawBox(0, 0, WIDTH, HEIGTH, dxlib_d.DxLib.GetColor(Color, 0, 0), dxlib_d.DxDataType.TRUE);
 				.Count++;
 			}
 
 			// テキストバッファの描画
 			for (size_t i = 0; i < .StringBuf.length; i++) {
-				dxlib_d.dxlib.DrawString(8, cast(int)(i * .MOJI_SIZE), &(.StringBuf[i][0]), dxlib_d.dxlib.GetColor(255, 255, 255));
+				dxlib_d.DxLib.DrawString(8, cast(int)(i * .MOJI_SIZE), &(.StringBuf[i][0]), dxlib_d.DxLib.GetColor(255, 255, 255));
 			}
 
 			// 裏画面の内容を表画面に反映させる
-			dxlib_d.dxlib.ScreenFlip();
+			dxlib_d.DxLib.ScreenFlip();
 		}
 
 		// ソフトの終了

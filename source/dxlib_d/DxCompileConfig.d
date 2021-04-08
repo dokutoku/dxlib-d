@@ -14,7 +14,7 @@
 /**
  * このモジュールは使用されません。使用されたとしても正しく動作しません。
  */
-module dxlib_d.dxcompileconfig;
+module dxlib_d.DxCompileConfig;
 
 
 version (none):
@@ -327,4 +327,4 @@ static if ((__traits(compiles, _WIN64)) || (__traits(compiles, __ANDROID__)) || 
 	version = DX_NON_INLINE_ASM;
 }
 
-public import dxlib_d.dxdatatype;
+public import dxlib_d.DxDataType;

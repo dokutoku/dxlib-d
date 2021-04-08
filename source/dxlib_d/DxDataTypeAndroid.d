@@ -5,7 +5,7 @@
 //                 Ver 3.22c
 //
 // -------------------------------------------------------------------------------
-module dxlib_d.dxdatatypeandroid;
+module dxlib_d.DxDataTypeAndroid;
 
 
 version (Android):
@@ -14,11 +14,11 @@ extern (C):
 nothrow @nogc:
 
 // インクルード ------------------------------------------------------------------
-public import dxlib_d.dxcompileconfig;
+public import dxlib_d.DxCompileConfig;
 private static import core.stdc.stddef;
 private static import core.stdc.stdint;
 private static import std.traits;
-private static import dxlib_d.dxlib;
+private static import dxlib_d.DxLib;
 
 //extern (C++, DxLib) {
 // マクロ定義 --------------------------------------------------------------------
@@ -159,7 +159,7 @@ pure nothrow @safe @nogc
 	}
 
 // ATRAC9 を使用した読み込み処理
-enum DX_READSOUNDFUNCTION_AT9 = 1 << (dxlib_d.dxlib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 0);
+enum DX_READSOUNDFUNCTION_AT9 = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 0);
 
 // 構造体定義 --------------------------------------------------------------------
 
