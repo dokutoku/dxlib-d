@@ -28,7 +28,7 @@ enum STRBUF_WIDTH = 24;
 enum STRBUF_HEIGHT = 20;
 
 // 仮想テキストバッファ
-core.sys.windows.winnt.TCHAR[(.STRBUF_WIDTH * 4) + 1][.STRBUF_HEIGHT] StringBuf;
+dxlib_d.DxDataType.TCHAR[(.STRBUF_WIDTH * 4) + 1][.STRBUF_HEIGHT] StringBuf;
 
 // 仮想画面上での文字表示カーソルの位置
 int CursorX;
@@ -105,8 +105,8 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 
 	do
 	{
-		//WIDTH × HEIGTH, 色ビット深度 16
-		dxlib_d.DxLib.SetGraphMode(WIDTH, HEIGTH, 16);
+		//WIDTH × HEIGTH, 色ビット深度 32
+		dxlib_d.DxLib.SetGraphMode(WIDTH, HEIGTH, 32);
 
 		//全画面表示にしない
 		dxlib_d.DxFunctionWin.ChangeWindowMode(dxlib_d.DxDataType.TRUE);
@@ -117,6 +117,9 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 				dxlib_d.DxLib.SetUseCharCodeFormat(dxlib_d.DxLib.DX_CHARCODEFORMAT_UTF8);
 			}
 		}
+
+		//ウィンドウが非アクティブ時にも動作させる
+		dxlib_d.DxLib.SetAlwaysRunFlag(dxlib_d.DxDataType.TRUE);
 
 		// DXライブラリ初期化処理
 		if (dxlib_d.DxLib.DxLib_Init() == -1) {
@@ -177,7 +180,7 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 					}
 				} else {
 					// 文字の描画
-					core.sys.windows.winnt.TCHAR Moji = String[.SP][.CP];
+					dxlib_d.DxDataType.TCHAR Moji = String[.SP][.CP];
 
 					switch (Moji) {
 						// 改行文字
@@ -231,7 +234,7 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 							assert(code_length != -1);
 
 							version (Unicode) {
-								code_length = code_length / 2;
+								code_length = cast(int)(code_length / dxlib_d.DxDataType.TCHAR.sizeof);
 							}
 
 							// 1文字テキストバッファに代入

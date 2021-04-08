@@ -8060,20 +8060,23 @@ extern (C++, DxLib) {
 		 */
 		extern int GetNetWorkCloseAfterLostFlag();
 
-		/*
+		/**
 		 * HTTP通信で使用するプロキシ設定を行う
 		 */
-		//extern int SetProxySetting(int UseFlag, const (char)* Address, int Port);
+		@disable
+		extern int SetProxySetting(int UseFlag, const (char)* Address, int Port);
 
-		/*
+		/**
 		 * HTTP通信で使用するプロキシ設定を取得する
 		 */
-		//extern int GetProxySetting(int* UseFlagBuffer, char* AddressBuffer, int* PortBuffer);
+		@disable
+		extern int GetProxySetting(int* UseFlagBuffer, char* AddressBuffer, int* PortBuffer);
 
-		/*
+		/**
 		 * IEのプロキシ設定を適応する
 		 */
-		//extern int SetIEProxySetting(void);
+		@disable
+		extern int SetIEProxySetting();
 
 		/**
 		 * 受信したデータを読み込む
@@ -8138,12 +8141,13 @@ extern (C++, DxLib) {
 		 */
 		extern int NetWorkRecvUDP_IPv6(int NetUDPHandle, .IPDATA_IPv6* RecvIP, int* RecvPort, void* Buffer, int Length, int Peek);
 
-		/*
+		/**
 		 * UDPを使用した通信でデータが送信できる状態かどうかを調べる
 		 *
 		 * Returns: -1:エラー  TRUE:送信可能  FALSE:送信不可能
 		 */
-		//extern int CheckNetWorkSendUDP(int NetUDPHandle);
+		@disable
+		extern int CheckNetWorkSendUDP(int NetUDPHandle);
 
 		/**
 		 * UDPを使用した通信で新たな受信データが存在するかどうかを調べる
@@ -16026,40 +16030,46 @@ extern (C++, DxLib) {
 	 */
 	extern int ReverseGraphImage(.BASEIMAGE* GraphImage);
 
-	/*
+	/**
 	 * ユーザー定義の画像データ読み込み関数を登録する
 	 */
-	//extern int AddUserGraphLoadFunction(int function(FILE* fp, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
+	@disable
+	extern int AddUserGraphLoadFunction(int function(FILE* fp, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
-	/*
+	/**
 	 * ユーザー定義の画像データ読み込み関数を登録する
 	 */
-	//extern int AddUserGraphLoadFunction2(int function(void* Image, int ImageSize, int ImageType, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
+	@disable
+	extern int AddUserGraphLoadFunction2(int function(void* Image, int ImageSize, int ImageType, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
-	/*
+	/**
 	 * ユーザー定義の画像データ読み込み関数Ver3を登録する
 	 */
-	//extern int AddUserGraphLoadFunction3(int function(void* DataImage, int DataImageSize, int DataImageType, int BmpFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
+	@disable
+	extern int AddUserGraphLoadFunction3(int function(void* DataImage, int DataImageSize, int DataImageType, int BmpFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
 	 * ユーザー定義の画像データ読み込み関数Ver4を登録する
 	 */
 	extern int AddUserGraphLoadFunction4(int function(.STREAMDATA* Src, .BASEIMAGE* BaseImage) UserLoadFunc);
 
-	/*
+	/**
 	 * ユーザー定義の画像データ読み込み関数を登録から抹消する
 	 */
-	//extern int SubUserGraphLoadFunction(int function(FILE* fp, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
+	@disable
+	extern int SubUserGraphLoadFunction(int function(FILE* fp, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
-	/*
+	/**
 	 * ユーザー定義の画像データ読み込み関数を登録から抹消する
 	 */
-	//extern int SubUserGraphLoadFunction2(int function(void* Image, int ImageSize, int ImageType, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
+	@disable
+	extern int SubUserGraphLoadFunction2(int function(void* Image, int ImageSize, int ImageType, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
-	/*
+	/**
 	 * ユーザー定義の画像データ読み込み関数Ver3を登録から抹消する
 	 */
-	//extern int SubUserGraphLoadFunction3(int function(void* DataImage, int DataImageSize, int DataImageType, int BmpFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
+	@disable
+	extern int SubUserGraphLoadFunction3(int function(void* DataImage, int DataImageSize, int DataImageType, int BmpFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
 	 * ユーザー定義の画像データ読み込み関数Ver4を登録から抹消する
