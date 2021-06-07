@@ -27,6 +27,8 @@ public import dxlib_d.DxCompileConfig;
 
 private static import core.stdc.stddef;
 private static import core.stdcpp.xutility;
+private static import core.sys.windows.basetsd;
+private static import core.sys.windows.basetyps;
 private static import core.sys.windows.windef;
 private static import core.sys.windows.wingdi;
 private static import core.sys.windows.winnt;

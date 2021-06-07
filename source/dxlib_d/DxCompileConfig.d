@@ -19,20 +19,15 @@ module dxlib_d.DxCompileConfig;
 
 version (none):
 
-
 version (OSX) {
 	version = __APPLE__;
 } else version (iOS) {
 	version = __APPLE__;
 }
 
-version (Android) {
-	version = __ANDROID__;
-}
-
 version (__APPLE__) {
 } else {
-	version (__ANDROID__) {
+	version (Android) {
 	} else {
 		version = WINDOWS_DESKTOP_OS;
 	}
@@ -209,7 +204,13 @@ version (Android) {
 	//version = DX_NON_LIVE2D_CUBISM4;
 }
 
-static if ((__traits(compiles, DX_GCC_COMPILE)) || (__traits(compiles, __ANDROID__)) || (__traits(compiles, __APPLE__)) || (__traits(compiles, BC2_COMPILER))) {
+version (DX_GCC_COMPILE) {
+	version = USE_ULL;
+} else version (Android) {
+	version = USE_ULL;
+} else version (__APPLE__) {
+	version = USE_ULL;
+} else version (BC2_COMPILER) {
 	version = USE_ULL;
 }
 
@@ -222,7 +223,19 @@ version (WINDOWS_DESKTOP_OS) {
 	version = DX_NON_MEDIA_FOUNDATION;
 }
 
-static if ((__traits(compiles, __ANDROID__)) || (__traits(compiles, __APPLE__))) {
+version (Android) {
+	//version = DX_NON_2DDRAW;
+	version = DX_NON_ACM;
+	version = DX_NON_DSHOW_MP3;
+	version = DX_NON_DSHOW_MOVIE;
+	version = DX_NON_MEDIA_FOUNDATION;
+	version = DX_NON_KEYEX;
+	version = DX_NON_INPUTSTRING;
+	version = DX_NON_NETWORK;
+	version = DX_NON_STOPTASKSWITCH;
+	version = DX_NON_DIRECT3D11;
+	version = DX_NON_DIRECT3D9;
+} else version (__APPLE__) {
 	//version = DX_NON_2DDRAW;
 	version = DX_NON_ACM;
 	version = DX_NON_DSHOW_MP3;
@@ -319,11 +332,17 @@ version (DX_NON_OGGVORBIS) {
 	version = DX_NON_OPUS;
 }
 
-static if ((__traits(compiles, _WIN64)) || (__traits(compiles, __LP64__))) {
+version (Win64) {
+	version = PLATFORM_64BIT;
+} else static if (__traits(compiles, __LP64__)) {
 	version = PLATFORM_64BIT;
 }
 
-static if ((__traits(compiles, _WIN64)) || (__traits(compiles, __ANDROID__)) || (__traits(compiles, __APPLE__))) {
+version (Win64) {
+	version = DX_NON_INLINE_ASM;
+} else version (Android) {
+	version = DX_NON_INLINE_ASM;
+} else version (__APPLE__) {
 	version = DX_NON_INLINE_ASM;
 }
 
