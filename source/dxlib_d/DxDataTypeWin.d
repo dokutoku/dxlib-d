@@ -1604,6 +1604,41 @@ version (DX_MAKE) {
 	}
 }
 
+// Dxlibで使う型のエイリアスとか--------------------------------------------------------
+
+version (Win64) {
+	alias DWORD_PTR = core.sys.windows.winnt.ULONGLONG;
+} else {
+	alias DWORD_PTR = core.sys.windows.windef.DWORD;
+}
+
+version (Win64) {
+	alias LONG_PTR = long;
+} else {
+	alias LONG_PTR = int;
+}
+
+alias BOOL = core.sys.windows.windef.BOOL;
+alias BYTE = core.sys.windows.windef.BYTE;
+alias DWORD = core.sys.windows.windef.DWORD;
+alias FALSE = core.sys.windows.windef.FALSE;
+alias HANDLE = core.sys.windows.basetsd.HANDLE;
+alias HBITMAP = core.sys.windows.windef.HBITMAP;
+alias HICON = core.sys.windows.windef.HICON;
+alias HINSTANCE = core.sys.windows.windef.HINSTANCE;
+alias HMODULE = core.sys.windows.windef.HMODULE;
+alias HRGN = core.sys.windows.windef.HRGN;
+alias HWND = core.sys.windows.windef.HWND;
+alias LONG = core.sys.windows.windef.LONG;
+alias LONGLONG = core.sys.windows.winnt.LONGLONG;
+alias SIZE = core.sys.windows.windef.SIZE;
+alias TCHAR = core.sys.windows.winnt.TCHAR;
+alias TRUE = core.sys.windows.windef.TRUE;
+alias ULONGLONG = core.sys.windows.winnt.ULONGLONG;
+alias WNDPROC = core.sys.windows.winuser.WNDPROC;
+alias WORD = core.sys.windows.windef.WORD;
+alias wchar_t = core.stdc.stddef.wchar_t;
+
 //core.sys.windowsの以下の構造体名が不適切なので、必要とする部分だけ修正
 version (none) {
 	alias BITMAPINFO = core.sys.windows.wingdi.BITMAPINFO;
@@ -1707,39 +1742,6 @@ extern (C++, DxLib) {
 
 	// DirectInputのバージョン設定
 	enum DIRECTINPUT_VERSION = 0x0700;
-
-	version (Win64) {
-		alias DWORD_PTR = core.sys.windows.winnt.ULONGLONG;
-	} else {
-		alias DWORD_PTR = core.sys.windows.windef.DWORD;
-	}
-
-	version (Win64) {
-		alias LONG_PTR = long;
-	} else {
-		alias LONG_PTR = int;
-	}
-
-	alias BOOL = core.sys.windows.windef.BOOL;
-	alias BYTE = core.sys.windows.windef.BYTE;
-	alias DWORD = core.sys.windows.windef.DWORD;
-	alias FALSE = core.sys.windows.windef.FALSE;
-	alias HANDLE = core.sys.windows.basetsd.HANDLE;
-	alias HBITMAP = core.sys.windows.windef.HBITMAP;
-	alias HICON = core.sys.windows.windef.HICON;
-	alias HINSTANCE = core.sys.windows.windef.HINSTANCE;
-	alias HMODULE = core.sys.windows.windef.HMODULE;
-	alias HRGN = core.sys.windows.windef.HRGN;
-	alias HWND = core.sys.windows.windef.HWND;
-	alias LONG = core.sys.windows.windef.LONG;
-	alias LONGLONG = core.sys.windows.winnt.LONGLONG;
-	alias SIZE = core.sys.windows.windef.SIZE;
-	alias TCHAR = core.sys.windows.winnt.TCHAR;
-	alias TRUE = core.sys.windows.windef.TRUE;
-	alias ULONGLONG = core.sys.windows.winnt.ULONGLONG;
-	alias WNDPROC = core.sys.windows.winuser.WNDPROC;
-	alias WORD = core.sys.windows.windef.WORD;
-	alias wchar_t = core.stdc.stddef.wchar_t;
 
 	/**
 	 * ACM を使用した読み込み処理
