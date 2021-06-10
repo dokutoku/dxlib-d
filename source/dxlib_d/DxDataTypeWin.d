@@ -1604,6 +1604,97 @@ version (DX_MAKE) {
 	}
 }
 
+//core.sys.windowsの以下の構造体名が不適切なので、必要とする部分だけ修正
+version (none) {
+	alias BITMAPINFO = core.sys.windows.wingdi.BITMAPINFO;
+	alias GUID = core.sys.windows.basetyps.GUID;
+	alias POINT = core.sys.windows.windef.POINT;
+	alias RECT = core.sys.windows.windef.RECT;
+} else {
+	extern (C)
+	struct tagBITMAPINFOHEADER
+	{
+		.DWORD biSize;
+		.LONG biWidth;
+		.LONG biHeight;
+		.WORD biPlanes;
+		.WORD biBitCount;
+		.DWORD biCompression;
+		.DWORD biSizeImage;
+		.LONG biXPelsPerMeter;
+		.LONG biYPelsPerMeter;
+		.DWORD biClrUsed;
+		.DWORD biClrImportant;
+	}
+
+	alias BITMAPINFOHEADER = .tagBITMAPINFOHEADER;
+	alias LPBITMAPINFOHEADER = /* FAR */.tagBITMAPINFOHEADER*;
+	alias PBITMAPINFOHEADER = .tagBITMAPINFOHEADER*;
+
+	extern (C)
+	struct tagRGBQUAD
+	{
+		.BYTE rgbBlue;
+		.BYTE rgbGreen;
+		.BYTE rgbRed;
+		.BYTE rgbReserved;
+	}
+
+	alias RGBQUAD = .tagRGBQUAD;
+
+	extern (C)
+	struct tagBITMAPINFO
+	{
+		.BITMAPINFOHEADER bmiHeader;
+
+		//Dynamic array?
+		.RGBQUAD bmiColors;
+	}
+
+	alias BITMAPINFO = .tagBITMAPINFO;
+	alias LPBITMAPINFO = /* FAR */.tagBITMAPINFO*;
+	alias PBITMAPINFO = .tagBITMAPINFO*;
+
+	align (1)
+	extern (C)
+	struct _GUID
+	{
+		.DWORD Data1;
+		.WORD Data2;
+		.WORD Data3;
+		.BYTE[4] Data4;
+	}
+
+	alias GUID = ._GUID;
+
+	extern (C)
+	struct tagPOINT
+	{
+		.LONG x;
+		.LONG y;
+	}
+
+	alias POINT = .tagPOINT;
+	alias PPOINT = .tagPOINT*;
+	alias NPPOINT = /* NEAR */ .tagPOINT*;
+	alias LPPOINT = /* FAR */ .tagPOINT*;
+
+	extern (C)
+	struct tagRECT
+	{
+		.LONG left;
+		.LONG top;
+		.LONG right;
+		.LONG bottom;
+	}
+
+	alias RECT = .tagRECT;
+	alias PRECT = .tagRECT*;
+	alias NPRECT = /* NEAR */ .tagRECT*;
+	alias LPRECT = /* FAR */ .tagRECT*;
+	alias LPCRECT = const /* FAR */ (.tagRECT)*;
+}
+
 extern (C++, DxLib) {
 	// マクロ定義 --------------------------------------------------------------------
 
@@ -1629,12 +1720,10 @@ extern (C++, DxLib) {
 		alias LONG_PTR = int;
 	}
 
-	alias BITMAPINFO = core.sys.windows.wingdi.BITMAPINFO;
 	alias BOOL = core.sys.windows.windef.BOOL;
 	alias BYTE = core.sys.windows.windef.BYTE;
 	alias DWORD = core.sys.windows.windef.DWORD;
 	alias FALSE = core.sys.windows.windef.FALSE;
-	alias GUID = core.sys.windows.basetyps.GUID;
 	alias HANDLE = core.sys.windows.basetsd.HANDLE;
 	alias HBITMAP = core.sys.windows.windef.HBITMAP;
 	alias HICON = core.sys.windows.windef.HICON;
@@ -1644,8 +1733,6 @@ extern (C++, DxLib) {
 	alias HWND = core.sys.windows.windef.HWND;
 	alias LONG = core.sys.windows.windef.LONG;
 	alias LONGLONG = core.sys.windows.winnt.LONGLONG;
-	alias POINT = core.sys.windows.windef.POINT;
-	alias RECT = core.sys.windows.windef.RECT;
 	alias SIZE = core.sys.windows.windef.SIZE;
 	alias TCHAR = core.sys.windows.winnt.TCHAR;
 	alias TRUE = core.sys.windows.windef.TRUE;
