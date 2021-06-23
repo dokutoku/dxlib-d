@@ -20,20 +20,20 @@ public import dxlib_d.DxDataTypeWin;
 	//#include "TargetConditionals.h"
 //}
 
+pragma(inline, true)
+pure nothrow @safe @nogc @live
+void SETRECT(ref .RECT Dest, .LONG Left, .LONG Top, .LONG Right, .LONG Bottom)
+
+	do
+	{
+		Dest.left = Left;
+		Dest.top = Top;
+		Dest.right = Right;
+		Dest.bottom = Bottom;
+	}
+
 extern (C++, DxLib) {
 	// マクロ定義 --------------------------------------------------------------------
-
-	pragma(inline, true)
-	pure nothrow @safe @nogc @live
-	void SETRECT(ref .RECT Dest, .LONG Left, .LONG Top, .LONG Right, .LONG Bottom)
-
-		do
-		{
-			Dest.left = Left;
-			Dest.top = Top;
-			Dest.right = Right;
-			Dest.bottom = Bottom;
-		}
 
 	/+
 	version (USE_ULL) {
