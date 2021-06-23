@@ -4889,7 +4889,7 @@ extern (C++, DxLib) {
 		/**
 		 * 文字
 		 */
-		dxlib_d.DxDataType.TCHAR[14] Char;
+		dxlib_d.DxDataType.TCHAR[14] Char = '\0';
 
 		/**
 		 * 文字のバイト数
@@ -4899,22 +4899,22 @@ extern (C++, DxLib) {
 		/**
 		 * 描画位置 X
 		 */
-		float DrawX;
+		float DrawX = 0;
 
 		/**
 		 * 描画位置 Y
 		 */
-		float DrawY;
+		float DrawY = 0;
 
 		/**
 		 * 描画サイズ Y
 		 */
-		float SizeX;
+		float SizeX = 0;
 
 		/**
 		 * 描画サイズ Y
 		 */
-		float SizeY;
+		float SizeY = 0;
 	}
 
 	public alias DRAWCHARINFO = .tagDRAWCHARINFO;
@@ -4996,7 +4996,7 @@ extern (C++, DxLib) {
 		/**
 		 * オブジェクト名
 		 */
-		dxlib_d.DxDataType.TCHAR[260] Name;
+		dxlib_d.DxDataType.TCHAR[260] Name = '\0';
 
 		/**
 		 * ディレクトリかどうか( TRUE:ディレクトリ  FALSE:ファイル )
@@ -5030,7 +5030,7 @@ extern (C++, DxLib) {
 		/**
 		 * オブジェクト名
 		 */
-		.wchar_t[260] Name;
+		.wchar_t[260] Name = '\0';
 
 		/**
 		 * ディレクトリかどうか( TRUE:ディレクトリ  FALSE:ファイル )
@@ -5061,7 +5061,7 @@ extern (C++, DxLib) {
 	 */
 	package struct tagMATRIX
 	{
-		float[4][4] m;
+		float[4][4] m = [[0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0]];
 	}
 
 	public alias MATRIX = .tagMATRIX;
@@ -5069,7 +5069,7 @@ extern (C++, DxLib) {
 
 	package struct tagMATRIX_D
 	{
-		double[4][4] m;
+		double[4][4] m = [[0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0]];
 	}
 
 	public alias MATRIX_D = .tagMATRIX_D;
@@ -5080,9 +5080,9 @@ extern (C++, DxLib) {
 	 */
 	package struct tagVECTOR
 	{
-		float x;
-		float y;
-		float z;
+		float x = 0;
+		float y = 0;
+		float z = 0;
 	}
 
 	public alias VECTOR = .tagVECTOR;
@@ -5092,9 +5092,9 @@ extern (C++, DxLib) {
 
 	package struct tagVECTOR_D
 	{
-		double x;
-		double y;
-		double z;
+		double x = 0;
+		double y = 0;
+		double z = 0;
 	}
 
 	public alias VECTOR_D = .tagVECTOR_D;
@@ -5107,8 +5107,8 @@ extern (C++, DxLib) {
 	 */
 	package struct tagFLOAT2
 	{
-		float u;
-		float v;
+		float u = 0;
+		float v = 0;
 	}
 
 	public alias FLOAT2 = .tagFLOAT2;
@@ -5118,10 +5118,10 @@ extern (C++, DxLib) {
 	 */
 	package struct tagCOLOR_F
 	{
-		float r;
-		float g;
-		float b;
-		float a;
+		float r = 0;
+		float g = 0;
+		float b = 0;
+		float a = 0;
 	}
 
 	public alias COLOR_F = .tagCOLOR_F;
@@ -5145,10 +5145,10 @@ extern (C++, DxLib) {
 	 */
 	package struct tagFLOAT4
 	{
-		float x;
-		float y;
-		float z;
-		float w;
+		float x = 0;
+		float y = 0;
+		float z = 0;
+		float w = 0;
 	}
 
 	public alias FLOAT4 = .tagFLOAT4;
@@ -5159,10 +5159,10 @@ extern (C++, DxLib) {
 	 */
 	package struct tagDOUBLE4
 	{
-		double x;
-		double y;
-		double z;
-		double w;
+		double x = 0;
+		double y = 0;
+		double z = 0;
+		double w = 0;
 	}
 
 	public alias DOUBLE4 = .tagDOUBLE4;
@@ -5189,10 +5189,10 @@ extern (C++, DxLib) {
 		package struct tagVERTEX2D
 		{
 			.VECTOR pos;
-			float rhw;
+			float rhw = 0;
 			.COLOR_U8 dif;
-			float u;
-			float v;
+			float u = 0;
+			float v = 0;
 		}
 
 		public alias VERTEX2D = .tagVERTEX2D;
@@ -5204,13 +5204,13 @@ extern (C++, DxLib) {
 		package struct tagVERTEX2DSHADER
 		{
 			.VECTOR pos;
-			float rhw;
+			float rhw = 0;
 			.COLOR_U8 dif;
 			.COLOR_U8 spc;
-			float u;
-			float v;
-			float su;
-			float sv;
+			float u = 0;
+			float v = 0;
+			float su = 0;
+			float sv = 0;
 		}
 
 		public alias VERTEX2DSHADER = .tagVERTEX2DSHADER;
@@ -5221,10 +5221,10 @@ extern (C++, DxLib) {
 		 */
 		package struct tagVERTEX
 		{
-			float x;
-			float y;
-			float u;
-			float v;
+			float x = 0;
+			float y = 0;
+			float u = 0;
+			float v = 0;
 			ubyte b;
 			ubyte g;
 			ubyte r;
@@ -5243,8 +5243,8 @@ extern (C++, DxLib) {
 			ubyte g;
 			ubyte r;
 			ubyte a;
-			float u;
-			float v;
+			float u = 0;
+			float v = 0;
 		}
 
 		public alias VERTEX_3D = .tagVERTEX_3D;
@@ -5278,22 +5278,22 @@ extern (C++, DxLib) {
 			/**
 			 * テクスチャ座標
 			 */
-			float u;
+			float u = 0;
 
 			/**
 			 * テクスチャ座標
 			 */
-			float v;
+			float v = 0;
 
 			/**
 			 * 補助テクスチャ座標
 			 */
-			float su;
+			float su = 0;
 
 			/**
 			 * 補助テクスチャ座標
 			 */
-			float sv;
+			float sv = 0;
 		}
 
 		public alias VERTEX3D = .tagVERTEX3D;
@@ -5343,22 +5343,22 @@ extern (C++, DxLib) {
 			/**
 			 * テクスチャ座標
 			 */
-			float u;
+			float u = 0;
 
 			/**
 			 * テクスチャ座標
 			 */
-			float v;
+			float v = 0;
 
 			/**
 			 * 補助テクスチャ座標
 			 */
-			float su;
+			float su = 0;
 
 			/**
 			 * 補助テクスチャ座標
 			 */
-			float sv;
+			float sv = 0;
 		}
 
 		public alias VERTEX3DSHADER = .tagVERTEX3DSHADER;
@@ -5402,37 +5402,37 @@ extern (C++, DxLib) {
 			/**
 			 * 有効距離
 			 */
-			float Range;
+			float Range = 0;
 
 			/**
 			 * フォールオフ 1.0f にしておくのが好ましい
 			 */
-			float Falloff;
+			float Falloff = 0;
 
 			/**
 			 * 距離による減衰係数0
 			 */
-			float Attenuation0;
+			float Attenuation0 = 0;
 
 			/**
 			 * 距離による減衰係数1
 			 */
-			float Attenuation1;
+			float Attenuation1 = 0;
 
 			/**
 			 * 距離による減衰係数2
 			 */
-			float Attenuation2;
+			float Attenuation2 = 0;
 
 			/**
 			 * スポットライトの内部コーンの照明角度( ラジアン )
 			 */
-			float Theta;
+			float Theta = 0;
 
 			/**
 			 * スポットライトの外部コーンの照明角度
 			 */
-			float Phi;
+			float Phi = 0;
 		}
 
 		alias LIGHTPARAM = .tagLIGHTPARAM;
@@ -5465,7 +5465,7 @@ extern (C++, DxLib) {
 			/**
 			 * スペキュラハイライトの鮮明度
 			 */
-			float Power;
+			float Power = 0;
 		}
 
 		alias MATERIALPARAM = .tagMATERIALPARAM;
@@ -5515,17 +5515,17 @@ extern (C++, DxLib) {
 		/**
 		 * 線分Aと線分Bが最も接近する座標間の距離の二乗
 		 */
-		float SegA_SegB_MinDist_Square;
+		float SegA_SegB_MinDist_Square = 0;
 
 		/**
 		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0f 〜 1.0f 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
 		 */
-		float SegA_MinDist_Pos1_Pos2_t;
+		float SegA_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0f 〜 1.0f 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
 		 */
-		float SegB_MinDist_Pos1_Pos2_t;
+		float SegB_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分Aが線分Bに最も接近する線分A上の座標
@@ -5548,17 +5548,17 @@ extern (C++, DxLib) {
 		/**
 		 * 線分Aと線分Bが最も接近する座標間の距離の二乗
 		 */
-		double SegA_SegB_MinDist_Square;
+		double SegA_SegB_MinDist_Square = 0;
 
 		/**
 		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0 〜 1.0 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
 		 */
-		double SegA_MinDist_Pos1_Pos2_t;
+		double SegA_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0 〜 1.0 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
 		 */
-		double SegB_MinDist_Pos1_Pos2_t;
+		double SegB_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分Aが線分Bに最も接近する線分A上の座標
@@ -5581,12 +5581,12 @@ extern (C++, DxLib) {
 		/**
 		 * 線分と点が最も接近する座標間の距離の二乗
 		 */
-		float Seg_Point_MinDist_Square;
+		float Seg_Point_MinDist_Square = 0;
 
 		/**
 		 * 線分が点に最も接近する座標の線分の t ( 0.0f 〜 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
-		float Seg_MinDist_Pos1_Pos2_t;
+		float Seg_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分が点に最も接近する線分上の座標
@@ -5604,12 +5604,12 @@ extern (C++, DxLib) {
 		/**
 		 * 線分と点が最も接近する座標間の距離の二乗
 		 */
-		double Seg_Point_MinDist_Square;
+		double Seg_Point_MinDist_Square = 0;
 
 		/**
 		 * 線分が点に最も接近する座標の線分の t ( 0.0 〜 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
-		double Seg_MinDist_Pos1_Pos2_t;
+		double Seg_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分が点に最も接近する線分上の座標
@@ -5627,12 +5627,12 @@ extern (C++, DxLib) {
 		/**
 		 * 線分と三角形が最も接近する座標間の距離の二乗
 		 */
-		float Seg_Tri_MinDist_Square;
+		float Seg_Tri_MinDist_Square = 0;
 
 		/**
 		 * 線分が三角形に最も接近する座標の線分の t ( 0.0f 〜 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
-		float Seg_MinDist_Pos1_Pos2_t;
+		float Seg_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分が三角形に最も接近する線分上の座標
@@ -5642,17 +5642,17 @@ extern (C++, DxLib) {
 		/**
 		 * 三角形が線分に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
 		 */
-		float Tri_MinDist_Pos1_w;
+		float Tri_MinDist_Pos1_w = 0;
 
 		/**
 		 * 三角形が線分に最も接近する座標の三角形座標2の重み
 		 */
-		float Tri_MinDist_Pos2_w;
+		float Tri_MinDist_Pos2_w = 0;
 
 		/**
 		 * 三角形が線分に最も接近する座標の三角形座標3の重み
 		 */
-		float Tri_MinDist_Pos3_w;
+		float Tri_MinDist_Pos3_w = 0;
 
 		/**
 		 * 三角形が線分に最も接近する三角形上の座標
@@ -5670,12 +5670,12 @@ extern (C++, DxLib) {
 		/**
 		 * 線分と三角形が最も接近する座標間の距離の二乗
 		 */
-		double Seg_Tri_MinDist_Square;
+		double Seg_Tri_MinDist_Square = 0;
 
 		/**
 		 * 線分が三角形に最も接近する座標の線分の t ( 0.0 〜 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
-		double Seg_MinDist_Pos1_Pos2_t;
+		double Seg_MinDist_Pos1_Pos2_t = 0;
 
 		/**
 		 * 線分が三角形に最も接近する線分上の座標
@@ -5685,17 +5685,17 @@ extern (C++, DxLib) {
 		/**
 		 * 三角形が線分に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
 		 */
-		double Tri_MinDist_Pos1_w;
+		double Tri_MinDist_Pos1_w = 0;
 
 		/**
 		 * 三角形が線分に最も接近する座標の三角形座標2の重み
 		 */
-		double Tri_MinDist_Pos2_w;
+		double Tri_MinDist_Pos2_w = 0;
 
 		/**
 		 * 三角形が線分に最も接近する座標の三角形座標3の重み
 		 */
-		double Tri_MinDist_Pos3_w;
+		double Tri_MinDist_Pos3_w = 0;
 
 		/**
 		 * 三角形が線分に最も接近する三角形上の座標
@@ -5713,22 +5713,22 @@ extern (C++, DxLib) {
 		/**
 		 * 三角形と点が最も接近する座標間の距離の二乗
 		 */
-		float Tri_Pnt_MinDist_Square;
+		float Tri_Pnt_MinDist_Square = 0;
 
 		/**
 		 * 三角形が点に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
 		 */
-		float Tri_MinDist_Pos1_w;
+		float Tri_MinDist_Pos1_w = 0;
 
 		/**
 		 * 三角形が点に最も接近する座標の三角形座標2の重み
 		 */
-		float Tri_MinDist_Pos2_w;
+		float Tri_MinDist_Pos2_w = 0;
 
 		/**
 		 * 三角形が点に最も接近する座標の三角形座標3の重み
 		 */
-		float Tri_MinDist_Pos3_w;
+		float Tri_MinDist_Pos3_w = 0;
 
 		/**
 		 * 三角形が点に最も接近する三角形上の座標
@@ -5746,22 +5746,22 @@ extern (C++, DxLib) {
 		/**
 		 * 三角形と点が最も接近する座標間の距離の二乗
 		 */
-		double Tri_Pnt_MinDist_Square;
+		double Tri_Pnt_MinDist_Square = 0;
 
 		/**
 		 * 三角形が点に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
 		 */
-		double Tri_MinDist_Pos1_w;
+		double Tri_MinDist_Pos1_w = 0;
 
 		/**
 		 * 三角形が点に最も接近する座標の三角形座標2の重み
 		 */
-		double Tri_MinDist_Pos2_w;
+		double Tri_MinDist_Pos2_w = 0;
 
 		/**
 		 * 三角形が点に最も接近する座標の三角形座標3の重み
 		 */
-		double Tri_MinDist_Pos3_w;
+		double Tri_MinDist_Pos3_w = 0;
 
 		/**
 		 * 三角形が点に最も接近する三角形上の座標
@@ -5784,7 +5784,7 @@ extern (C++, DxLib) {
 		/**
 		 * 平面と点の距離
 		 */
-		float Plane_Pnt_MinDist_Square;
+		float Plane_Pnt_MinDist_Square = 0;
 
 		/**
 		 * 平面上の点との最近点座標
@@ -5807,7 +5807,7 @@ extern (C++, DxLib) {
 		/**
 		 * 平面と点の距離
 		 */
-		double Plane_Pnt_MinDist_Square;
+		double Plane_Pnt_MinDist_Square = 0;
 
 		/**
 		 * 平面上の点との最近点座標
@@ -5867,7 +5867,7 @@ extern (C++, DxLib) {
 			/**
 			 * 当たった座標は、当たったポリゴンの三点それぞれどの割合で影響しているか、の値( 当たった座標 = (Position[ 0 ] * PositionWeight[ 0 ]) + (Position[ 1 ] * PositionWeight[ 1 ]) + (Position[ 2 ] * PositionWeight[ 2 ]) )
 			 */
-			float[3] PositionWeight;
+			float[3] PositionWeight = 0;
 
 			/**
 			 * 当たったポリゴンの座標がそれぞれ最も影響を受けているフレームの番号
@@ -6024,7 +6024,7 @@ extern (C++, DxLib) {
 		/**
 		 * リバーブとなる出力の割合( 指定可能範囲 0.0f 〜 100.0f )
 		 */
-		float WetDryMix;
+		float WetDryMix = 0;
 
 		/**
 		 * ダイレクト パスに対する初期反射の遅延時間、単位はミリ秒( 指定可能範囲 0 〜 300 )
@@ -6116,32 +6116,32 @@ extern (C++, DxLib) {
 		/**
 		 * 室内エフェクトのローパス フィルターの折点周波数、単位は Hz ( 指定可能範囲 20.0f 〜 20000.0f )
 		 */
-		float RoomFilterFreq;
+		float RoomFilterFreq = 0;
 
 		/**
 		 * 初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f 〜 0.0f )
 		 */
-		float RoomFilterMain;
+		float RoomFilterMain = 0;
 
 		/**
 		 * 折点周波数 (RoomFilterFreq) での初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f 〜 0.0f )
 		 */
-		float RoomFilterHF;
+		float RoomFilterHF = 0;
 
 		/**
 		 * 初期反射の強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f 〜 20.0f )
 		 */
-		float ReflectionsGain;
+		float ReflectionsGain = 0;
 
 		/**
 		 * リバーブの強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f 〜 20.0f )
 		 */
-		float ReverbGain;
+		float ReverbGain = 0;
 
 		/**
 		 * 1 kHz における残響減衰時間、単位は秒 ( 指定可能範囲 0.1f 〜 上限値特になし )、これは、フル スケールの入力信号が 60 dB 減衰するまでの時間です。
 		 */
-		float DecayTime;
+		float DecayTime = 0;
 
 		/**
 		 * 後期フィールド残響のモード密度を制御値、単位はパーセント( 指定可能範囲 0.0f 〜 100.0f )
@@ -6149,12 +6149,12 @@ extern (C++, DxLib) {
 		 * Density を小さくすると、サウンドはくぐもった音 (くし形フィルターが適用された音) になります。
 		 * これはサイロをシミュレーションするときに有効なエフェクトです。
 		 */
-		float Density;
+		float Density = 0;
 
 		/**
 		 * 音響空間の見かけ上のサイズ、単位はフィート( 指定可能範囲 1.0f (30.48 cm) 〜 100.0f (30.48 m) )
 		 */
-		float RoomSize;
+		float RoomSize = 0;
 	}
 
 	public alias SOUND3D_REVERB_PARAM = .tagSOUND3D_REVERB_PARAM;

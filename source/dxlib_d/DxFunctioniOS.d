@@ -31,9 +31,9 @@ extern (C++, DxLib) {
 
 	package struct tagDEVICEMOTIONINFO_IOS
 	{
-		double Attitude_Roll;
-		double Attitude_Pitch;
-		double Attitude_Yaw;
+		double Attitude_Roll = 0;
+		double Attitude_Pitch = 0;
+		double Attitude_Yaw = 0;
 		dxlib_d.DxLib.VECTOR_D RotationRate;
 		dxlib_d.DxLib.VECTOR_D Gravity;
 		dxlib_d.DxLib.VECTOR_D UserAcceleration;
