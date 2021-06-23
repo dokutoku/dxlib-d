@@ -6828,10 +6828,12 @@ extern (C++, DxLib) {
 
 	package struct tagIPDATA_IPv6
 	{
-		union {
+		union
+		{
 			ubyte[16] Byte;
 			ushort[8] Word;
 		}
+
 		core.stdc.config.c_ulong ScopeID;
 	}
 

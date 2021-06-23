@@ -23,6 +23,10 @@ version (OSX) {
 	version = __APPLE__;
 } else version (iOS) {
 	version = __APPLE__;
+} else version (TVOS) {
+	version = __APPLE__;
+} else version (WatchOS) {
+	version = __APPLE__;
 }
 
 version (__APPLE__) {
