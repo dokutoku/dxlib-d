@@ -40,10 +40,10 @@ int CP;
 int CursorX_CP;
 
 // 終了フラグ
-int EndFlag;
+bool EndFlag;
 
 // ボタン押し待ちフラグ
-int KeyWaitFlag;
+bool KeyWaitFlag;
 
 // フレームカウンタ
 int Count;
@@ -171,12 +171,12 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 		while ((dxlib_d.DxLib.ProcessMessage() == 0) && (dxlib_d.DxLib.CheckHitKey(dxlib_d.DxLib.KEY_INPUT_ESCAPE) == 0)) {
 			// サウンドノベル風文字列描画処理を行う
 			// ただし終了フラグが1だった場合は処理をしない
-			if (.EndFlag == 0) {
+			if (!.EndFlag) {
 				// ボタン押し待ちフラグがたっていた場合はボタンが押されるまでここで終了
-				if (.KeyWaitFlag == 1) {
+				if (.KeyWaitFlag) {
 					if ((dxlib_d.DxLib.ProcessMessage() == 0) && (dxlib_d.DxLib.CheckHitKeyAll() != 0)) {
 						// ボタンが押されていたら解除
-						.KeyWaitFlag = 0;
+						.KeyWaitFlag = false;
 					}
 				} else {
 					// 文字の描画
@@ -199,7 +199,7 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 							}
 
 							// ボタン押し待ちフラグをたてる
-							.KeyWaitFlag = 1;
+							.KeyWaitFlag = true;
 							.CP++;
 
 							break;
@@ -207,7 +207,7 @@ int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef
 						// 終了文字
 						case 'E':
 							// 終了フラグを立てるおよび参照文字位置を1つ進める
-							.EndFlag = 1;
+							.EndFlag = true;
 							.CP++;
 
 							break;
