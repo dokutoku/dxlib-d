@@ -1682,7 +1682,7 @@ version (none) {
 	{
 		.BITMAPINFOHEADER bmiHeader;
 
-		//Dynamic array?
+		/* Dynamic array */
 		.RGBQUAD bmiColors;
 	}
 

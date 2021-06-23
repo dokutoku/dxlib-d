@@ -244,7 +244,9 @@ public alias PBITMAPINFOHEADER = .tagBITMAPINFOHEADER*;
 package struct tagBITMAPINFO
 {
 	.BITMAPINFOHEADER bmiHeader;
-	.RGBQUAD[1] bmiColors;
+
+	/* Dynamic array */
+	.RGBQUAD bmiColors;
 }
 
 public alias BITMAPINFO = .tagBITMAPINFO;
