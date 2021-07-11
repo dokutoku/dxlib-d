@@ -5061,7 +5061,7 @@ extern (C++, DxLib) {
 	 */
 	package struct tagMATRIX
 	{
-		float[4][4] m = [[0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0]];
+		float[4][4] m = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
 	}
 
 	public alias MATRIX = .tagMATRIX;
@@ -5069,7 +5069,7 @@ extern (C++, DxLib) {
 
 	package struct tagMATRIX_D
 	{
-		double[4][4] m = [[0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0], [0. 0, 0, 0]];
+		double[4][4] m = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
 	}
 
 	public alias MATRIX_D = .tagMATRIX_D;
