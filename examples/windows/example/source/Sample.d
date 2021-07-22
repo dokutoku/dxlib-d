@@ -8,8 +8,6 @@ module windows_sample.app;
 version (Windows):
 
 import core.stdc.math;
-import core.sys.windows.windef;
-import core.sys.windows.winnt;
 import dxlib_d.DxDataType;
 import dxlib_d.DxFunctionWin;
 import dxlib_d.DxLib;
@@ -101,7 +99,7 @@ version (Unicode) {
 
 extern (Windows)
 nothrow @nogc
-int WinMain(core.sys.windows.windef.HINSTANCE hInstance, core.sys.windows.windef.HINSTANCE hPrevInstance, core.sys.windows.winnt.LPSTR lpCmdLine, int nCmdShow)
+int WinMain(dxlib_d.DxDataType.HINSTANCE hInstance, dxlib_d.DxDataType.HINSTANCE hPrevInstance, dxlib_d.DxDataType.LPSTR lpCmdLine, int nCmdShow)
 
 	do
 	{

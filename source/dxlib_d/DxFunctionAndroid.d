@@ -18,8 +18,8 @@ nothrow @nogc:
 #include <android/native_activity.h>
 #include <android/window.h>
 +/
-private static import dxlib_d.DxDataTypeAndroid;
 private static import dxlib_d.DxLib;
+public import dxlib_d.DxDataType;
 
 // 定義---------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ extern (C++, DxLib) {
 	/**
 	 * ソフトのデータ保存用のディレクトリパスを取得する
 	 */
-	extern int GetInternalDataPath(dxlib_d.DxDataTypeAndroid.TCHAR* PathBuffer, int PathBufferBytes);
+	extern int GetInternalDataPath(dxlib_d.DxDataType.TCHAR* PathBuffer, int PathBufferBytes);
 
 	/**
 	 * ソフトの外部データ保存用のディレクトリパスを取得する
@@ -48,7 +48,7 @@ extern (C++, DxLib) {
 	 *      PathIndex = 外部データ保存用のディレクトリパスの番号(複数個ある場合があるので)
 	 *      IsRemovableFlag = PathIndexで指定したパスが取り外し可能なデバイスかどうかを保存するint型変数のアドレス(格納された値 dxlib_d.DxDataType.TRUE:取り外し可能(SDカード等)  dxlib_d.DxDataType.FALSE:取り外し不可能(内蔵ストレージ等))
 	 */
-	extern int GetExternalDataPath(dxlib_d.DxDataTypeAndroid.TCHAR* PathBuffer, int PathBufferBytes, int PathIndex = 0, int* IsRemovableFlag = null);
+	extern int GetExternalDataPath(dxlib_d.DxDataType.TCHAR* PathBuffer, int PathBufferBytes, int PathIndex = 0, int* IsRemovableFlag = null);
 
 	/**
 	 * ソフトの外部データ保存用のディレクトリパスの数を取得する
@@ -60,14 +60,14 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: -1:エラー 0以上:言語名文字列の格納に必要なバイト数
 	 */
-	extern int GetLanguage(dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferSize);
+	extern int GetLanguage(dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferSize);
 
 	/**
 	 * 端末に設定されている国を取得する
 	 *
 	 * Returns: -1:エラー 0以上:国名文字列の格納に必要なバイト数
 	 */
-	extern int GetCountry(dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferSize);
+	extern int GetCountry(dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferSize);
 
 	/**
 	 * メモリ情報を取得する
@@ -75,7 +75,7 @@ extern (C++, DxLib) {
 	 *      FreeMrmoyy = 空きメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)
 	 *      UseMemory = アプリが使用しているメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)、(使用メモリ量の取得は非常に処理負荷が高いので、不要な場合は必ずnullを渡すようにしてください)
 	 */
-	extern int GetAndroidMemoryInfo(dxlib_d.DxDataTypeAndroid.LONGLONG* TotalMemory, dxlib_d.DxDataTypeAndroid.LONGLONG* FreeMemory, dxlib_d.DxDataTypeAndroid.LONGLONG* UseMemory);
+	extern int GetAndroidMemoryInfo(dxlib_d.DxDataType.LONGLONG* TotalMemory, dxlib_d.DxDataType.LONGLONG* FreeMemory, dxlib_d.DxDataType.LONGLONG* UseMemory);
 
 	/**
 	 * ディスプレイの解像度を取得する
@@ -183,8 +183,8 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: -1:指定のstring情報は無かった  -1以外:StringBufferに必要なバッファのサイズ(単位:バイト)
 	 */
-	extern int GetAndroidResource_Strings_String(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
-	extern int GetAndroidResource_Strings_StringWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
+	extern int GetAndroidResource_Strings_String(const (dxlib_d.DxDataType.TCHAR)* ValueName, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
+	extern int GetAndroidResource_Strings_StringWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
 
 	/**
 	 * AndroidManifest.xmlに書かれた<meta-data android:name="test0" android:value="abcde" />などのメタデータの文字列を取得する
@@ -194,16 +194,16 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: -1:指定のメタデータは無かった  -1以外:StringBufferに必要なバッファのサイズ(単位:バイト)
 	 */
-	extern int GetAndroidMetaData_String(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
-	extern int GetAndroidMetaData_StringWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
+	extern int GetAndroidMetaData_String(const (dxlib_d.DxDataType.TCHAR)* ValueName, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
+	extern int GetAndroidMetaData_StringWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
 
 	/*
 	 * AndroidManifest.xmlに書かれた<meta-data android:name="bool0" android:value="true" />などのBoolean型のメタデータを取得する
 	 * ValueName:メタデータ名
 	 * Returns: -1:指定のメタデータは無かった  dxlib_d.DxDataType.TRUE:指定のメタデータはtrueだった   dxlib_d.DxDataType.FALSE:指定のメタデータはfalseだった
 	 */
-	//extern int GetAndroidMetaData_Boolean(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName);
-	//extern int GetAndroidMetaData_BooleanWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength);
+	//extern int GetAndroidMetaData_Boolean(const (dxlib_d.DxDataType.TCHAR)* ValueName);
+	//extern int GetAndroidMetaData_BooleanWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ValueName, size_t ValueNameLength);
 
 	/**
 	 * 通知を発行する
@@ -218,8 +218,8 @@ extern (C++, DxLib) {
 	 *      LightColor = 通知時のライトの色(GetColorで取得)、LightOnTime か LightOffTimeが0の場合はライトの点灯無し
 	 *      LightOnTime = ライトの点灯時間(単位:ミリ秒)
 	 *      LightOffTime = ライトの消灯時間(単位:ミリ秒)
-	extern int AndroidNotification(const (dxlib_d.DxDataTypeAndroid.TCHAR)* Title, const (dxlib_d.DxDataTypeAndroid.TCHAR)* SubTitle, int Icon = -1, int ShowWhen = dxlib_d.DxDataTypeAndroid.TRUE, int AutoCancel = dxlib_d.DxDataTypeAndroid.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
-	extern int AndroidNotificationWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* Title, size_t TitleLength, const (dxlib_d.DxDataTypeAndroid.TCHAR)* SubTitle, size_t SubTitleLength, int Icon = -1, int ShowWhen = dxlib_d.DxDataTypeAndroid.TRUE, int AutoCancel = dxlib_d.DxDataTypeAndroid.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
+	extern int AndroidNotification(const (dxlib_d.DxDataType.TCHAR)* Title, const (dxlib_d.DxDataType.TCHAR)* SubTitle, int Icon = -1, int ShowWhen = dxlib_d.DxDataType.TRUE, int AutoCancel = dxlib_d.DxDataType.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
+	extern int AndroidNotificationWithStrLen(const (dxlib_d.DxDataType.TCHAR)* Title, size_t TitleLength, const (dxlib_d.DxDataType.TCHAR)* SubTitle, size_t SubTitleLength, int Icon = -1, int ShowWhen = dxlib_d.DxDataType.TRUE, int AutoCancel = dxlib_d.DxDataType.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
 
 	/**
 	 * 通知をキャンセルする
@@ -238,8 +238,8 @@ extern (C++, DxLib) {
 	 *      BrowserAppPackageName = ブラウザのパッケージ名(nullで標準ブラウザ)
 	 *      BrowserAppClassName = ブラウザのクラス名(nullで標準ブラウザ)
 	 */
-	extern int AndroidJumpURL(const (dxlib_d.DxDataTypeAndroid.TCHAR)* URL, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppPackageName = null, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppClassName = null);
-	extern int AndroidJumpURLWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* URL, size_t URLLength, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppPackageName = null, size_t BrowserAppPackageNameLength = 0, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppClassName = null, size_t BrowserAppClassNameLength = 0);
+	extern int AndroidJumpURL(const (dxlib_d.DxDataType.TCHAR)* URL, const (dxlib_d.DxDataType.TCHAR)* BrowserAppPackageName = null, const (dxlib_d.DxDataType.TCHAR)* BrowserAppClassName = null);
+	extern int AndroidJumpURLWithStrLen(const (dxlib_d.DxDataType.TCHAR)* URL, size_t URLLength, const (dxlib_d.DxDataType.TCHAR)* BrowserAppPackageName = null, size_t BrowserAppPackageNameLength = 0, const (dxlib_d.DxDataType.TCHAR)* BrowserAppClassName = null, size_t BrowserAppClassNameLength = 0);
 
 	/**
 	 * Wifiの電波強度を取得する(使用するにはAndroidManifest.xmlに<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />を書き加える必要があります)
@@ -283,7 +283,7 @@ extern (C++, DxLib) {
 	 *      Shader_Max_Texture_Image_Units = GL_MAX_TEXTURE_IMAGE_UNITS
 	 *      Shader_Max_Fragment_Uniform_Vectors = GL_MAX_FRAGMENT_UNIFORM_VECTORS
 	 */
-	extern int GetOpenGLInfo(dxlib_d.DxDataTypeAndroid.TCHAR** Version = null, dxlib_d.DxDataTypeAndroid.TCHAR** Renderer = null, dxlib_d.DxDataTypeAndroid.TCHAR** Vendor = null, dxlib_d.DxDataTypeAndroid.TCHAR*** ExtensionNames = null, dxlib_d.DxDataTypeAndroid.TCHAR** Shader_Language_Version = null, int* Shader_Max_Vertex_Attribs = null, int* Shader_Max_Vertex_Uniform_Vectors = null, int* Shader_Max_Varying_Vectors = null, int* Shader_Max_Combined_Texture_Image_Units = null, int* Shader_Max_Vertex_Texture_Image_Units = null, int* Shader_Max_Texture_Image_Units = null, int* Shader_Max_Fragment_Uniform_Vectors = null);
+	extern int GetOpenGLInfo(dxlib_d.DxDataType.TCHAR** Version = null, dxlib_d.DxDataType.TCHAR** Renderer = null, dxlib_d.DxDataType.TCHAR** Vendor = null, dxlib_d.DxDataType.TCHAR*** ExtensionNames = null, dxlib_d.DxDataType.TCHAR** Shader_Language_Version = null, int* Shader_Max_Vertex_Attribs = null, int* Shader_Max_Vertex_Uniform_Vectors = null, int* Shader_Max_Varying_Vectors = null, int* Shader_Max_Combined_Texture_Image_Units = null, int* Shader_Max_Vertex_Texture_Image_Units = null, int* Shader_Max_Texture_Image_Units = null, int* Shader_Max_Fragment_Uniform_Vectors = null);
 
 	/**
 	 * グラフィックハンドルのテクスチャオブジェクトを取得する
@@ -361,7 +361,7 @@ extern (C++, DxLib) {
 	 *
 	 * Returns: プリセット名の文字列が格納されたメモリ領域の先頭アドレス
 	 */
-	extern const (dxlib_d.DxDataTypeAndroid.TCHAR)* GetEqualizerPresetName(int PresetIndex);
+	extern const (dxlib_d.DxDataType.TCHAR)* GetEqualizerPresetName(int PresetIndex);
 
 	/**
 	 * 指定したプリセットに従ってイコライザーを設定します
