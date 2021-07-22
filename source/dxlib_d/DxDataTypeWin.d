@@ -25,7 +25,6 @@ public import dxlib_d.DxCompileConfig;
 #endif
 +/
 
-private static import core.stdc.stddef;
 private static import core.stdcpp.xutility;
 private static import core.sys.windows.basetsd;
 private static import core.sys.windows.basetyps;
@@ -1618,36 +1617,43 @@ version (Win64) {
 	alias LONG_PTR = int;
 }
 
+// 全プラットフォーム共通の型
 alias BOOL = core.sys.windows.windef.BOOL;
 alias BYTE = core.sys.windows.windef.BYTE;
 alias DWORD = core.sys.windows.windef.DWORD;
 alias FALSE = core.sys.windows.windef.FALSE;
-alias HANDLE = core.sys.windows.basetsd.HANDLE;
 alias HBITMAP = core.sys.windows.windef.HBITMAP;
-alias HICON = core.sys.windows.windef.HICON;
 alias HINSTANCE = core.sys.windows.windef.HINSTANCE;
-alias HMODULE = core.sys.windows.windef.HMODULE;
-alias HRGN = core.sys.windows.windef.HRGN;
-alias HWND = core.sys.windows.windef.HWND;
 alias LONG = core.sys.windows.windef.LONG;
 alias LONGLONG = core.sys.windows.winnt.LONGLONG;
 alias SIZE = core.sys.windows.windef.SIZE;
 alias TCHAR = core.sys.windows.winnt.TCHAR;
 alias TRUE = core.sys.windows.windef.TRUE;
 alias ULONGLONG = core.sys.windows.winnt.ULONGLONG;
-alias WNDPROC = core.sys.windows.winuser.WNDPROC;
 alias WORD = core.sys.windows.windef.WORD;
-alias wchar_t = core.stdc.stddef.wchar_t;
+
+// DxFunctionWinで扱う型
+version (all) {
+	alias HANDLE = core.sys.windows.basetsd.HANDLE;
+	alias HICON = core.sys.windows.windef.HICON;
+	alias HMODULE = core.sys.windows.windef.HMODULE;
+	alias HRGN = core.sys.windows.windef.HRGN;
+	alias HWND = core.sys.windows.windef.HWND;
+	alias WNDPROC = core.sys.windows.winuser.WNDPROC;
+}
 
 //core.sys.windowsの以下の構造体名が不適切なので、必要とする部分だけ修正
 version (none) {
 	alias BITMAPINFO = core.sys.windows.wingdi.BITMAPINFO;
-	alias GUID = core.sys.windows.basetyps.GUID;
 	alias POINT = core.sys.windows.windef.POINT;
 	alias RECT = core.sys.windows.windef.RECT;
+
+	// DxFunctionWinで扱う型
+	version (all) {
+		alias GUID = core.sys.windows.basetyps.GUID;
+	}
 } else {
-	extern (C)
-	struct tagBITMAPINFOHEADER
+	package struct tagBITMAPINFOHEADER
 	{
 		.DWORD biSize;
 		.LONG biWidth;
@@ -1666,8 +1672,7 @@ version (none) {
 	alias LPBITMAPINFOHEADER = /* FAR */.tagBITMAPINFOHEADER*;
 	alias PBITMAPINFOHEADER = .tagBITMAPINFOHEADER*;
 
-	extern (C)
-	struct tagRGBQUAD
+	package struct tagRGBQUAD
 	{
 		.BYTE rgbBlue;
 		.BYTE rgbGreen;
@@ -1677,8 +1682,7 @@ version (none) {
 
 	alias RGBQUAD = .tagRGBQUAD;
 
-	extern (C)
-	struct tagBITMAPINFO
+	package struct tagBITMAPINFO
 	{
 		.BITMAPINFOHEADER bmiHeader;
 
@@ -1690,20 +1694,7 @@ version (none) {
 	alias LPBITMAPINFO = /* FAR */.tagBITMAPINFO*;
 	alias PBITMAPINFO = .tagBITMAPINFO*;
 
-	align (1)
-	extern (C)
-	struct _GUID
-	{
-		.DWORD Data1;
-		.WORD Data2;
-		.WORD Data3;
-		.BYTE[4] Data4;
-	}
-
-	alias GUID = ._GUID;
-
-	extern (C)
-	struct tagPOINT
+	package struct tagPOINT
 	{
 		.LONG x;
 		.LONG y;
@@ -1714,8 +1705,7 @@ version (none) {
 	alias NPPOINT = /* NEAR */ .tagPOINT*;
 	alias LPPOINT = /* FAR */ .tagPOINT*;
 
-	extern (C)
-	struct tagRECT
+	package struct tagRECT
 	{
 		.LONG left;
 		.LONG top;
@@ -1728,6 +1718,20 @@ version (none) {
 	alias NPRECT = /* NEAR */ .tagRECT*;
 	alias LPRECT = /* FAR */ .tagRECT*;
 	alias LPCRECT = const /* FAR */ (.tagRECT)*;
+
+	// DxFunctionWinで扱う型
+	version (all) {
+		align (1)
+		package struct _GUID
+		{
+			.DWORD Data1;
+			.WORD Data2;
+			.WORD Data3;
+			.BYTE[4] Data4;
+		}
+
+		alias GUID = ._GUID;
+	}
 }
 
 extern (C++, DxLib) {

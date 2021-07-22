@@ -10,6 +10,7 @@ module dxlib_d.DxLib;
 
 private static import core.stdc.config;
 private static import core.stdc.stdarg;
+private static import core.stdc.stddef;
 public import dxlib_d.DxCompileConfig;
 public import dxlib_d.DxDataType;
 
@@ -70,6 +71,8 @@ enum
  * ?
  */
 alias DX_CHAR = char;
+
+alias wchar_t = core.stdc.stddef.wchar_t;
 
 /**
  * 最大数
