@@ -4873,7 +4873,7 @@ extern (C++, DxLib) {
 		int SelectCandidate;
 
 		/**
-		 * 文字変換中かどうか(TRUE:変換中  FALSE:変換中ではない(文字単位でカーソルが移動できる状態))
+		 * 文字変換中かどうか(dxlib_d.DxDataType.TRUE:変換中  dxlib_d.DxDataType.FALSE:変換中ではない(文字単位でカーソルが移動できる状態))
 		 */
 		int ConvertFlag;
 	}
@@ -4999,7 +4999,7 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.TCHAR[260] Name = '\0';
 
 		/**
-		 * ディレクトリかどうか(TRUE:ディレクトリ  FALSE:ファイル)
+		 * ディレクトリかどうか(dxlib_d.DxDataType.TRUE:ディレクトリ  dxlib_d.DxDataType.FALSE:ファイル)
 		 */
 		int DirFlag;
 
@@ -5033,7 +5033,7 @@ extern (C++, DxLib) {
 		.wchar_t[260] Name = '\0';
 
 		/**
-		 * ディレクトリかどうか(TRUE:ディレクトリ  FALSE:ファイル)
+		 * ディレクトリかどうか(dxlib_d.DxDataType.TRUE:ディレクトリ  dxlib_d.DxDataType.FALSE:ファイル)
 		 */
 		int DirFlag;
 
@@ -6294,7 +6294,7 @@ extern (C++, DxLib) {
 		ubyte ChannelBitDepth;
 
 		/**
-		 * 浮動小数点型かどうか(TRUE:浮動小数点型  FALSE:整数型)
+		 * 浮動小数点型かどうか(dxlib_d.DxDataType.TRUE:浮動小数点型  dxlib_d.DxDataType.FALSE:整数型)
 		 */
 		ubyte FloatTypeFlag;
 
@@ -6551,27 +6551,27 @@ extern (C++, DxLib) {
 		package struct tagIMAGEFORMATDESC
 		{
 			/**
-			 * テクスチャか、フラグ(TRUE:テクスチャ  FALSE:標準サーフェス)
+			 * テクスチャか、フラグ(dxlib_d.DxDataType.TRUE:テクスチャ  dxlib_d.DxDataType.FALSE:標準サーフェス)
 			 */
 			ubyte TextureFlag;
 
 			/**
-			 * キューブマップテクスチャか、フラグ(TRUE:キューブマップテクスチャ FALSE:それ以外)
+			 * キューブマップテクスチャか、フラグ(dxlib_d.DxDataType.TRUE:キューブマップテクスチャ dxlib_d.DxDataType.FALSE:それ以外)
 			 */
 			ubyte CubeMapTextureFlag;
 
 			/**
-			 * αチャンネルはあるか、フラグ(TRUE:ある  FALSE:ない)
+			 * αチャンネルはあるか、フラグ(dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない)
 			 */
 			ubyte AlphaChFlag;
 
 			/**
-			 * 描画可能か、フラグ(TRUE:可能  FALSE:不可能)
+			 * 描画可能か、フラグ(dxlib_d.DxDataType.TRUE:可能  dxlib_d.DxDataType.FALSE:不可能)
 			 */
 			ubyte DrawValidFlag;
 
 			/**
-			 * システムメモリ上に存在しているか、フラグ(TRUE:システムメモリ上  FALSE:VRAM上)(標準サーフェスの時のみ有効)
+			 * システムメモリ上に存在しているか、フラグ(dxlib_d.DxDataType.TRUE:システムメモリ上  dxlib_d.DxDataType.FALSE:VRAM上)(標準サーフェスの時のみ有効)
 			 */
 			ubyte SystemMemFlag;
 
@@ -6581,7 +6581,7 @@ extern (C++, DxLib) {
 			ubyte UseManagedTextureFlag;
 
 			/**
-			 * テクスチャのメモリデータ配置にリニアが選択できる場合はデータ配置方式をリニアにするかどうか(TRUE:リニアが可能な場合はリニアにする  FALSE:リニアが可能な場合も特にリニアを指定しない)
+			 * テクスチャのメモリデータ配置にリニアが選択できる場合はデータ配置方式をリニアにするかどうか(dxlib_d.DxDataType.TRUE:リニアが可能な場合はリニアにする  dxlib_d.DxDataType.FALSE:リニアが可能な場合も特にリニアを指定しない)
 			 */
 			ubyte UseLinearMapTextureFlag;
 
@@ -6601,7 +6601,7 @@ extern (C++, DxLib) {
 			ubyte MipMapCount;
 
 			/**
-			 * αテストチャンネルはあるか、フラグ(TRUE:ある  FALSE:ない)(テクスチャの場合のみ有効)
+			 * αテストチャンネルはあるか、フラグ(dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない)(テクスチャの場合のみ有効)
 			 */
 			ubyte AlphaTestFlag;
 
@@ -6631,7 +6631,7 @@ extern (C++, DxLib) {
 			ubyte BlendGraphFlag;
 
 			/**
-			 * パレットを使用しているか、フラグ(SystemMemFlagがTRUEの場合のみ有効)
+			 * パレットを使用しているか、フラグ(SystemMemFlagがdxlib_d.DxDataType.TRUEの場合のみ有効)
 			 */
 			ubyte UsePaletteFlag;
 
@@ -6860,7 +6860,7 @@ extern (C++, DxLib) {
 	/**
 	 * ライブラリが初期化されているかどうかを取得する
 	 *
-	 * Returns: TRUE:初期化されている  FALSE:されていない
+	 * Returns: dxlib_d.DxDataType.TRUE:初期化されている  dxlib_d.DxDataType.FALSE:されていない
 	 */
 	extern int DxLib_IsInit();
 
@@ -6891,7 +6891,7 @@ extern (C++, DxLib) {
 	 * アプリが非アクティブ状態でも処理を実行するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:実行する  FALSE:停止する(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:実行する  dxlib_d.DxDataType.FALSE:停止する(デフォルト)
 	 */
 	extern int SetAlwaysRunFlag(int Flag);
 
@@ -7155,7 +7155,7 @@ extern (C++, DxLib) {
 		 * ログファイル(Log.txt)に出力する文字列の前に起動してからの時間を付けるかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:付ける(デフォルト)  FALSE:付けない
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:付ける(デフォルト)  dxlib_d.DxDataType.FALSE:付けない
 		 */
 		extern int SetUseTimeStampFlag(int UseFlag);
 
@@ -7170,7 +7170,7 @@ extern (C++, DxLib) {
 		 * ログファイル(Log.txt)を作成するかどうかを設定する、DxLib_Initの前でのみ使用可能
 		 *
 		 * Params:
-		 *      Flag = TRUE:作成する(デフォルト)  FALSE:作成しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:作成する(デフォルト)  dxlib_d.DxDataType.FALSE:作成しない
 		 */
 		extern int SetOutApplicationLogValidFlag(int Flag);
 
@@ -7198,7 +7198,7 @@ extern (C++, DxLib) {
 		 * ログファイル名に日付をつけるかどうかをセットする
 		 *
 		 * Params:
-		 *      Flag = TRUE:付ける  FALSE:付けない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:付ける  dxlib_d.DxDataType.FALSE:付けない(デフォルト)
 		 */
 		extern int SetUseDateNameLogFile(int Flag);
 
@@ -7207,14 +7207,14 @@ extern (C++, DxLib) {
 			// ログ出力機能関数
 
 			/**
-			 * printfDxの結果を画面に出力するかどうかを設定する、TRUE:出力を行う  FALSE:出力を行わない(printfDxを実行すると内部でSetLogDrawOutFlag(TRUE);が呼ばれます)
+			 * printfDxの結果を画面に出力するかどうかを設定する、dxlib_d.DxDataType.TRUE:出力を行う  dxlib_d.DxDataType.FALSE:出力を行わない(printfDxを実行すると内部でSetLogDrawOutFlag(dxlib_d.DxDataType.TRUE);が呼ばれます)
 			 */
 			extern int SetLogDrawOutFlag(int DrawFlag);
 
 			/**
 			 * printfDxの結果を画面に出力するかどうかの設定を取得する
 			 *
-			 * Returns: TRUE:出力を行う  FALSE:出力を行わない
+			 * Returns: dxlib_d.DxDataType.TRUE:出力を行う  dxlib_d.DxDataType.FALSE:出力を行わない
 			 */
 			extern int GetLogDrawFlag();
 
@@ -7267,21 +7267,21 @@ extern (C++, DxLib) {
 		 * 読み込み処理系の関数で非同期読み込みを行うかどうかを設定する(非同期読み込みに対応している関数のみ有効)
 		 *
 		 * Params:
-		 *      Flag = TRUE:非同期読み込みを行う  FALSE:非同期読み込みを行わない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:非同期読み込みを行う  dxlib_d.DxDataType.FALSE:非同期読み込みを行わない(デフォルト)
 		 */
 		extern int SetUseASyncLoadFlag(int Flag);
 
 		/**
 		 * 読み込み処理系の関数で非同期読み込みを行うかどうかを取得する(非同期読み込みに対応している関数のみ有効)
 		 *
-		 * Returns: TRUE:非同期読み込みを行う  FALSE:非同期読み込みを行わない(デフォルト)
+		 * Returns: dxlib_d.DxDataType.TRUE:非同期読み込みを行う  dxlib_d.DxDataType.FALSE:非同期読み込みを行わない(デフォルト)
 		 */
 		extern int GetUseASyncLoadFlag();
 
 		/**
 		 * ハンドルの非同期読み込みが完了しているかどうかを取得する
 		 *
-		 * Returns: TRUE:まだ完了していない  FALSE:完了している  -1:エラー
+		 * Returns: dxlib_d.DxDataType.TRUE:まだ完了していない  dxlib_d.DxDataType.FALSE:完了している  -1:エラー
 		 */
 		extern int CheckHandleASyncLoad(int Handle);
 
@@ -7319,7 +7319,7 @@ extern (C++, DxLib) {
 	 * マウスポインタの表示状態を設定する(DispFlag:マウスポインタを表示するかどうか
 	 *
 	 * Params:
-	 *      DispFlag = TRUE:表示する  FALSE:表示しない
+	 *      DispFlag = dxlib_d.DxDataType.TRUE:表示する  dxlib_d.DxDataType.FALSE:表示しない
 	 */
 	extern int SetMouseDispFlag(int DispFlag);
 
@@ -7367,7 +7367,7 @@ extern (C++, DxLib) {
 		 *      Button = 押されたボタン(MOUSE_INPUT_LEFT等)を格納する変数のアドレス
 		 *      ClickX = 押された時のX座標を格納する変数のアドレス
 		 *      ClickY = 押された時のY座標を格納する変数のアドレス
-		 *      LogDelete = 取得した押下情報1つ分をログから削除するかどうか(TRUE:削除する  FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる)
+		 *      LogDelete = 取得した押下情報1つ分をログから削除するかどうか(dxlib_d.DxDataType.TRUE:削除する  dxlib_d.DxDataType.FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる)
 		 *
 		 * Returns: 0:押された情報取得できた -1:押された情報が無かった、つまり前回の呼び出し(または起動時から最初の呼び出し)の間に一度もマウスのボタンが押されなかった
 		 */
@@ -7381,7 +7381,7 @@ extern (C++, DxLib) {
 		 *      ClickX = 押されたり離されたりした時のX座標を格納する変数のアドレス
 		 *      ClickY = 押されたり離されたりした時のY座標を格納する変数のアドレス
 		 *      LogType = 押されたのか(MOUSE_INPUT_LOG_DOWN)離されたのか(MOUSE_INPUT_LOG_UP)、等の情報を格納する変数のアドレス
-		 *      LogDelete = 取得した押されたり離されたりした情報1つ分をログから削除するかどうか(TRUE:削除する  FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる)
+		 *      LogDelete = 取得した押されたり離されたりした情報1つ分をログから削除するかどうか(dxlib_d.DxDataType.TRUE:削除する  dxlib_d.DxDataType.FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる)
 		 *
 		 * Returns: 0:押されたり離されたりした情報取得できた -1:押されたり離されたりした情報が無かった、つまり前回の呼び出し(または起動時から最初の呼び出し)の間に一度もマウスのボタンが押されたり離されたりしなかった
 		 */
@@ -8129,14 +8129,14 @@ extern (C++, DxLib) {
 		extern int NetWorkSendUDP_IPv6(int NetUDPHandle, .IPDATA_IPv6 SendIP, int SendPort, const (void)* Buffer, int Length);
 
 		/**
-		 * UDPを使用した通信でデータを受信する、PeekにTRUEを渡すと受信に成功してもデータを受信キューから削除しません
+		 * UDPを使用した通信でデータを受信する、Peekにdxlib_d.DxDataType.TRUEを渡すと受信に成功してもデータを受信キューから削除しません
 		 *
 		 * Returns: 0以上:受信したデータのサイズ  -1:エラー  -2:バッファのサイズが足りない  -3:受信データがない
 		 */
 		extern int NetWorkRecvUDP(int NetUDPHandle, .IPDATA* RecvIP, int* RecvPort, void* Buffer, int Length, int Peek);
 
 		/**
-		 * UDPを使用した通信でデータを受信する、PeekにTRUEを渡すと受信に成功してもデータを受信キューから削除しません(IPv6版)
+		 * UDPを使用した通信でデータを受信する、Peekにdxlib_d.DxDataType.TRUEを渡すと受信に成功してもデータを受信キューから削除しません(IPv6版)
 		 *
 		 * Returns: 0以上:受信したデータのサイズ  -1:エラー  -2:バッファのサイズが足りない  -3:受信データがない
 		 */
@@ -8145,7 +8145,7 @@ extern (C++, DxLib) {
 		/**
 		 * UDPを使用した通信でデータが送信できる状態かどうかを調べる
 		 *
-		 * Returns: -1:エラー  TRUE:送信可能  FALSE:送信不可能
+		 * Returns: -1:エラー  dxlib_d.DxDataType.TRUE:送信可能  dxlib_d.DxDataType.FALSE:送信不可能
 		 */
 		@disable
 		extern int CheckNetWorkSendUDP(int NetUDPHandle);
@@ -8153,7 +8153,7 @@ extern (C++, DxLib) {
 		/**
 		 * UDPを使用した通信で新たな受信データが存在するかどうかを調べる
 		 *
-		 * Returns: -1:エラー  TRUE:受信データあり  FALSE:受信データなし
+		 * Returns: -1:エラー  dxlib_d.DxDataType.TRUE:受信データあり  dxlib_d.DxDataType.FALSE:受信データなし
 		 */
 		extern int CheckNetWorkRecvUDP(int NetUDPHandle);
 
@@ -8313,7 +8313,7 @@ extern (C++, DxLib) {
 		 * IMEで入力できる最大文字数をMakeKeyInputの設定に合わせるかどうかをセットする
 		 *
 		 * Params:
-		 *      Flag = TRUE:あわせる  FALSE:あわせない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:あわせる  dxlib_d.DxDataType.FALSE:あわせない(デフォルト)
 		 */
 		extern int SetInputStringMaxLengthIMESync(int Flag);
 
@@ -8747,7 +8747,7 @@ extern (C++, DxLib) {
 	/**
 	 * DXライブラリでストリームデータアクセスに使用する関数がデフォルトのものか調べる
 	 *
-	 * Returns: TRUE:デフォルトのもの  FALSE:デフォルトではない
+	 * Returns: dxlib_d.DxDataType.TRUE:デフォルトのもの  dxlib_d.DxDataType.FALSE:デフォルトではない
 	 */
 	extern int GetStreamFunctionDefault();
 
@@ -8832,7 +8832,7 @@ extern (C++, DxLib) {
 		/**
 		 * 指定の入力デバイスがXInputに対応しているかどうかを取得する(DX_INPUT_KEYやDX_INPUT_KEY_PAD1など、キーボードが絡むタイプをInputTypeに渡すとエラーとなり -1を返す)
 		 *
-		 * Returns: TRUE:XInput対応の入力デバイス  FALSE:XInput非対応の入力デバイス   -1:エラー
+		 * Returns: dxlib_d.DxDataType.TRUE:XInput対応の入力デバイス  dxlib_d.DxDataType.FALSE:XInput非対応の入力デバイス   -1:エラー
 		 */
 		extern int CheckJoypadXInput(int InputType);
 
@@ -8899,7 +8899,7 @@ extern (C++, DxLib) {
 		 * ジョイパッドの振動機能を使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseJoypadVibrationFlag(int Flag);
 	}
@@ -9496,7 +9496,7 @@ extern (C++, DxLib) {
 		 * SetDrawScreenに引数として渡せる(描画対象として使用できる)グラフィックハンドルを作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:描画可能グラフィックハンドルを作成する  FLASE:通常のグラフィックハンドルを作成する(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:描画可能グラフィックハンドルを作成する  FLASE:通常のグラフィックハンドルを作成する(デフォルト)
 		 */
 		extern int SetDrawValidGraphCreateFlag(int Flag);
 
@@ -9514,7 +9514,7 @@ extern (C++, DxLib) {
 		 * 画像ファイルからグラフィックハンドルを作成する際に画像左上の色を透過色として扱うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:透過色として扱う  FALSE:透過色として扱わない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:透過色として扱う  dxlib_d.DxDataType.FALSE:透過色として扱わない(デフォルト)
 		 */
 		extern int SetLeftUpColorIsTransColorFlag(int Flag);
 
@@ -9522,7 +9522,7 @@ extern (C++, DxLib) {
 		 * 読み込む画像がパレット画像の場合、パレット画像として使用できる場合はパレット画像として使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:パレット画像として使用できる場合はパレット画像として使用する(デフォルト)  FALSE:パレット画像として使用できる場合もパレット画像としては使用しない(通常タイプの画像に変換して使用する)
+		 *      Flag = dxlib_d.DxDataType.TRUE:パレット画像として使用できる場合はパレット画像として使用する(デフォルト)  dxlib_d.DxDataType.FALSE:パレット画像として使用できる場合もパレット画像としては使用しない(通常タイプの画像に変換して使用する)
 		 */
 		extern int SetUsePaletteGraphFlag(int Flag);
 
@@ -9530,7 +9530,7 @@ extern (C++, DxLib) {
 		 * ブレンド処理用画像を作成するかどうか(要は画像の赤成分をα成分として扱うかどうか)の設定を行う
 		 *
 		 * Params:
-		 *      Flag = TRUE:ブレンド画像として読み込む  FALSE:通常画像として読み込む(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:ブレンド画像として読み込む  dxlib_d.DxDataType.FALSE:通常画像として読み込む(デフォルト)
 		 */
 		extern int SetUseBlendGraphCreateFlag(int Flag);
 
@@ -9543,7 +9543,7 @@ extern (C++, DxLib) {
 		 * アルファテストを使用するグラフィックハンドルを作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:アルファテストを使用する(デフォルト)  FALSE:アルファテストを使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:アルファテストを使用する(デフォルト)  dxlib_d.DxDataType.FALSE:アルファテストを使用しない
 		 */
 		extern int SetUseAlphaTestGraphCreateFlag(int Flag);
 
@@ -9576,7 +9576,7 @@ extern (C++, DxLib) {
 		 * SetDrawBlendMode関数の第1引数にDX_BLENDMODE_NOBLENDを代入した際に、デフォルトでは第二引数は内部で255を指定したことになるが、その自動255化をしないかどうかを設定する。αチャンネル付き画像に対して描画を行う場合のみ意味がある関数
 		 *
 		 * Params:
-		 *      Flag = TRUE:しない(第二引数の値が使用される)   FALSE:する(第二引数の値は無視されて 255が常に使用される)(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:しない(第二引数の値が使用される)   dxlib_d.DxDataType.FALSE:する(第二引数の値は無視されて 255が常に使用される)(デフォルト)
 		 */
 		extern int SetUseNoBlendModeParam(int Flag);
 
@@ -9584,7 +9584,7 @@ extern (C++, DxLib) {
 		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)αチャンネル付きグラフィックハンドルを作成するかどうかを設定する(SetDrawValidGraphCreateFlag関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません)
 		 *
 		 * Params:
-		 *      Flag = TRUE:αチャンネル付き   FALSE:αチャンネルなし(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:αチャンネル付き   dxlib_d.DxDataType.FALSE:αチャンネルなし(デフォルト)
 		 */
 		extern int SetDrawValidAlphaChannelGraphCreateFlag(int Flag);
 
@@ -9597,7 +9597,7 @@ extern (C++, DxLib) {
 		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)ピクセルフォーマットが浮動小数点型のグラフィックハンドルを作成するかどうかを設定する(SetDrawValidGraphCreateFlag関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません)、グラフィックスデバイスが浮動小数点型のピクセルフォーマットに対応していない場合はグラフィックハンドルの作成に失敗する
 		 *
 		 * Params:
-		 *      Flag = TRUE:浮動小数点型  FALSE:整数型(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:浮動小数点型  dxlib_d.DxDataType.FALSE:整数型(デフォルト)
 		 */
 		extern int SetDrawValidFloatTypeGraphCreateFlag(int Flag);
 
@@ -9610,7 +9610,7 @@ extern (C++, DxLib) {
 		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルを作成する際に専用のZバッファも作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:専用のZバッファを作成する(デフォルト)  FALSE:専用のZバッファは作成しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:専用のZバッファを作成する(デフォルト)  dxlib_d.DxDataType.FALSE:専用のZバッファは作成しない
 		 */
 		extern int SetDrawValidGraphCreateZBufferFlag(int Flag);
 
@@ -9678,12 +9678,12 @@ extern (C++, DxLib) {
 		 * 透過色機能を使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseTransColor(int Flag);
 
 		/**
-		 * 透過色機能を使用することを前提とした画像データの読み込み処理を行うかどうかを設定する(TRUEにするとSetDrawMode(DX_DRAWMODE_BILINEAR);をした状態でDrawGraphF等の浮動小数点型座標を受け取る関数で小数点以下の値を指定した場合に発生する描画結果の不自然を緩和する効果があります (デフォルトはFALSE))
+		 * 透過色機能を使用することを前提とした画像データの読み込み処理を行うかどうかを設定する(dxlib_d.DxDataType.TRUEにするとSetDrawMode(DX_DRAWMODE_BILINEAR);をした状態でDrawGraphF等の浮動小数点型座標を受け取る関数で小数点以下の値を指定した場合に発生する描画結果の不自然を緩和する効果があります (デフォルトはdxlib_d.DxDataType.FALSE))
 		 */
 		extern int SetUseTransColorGraphCreateFlag(int Flag);
 
@@ -9701,14 +9701,14 @@ extern (C++, DxLib) {
 		 * αチャンネル付きグラフィックハンドルを作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:αチャンネル付き   FALSE:αチャンネル無し
+		 *      Flag = dxlib_d.DxDataType.TRUE:αチャンネル付き   dxlib_d.DxDataType.FALSE:αチャンネル無し
 		 */
 		extern int SetUseAlphaChannelGraphCreateFlag(int Flag);
 
 		/**
 		 * αチャンネル付きグラフィックハンドルを作成するかどうかを取得する
 		 *
-		 * Returns: TRUE:αチャンネル付き   FALSE:αチャンネル無し
+		 * Returns: dxlib_d.DxDataType.TRUE:αチャンネル付き   dxlib_d.DxDataType.FALSE:αチャンネル無し
 		 */
 		extern int GetUseAlphaChannelGraphCreateFlag();
 
@@ -9716,7 +9716,7 @@ extern (C++, DxLib) {
 		 * Direct3Dの管理テクスチャ機能を使用するグラフィックハンドルを作成するかどうかを設定する、管理機能を使用するとグラフィックスデバイスのVRAM容量以上の画像を扱うことができる代わりにシステムメモリの使用量が増えます
 		 *
 		 * Params:
-		 *      Flag = TRUE:管理機能を使用する(デフォルト)  FALSE:管理機能を使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:管理機能を使用する(デフォルト)  dxlib_d.DxDataType.FALSE:管理機能を使用しない
 		 */
 		extern int SetUseNotManageTextureFlag(int Flag);
 
@@ -9754,7 +9754,7 @@ extern (C++, DxLib) {
 		 * 2のn乗ではないサイズの画像を複数のテクスチャを使用してVRAMの無駄を省くかどうかを設定する、複数のテクスチャを使用する場合はVRAM容量の節約ができる代わりに速度の低下やバイリニアフィルタリング描画時にテクスチャとテクスチャの境目が良く見るとわかる等の弊害があります
 		 *
 		 * Params:
-		 *      Flag = TRUE:複数のテクスチャを使用する   FALSE:なるべく1枚のテクスチャで済ます(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:複数のテクスチャを使用する   dxlib_d.DxDataType.FALSE:なるべく1枚のテクスチャで済ます(デフォルト)
 		 */
 		extern int SetUseDivGraphFlag(int Flag);
 
@@ -9762,7 +9762,7 @@ extern (C++, DxLib) {
 		 * LoadGraphなどの際にファイル名の末尾に_aが付いたアルファチャンネル用の画像ファイルを追加で読み込む処理を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う(デフォルト)  FALSE:行わない
+		 *      Flag = dxlib_d.DxDataType.TRUE:行う(デフォルト)  dxlib_d.DxDataType.FALSE:行わない
 		 */
 		extern int SetUseAlphaImageLoadFlag(int Flag);
 
@@ -9775,7 +9775,7 @@ extern (C++, DxLib) {
 		 * グラフィックハンドルを作成する際に使用した画像データのバックアップをして Direct3DDeviceのデバイスロスト時に使用するかどうかを設定する、バックアップをしないとメモリの節約になりますが、復帰に掛かる時間が長くなり、メモリ上のファイルイメージからグラフィックハンドルを作成した場合は自動復帰ができないなどの弊害があります
 		 *
 		 * Params:
-		 *      Flag = TRUE:バックアップをする(デフォルト)  FALSE:バックアップをしない
+		 *      Flag = dxlib_d.DxDataType.TRUE:バックアップをする(デフォルト)  dxlib_d.DxDataType.FALSE:バックアップをしない
 		 */
 		extern int SetUseGraphBaseDataBackup(int Flag);
 
@@ -9788,7 +9788,7 @@ extern (C++, DxLib) {
 		 * (現在効果なし)グラフィックハンドルが持つ画像データをシステムメモリ上に作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:システムメモリ上に作成  FALSE:VRAM上に作成(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:システムメモリ上に作成  dxlib_d.DxDataType.FALSE:VRAM上に作成(デフォルト)
 		 */
 		extern int SetUseSystemMemGraphCreateFlag(int Flag);
 
@@ -9819,7 +9819,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      GrHandle = 対象となるグラフィックハンドル(描画対象として使用可能なグラフィックハンドルのみ有効)
-		 *      UseFlag = 専用のZバッファを持つかどうか(TRUE:持つ(デフォルト)  FALSE:持たない)
+		 *      UseFlag = 専用のZバッファを持つかどうか(dxlib_d.DxDataType.TRUE:持つ(デフォルト)  dxlib_d.DxDataType.FALSE:持たない)
 		 *      BitDepth = ビット深度(16 or 24 or 32)
 		 */
 		extern int SetUseGraphZBuffer(int GrHandle, int UseFlag, int BitDepth = -1);
@@ -9834,7 +9834,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      GrHandle = ?
-		 *      DeleteFlag = TRUE:デバイスロスト時に削除する  FALSE:デバイスロストが発生しても削除しない
+		 *      DeleteFlag = dxlib_d.DxDataType.TRUE:デバイスロスト時に削除する  dxlib_d.DxDataType.FALSE:デバイスロストが発生しても削除しない
 		 */
 		extern int SetDeviceLostDeleteGraphFlag(int GrHandle, int DeleteFlag);
 
@@ -9871,7 +9871,7 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のグラフィックハンドルが描画対象にできる(SetDrawScreenの引数に渡せる)グラフィックハンドルかどうかを取得する
 		 *
-		 * Returns: TRUE:描画対象にできるグラフィックハンドル FALSE:描画対象にできないグラフィックハンドル
+		 * Returns: dxlib_d.DxDataType.TRUE:描画対象にできるグラフィックハンドル dxlib_d.DxDataType.FALSE:描画対象にできないグラフィックハンドル
 		 */
 		extern int CheckDrawValidGraph(int GrHandle);
 
@@ -9898,7 +9898,7 @@ extern (C++, DxLib) {
 		/**
 		 * グラフィックハンドルの画像を復元する関数が登録されているかどうかを取得する
 		 *
-		 * Returns: TRUE:登録されている  FALSE:登録されていない
+		 * Returns: dxlib_d.DxDataType.TRUE:登録されている  dxlib_d.DxDataType.FALSE:登録されていない
 		 */
 		extern int GetValidRestoreShredPoint();
 
@@ -10455,8 +10455,8 @@ extern (C++, DxLib) {
 		 *      Vertex = 三角形を形成する頂点配列の先頭アドレス(頂点の数はポリゴンの数×3)
 		 *      PolygonNum = 描画するポリゴンの数
 		 *      GrHandle = 使用するグラフィックハンドル
-		 *      TransFlag = 透過色処理を行うかどうか(TRUE:行う  FALSE:行わない)
-		 *      UVScaling = 基本FALSEでOK
+		 *      TransFlag = 透過色処理を行うかどうか(dxlib_d.DxDataType.TRUE:行う  dxlib_d.DxDataType.FALSE:行わない)
+		 *      UVScaling = 基本dxlib_d.DxDataType.FALSEでOK
 		 */
 		extern int DrawPolygon(const (.VERTEX)* VertexArray, int PolygonNum, int GrHandle, int TransFlag, int UVScaling = dxlib_d.DxDataType.FALSE);
 
@@ -10658,21 +10658,21 @@ extern (C++, DxLib) {
 		 * 描画先のアルファチャンネルの内容を書き換えるかを設定する
 		 *
 		 * Params:
-		 *      Flag = FALSE:書き換えない  TRUE:書き換える(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.FALSE:書き換えない  dxlib_d.DxDataType.TRUE:書き換える(デフォルト)
 		 */
 		extern int SetWriteAlphaChannelFlag(int Flag);
 
 		/**
 		 * 描画先のアルファチャンネルの内容を書き換えるかを取得する
 		 *
-		 * Returns: FALSE:書き換えない  TRUE:書き換える(デフォルト)
+		 * Returns: dxlib_d.DxDataType.FALSE:書き換えない  dxlib_d.DxDataType.TRUE:書き換える(デフォルト)
 		 */
 		extern int GetWriteAlphaChannelFlag();
 
 		/**
 		 * 描画先のアルファチャンネルの内容を書き換えないことができるかどうかを取得する
 		 *
-		 * Returns: TRUE:書き換えないことができる  FALSE:書き換えないことができない
+		 * Returns: dxlib_d.DxDataType.TRUE:書き換えないことができる  dxlib_d.DxDataType.FALSE:書き換えないことができない
 		 */
 		extern int CheckSeparateAlphaBlendEnable();
 
@@ -10680,7 +10680,7 @@ extern (C++, DxLib) {
 		 * 描画する画像のRGB成分を無視するかどうかを指定する
 		 *
 		 * Params:
-		 *      EnableFlag = この機能を使うかどうか(TRUE:使う  FALSE:使わない(デフォルト))
+		 *      EnableFlag = この機能を使うかどうか(dxlib_d.DxDataType.TRUE:使う  dxlib_d.DxDataType.FALSE:使わない(デフォルト))
 		 */
 		extern int SetIgnoreDrawGraphColor(int EnableFlag);
 
@@ -10698,7 +10698,7 @@ extern (C++, DxLib) {
 		 * 3D処理で使用する座標値が10000000.0fなどの大きな値になっても描画の崩れを小さく抑える処理を使用するかどうかを設定する、DxLib_Initの呼び出し前でのみ使用可能
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:描画の崩れを抑える処理を使用する(CPU負荷が上がります)  FALSE:描画の崩れを抑える処理は使用しない(デフォルト)
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:描画の崩れを抑える処理を使用する(CPU負荷が上がります)  dxlib_d.DxDataType.FALSE:描画の崩れを抑える処理は使用しない(デフォルト)
 		 */
 		extern int SetUseLarge3DPositionSupport(int UseFlag);
 
@@ -10706,7 +10706,7 @@ extern (C++, DxLib) {
 		 * Zバッファを使用するかどうかを設定する(2Dと3D描画に影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:Zバッファを使用する  FALSE:Zバッファを使用しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:Zバッファを使用する  dxlib_d.DxDataType.FALSE:Zバッファを使用しない(デフォルト)
 		 */
 		extern int SetUseZBufferFlag(int Flag);
 
@@ -10714,7 +10714,7 @@ extern (C++, DxLib) {
 		 * Zバッファに書き込みを行うかどうかを設定する(2Dと3D描画に影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:書き込みを行う  FALSE:書き込みを行わない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:書き込みを行う  dxlib_d.DxDataType.FALSE:書き込みを行わない(デフォルト)
 		 */
 		extern int SetWriteZBufferFlag(int Flag);
 
@@ -10738,7 +10738,7 @@ extern (C++, DxLib) {
 		 * Zバッファを使用するかどうかを設定する(3D描画のみに影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:Zバッファを使用する  FALSE:Zバッファを使用しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:Zバッファを使用する  dxlib_d.DxDataType.FALSE:Zバッファを使用しない(デフォルト)
 		 */
 		extern int SetUseZBuffer3D(int Flag);
 
@@ -10746,7 +10746,7 @@ extern (C++, DxLib) {
 		 * Zバッファに書き込みを行うかどうかを設定する(3D描画のみに影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:書き込みを行う  FALSE:書き込みを行わない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:書き込みを行う  dxlib_d.DxDataType.FALSE:書き込みを行わない(デフォルト)
 		 */
 		extern int SetWriteZBuffer3D(int Flag);
 
@@ -11043,14 +11043,14 @@ extern (C++, DxLib) {
 		 * フォグを有効にするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:有効  FALSE:無効
+		 *      Flag = dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 		 */
 		extern int SetFogEnable(int Flag);
 
 		/**
 		 * フォグが有効かどうかを取得する
 		 *
-		 * Returns: TRUE:有効  FALSE:無効
+		 * Returns: dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 		 */
 		extern int GetFogEnable();
 
@@ -11187,7 +11187,7 @@ extern (C++, DxLib) {
 		 * SetDrawScreenを実行した際にカメラや描画範囲の設定をリセットするかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:リセットする(デフォルト)  FALSE:リセットしない
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:リセットする(デフォルト)  dxlib_d.DxDataType.FALSE:リセットしない
 		 */
 		extern int SetUseSetDrawScreenSettingReset(int UseFlag);
 
@@ -11230,7 +11230,7 @@ extern (C++, DxLib) {
 		 * 640x480の画面で320x240の画面解像度にするかどうかを設定する、640x480以外の解像度では無効
 		 *
 		 * Params:
-		 *      Flag = TRUE:有効  FALSE:無効
+		 *      Flag = dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 		 */
 		extern int SetEmulation320x240(int Flag);
 
@@ -11268,7 +11268,7 @@ extern (C++, DxLib) {
 		 * 画面モード変更時(とウインドウモード変更時)にグラフィックスシステムの設定やグラフィックハンドルをリセットするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:リセットする(デフォルト)  FALSE:リセットしない
+		 *      Flag = dxlib_d.DxDataType.TRUE:リセットする(デフォルト)  dxlib_d.DxDataType.FALSE:リセットしない
 		 */
 		extern int SetChangeScreenModeGraphicsSystemResetFlag(int Flag);
 
@@ -11355,7 +11355,7 @@ extern (C++, DxLib) {
 		 * 通常描画にプログラマブルシェーダーを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseNormalDrawShader(int Flag);
 
@@ -11363,7 +11363,7 @@ extern (C++, DxLib) {
 		 * ソフトウエアレンダリングモードを使用するかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
 		 */
 		extern int SetUseSoftwareRenderModeFlag(int Flag);
 
@@ -11406,7 +11406,7 @@ extern (C++, DxLib) {
 		 * ハードウエアの頂点演算処理機能を使用するかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseHardwareVertexProcessing(int Flag);
 
@@ -11414,7 +11414,7 @@ extern (C++, DxLib) {
 		 * ピクセル単位でライティングを行うかどうかを設定する、要 ShaderModel 3.0
 		 *
 		 * Params:
-		 *      Flag = TRUE:ピクセル単位のライティングを行う  FALSE:頂点単位のライティングを行う(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:ピクセル単位のライティングを行う  dxlib_d.DxDataType.FALSE:頂点単位のライティングを行う(デフォルト)
 		 */
 		extern int SetUsePixelLighting(int Flag);
 
@@ -12100,13 +12100,13 @@ extern (C++, DxLib) {
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_MONO, int Cb = 青色差(-255~255), int Cr = 赤色差(-255~255));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GAUSS, int PixelWidth = 使用ピクセル幅(8 , 16 , 32の何れか), int Param = ぼかしパラメータ(100で約1ピクセル分の幅));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_DOWN_SCALE, int DivNum = 元のサイズの何分の1か、という値(2 , 4 , 8の何れか));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_CLIP, int CmpType = クリップタイプ(DX_CMP_LESS:CmpParam以下をクリップ又はDX_CMP_GREATER:CmpParam以上をクリップ), int CmpParam = クリップパラメータ(0~255), int ClipFillFlag = クリップしたピクセルを塗りつぶすかどうか(TRUE:塗りつぶす  FALSE:塗りつぶさない), uint ClipFillColor = クリップしたピクセルに塗る色値(GetColorで取得する)(ClipFillFlagがFALSEの場合は使用しない), int ClipFillAlpha = クリップしたピクセルに塗るα値(0~255)(ClipFillFlagがFALSEの場合は使用しない));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_CLIP, int CmpType = クリップタイプ(DX_CMP_LESS:CmpParam以下をクリップ又はDX_CMP_GREATER:CmpParam以上をクリップ), int CmpParam = クリップパラメータ(0~255), int ClipFillFlag = クリップしたピクセルを塗りつぶすかどうか(dxlib_d.DxDataType.TRUE:塗りつぶす  dxlib_d.DxDataType.FALSE:塗りつぶさない), uint ClipFillColor = クリップしたピクセルに塗る色値(GetColorで取得する)(ClipFillFlagがdxlib_d.DxDataType.FALSEの場合は使用しない), int ClipFillAlpha = クリップしたピクセルに塗るα値(0~255)(ClipFillFlagがdxlib_d.DxDataType.FALSEの場合は使用しない));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_SCALE, int MinBright = 変換後に真っ暗になる明るさ(0~255), int MaxBright = 変換後に真っ白になる明るさ(0~255));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_HSB, int HueType = Hueの意味(0:相対値  1:絶対値), int Hue = 色相パラメータ(HueTypeが0の場合 = ピクセルの色相に対する相対値(-180~180)   HueTypeが1の場合 = 色相の絶対値(0~360)), int Saturation = 彩度(-255~), int Bright = 輝度(-255~255));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_INVERT);
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_LEVEL, int Min = 変換元の下限値(0~255), int Max = 変換元の上限値(0~255), int Gamma = ガンマ値(100でガンマ補正無し、0とそれ以下の値は不可), int AfterMin = 変換後の最低値(0~255), int AfterMax = 変換後の最大値(0~255));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_TWO_COLOR, int Threshold = 閾値(0~255), uint LowColor = 閾値より値が低かったピクセルの変換後の色値(GetColorで取得する), int LowAlpha = 閾値より値が低かったピクセルの変換後のα値(0~255), uint HighColor = 閾値より値が高かったピクセルの変換後の色値(GetColorで取得する), int HighAlpha = 閾値より値が高かったピクセルの変換後のα値(0~255));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GRADIENT_MAP, int MapGrHandle = グラデーションマップのグラフィックハンドル(元画像の輝度からグラデーションマップ画像のx座標を算出しますので縦幅は1dotでもOK), int Reverse = グラデーションマップ左右反転フラグ(TRUE:グラデーションマップを左右反転して使う  FALSE:左右反転しない));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GRADIENT_MAP, int MapGrHandle = グラデーションマップのグラフィックハンドル(元画像の輝度からグラデーションマップ画像のx座標を算出しますので縦幅は1dotでもOK), int Reverse = グラデーションマップ左右反転フラグ(dxlib_d.DxDataType.TRUE:グラデーションマップを左右反転して使う  dxlib_d.DxDataType.FALSE:左右反転しない));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_REPLACEMENT, int TargetR, int TargetG, int TargetB, int TargetA = 置換対象の色(0~255), int R, int G, int B, int A = 置換後の色(0~255));
 
 			/*
@@ -12257,7 +12257,7 @@ extern (C++, DxLib) {
 			extern int ChangeMovieVolumeToGraph(int Volume, int GraphHandle);
 
 			/**
-			 * 動画ファイルの基本イメージデータを取得する(ImageUpdateFlagにint型変数のアドレスを渡すと、イメージが更新された場合は1が、更新されていない場合は0が格納されます、ImageUpdateFlagSetOnlyをTRUEにすると戻り値のBASEIMAGEは有効な画像データではなくなりますが、BASEIMAGEの更新処理が行われませんので、ImageUpdateFlagを利用して画像が更新されたかどうかだけをチェックしたい場合はTRUEにしてください)
+			 * 動画ファイルの基本イメージデータを取得する(ImageUpdateFlagにint型変数のアドレスを渡すと、イメージが更新された場合は1が、更新されていない場合は0が格納されます、ImageUpdateFlagSetOnlyをdxlib_d.DxDataType.TRUEにすると戻り値のBASEIMAGEは有効な画像データではなくなりますが、BASEIMAGEの更新処理が行われませんので、ImageUpdateFlagを利用して画像が更新されたかどうかだけをチェックしたい場合はdxlib_d.DxDataType.TRUEにしてください)
 			 */
 			extern const (.BASEIMAGE)* GetMovieBaseImageToGraph(int GraphHandle, int* ImageUpdateFlag = null, int ImageUpdateFlagSetOnly = dxlib_d.DxDataType.FALSE);
 
@@ -12297,7 +12297,7 @@ extern (C++, DxLib) {
 			 * 読み込む動画ファイル映像の右半分の赤成分をα情報として扱うかどうかをセットする
 			 *
 			 * Params:
-			 *      Flag = TRUE:α情報として扱う  FALSE:α情報として扱わない(デフォルト)
+			 *      Flag = dxlib_d.DxDataType.TRUE:α情報として扱う  dxlib_d.DxDataType.FALSE:α情報として扱わない(デフォルト)
 			 */
 			extern int SetMovieRightImageAlphaFlag(int Flag);
 
@@ -12305,7 +12305,7 @@ extern (C++, DxLib) {
 			 * 読み込む動画ファイルが32bitカラーだった場合、A8R8G8B8形式として扱うかどうかをセットする、32bitカラーではない動画ファイルに対しては無効
 			 *
 			 * Params:
-			 *      Flag = TRUE:A8R8G8B8として扱う  FALSE:X8R8G8B8として扱う(デフォルト)
+			 *      Flag = dxlib_d.DxDataType.TRUE:A8R8G8B8として扱う  dxlib_d.DxDataType.FALSE:X8R8G8B8として扱う(デフォルト)
 			 */
 			extern int SetMovieColorA8R8G8B8Flag(int Flag);
 
@@ -12313,7 +12313,7 @@ extern (C++, DxLib) {
 			 * YUVフォーマットのサーフェスが使用できる場合はYUVフォーマットのサーフェスを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      Flag = TRUE:使用する(デフォルト) FALSE:RGBフォーマットのサーフェスを使用する
+			 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト) dxlib_d.DxDataType.FALSE:RGBフォーマットのサーフェスを使用する
 			 */
 			extern int SetMovieUseYUVFormatSurfaceFlag(int Flag);
 		}
@@ -12423,14 +12423,14 @@ extern (C++, DxLib) {
 		/**
 		 * 指定の座標がカメラの視界に入っているかどうかを判定する
 		 *
-		 * Returns: TRUE:視界に入っていない  FALSE:視界に入っている
+		 * Returns: dxlib_d.DxDataType.TRUE:視界に入っていない  dxlib_d.DxDataType.FALSE:視界に入っている
 		 */
 		extern int CheckCameraViewClip(.VECTOR CheckPos);
 
 		/**
 		 * 指定の座標がカメラの視界に入っているかどうかを判定する
 		 *
-		 * Returns: TRUE:視界に入っていない  FALSE:視界に入っている
+		 * Returns: dxlib_d.DxDataType.TRUE:視界に入っていない  dxlib_d.DxDataType.FALSE:視界に入っている
 		 */
 		extern int CheckCameraViewClipD(.VECTOR_D CheckPos);
 
@@ -12451,14 +12451,14 @@ extern (C++, DxLib) {
 		/**
 		 * 二つの座標で表されるボックスがカメラの視界に入っているかどうかを判定する
 		 *
-		 * Returns: TRUE:視界に入っていない  FALSE:視界に入っている
+		 * Returns: dxlib_d.DxDataType.TRUE:視界に入っていない  dxlib_d.DxDataType.FALSE:視界に入っている
 		 */
 		extern int CheckCameraViewClip_Box(.VECTOR BoxPos1, .VECTOR BoxPos2);
 
 		/**
 		 * 二つの座標で表されるボックスがカメラの視界に入っているかどうかを判定する
 		 *
-		 * Returns: TRUE:視界に入っていない  FALSE:視界に入っている
+		 * Returns: dxlib_d.DxDataType.TRUE:視界に入っていない  dxlib_d.DxDataType.FALSE:視界に入っている
 		 */
 		extern int CheckCameraViewClip_BoxD(.VECTOR_D BoxPos1, .VECTOR_D BoxPos2);
 
@@ -12744,7 +12744,7 @@ extern (C++, DxLib) {
 		/**
 		 * デフォルトライトを使用するかどうかを取得する
 		 *
-		 * Returns: TRUE:有効  FALSE:無効
+		 * Returns: dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 		 */
 		extern int GetLightEnable();
 
@@ -12823,7 +12823,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      SmSlotIndex = シャドウマップスロット(SetUseShadowMapの第1引数に設定する値)
-		 *      UseFlag = 適用にするかどうかのフラグ(TRUE:適用する(デフォルト)  FALSE:適用しない)
+		 *      UseFlag = 適用にするかどうかのフラグ(dxlib_d.DxDataType.TRUE:適用する(デフォルト)  dxlib_d.DxDataType.FALSE:適用しない)
 		 */
 		extern int SetLightUseShadowMap(int SmSlotIndex, int UseFlag);
 
@@ -12862,7 +12862,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      LHandle = ?
-		 *      EnableFlag = TRUE:有効  FALSE:無効
+		 *      EnableFlag = dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 		 */
 		extern int SetLightEnableHandle(int LHandle, int EnableFlag);
 
@@ -12907,7 +12907,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      LHandle = ?
 		 *      SmSlotIndex = シャドウマップスロット(SetUseShadowMapの第1引数に設定する値)
-		 *      UseFlag = 適用にするかどうかのフラグ(TRUE:適用する(デフォルト)  FALSE:適用しない)
+		 *      UseFlag = 適用にするかどうかのフラグ(dxlib_d.DxDataType.TRUE:適用する(デフォルト)  dxlib_d.DxDataType.FALSE:適用しない)
 		 */
 		extern int SetLightUseShadowMapHandle(int LHandle, int SmSlotIndex, int UseFlag);
 
@@ -12921,7 +12921,7 @@ extern (C++, DxLib) {
 		/**
 		 * ライトハンドルのライト効果の有効、無効を取得する
 		 *
-		 * Returns: TRUE:有効  FALSE:無効
+		 * Returns: dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 		 */
 		extern int GetLightEnableHandle(int LHandle);
 
@@ -13007,7 +13007,7 @@ extern (C++, DxLib) {
 			 * マスクスクリーンを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      ValidFlag = 使用するかどうか(TRUE:使用する  FALSE:使用しない(デフォルト)
+			 *      ValidFlag = 使用するかどうか(dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
 			 */
 			extern int SetUseMaskScreenFlag(int ValidFlag);
 
@@ -13109,7 +13109,7 @@ extern (C++, DxLib) {
 				extern int DrawFormatStringMask(int x, int y, int Flag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 				/**
-				 * 書式指定ありの文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(FALSE);にして作成したフォントハンドルのみ使用可能)
+				 * 書式指定ありの文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(dxlib_d.DxDataType.FALSE);にして作成したフォントハンドルのみ使用可能)
 				 */
 				extern int DrawFormatStringMaskToHandle(int x, int y, int Flag, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -13124,12 +13124,12 @@ extern (C++, DxLib) {
 				extern int DrawNStringMask(int x, int y, int Flag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 				/**
-				 * 文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(FALSE);にして作成したフォントハンドルのみ使用可能)
+				 * 文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(dxlib_d.DxDataType.FALSE);にして作成したフォントハンドルのみ使用可能)
 				 */
 				extern int DrawStringMaskToHandle(int x, int y, int Flag, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* String);
 
 				/**
-				 * 文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(FALSE);にして作成したフォントハンドルのみ使用可能)
+				 * 文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(dxlib_d.DxDataType.FALSE);にして作成したフォントハンドルのみ使用可能)
 				 */
 				extern int DrawNStringMaskToHandle(int x, int y, int Flag, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 			}
@@ -13185,14 +13185,14 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のフォント名のフォントが存在するかどうかをチェックする
 		 *
-		 * Returns: TRUE:存在する  FALSE:存在しない
+		 * Returns: dxlib_d.DxDataType.TRUE:存在する  dxlib_d.DxDataType.FALSE:存在しない
 		 */
 		extern int CheckFontName(const (dxlib_d.DxDataType.TCHAR)* FontName, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
 		/**
 		 * 指定のフォント名のフォントが存在するかどうかをチェックする
 		 *
-		 * Returns: TRUE:存在する  FALSE:存在しない
+		 * Returns: dxlib_d.DxDataType.TRUE:存在する  dxlib_d.DxDataType.FALSE:存在しない
 		 */
 		extern int CheckFontNameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
@@ -13247,7 +13247,7 @@ extern (C++, DxLib) {
 		extern int DeleteFontToHandle(int FontHandle);
 
 		/**
-		 * フォントハンドルを削除した際にTRUEを代入する変数のアドレスを設定する
+		 * フォントハンドルを削除した際にdxlib_d.DxDataType.TRUEを代入する変数のアドレスを設定する
 		 */
 		extern int SetFontLostFlag(int FontHandle, int* LostFlag);
 
@@ -13674,7 +13674,7 @@ extern (C++, DxLib) {
 		 * フォントのキャッシュにテクスチャを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:テクスチャを使用する(デフォルト)  FALSE:テクスチャは使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:テクスチャを使用する(デフォルト)  dxlib_d.DxDataType.FALSE:テクスチャは使用しない
 		 */
 		extern int SetFontCacheToTextureFlag(int Flag);
 
@@ -13719,7 +13719,7 @@ extern (C++, DxLib) {
 		 * フォントキャッシュとして保存する画像の形式を乗算済みαチャンネル付き画像にするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:乗算済みαを使用する  FLASE:乗算済みαを使用しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:乗算済みαを使用する  FLASE:乗算済みαを使用しない(デフォルト)
 		 */
 		extern int SetFontCacheUsePremulAlphaFlag(int Flag);
 
@@ -13732,7 +13732,7 @@ extern (C++, DxLib) {
 		 * フォントのサイズを補正する処理を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う(デフォルト)  FALSE:行わない
+		 *      Flag = dxlib_d.DxDataType.TRUE:行う(デフォルト)  dxlib_d.DxDataType.FALSE:行わない
 		 */
 		extern int SetFontUseAdjustSizeFlag(int Flag);
 
@@ -13774,9 +13774,9 @@ extern (C++, DxLib) {
 		extern int FontBaseImageBltToHandleWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, .BASEIMAGE* DestImage, .BASEIMAGE* DestEdgeImage, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 2バイト文字か調べる(TRUE:2バイト文字  FALSE:1バイト文字)
+		 * 2バイト文字か調べる(dxlib_d.DxDataType.TRUE:2バイト文字  dxlib_d.DxDataType.FALSE:1バイト文字)
 		 *
-		 * Returns: TRUE:2バイト文字  FALSE:1バイト文字
+		 * Returns: dxlib_d.DxDataType.TRUE:2バイト文字  dxlib_d.DxDataType.FALSE:1バイト文字
 		 */
 		extern int MultiByteCharCheck(const (char)* Buf, int CharSet /* DX_CHARSET_SHFTJIS */);
 
@@ -15024,28 +15024,28 @@ extern (C++, DxLib) {
 	/**
 	 * 三角形と三角形の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Triangle_Triangle(.VECTOR Triangle1Pos1, .VECTOR Triangle1Pos2, .VECTOR Triangle1Pos3, .VECTOR Triangle2Pos1, .VECTOR Triangle2Pos2, .VECTOR Triangle2Pos3);
 
 	/**
 	 * 三角形と三角形の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Triangle_TriangleD(.VECTOR_D Triangle1Pos1, .VECTOR_D Triangle1Pos2, .VECTOR_D Triangle1Pos3, .VECTOR_D Triangle2Pos1, .VECTOR_D Triangle2Pos2, .VECTOR_D Triangle2Pos3);
 
 	/**
 	 * 三角形と三角形の当たり判定(2D版)
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Triangle_Triangle_2D(.VECTOR Triangle1Pos1, .VECTOR Triangle1Pos2, .VECTOR Triangle1Pos3, .VECTOR Triangle2Pos1, .VECTOR Triangle2Pos2, .VECTOR Triangle2Pos3);
 
 	/**
 	 * 三角形と三角形の当たり判定(2D版)
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Triangle_TriangleD_2D(.VECTOR_D Triangle1Pos1, .VECTOR_D Triangle1Pos2, .VECTOR_D Triangle1Pos3, .VECTOR_D Triangle2Pos1, .VECTOR_D Triangle2Pos2, .VECTOR_D Triangle2Pos3);
 
@@ -15062,98 +15062,98 @@ extern (C++, DxLib) {
 	/**
 	 * 点と円錐の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Point_Cone(.VECTOR PointPos, .VECTOR ConeTopPos, .VECTOR ConeBottomPos, float ConeR);
 
 	/**
 	 * 点と円錐の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Point_ConeD(.VECTOR_D PointPos, .VECTOR_D ConeTopPos, .VECTOR_D ConeBottomPos, double ConeR);
 
 	/**
 	 * 線と球の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Line_Sphere(.VECTOR LinePos1, .VECTOR LinePos2, .VECTOR SphereCenterPos, float SphereR);
 
 	/**
 	 * 線と球の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Line_SphereD(.VECTOR_D LinePos1, .VECTOR_D LinePos2, .VECTOR_D SphereCenterPos, double SphereR);
 
 	/**
 	 * 球と球の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Sphere_Sphere(.VECTOR Sphere1CenterPos, float Sphere1R, .VECTOR Sphere2CenterPos, float Sphere2R);
 
 	/**
 	 * 球と球の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Sphere_SphereD(.VECTOR_D Sphere1CenterPos, double Sphere1R, .VECTOR_D Sphere2CenterPos, double Sphere2R);
 
 	/**
 	 * 球とカプセルの当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Sphere_Capsule(.VECTOR SphereCenterPos, float SphereR, .VECTOR CapPos1, .VECTOR CapPos2, float CapR);
 
 	/**
 	 * 球とカプセルの当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Sphere_CapsuleD(.VECTOR_D SphereCenterPos, double SphereR, .VECTOR_D CapPos1, .VECTOR_D CapPos2, double CapR);
 
 	/**
 	 * 球と三角形の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Sphere_Triangle(.VECTOR SphereCenterPos, float SphereR, .VECTOR TrianglePos1, .VECTOR TrianglePos2, .VECTOR TrianglePos3);
 
 	/**
 	 * 球と三角形の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Sphere_TriangleD(.VECTOR_D SphereCenterPos, double SphereR, .VECTOR_D TrianglePos1, .VECTOR_D TrianglePos2, .VECTOR_D TrianglePos3);
 
 	/**
 	 * カプセル同士の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Capsule_Capsule(.VECTOR Cap1Pos1, .VECTOR Cap1Pos2, float Cap1R, .VECTOR Cap2Pos1, .VECTOR Cap2Pos2, float Cap2R);
 
 	/**
 	 * カプセル同士の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Capsule_CapsuleD(.VECTOR_D Cap1Pos1, .VECTOR_D Cap1Pos2, double Cap1R, .VECTOR_D Cap2Pos1, .VECTOR_D Cap2Pos2, double Cap2R);
 
 	/**
 	 * カプセルと三角形の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Capsule_Triangle(.VECTOR CapPos1, .VECTOR CapPos2, float CapR, .VECTOR TrianglePos1, .VECTOR TrianglePos2, .VECTOR TrianglePos3);
 
 	/**
 	 * カプセルと三角形の当たり判定
 	 *
-	 * Returns: TRUE:当たっている  FALSE:当たっていない
+	 * Returns: dxlib_d.DxDataType.TRUE:当たっている  dxlib_d.DxDataType.FALSE:当たっていない
 	 */
 	extern int HitCheck_Capsule_TriangleD(.VECTOR_D CapPos1, .VECTOR_D CapPos2, double CapR, .VECTOR_D TrianglePos1, .VECTOR_D TrianglePos2, .VECTOR_D TrianglePos3);
 
@@ -16081,7 +16081,7 @@ extern (C++, DxLib) {
 	 * 高速読み込みルーチンを使用するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 	 */
 	extern int SetUseFastLoadFlag(int Flag);
 
@@ -16099,7 +16099,7 @@ extern (C++, DxLib) {
 	 * 画像ファイル読み込み時に乗算済みアルファ画像に変換するかどうかを設定する
 	 *
 	 * Params:
-	 *      UseFlag = TRUE:変換処理を行う  FALSE:変換処理を行わない(デフォルト)
+	 *      UseFlag = dxlib_d.DxDataType.TRUE:変換処理を行う  dxlib_d.DxDataType.FALSE:変換処理を行わない(デフォルト)
 	 */
 	extern int SetUsePremulAlphaConvertLoad(int UseFlag);
 
@@ -16558,7 +16558,7 @@ extern (C++, DxLib) {
 	/**
 	 * 二つのカラーフォーマットが等しいかどうか調べる
 	 *
-	 * Returns: TRUE:等しい  FALSE:等しくない
+	 * Returns: dxlib_d.DxDataType.TRUE:等しい  dxlib_d.DxDataType.FALSE:等しくない
 	 */
 	extern int CmpColorData(const (.COLORDATA)* ColorData1, const (.COLORDATA)* ColorData2);
 
@@ -16708,14 +16708,14 @@ extern (C++, DxLib) {
 		/**
 		 * ソフトウエアイメージハンドルがパレット画像かどうかを取得する
 		 *
-		 * Returns: TRUE:パレット画像  FALSE:パレット画像じゃない
+		 * Returns: dxlib_d.DxDataType.TRUE:パレット画像  dxlib_d.DxDataType.FALSE:パレット画像じゃない
 		 */
 		extern int CheckPaletteSoftImage(int SIHandle);
 
 		/**
 		 * ソフトウエアイメージハンドルのフォーマットにα要素があるかどうかを取得する
 		 *
-		 * Returns: TRUE:ある  FALSE:ない
+		 * Returns: dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない
 		 */
 		extern int CheckAlphaSoftImage(int SIHandle);
 
@@ -17348,7 +17348,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      Param = ?
-		 *      PlaySoundOnly = TRUE:再生中のサウンドにのみ設定する  FALSE:再生していないサウンドにも設定する
+		 *      PlaySoundOnly = dxlib_d.DxDataType.TRUE:再生中のサウンドにのみ設定する  dxlib_d.DxDataType.FALSE:再生していないサウンドにも設定する
 		 */
 		extern int Set3DReverbParamSoundMemAll(const (.SOUND3D_REVERB_PARAM)* Param, int PlaySoundOnly = dxlib_d.DxDataType.FALSE);
 
@@ -17357,7 +17357,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      PresetNo = ?
-		 *      PlaySoundOnly = TRUE:再生中のサウンドにのみ設定する  FALSE:再生していないサウンドにも設定する
+		 *      PlaySoundOnly = dxlib_d.DxDataType.TRUE:再生中のサウンドにのみ設定する  dxlib_d.DxDataType.FALSE:再生していないサウンドにも設定する
 		 */
 		extern int Set3DPresetReverbParamSoundMemAll(int PresetNo /* DX_REVERB_PRESET_DEFAULT等 */, int PlaySoundOnly = dxlib_d.DxDataType.FALSE);
 
@@ -17494,14 +17494,14 @@ extern (C++, DxLib) {
 		 * LoadSoundMemなどで読み込むサウンドデータにループ範囲情報があっても無視するかどうかを設定する
 		 *
 		 * Params:
-		 *      IgnoreFlag = TRUE:無視する  FALSE:無視しない(デフォルト)
+		 *      IgnoreFlag = dxlib_d.DxDataType.TRUE:無視する  dxlib_d.DxDataType.FALSE:無視しない(デフォルト)
 		 */
 		extern int SetCreateSoundIgnoreLoopAreaInfo(int IgnoreFlag);
 
 		/**
 		 * LoadSoundMemなどで読み込むサウンドデータにループ範囲情報があっても無視するかどうかを取得する
 		 *
-		 * Returns: TRUE:無視する  FALSE:無視しない(デフォルト)
+		 * Returns: dxlib_d.DxDataType.TRUE:無視する  dxlib_d.DxDataType.FALSE:無視しない(デフォルト)
 		 */
 		extern int GetCreateSoundIgnoreLoopAreaInfo();
 
@@ -17524,7 +17524,7 @@ extern (C++, DxLib) {
 		 * ChangeVolumeSoundMem, ChangeNextPlayVolumeSoundMem, ChangeMovieVolumeToGraphの音量計算式をVer3.10c以前のものを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:Ver3.10c以前の計算式を使用  FALSE:3.10d以降の計算式を使用(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:Ver3.10c以前の計算式を使用  dxlib_d.DxDataType.FALSE:3.10d以降の計算式を使用(デフォルト)
 		 */
 		extern int SetUseOldVolumeCalcFlag(int Flag);
 
@@ -17542,7 +17542,7 @@ extern (C++, DxLib) {
 		 * 次に作成するサウンドハンドルを3Dサウンド用にするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:3Dサウンド用にする  FALSE:3Dサウンド用にしない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:3Dサウンド用にする  dxlib_d.DxDataType.FALSE:3Dサウンド用にしない(デフォルト)
 		 */
 		extern int SetCreate3DSoundFlag(int Flag);
 
@@ -17884,7 +17884,7 @@ extern (C++, DxLib) {
 		/**
 		 * ソフトウエアで扱う波形データのプレイヤーハンドルの再生処理が開始されているか取得する
 		 *
-		 * Returns: TRUE:開始している  FALSE:停止している
+		 * Returns: dxlib_d.DxDataType.TRUE:開始している  dxlib_d.DxDataType.FALSE:停止している
 		 */
 		extern int CheckStartSoftSoundPlayer(int SSoundPlayerHandle);
 
@@ -17906,7 +17906,7 @@ extern (C++, DxLib) {
 		/**
 		 * ソフトウエアで扱う波形データのプレイヤーハンドルに再生用サウンドバッファに転送していない波形データが無く、再生用サウンドバッファにも無音データ以外無いかどうかを取得する
 		 *
-		 * Returns: TRUE:無音データ以外無い  FALSE:有効データがある
+		 * Returns: dxlib_d.DxDataType.TRUE:無音データ以外無い  dxlib_d.DxDataType.FALSE:有効データがある
 		 */
 		extern int CheckSoftSoundPlayerNoneData(int SSoundPlayerHandle);
 
@@ -17945,7 +17945,7 @@ extern (C++, DxLib) {
 		/**
 		 * MIDIハンドルが演奏中かどうかを取得する
 		 *
-		 * Returns: TRUE:演奏中  FALSE:停止中
+		 * Returns: dxlib_d.DxDataType.TRUE:演奏中  dxlib_d.DxDataType.FALSE:停止中
 		 */
 		extern int CheckMusicMem(int MusicHandle);
 
@@ -18015,7 +18015,7 @@ extern (C++, DxLib) {
 	/**
 	 * DXアーカイブファイルの読み込み機能を使うかどうかを設定する
 	 *
-	 * Returns: FALSE:使用しない  TRUE:使用する
+	 * Returns: dxlib_d.DxDataType.FALSE:使用しない  dxlib_d.DxDataType.TRUE:使用する
 	 */
 	extern int SetUseDXArchiveFlag(int Flag);
 
@@ -18078,14 +18078,14 @@ extern (C++, DxLib) {
 	/**
 	 * 指定のDXAファイルの事前読み込みが完了したかどうかを取得する
 	 *
-	 * Returns: TRUE:完了した FALSE:まだ
+	 * Returns: dxlib_d.DxDataType.TRUE:完了した dxlib_d.DxDataType.FALSE:まだ
 	 */
 	extern int DXArchiveCheckIdle(const (dxlib_d.DxDataType.TCHAR)* FilePath);
 
 	/**
 	 * 指定のDXAファイルの事前読み込みが完了したかどうかを取得する
 	 *
-	 * Returns: TRUE:完了した FALSE:まだ
+	 * Returns: dxlib_d.DxDataType.TRUE:完了した dxlib_d.DxDataType.FALSE:まだ
 	 */
 	extern int DXArchiveCheckIdleWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength);
 
@@ -18186,7 +18186,7 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際に法線の再計算を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う  FALSE:行わない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:行う  dxlib_d.DxDataType.FALSE:行わない(デフォルト)
 		 */
 		extern int MV1SetLoadModelReMakeNormal(int Flag);
 
@@ -18199,7 +18199,7 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際にスケーリングデータを無視するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:無視する  FALSE:無視しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:無視する  dxlib_d.DxDataType.FALSE:無視しない(デフォルト)
 		 */
 		extern int MV1SetLoadModelIgnoreScaling(int Flag);
 
@@ -18207,7 +18207,7 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際に座標データの最適化を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う  FALSE:行わない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:行う  dxlib_d.DxDataType.FALSE:行わない(デフォルト)
 		 */
 		extern int MV1SetLoadModelPositionOptimize(int Flag);
 
@@ -18215,7 +18215,7 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際にポリゴンの辺が接していて、且つ法線の方向が異なる辺に面積0のポリゴンを埋め込むかどうかを設定する、(MV1ファイルの読み込みではこの関数の設定は無視され、ポリゴンの埋め込みは実行されません)
 		 *
 		 * Params:
-		 *      Flag = TRUE:埋め込む FALSE:埋め込まない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:埋め込む dxlib_d.DxDataType.FALSE:埋め込まない(デフォルト)
 		 */
 		extern int MV1SetLoadModelNotEqNormalSide_AddZeroAreaPolygon(int Flag);
 
@@ -18291,7 +18291,7 @@ extern (C++, DxLib) {
 		 * 読み込むモデルを同時複数描画に対応させるかどうかを設定する、(「対応させる」にすると描画が高速になる可能性がある代わりに消費VRAMが増えます)
 		 *
 		 * Params:
-		 *      Flag = TRUE:対応させる  FALSE:対応させない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:対応させる  dxlib_d.DxDataType.FALSE:対応させない(デフォルト)
 		 */
 		extern int MV1SetLoadModelUsePackDraw(int Flag);
 
@@ -18366,7 +18366,7 @@ extern (C++, DxLib) {
 		 * モデルの描画にSetUseVertexShader, SetUsePixelShaderで指定したシェーダーを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:使用する  FALSE:使用しない(デフォルト)
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
 		 */
 		extern int MV1SetUseOrigShader(int UseFlag);
 
@@ -18472,14 +18472,14 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      VisibleFlag = TRUE:表示  FALSE:非表示
+		 *      VisibleFlag = dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1SetVisible(int MHandle, int VisibleFlag);
 
 		/**
 		 * モデルの表示、非表示状態を取得する
 		 *
-		 * Returns: TRUE:表示  FALSE:非表示
+		 * Returns: dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1GetVisible(int MHandle);
 
@@ -18489,14 +18489,14 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MeshCategory = ?
-		 *      VisibleFlag = TRUE:表示  FALSE:非表示
+		 *      VisibleFlag = dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1SetMeshCategoryVisible(int MHandle, int MeshCategory, int VisibleFlag);
 
 		/**
 		 * モデルのメッシュの種類(DX_MV1_MESHCATEGORY_NORMALなど)毎の表示、非表示を取得する
 		 *
-		 * Returns: TRUE:表示  FALSE:非表示
+		 * Returns: dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1GetMeshCategoryVisible(int MHandle, int MeshCategory);
 
@@ -18543,7 +18543,7 @@ extern (C++, DxLib) {
 		/**
 		 * モデルに半透明要素があるかどうかを取得する
 		 *
-		 * Returns: TRUE:ある  FALSE:ない
+		 * Returns: dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない
 		 */
 		extern int MV1GetSemiTransState(int MHandle);
 
@@ -18562,14 +18562,14 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      Flag = TRUE:RGB値に対してA値を乗算する  FALSE:乗算しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:RGB値に対してA値を乗算する  dxlib_d.DxDataType.FALSE:乗算しない(デフォルト)
 		 */
 		extern int MV1SetUseDrawMulAlphaColor(int MHandle, int Flag);
 
 		/**
 		 * モデルを描画する際にRGB値に対してA値を乗算するかどうかを取得する(描画結果が乗算済みアルファ画像になります)
 		 *
-		 * Returns: TRUE:RGB値に対してA値を乗算する  FALSE:乗算しない(デフォルト)
+		 * Returns: dxlib_d.DxDataType.TRUE:RGB値に対してA値を乗算する  dxlib_d.DxDataType.FALSE:乗算しない(デフォルト)
 		 */
 		extern int MV1GetUseDrawMulAlphaColor(int MHandle);
 
@@ -18598,7 +18598,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      UseFlag = TRUE:マテリアルカラーの代わりに使用する  FALSE:マテリアルカラーを使用する
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:マテリアルカラーの代わりに使用する  dxlib_d.DxDataType.FALSE:マテリアルカラーを使用する
 		 */
 		extern int MV1SetUseVertDifColor(int MHandle, int UseFlag);
 
@@ -18607,7 +18607,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      UseFlag = TRUE:マテリアルカラーの代わりに使用する  FALSE:マテリアルカラーを使用する
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:マテリアルカラーの代わりに使用する  dxlib_d.DxDataType.FALSE:マテリアルカラーを使用する
 		 */
 		extern int MV1SetUseVertSpcColor(int MHandle, int UseFlag);
 
@@ -18655,14 +18655,14 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      UseFlag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int MV1SetUseShapeFlag(int MHandle, int UseFlag);
 
 		/**
 		 * モデルのマテリアル番号順にメッシュを描画するかどうかのフラグを取得する
 		 *
-		 * Returns: TRUE:マテリアル番号順に描画  FALSE:不透明メッシュの後半透明メッシュ
+		 * Returns: dxlib_d.DxDataType.TRUE:マテリアル番号順に描画  dxlib_d.DxDataType.FALSE:不透明メッシュの後半透明メッシュ
 		 */
 		extern int MV1GetMaterialNumberOrderFlag(int MHandle);
 
@@ -18726,7 +18726,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      AttachIndex = ?
-		 *      UseFlag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int MV1SetAttachAnimUseShapeFlag(int MHandle, int AttachIndex, int UseFlag);
 
@@ -19191,7 +19191,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      Enable = αテストを行うかどうか(TRUE:行う  FALSE:行わない(デフォルト))
+		 *      Enable = αテストを行うかどうか(dxlib_d.DxDataType.TRUE:行う  dxlib_d.DxDataType.FALSE:行わない(デフォルト))
 		 *      Mode = テストモード(DX_CMP_GREATER等)
 		 *      Param = 描画アルファ値との比較に使用する値(0~255)
 		 */
@@ -19203,7 +19203,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MaterialIndex = ?
-		 *      Enable = αテストを行うかどうか(TRUE:行う  FALSE:行わない(デフォルト))
+		 *      Enable = αテストを行うかどうか(dxlib_d.DxDataType.TRUE:行う  dxlib_d.DxDataType.FALSE:行わない(デフォルト))
 		 *      Mode = テストモード(DX_CMP_GREATER等)
 		 *      Param = 描画アルファ値との比較に使用する値(0~255)
 		 */
@@ -19212,7 +19212,7 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のマテリアルの描画時のアルファテストを行うかどうかを取得する
 		 *
-		 * Returns: TRUE:アルファテストを行う  FALSE:アルファテストを行わない
+		 * Returns: dxlib_d.DxDataType.TRUE:アルファテストを行う  dxlib_d.DxDataType.FALSE:アルファテストを行わない
 		 */
 		extern int MV1GetMaterialDrawAlphaTestEnable(int MHandle, int MaterialIndex);
 
@@ -19312,7 +19312,7 @@ extern (C++, DxLib) {
 		/**
 		 * テクスチャに半透明要素があるかどうかを取得する
 		 *
-		 * Returns: TRUE:ある  FALSE:ない
+		 * Returns: dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない
 		 */
 		extern int MV1GetTextureSemiTransState(int MHandle, int TexIndex);
 
@@ -19324,7 +19324,7 @@ extern (C++, DxLib) {
 		/**
 		 * テクスチャがバンプマップかどうかを取得する
 		 *
-		 * Returns: TRUE:バンプマップ  FALSE:違う
+		 * Returns: dxlib_d.DxDataType.TRUE:バンプマップ  dxlib_d.DxDataType.FALSE:違う
 		 */
 		extern int MV1GetTextureBumpImageFlag(int MHandle, int TexIndex);
 
@@ -19558,14 +19558,14 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      FrameIndex = ?
-		 *      VisibleFlag = TRUE:表示  FALSE:非表示
+		 *      VisibleFlag = dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1SetFrameVisible(int MHandle, int FrameIndex, int VisibleFlag);
 
 		/**
 		 * 指定のフレームの表示、非表示状態を取得する
 		 *
-		 * Returns: TRUE:表示  FALSE:非表示
+		 * Returns: dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1GetFrameVisible(int MHandle, int FrameIndex);
 
@@ -19612,7 +19612,7 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のフレームに半透明要素があるかどうかを取得する
 		 *
-		 * Returns: TRUE:ある  FALSE:ない
+		 * Returns: dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない
 		 */
 		extern int MV1GetFrameSemiTransState(int MHandle, int FrameIndex);
 
@@ -19632,14 +19632,14 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      FrameIndex = ?
-		 *      VisibleFlag = TRUE:表示  FALSE:非表示
+		 *      VisibleFlag = dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1SetFrameBaseVisible(int MHandle, int FrameIndex, int VisibleFlag);
 
 		/**
 		 * 指定のフレームの初期表示状態を取得する
 		 *
-		 * Returns: TRUE:表示  FALSE:非表示
+		 * Returns: dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1GetFrameBaseVisible(int MHandle, int FrameIndex);
 
@@ -19686,14 +19686,14 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MeshIndex = ?
-		 *      VisibleFlag = TRUE:表示  FALSE:非表示
+		 *      VisibleFlag = dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1SetMeshVisible(int MHandle, int MeshIndex, int VisibleFlag);
 
 		/**
 		 * 指定メッシュの表示、非表示状態を取得する
 		 *
-		 * Returns: TRUE:表示  FALSE:非表示
+		 * Returns: dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1GetMeshVisible(int MHandle, int MeshIndex);
 
@@ -19773,14 +19773,14 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MeshIndex = ?
-		 *      VisibleFlag = TRUE:表示  FALSE:非表示
+		 *      VisibleFlag = dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1SetMeshBaseVisible(int MHandle, int MeshIndex, int VisibleFlag);
 
 		/**
 		 * 指定のメッシュの初期表示状態を取得する
 		 *
-		 * Returns: TRUE:表示  FALSE:非表示
+		 * Returns: dxlib_d.DxDataType.TRUE:表示  dxlib_d.DxDataType.FALSE:非表示
 		 */
 		extern int MV1GetMeshBaseVisible(int MHandle, int MeshIndex);
 
@@ -19817,7 +19817,7 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のメッシュに半透明要素があるかどうかを取得する
 		 *
-		 * Returns: TRUE:ある  FALSE:ない
+		 * Returns: dxlib_d.DxDataType.TRUE:ある  dxlib_d.DxDataType.FALSE:ない
 		 */
 		extern int MV1GetMeshSemiTransState(int MHandle, int MeshIndex);
 
@@ -19827,7 +19827,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MeshIndex = ?
-		 *      UseFlag = TRUE:マテリアルカラーの代わりに使用する  FALSE:マテリアルカラーを使用する
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:マテリアルカラーの代わりに使用する  dxlib_d.DxDataType.FALSE:マテリアルカラーを使用する
 		 */
 		extern int MV1SetMeshUseVertDifColor(int MHandle, int MeshIndex, int UseFlag);
 
@@ -19837,28 +19837,28 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MeshIndex = ?
-		 *      UseFlag = TRUE:マテリアルカラーの代わりに使用する  FALSE:マテリアルカラーを使用する
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:マテリアルカラーの代わりに使用する  dxlib_d.DxDataType.FALSE:マテリアルカラーを使用する
 		 */
 		extern int MV1SetMeshUseVertSpcColor(int MHandle, int MeshIndex, int UseFlag);
 
 		/**
 		 * 指定のメッシュの頂点ディフューズカラーをマテリアルのディフューズカラーの代わりに使用するかどうかの設定を取得する
 		 *
-		 * Returns: TRUE:マテリアルカラーの代わりに使用する  FALSE:マテリアルカラーを使用する
+		 * Returns: dxlib_d.DxDataType.TRUE:マテリアルカラーの代わりに使用する  dxlib_d.DxDataType.FALSE:マテリアルカラーを使用する
 		 */
 		extern int MV1GetMeshUseVertDifColor(int MHandle, int MeshIndex);
 
 		/**
 		 * 指定のメッシュの頂点スペキュラカラーをマテリアルのスペキュラカラーの代わりに使用するかどうかの設定を取得する
 		 *
-		 * Returns: TRUE:マテリアルカラーの代わりに使用する  FALSE:マテリアルカラーを使用する
+		 * Returns: dxlib_d.DxDataType.TRUE:マテリアルカラーの代わりに使用する  dxlib_d.DxDataType.FALSE:マテリアルカラーを使用する
 		 */
 		extern int MV1GetMeshUseVertSpcColor(int MHandle, int MeshIndex);
 
 		/**
 		 * 指定のメッシュがシェイプメッシュかどうかを取得する
 		 *
-		 * Returns: TRUE:シェイプメッシュ  FALSE:通常メッシュ
+		 * Returns: dxlib_d.DxDataType.TRUE:シェイプメッシュ  dxlib_d.DxDataType.FALSE:通常メッシュ
 		 */
 		extern int MV1GetMeshShapeFlag(int MHandle, int MeshIndex);
 
@@ -20138,7 +20138,7 @@ extern (C++, DxLib) {
 		/**
 		 * Live2Dのモデルのモーション再生が終了しているかを取得する
 		 *
-		 * Returns: TRUE:再生が終了している  FALSE:再生中
+		 * Returns: dxlib_d.DxDataType.TRUE:再生が終了している  dxlib_d.DxDataType.FALSE:再生中
 		 */
 		extern int Live2D_Model_IsMotionFinished(int Live2DModelHandle);
 
@@ -20155,14 +20155,14 @@ extern (C++, DxLib) {
 		/**
 		 * 指定の座標がLive2Dのモデルの指定の当たり判定の矩形範囲内か判定する
 		 *
-		 * Returns: TRUE:矩形範囲内  FALSE:矩形範囲外
+		 * Returns: dxlib_d.DxDataType.TRUE:矩形範囲内  dxlib_d.DxDataType.FALSE:矩形範囲外
 		 */
 		extern int Live2D_Model_HitTest(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* hitAreaName, float x, float y);
 
 		/**
 		 * 指定の座標がLive2Dのモデルの指定の当たり判定の矩形範囲内か判定する
 		 *
-		 * Returns: TRUE:矩形範囲内  FALSE:矩形範囲外
+		 * Returns: dxlib_d.DxDataType.TRUE:矩形範囲内  dxlib_d.DxDataType.FALSE:矩形範囲外
 		 */
 		extern int Live2D_Model_HitTestWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* hitAreaName, size_t hitAreaNameLength, float x, float y);
 

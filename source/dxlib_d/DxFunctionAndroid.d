@@ -46,7 +46,7 @@ extern (C++, DxLib) {
 	 *      PathBuffer = パスを保存するバッファ
 	 *      PathBufferBytes = パスを保存するバッファのサイズ(単位:バイト)
 	 *      PathIndex = 外部データ保存用のディレクトリパスの番号(複数個ある場合があるので)
-	 *      IsRemovableFlag = PathIndexで指定したパスが取り外し可能なデバイスかどうかを保存するint型変数のアドレス(格納された値 TRUE:取り外し可能(SDカード等)  FALSE:取り外し不可能(内蔵ストレージ等))
+	 *      IsRemovableFlag = PathIndexで指定したパスが取り外し可能なデバイスかどうかを保存するint型変数のアドレス(格納された値 dxlib_d.DxDataType.TRUE:取り外し可能(SDカード等)  dxlib_d.DxDataType.FALSE:取り外し不可能(内蔵ストレージ等))
 	 */
 	extern int GetExternalDataPath(dxlib_d.DxDataTypeAndroid.TCHAR* PathBuffer, int PathBufferBytes, int PathIndex = 0, int* IsRemovableFlag = null);
 
@@ -86,7 +86,7 @@ extern (C++, DxLib) {
 	 * ディスプレイを本体設定に従って時間経過でスリープ状態になることを許可するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:スリープ状態になることを許可しない  FALSE:スリープ状態を許可する(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:スリープ状態になることを許可しない  dxlib_d.DxDataType.FALSE:スリープ状態を許可する(デフォルト)
 	 */
 	extern int SetKeepScreenOnFlag(int Flag);
 
@@ -118,7 +118,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      SensorType = DX_ANDROID_SENSOR_ACCELEROMETERなど
 	 *
-	 * Returns: TRUE:有効 FALSE:無効
+	 * Returns: dxlib_d.DxDataType.TRUE:有効 dxlib_d.DxDataType.FALSE:無効
 	 */
 	extern int CheckAndroidSensor(int SensorType);
 
@@ -127,14 +127,14 @@ extern (C++, DxLib) {
 	/**
 	 * 振動機能があるか取得する
 	 *
-	 * Returns: TRUE:振動機能あり  FALSE:振動機能なし
+	 * Returns: dxlib_d.DxDataType.TRUE:振動機能あり  dxlib_d.DxDataType.FALSE:振動機能なし
 	 */
 	extern int Vibrator_hasVibrator();
 
 	/**
 	 * 振動機能に振幅制御(振動の強さ制御)機能があるかどうかを取得する
 	 *
-	 * Returns: TRUE:振幅制御ができる  FALSE:振幅制御はできない
+	 * Returns: dxlib_d.DxDataType.TRUE:振幅制御ができる  dxlib_d.DxDataType.FALSE:振幅制御はできない
 	 */
 	extern int Vibrator_hasAmplitudeControl();
 
@@ -154,7 +154,7 @@ extern (C++, DxLib) {
 	extern int Vibrator_vibrate_with_OnOffTimings(int* Timings, int TimingsLength, int Repeat);
 
 	/**
-	 * 振幅制御付き(振動の強さ指定付き)振動を開始する(Vibrator_hasAmplitudeControlの戻り値がTRUEの場合のみ使用可能)
+	 * 振幅制御付き(振動の強さ指定付き)振動を開始する(Vibrator_hasAmplitudeControlの戻り値がdxlib_d.DxDataType.TRUEの場合のみ使用可能)
 	 *      Timings = 振動の強さを変更するタイミング(単位:ミリ秒)の配列
 	 *      Amplitudes = 振動の強さ(0(振動なし)~255(最大振幅))の配列
 	 *      ArrayLength = TimingsとAmplitudesの配列の長さ(配列の長さはどちらも同じである必要があります)
@@ -200,7 +200,7 @@ extern (C++, DxLib) {
 	/*
 	 * AndroidManifest.xmlに書かれた<meta-data android:name="bool0" android:value="true" />などのBoolean型のメタデータを取得する
 	 * ValueName:メタデータ名
-	 * Returns: -1:指定のメタデータは無かった  TRUE:指定のメタデータはtrueだった   FALSE:指定のメタデータはfalseだった
+	 * Returns: -1:指定のメタデータは無かった  dxlib_d.DxDataType.TRUE:指定のメタデータはtrueだった   dxlib_d.DxDataType.FALSE:指定のメタデータはfalseだった
 	 */
 	//extern int GetAndroidMetaData_Boolean(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName);
 	//extern int GetAndroidMetaData_BooleanWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength);
@@ -210,8 +210,8 @@ extern (C++, DxLib) {
 	 *      Title = タイトル
 	 *      SubTitle = サブタイトル
 	 *      Icon = アイコン(-1でデフォルトのアイコン)
-	 *      ShowWhen = 通知時刻を表示するか(TRUE:表示する  FALSE:表示しない)
-	 *      AutoCancel = 通知がタップされたら通知を削除するか(TRUE:タップされたら通知を削除する   FALSE:Cancel されるまで通知を削除しない)
+	 *      ShowWhen = 通知時刻を表示するか(dxlib_d.DxDataType.TRUE:表示する  dxlib_d.DxDataType.FALSE:表示しない)
+	 *      AutoCancel = 通知がタップされたら通知を削除するか(dxlib_d.DxDataType.TRUE:タップされたら通知を削除する   dxlib_d.DxDataType.FALSE:Cancel されるまで通知を削除しない)
 	 *      NotifyID = 通知ID
 	 *      Vibrate = 振動パターン用のint型配列(時間の単位はミリ秒)、nullの場合は振動なし(Vibrate[0]:振動停止時間  Vibrate[1]:振動時間  Vibrate[2]:振動停止時間  Vibrate[3]:振動時間  ... 以下繰り返し)
 	 *      VibrateLength = Vibrate 配列の要素数
@@ -262,7 +262,7 @@ extern (C++, DxLib) {
 	 * アプリを終了した際に、プロセスを完全に終了するかを設定する
 	 *
 	 * Params:
-	 *      KillProcessFlag = TRUE:アプリを終了したら、プロセスを完全に終了する  FALSE:アプリを終了しても、プロセスは完全には終了されない(デフォルト)
+	 *      KillProcessFlag = dxlib_d.DxDataType.TRUE:アプリを終了したら、プロセスを完全に終了する  dxlib_d.DxDataType.FALSE:アプリを終了しても、プロセスは完全には終了されない(デフォルト)
 	 */
 	extern int SetUseAndroidKillProcessFlag(int KillProcessFlag);
 
@@ -297,7 +297,7 @@ extern (C++, DxLib) {
 
 	/**
 	 * イコライザー機能を使用するかどうかを設定する(DxLib_Init呼び出し前のみ実行可能)
-	 * UseFlag  TRUE:使用する  FALSE:使用しない
+	 * UseFlag  dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 	 */
 	extern int SetUseEqualizer(int UseFlag);
 

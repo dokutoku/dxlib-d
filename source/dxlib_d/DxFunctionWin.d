@@ -61,21 +61,21 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウがアクティブかどうかを取得する
 	 *
-	 * Returns: TRUE:アクティブ  FALSE:非アクティブ
+	 * Returns: dxlib_d.DxDataType.TRUE:アクティブ  dxlib_d.DxDataType.FALSE:非アクティブ
 	 */
 	extern int GetWindowActiveFlag();
 
 	/**
 	 * メインウインドウが最小化されているかどうかを取得する
 	 *
-	 * Returns: TRUE:最小化されている  FALSE:最小化されていない
+	 * Returns: dxlib_d.DxDataType.TRUE:最小化されている  dxlib_d.DxDataType.FALSE:最小化されていない
 	 */
 	extern int GetWindowMinSizeFlag();
 
 	/**
 	 * メインウインドウが最大化されているかどうかを取得する
 	 *
-	 * Returns: TRUE:最大化されている  FALSE:最大化されていない
+	 * Returns: dxlib_d.DxDataType.TRUE:最大化されている  dxlib_d.DxDataType.FALSE:最大化されていない
 	 */
 	extern int GetWindowMaxSizeFlag();
 
@@ -92,7 +92,7 @@ extern (C++, DxLib) {
 	/**
 	 * ウインドウモードで起動しているかどうかを取得する
 	 *
-	 * Returns: TRUE:ウインドウモード  FALSE:フルスクリーンモード
+	 * Returns: dxlib_d.DxDataType.TRUE:ウインドウモード  dxlib_d.DxDataType.FALSE:フルスクリーンモード
 	 */
 	extern int GetWindowModeFlag();
 
@@ -122,7 +122,7 @@ extern (C++, DxLib) {
 	 * メインウインドウが非アクティブになり、処理が一時停止していたかどうかを取得する
 	 *
 	 * Params:
-	 *      ResetFlag = TRUE:状態をリセット FALSE:状態をリセットしない
+	 *      ResetFlag = dxlib_d.DxDataType.TRUE:状態をリセット dxlib_d.DxDataType.FALSE:状態をリセットしない
 	 *
 	 * Returns: 0:一時停止はしていない  1:一時停止していた
 	 */
@@ -131,14 +131,14 @@ extern (C++, DxLib) {
 	/**
 	 * マウスポインタを表示するかどうかの設定を取得する
 	 *
-	 * Returns: TRUE:表示する  FALSE:表示しない
+	 * Returns: dxlib_d.DxDataType.TRUE:表示する  dxlib_d.DxDataType.FALSE:表示しない
 	 */
 	extern int GetMouseDispFlag();
 
 	/**
 	 * メインウインドウが非アクティブになっても処理を実行し続けるかどうかの設定を取得する
 	 *
-	 * Returns: TRUE:実行する  FALSE:停止する
+	 * Returns: dxlib_d.DxDataType.TRUE:実行する  dxlib_d.DxDataType.FALSE:停止する
 	 */
 	extern int GetAlwaysRunFlag();
 
@@ -185,7 +185,7 @@ extern (C++, DxLib) {
 	/**
 	 * ウインドウのサイズを変更できる設定になっているかどうかを取得する
 	 *
-	 * Returns: TRUE:変更できるようになっている  FALSE:変更できないようになっている
+	 * Returns: dxlib_d.DxDataType.TRUE:変更できるようになっている  dxlib_d.DxDataType.FALSE:変更できないようになっている
 	 */
 	extern int GetWindowSizeChangeEnableFlag(int* FitScreen = null);
 
@@ -220,7 +220,7 @@ extern (C++, DxLib) {
 	 * メインウインドウの最大化ボタンが押されたかどうかを取得する、SetWindowMaximizeButtonBehavior(1);が実行されている場合のみ有効な関数
 	 *
 	 * Params:
-	 *      StateResetFlag = TRUE:押された状態をリセットする   FALSE:押された状態をリセットしない
+	 *      StateResetFlag = dxlib_d.DxDataType.TRUE:押された状態をリセットする   dxlib_d.DxDataType.FALSE:押された状態をリセットしない
 	 */
 	extern int CheckWindowMaximizeButtonInput(int StateResetFlag = dxlib_d.DxDataTypeWin.TRUE);
 
@@ -232,14 +232,14 @@ extern (C++, DxLib) {
 	/**
 	 * WM_PAINT メッセージが来たかどうかを取得する
 	 *
-	 * Returns: TRUE:WM_PAINTメッセージが来た(一度取得すると以後、再び WM_PAINTメッセージが来るまでFALSEが返ってくるようになる)  FALSE:WM_PAINT メッセージは来ていない
+	 * Returns: dxlib_d.DxDataType.TRUE:WM_PAINTメッセージが来た(一度取得すると以後、再び WM_PAINTメッセージが来るまでdxlib_d.DxDataType.FALSEが返ってくるようになる)  dxlib_d.DxDataType.FALSE:WM_PAINT メッセージは来ていない
 	 */
 	extern int GetPaintMessageFlag();
 
 	/**
 	 * パフォーマンスカウンタが有効かどうかを取得する
 	 *
-	 * Returns: TRUE:有効  FALSE:無効
+	 * Returns: dxlib_d.DxDataType.TRUE:有効  dxlib_d.DxDataType.FALSE:無効
 	 */
 	extern int GetValidHiPerformanceCounter();
 
@@ -332,7 +332,7 @@ extern (C++, DxLib) {
 	 * 最大化ボタンやALT+ENTERキーによる非同期なウインドウモードの変更の機能の設定を行う
 	 *
 	 * Params:
-	 *      Flag = 非同期ウインドウモード変更を有効にするかどうかのフラグ(TRUE:有効にする  FALSE:無効にする(デフォルト))
+	 *      Flag = 非同期ウインドウモード変更を有効にするかどうかのフラグ(dxlib_d.DxDataType.TRUE:有効にする  dxlib_d.DxDataType.FALSE:無効にする(デフォルト))
 	 *      CallBackFunction = 非同期ウインドウモード変更が行われた場合に呼ばれるコールバック関数のアドレス
 	 *      Data = CallBackFunctionの引数に渡されるvoid型のポインタ
 	 */
@@ -357,8 +357,8 @@ extern (C++, DxLib) {
 	 * メインウインドウの端を掴んでウインドウのサイズを変更できるようにするかどうかの設定を行う
 	 *
 	 * Params:
-	 *      Flag = 変更を可能にするかどうか(TRUE:可能にする  FALSE:不可能にする(デフォルト))
-	 *      FitScreen = ウインドウのクライアント領域に画面をフィットさせる(拡大させる)かどうか  TRUE:フィットさせる  FALSE:フィットさせない
+	 *      Flag = 変更を可能にするかどうか(dxlib_d.DxDataType.TRUE:可能にする  dxlib_d.DxDataType.FALSE:不可能にする(デフォルト))
+	 *      FitScreen = ウインドウのクライアント領域に画面をフィットさせる(拡大させる)かどうか  dxlib_d.DxDataType.TRUE:フィットさせる  dxlib_d.DxDataType.FALSE:フィットさせない
 	 */
 	extern int SetWindowSizeChangeEnableFlag(int Flag, int FitScreen = dxlib_d.DxDataTypeWin.TRUE);
 
@@ -373,12 +373,12 @@ extern (C++, DxLib) {
 	extern int SetWindowSize(int Width, int Height);
 
 	/**
-	 * メインウインドウのクライアント領域の最大サイズを設定する(SetWindowSizeChangeEnableFlagの第一引数をTRUEで呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです)
+	 * メインウインドウのクライアント領域の最大サイズを設定する(SetWindowSizeChangeEnableFlagの第一引数をdxlib_d.DxDataType.TRUEで呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです)
 	 */
 	extern int SetWindowMaxSize(int MaxWidth, int MaxHeight);
 
 	/**
-	 * メインウインドウのクライアント領域の最小サイズを設定する(SetWindowSizeChangeEnableFlagの第一引数をTRUEで呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです)
+	 * メインウインドウのクライアント領域の最小サイズを設定する(SetWindowSizeChangeEnableFlagの第一引数をdxlib_d.DxDataType.TRUEで呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです)
 	 */
 	extern int SetWindowMinSize(int MinWidth, int MinHeight);
 
@@ -411,7 +411,7 @@ extern (C++, DxLib) {
 	 * SetHookWinProcで設定したウインドウプロージャの戻り値を使用するかどうかを設定する、SetHookWinProcで設定したウインドウプロージャの中でのみ使用可能
 	 *
 	 * Params:
-	 *      UseFlag = TRUE:戻り値を使用して、DXライブラリのウインドウプロージャの処理は行わない  FALSE:戻り値は使用せず、ウインドウプロージャから出た後、DXライブラリのウインドウプロージャの処理を行う
+	 *      UseFlag = dxlib_d.DxDataType.TRUE:戻り値を使用して、DXライブラリのウインドウプロージャの処理は行わない  dxlib_d.DxDataType.FALSE:戻り値は使用せず、ウインドウプロージャから出た後、DXライブラリのウインドウプロージャの処理を行う
 	 */
 	extern int SetUseHookWinProcReturnValue(int UseFlag);
 
@@ -419,14 +419,14 @@ extern (C++, DxLib) {
 	 * DXライブラリを使用したソフトの二重起動を可能にするかどうかの設定を行う
 	 *
 	 * Params:
-	 *      Flag = TRUE:可能にする  FALSE:不可能にする(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:可能にする  dxlib_d.DxDataType.FALSE:不可能にする(デフォルト)
 	 */
 	extern int SetDoubleStartValidFlag(int Flag);
 
 	/**
 	 * DXライブラリを使用したソフトが既に起動しているかどうかを取得する
 	 *
-	 * Returns: TRUE:既に起動している  FALSE:起動していない
+	 * Returns: dxlib_d.DxDataType.TRUE:既に起動している  dxlib_d.DxDataType.FALSE:起動していない
 	 */
 	extern int CheckDoubleStart();
 
@@ -449,7 +449,7 @@ extern (C++, DxLib) {
 	 * DXライブラリのウインドウ関連の機能を使用しないかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用しない  dxlib_d.DxDataType.FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotWinFlag(int Flag);
 
@@ -457,7 +457,7 @@ extern (C++, DxLib) {
 	 * DXライブラリの描画機能を使うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用しない  dxlib_d.DxDataType.FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotDrawFlag(int Flag);
 
@@ -465,7 +465,7 @@ extern (C++, DxLib) {
 	 * DXライブラリのサウンド機能を使うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用しない  dxlib_d.DxDataType.FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotSoundFlag(int Flag);
 
@@ -473,7 +473,7 @@ extern (C++, DxLib) {
 	 * DXライブラリの入力状態の取得機能を使うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用しない  dxlib_d.DxDataType.FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotInputFlag(int Flag);
 
@@ -486,7 +486,7 @@ extern (C++, DxLib) {
 	 * メインウインドウを表示するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:表示する  FALSE:表示しない
+	 *      Flag = dxlib_d.DxDataType.TRUE:表示する  dxlib_d.DxDataType.FALSE:表示しない
 	 */
 	extern int SetWindowVisibleFlag(int Flag);
 
@@ -494,7 +494,7 @@ extern (C++, DxLib) {
 	 * メインウインドウを最小化するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:最小化する  FALSE:最小化を解除
+	 *      Flag = dxlib_d.DxDataType.TRUE:最小化する  dxlib_d.DxDataType.FALSE:最小化を解除
 	 */
 	extern int SetWindowMinimizeFlag(int Flag);
 
@@ -502,7 +502,7 @@ extern (C++, DxLib) {
 	 * メインウインドウの×ボタンを押した時にDXライブラリが自動的にウインドウを閉じるかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:自動的に閉じる(デフォルト)  FALSE:閉じない
+	 *      Flag = dxlib_d.DxDataType.TRUE:自動的に閉じる(デフォルト)  dxlib_d.DxDataType.FALSE:閉じない
 	 */
 	extern int SetWindowUserCloseEnableFlag(int Flag);
 
@@ -510,7 +510,7 @@ extern (C++, DxLib) {
 	 * DXライブラリ終了時にPostQuitMessageを呼ぶかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:PostQuitMessageを呼ぶ(デフォルト)  FALSE:呼ばない
+	 *      Flag = dxlib_d.DxDataType.TRUE:PostQuitMessageを呼ぶ(デフォルト)  dxlib_d.DxDataType.FALSE:呼ばない
 	 */
 	extern int SetDxLibEndPostQuitMessageFlag(int Flag);
 
@@ -528,7 +528,7 @@ extern (C++, DxLib) {
 	 * SetUseWindowで設定したウインドウのメッセージループ処理をDXライブラリで行うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:DXライブラリで行う(デフォルト)  FALSE:DXライブラリでは行わない
+	 *      Flag = dxlib_d.DxDataType.TRUE:DXライブラリで行う(デフォルト)  dxlib_d.DxDataType.FALSE:DXライブラリでは行わない
 	 */
 	extern int SetUserWindowMessageProcessDXLibFlag(int Flag);
 
@@ -536,7 +536,7 @@ extern (C++, DxLib) {
 	 * FPUの精度を落とさない設定を使用するかどうかを設定する、DxLib_Initを呼び出す前のみ有効
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用する(精度が落ちない)  FALSE:使用しない(精度を落とす(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用する(精度が落ちない)  dxlib_d.DxDataType.FALSE:使用しない(精度を落とす(デフォルト)
 	 */
 	extern int SetUseFPUPreserveFlag(int Flag);
 
@@ -544,7 +544,7 @@ extern (C++, DxLib) {
 	 * マウスポインタがウインドウのクライアントエリアの外にいけるかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:いける(デフォルト設定)  FALSE:いけない
+	 *      Flag = dxlib_d.DxDataType.TRUE:いける(デフォルト設定)  dxlib_d.DxDataType.FALSE:いけない
 	 */
 	extern int SetValidMousePointerWindowOutClientAreaMoveFlag(int Flag);
 
@@ -552,7 +552,7 @@ extern (C++, DxLib) {
 	 * バックバッファの透過色の部分を透過させるかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:透過させる  FALSE:透過させない(デフォルト)
+	 *      Flag = dxlib_d.DxDataType.TRUE:透過させる  dxlib_d.DxDataType.FALSE:透過させない(デフォルト)
 	 */
 	extern int SetUseBackBufferTransColorFlag(int Flag);
 
@@ -560,7 +560,7 @@ extern (C++, DxLib) {
 	 * UpdateLayerdWindowForBaseImageやUpdateLayerdWindowForSoftImageを使用するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用する  FALSE:使用しない
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 	 */
 	extern int SetUseUpdateLayerdWindowFlag(int Flag);
 
@@ -694,7 +694,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      ID = AddToolBarButtonで設定したボタンの識別番号
 	 *
-	 * Returns: TRUE:押されているor押された  FALSE:押されていない
+	 * Returns: dxlib_d.DxDataType.TRUE:押されているor押された  dxlib_d.DxDataType.FALSE:押されていない
 	 */
 	extern int GetToolBarButtonState(int ID);
 
@@ -718,7 +718,7 @@ extern (C++, DxLib) {
 	 * メニューを有効にするかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用する  FALSE:使用しない
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 	 */
 	extern int SetUseMenuFlag(int Flag);
 
@@ -726,7 +726,7 @@ extern (C++, DxLib) {
 	 * キーボードアクセラレーターを使用するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用する  FALSE:使用しない
+	 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 	 */
 	extern int SetUseKeyAccelFlag(int Flag);
 
@@ -737,9 +737,9 @@ extern (C++, DxLib) {
 	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名(AddMenuItemでNewItemNameに渡した名前)、ItemIDを使用する場合はnullを渡す
 	 *      ItemID = メニュー項目の識別番号(AddMenuItemの引数 NewItemIDで指定したもの)、ItemNameを使用する場合は-1を渡す
 	 *      KeyCode = ショートカットキーのキー(KEY_INPUT_L等)
-	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
-	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
-	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
+	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
+	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
+	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
 	 */
 	extern int AddKeyAccel(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
@@ -751,9 +751,9 @@ extern (C++, DxLib) {
 	 *      ItemNameLength = ?
 	 *      ItemID = メニュー項目の識別番号(AddMenuItemの引数 NewItemIDで指定したもの)、ItemNameを使用する場合は-1を渡す
 	 *      KeyCode = ショートカットキーのキー(KEY_INPUT_L等)
-	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
-	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
-	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
+	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
+	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
+	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
 	 */
 	extern int AddKeyAccelWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
@@ -784,7 +784,7 @@ extern (C++, DxLib) {
 	 *      AddType = 項目タイプ(MENUITEM_ADD_CHILD等(解説は#defineの定義を参照してください))
 	 *      ItemName = AddTypeがMENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、nullを指定するとItemIDが使用される
 	 *      ItemID = ItemNameの代わりに識別番号で指定するもの、AddType毎の違いはItemNameの解説の通り、-1を指定するとItemNameが使用される
-	 *      SeparatorFlag = 区切り線を追加するかどうか(TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  FALSE:追加するのは区切り線ではない)
+	 *      SeparatorFlag = 区切り線を追加するかどうか(dxlib_d.DxDataType.TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  dxlib_d.DxDataType.FALSE:追加するのは区切り線ではない)
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
 	 */
@@ -798,7 +798,7 @@ extern (C++, DxLib) {
 	 *      ItemName = AddTypeがMENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、nullを指定するとItemIDが使用される
 	 *      ItemNameLength = ?
 	 *      ItemID = ItemNameの代わりに識別番号で指定するもの、AddType毎の違いはItemNameの解説の通り、-1を指定するとItemNameが使用される
-	 *      SeparatorFlag = 区切り線を追加するかどうか(TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  FALSE:追加するのは区切り線ではない)
+	 *      SeparatorFlag = 区切り線を追加するかどうか(dxlib_d.DxDataType.TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  dxlib_d.DxDataType.FALSE:追加するのは区切り線ではない)
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemNameLength = ?
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
@@ -844,7 +844,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      ItemName = ?
 	 *      ItemID = ?
-	 *      EnableFlag = 項目が選択できるかどうか(TRUE:選択できる   FALSE:選択できない)
+	 *      EnableFlag = 項目が選択できるかどうか(dxlib_d.DxDataType.TRUE:選択できる   dxlib_d.DxDataType.FALSE:選択できない)
 	 */
 	extern int SetMenuItemEnable(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID, int EnableFlag);
 
@@ -855,7 +855,7 @@ extern (C++, DxLib) {
 	 *      ItemName = ?
 	 *      ItemNameLength = ?
 	 *      ItemID = ?
-	 *      EnableFlag = 項目が選択できるかどうか(TRUE:選択できる   FALSE:選択できない)
+	 *      EnableFlag = 項目が選択できるかどうか(dxlib_d.DxDataType.TRUE:選択できる   dxlib_d.DxDataType.FALSE:選択できない)
 	 */
 	extern int SetMenuItemEnableWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int EnableFlag);
 
@@ -883,7 +883,7 @@ extern (C++, DxLib) {
 	/**
 	 * メニューの項目がどれか選択されたかどうかを取得する
 	 *
-	 * Returns: TRUE:どれか選択された  FALSE:選択されていない
+	 * Returns: dxlib_d.DxDataType.TRUE:どれか選択された  dxlib_d.DxDataType.FALSE:選択されていない
 	 */
 	extern int CheckMenuItemSelectAll();
 
@@ -1144,7 +1144,7 @@ extern (C++, DxLib) {
 		 * IMEの漢字変換候補表示の処理にTSFを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseTSFFlag(int UseFlag);
 	}
@@ -1157,7 +1157,7 @@ extern (C++, DxLib) {
 		 * DirectInputのキーボードの協調レベルを排他レベルにするかどうかを設定する、DxLib_Initの呼び出し前でのみ実行可能
 		 *
 		 * Params:
-		 *      Flag = TRUE:排他レベルにする  FALSE:標準レベルにする(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:排他レベルにする  dxlib_d.DxDataType.FALSE:標準レベルにする(デフォルト)
 		 */
 		extern int SetKeyExclusiveCooperativeLevelFlag(int Flag);
 
@@ -1165,7 +1165,7 @@ extern (C++, DxLib) {
 		 * キーボードの入力処理にDirectInputを使わないかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:DirectInputを使わず、Windows標準機能を使用する  FALSE:DirectInputを使用する
+		 *      Flag = dxlib_d.DxDataType.TRUE:DirectInputを使わず、Windows標準機能を使用する  dxlib_d.DxDataType.FALSE:DirectInputを使用する
 		 */
 		extern int SetKeyboardNotDirectInputFlag(int Flag);
 
@@ -1173,7 +1173,7 @@ extern (C++, DxLib) {
 		 * 入力処理にDirectInputを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:DirectInputを使用する  FALSE:DirectInputを使わず、Windows標準機能を使用する
+		 *      UseFlag = dxlib_d.DxDataType.TRUE:DirectInputを使用する  dxlib_d.DxDataType.FALSE:DirectInputを使わず、Windows標準機能を使用する
 		 */
 		extern int SetUseDirectInputFlag(int UseFlag);
 
@@ -1189,7 +1189,7 @@ extern (C++, DxLib) {
 		 * Xbox360コントローラの入力処理にXInputを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:XInputを使用する(デフォルト)  FALSE:XInputを使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:XInputを使用する(デフォルト)  dxlib_d.DxDataType.FALSE:XInputを使用しない
 		 */
 		extern int SetUseXInputFlag(int Flag);
 
@@ -1197,7 +1197,7 @@ extern (C++, DxLib) {
 		 * Xbox360コントローラやXbox OneコントローラをDirectInputコントローラとしても検出するかどうかを設定する、DxLib_Initの呼び出し前でのみ実行可能
 		 *
 		 * Params:
-		 *      Flag = TRUE:DirectInputコントローラとしても検出する  FALSE:DirectInputコントローラとしては検出しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:DirectInputコントローラとしても検出する  dxlib_d.DxDataType.FALSE:DirectInputコントローラとしては検出しない(デフォルト)
 		 */
 		extern int SetUseXboxControllerDirectInputFlag(int Flag);
 
@@ -1339,7 +1339,7 @@ extern (C++, DxLib) {
 		 * DirectDrawやDirect3Dの協調レベルをマルチスレッド対応にするかどうかをセットする
 		 *
 		 * Params:
-		 *      Flag = TRUE:マルチスレッド対応にする  FALSE:マルチスレッド対応にしない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:マルチスレッド対応にする  dxlib_d.DxDataType.FALSE:マルチスレッド対応にしない(デフォルト)
 		 */
 		extern int SetMultiThreadFlag(int Flag);
 
@@ -1352,7 +1352,7 @@ extern (C++, DxLib) {
 		 * Vista,7のWindows Aeroを無効にするかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:無効にする(デフォルト)  FALSE:有効にする
+		 *      Flag = dxlib_d.DxDataType.TRUE:無効にする(デフォルト)  dxlib_d.DxDataType.FALSE:有効にする
 		 */
 		extern int SetAeroDisableFlag(int Flag);
 
@@ -1360,7 +1360,7 @@ extern (C++, DxLib) {
 		 * Vista以降の環境でDirect3D9Exを使用するかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseDirect3D9Ex(int Flag);
 
@@ -1368,7 +1368,7 @@ extern (C++, DxLib) {
 		 * Direct3D11を使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 		 */
 		extern int SetUseDirect3D11(int Flag);
 
@@ -1384,7 +1384,7 @@ extern (C++, DxLib) {
 		 * D3D_DRIVER_TYPE_WARP タイプのDirect3D 11ドライバを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
 		 */
 		extern int SetUseDirect3D11WARPDriver(int Flag);
 
@@ -1506,7 +1506,7 @@ extern (C++, DxLib) {
 			 * Media Foundationを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
+			 *      Flag = dxlib_d.DxDataType.TRUE:使用する(デフォルト)  dxlib_d.DxDataType.FALSE:使用しない
 			 */
 			extern int SetUseMediaFoundationFlag(int Flag);
 		}
@@ -1714,7 +1714,7 @@ extern (C++, DxLib) {
 		 * サウンドの処理をソフトウエアで行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:ソフトウエア  FALSE:ハードウエア(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:ソフトウエア  dxlib_d.DxDataType.FALSE:ハードウエア(デフォルト)
 		 */
 		extern int SetUseSoftwareMixingSoundFlag(int Flag);
 
@@ -1722,7 +1722,7 @@ extern (C++, DxLib) {
 		 * サウンドの再生にXAudioを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
 		 */
 		extern int SetEnableXAudioFlag(int Flag);
 
@@ -1730,8 +1730,8 @@ extern (C++, DxLib) {
 		 * サウンドの再生にWASAPIを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
-		 *      IsExclusive = TRUE:排他モードを使用する  FALSE:排他モードを使用しない
+		 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
+		 *      IsExclusive = dxlib_d.DxDataType.TRUE:排他モードを使用する  dxlib_d.DxDataType.FALSE:排他モードを使用しない
 		 *      DevicePeriod = 再生遅延時間、100ナノ秒単位(100000で10ミリ秒)、-1でデフォルト値
 		 *      SamplePerSec = サンプリングレート
 		 */
@@ -1743,7 +1743,7 @@ extern (C++, DxLib) {
 			 * サウンドの再生にASIOを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
+			 *      Flag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない(デフォルト)
 			 *      BufferSize = 再生バッファのサイズ、小さいほど遅延が少なくなりますが、処理が間に合わずにブツブツノイズが発生する可能性も高くなります(-1でデフォルト値)
 			 *      SamplePerSec = サンプリングレート
 			 */

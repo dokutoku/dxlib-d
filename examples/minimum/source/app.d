@@ -9,13 +9,13 @@ int main()
 	{
 		debug {
 		} else {
-			SetOutApplicationLogValidFlag(FALSE);
+			SetOutApplicationLogValidFlag(dxlib_d.DxDataType.FALSE);
 		}
 
 		SetGraphMode(800, 600, 32);
 
 		version (Windows) {
-			ChangeWindowMode(TRUE);
+			dxlib_d.DxFunctionWin.ChangeWindowMode(dxlib_d.DxDataType.TRUE);
 		}
 
 		version (ANSI) {
@@ -23,7 +23,7 @@ int main()
 			setlocale(LC_ALL, ".utf8");
 		}
 
-		SetAlwaysRunFlag(TRUE);
+		SetAlwaysRunFlag(dxlib_d.DxDataType.TRUE);
 
 		if (DxLib_Init() == -1) {
 			return 1;
