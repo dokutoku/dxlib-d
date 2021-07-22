@@ -44,7 +44,7 @@ extern (C++, DxLib) {
 	// ウインドウ関係情報取得関数
 
 	/**
-	 * GetWindowClientRect の旧名称
+	 * GetWindowClientRectの旧名称
 	 */
 	extern int GetWindowCRect(dxlib_d.DxDataTypeWin.RECT* RectBuf);
 
@@ -80,7 +80,7 @@ extern (C++, DxLib) {
 	extern int GetWindowMaxSizeFlag();
 
 	/**
-	 * GetWindowActiveFlag の別名関数
+	 * GetWindowActiveFlagの別名関数
 	 */
 	extern int GetActiveFlag();
 
@@ -143,7 +143,7 @@ extern (C++, DxLib) {
 	extern int GetAlwaysRunFlag();
 
 	/**
-	 * DXライブラリと DirectX のバージョンと Windows のバージョン番号を取得する
+	 * DXライブラリとDirectXのバージョンとWindowsのバージョン番号を取得する
 	 */
 	extern int _GetSystemInfo(int* DxLibVer, int* DirectXVer, int* WindowsVer);
 
@@ -192,7 +192,7 @@ extern (C++, DxLib) {
 	/**
 	 * 描画画面のサイズに対するウインドウサイズの比率を取得する
 	 *
-	 * Returns: ExRateX に代入される値と同じ
+	 * Returns: ExRateXに代入される値と同じ
 	 */
 	extern double GetWindowSizeExtendRate(double* ExRateX = null, double* ExRateY = null);
 
@@ -207,7 +207,7 @@ extern (C++, DxLib) {
 	extern int GetWindowEdgeWidth(int* LeftWidth, int* RightWidth, int* TopWidth, int* BottomWidth);
 
 	/**
-	 * メインウインドウのデスクトップ上の左上端座標を取得する( 枠も含める )
+	 * メインウインドウのデスクトップ上の左上端座標を取得する(枠も含める)
 	 */
 	extern int GetWindowPosition(int* x, int* y);
 
@@ -217,7 +217,7 @@ extern (C++, DxLib) {
 	extern int GetWindowUserCloseFlag(int StateResetFlag = dxlib_d.DxDataTypeWin.FALSE);
 
 	/**
-	 * メインウインドウの最大化ボタンが押されたかどうかを取得する、SetWindowMaximizeButtonBehavior( 1 ); が実行されている場合のみ有効な関数
+	 * メインウインドウの最大化ボタンが押されたかどうかを取得する、SetWindowMaximizeButtonBehavior(1);が実行されている場合のみ有効な関数
 	 *
 	 * Params:
 	 *      StateResetFlag = TRUE:押された状態をリセットする   FALSE:押された状態をリセットしない
@@ -232,7 +232,7 @@ extern (C++, DxLib) {
 	/**
 	 * WM_PAINT メッセージが来たかどうかを取得する
 	 *
-	 * Returns: TRUE:WM_PAINTメッセージが来た(一度取得すると以後、再び WM_PAINTメッセージが来るまで FALSE が返ってくるようになる)  FALSE:WM_PAINT メッセージは来ていない
+	 * Returns: TRUE:WM_PAINTメッセージが来た(一度取得すると以後、再び WM_PAINTメッセージが来るまでFALSEが返ってくるようになる)  FALSE:WM_PAINT メッセージは来ていない
 	 */
 	extern int GetPaintMessageFlag();
 
@@ -258,15 +258,15 @@ extern (C++, DxLib) {
 	/**
 	 * DXライブラリの文字列処理で前提とする文字列セットを設定する
 	 */
-	extern int SetUseCharSet(int CharSet /* = DX_CHARSET_SHFTJIS 等 */);
+	extern int SetUseCharSet(int CharSet /* = DX_CHARSET_SHFTJIS等 */);
 
 	/**
-	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む( FileName に null を渡すことで解除)
+	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む(FileNameにnullを渡すことで解除)
 	 */
 	extern int LoadPauseGraph(const (dxlib_d.DxDataTypeWin.TCHAR)* FileName);
 
 	/**
-	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む( FileName に null を渡すことで解除)
+	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む(FileNameにnullを渡すことで解除)
 	 */
 	extern int LoadPauseGraphWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* FileName, size_t FileNameLength);
 
@@ -274,8 +274,8 @@ extern (C++, DxLib) {
 	 * アクティブウインドウが他のソフトに移っている際に表示する画像をメモリから読み込む
 	 *
 	 * Params:
-	 *      MemImage = ファイルイメージの先頭アドレス,null にすることで設定解除
-	 *      MemImageSize = ファイルイメージのサイズ( 単位:Byte )
+	 *      MemImage = ファイルイメージの先頭アドレス,nullにすることで設定解除
+	 *      MemImageSize = ファイルイメージのサイズ(単位:Byte)
 	 */
 	extern int LoadPauseGraphFromMem(const (void)* MemImage, int MemImageSize);
 
@@ -283,8 +283,8 @@ extern (C++, DxLib) {
 	 * メインウインドウのアクティブ状態に変化があったときに呼ばれるコールバック関数を設定する
 	 *
 	 * Params:
-	 *      CallBackFunction = 呼ばれるコールバック関数、null を渡すと設定解除
-	 *      UserData = CallBackFunction の第2引数に渡される値
+	 *      CallBackFunction = 呼ばれるコールバック関数、nullを渡すと設定解除
+	 *      UserData = CallBackFunctionの第2引数に渡される値
 	 */
 	extern int SetActiveStateChangeCallBackFunction(int function(int ActiveState, void* UserData) CallBackFunction, void* UserData);
 
@@ -299,22 +299,22 @@ extern (C++, DxLib) {
 	extern int SetWindowTextWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* WindowText, size_t WindowTextLength);
 
 	/**
-	 * SetWindowText の別名関数
+	 * SetWindowTextの別名関数
 	 */
 	extern int SetMainWindowText(const (dxlib_d.DxDataTypeWin.TCHAR)* WindowText);
 
 	/**
-	 * SetWindowText の別名関数
+	 * SetWindowTextの別名関数
 	 */
 	extern int SetMainWindowTextWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* WindowText, size_t WindowTextLength);
 
 	/**
-	 * メインウインドウのクラス名を設定する( DxLib_Init の前でのみ使用可能 )
+	 * メインウインドウのクラス名を設定する(DxLib_Initの前でのみ使用可能)
 	 */
 	extern int SetMainWindowClassName(const (dxlib_d.DxDataTypeWin.TCHAR)* ClassName);
 
 	/**
-	 * メインウインドウのクラス名を設定する( DxLib_Init の前でのみ使用可能 )
+	 * メインウインドウのクラス名を設定する(DxLib_Initの前でのみ使用可能)
 	 */
 	extern int SetMainWindowClassNameWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ClassName, size_t ClassNameLength);
 
@@ -332,14 +332,14 @@ extern (C++, DxLib) {
 	 * 最大化ボタンやALT+ENTERキーによる非同期なウインドウモードの変更の機能の設定を行う
 	 *
 	 * Params:
-	 *      Flag = 非同期ウインドウモード変更を有効にするかどうかのフラグ( TRUE:有効にする  FALSE:無効にする( デフォルト ))
+	 *      Flag = 非同期ウインドウモード変更を有効にするかどうかのフラグ(TRUE:有効にする  FALSE:無効にする(デフォルト))
 	 *      CallBackFunction = 非同期ウインドウモード変更が行われた場合に呼ばれるコールバック関数のアドレス
-	 *      Data = CallBackFunction の引数に渡される void 型のポインタ
+	 *      Data = CallBackFunctionの引数に渡されるvoid型のポインタ
 	 */
 	extern int SetUseASyncChangeWindowModeFunction(int Flag, void function(void*) CallBackFunction, void* Data);
 
 	/**
-	 * シャットダウンによるソフトの強制終了の際に呼ばれるコールバック関数を登録する( Message はコールバック関数の終了を待つ間表示されるメッセージ )
+	 * シャットダウンによるソフトの強制終了の際に呼ばれるコールバック関数を登録する(Messageはコールバック関数の終了を待つ間表示されるメッセージ)
 	 */
 	extern int SetShutdownCallbackFunction(void function(void*) *CallbackFunction, void* Data, const (dxlib_d.DxDataTypeWin.TCHAR)* Message);
 
@@ -351,19 +351,19 @@ extern (C++, DxLib) {
 	/**
 	 * メインウインドウの奥行き位置を変更する
 	 */
-	extern int SetWindowZOrder(int ZType /* = DX_WIN_ZTYPE_TOP 等 */, int WindowActivateFlag = dxlib_d.DxDataTypeWin.TRUE);
+	extern int SetWindowZOrder(int ZType /* = DX_WIN_ZTYPE_TOP等 */, int WindowActivateFlag = dxlib_d.DxDataTypeWin.TRUE);
 
 	/**
 	 * メインウインドウの端を掴んでウインドウのサイズを変更できるようにするかどうかの設定を行う
 	 *
 	 * Params:
-	 *      Flag = 変更を可能にするかどうか( TRUE:可能にする  FALSE:不可能にする( デフォルト ) )
+	 *      Flag = 変更を可能にするかどうか(TRUE:可能にする  FALSE:不可能にする(デフォルト))
 	 *      FitScreen = ウインドウのクライアント領域に画面をフィットさせる(拡大させる)かどうか  TRUE:フィットさせる  FALSE:フィットさせない
 	 */
 	extern int SetWindowSizeChangeEnableFlag(int Flag, int FitScreen = dxlib_d.DxDataTypeWin.TRUE);
 
 	/**
-	 * 描画画面のサイズに対するメインウインドウサイズの比率を設定する( ExRateY がマイナスの場合は ExRateX の値が ExRateY にも使用されます )
+	 * 描画画面のサイズに対するメインウインドウサイズの比率を設定する(ExRateYがマイナスの場合はExRateXの値がExRateYにも使用されます)
 	 */
 	extern int SetWindowSizeExtendRate(double ExRateX, double ExRateY = -1.0);
 
@@ -373,17 +373,17 @@ extern (C++, DxLib) {
 	extern int SetWindowSize(int Width, int Height);
 
 	/**
-	 * メインウインドウのクライアント領域の最大サイズを設定する( SetWindowSizeChangeEnableFlag の第一引数を TRUE で呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです )
+	 * メインウインドウのクライアント領域の最大サイズを設定する(SetWindowSizeChangeEnableFlagの第一引数をTRUEで呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです)
 	 */
 	extern int SetWindowMaxSize(int MaxWidth, int MaxHeight);
 
 	/**
-	 * メインウインドウのクライアント領域の最小サイズを設定する( SetWindowSizeChangeEnableFlag の第一引数を TRUE で呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです )
+	 * メインウインドウのクライアント領域の最小サイズを設定する(SetWindowSizeChangeEnableFlagの第一引数をTRUEで呼び出して、ウインドウのサイズが変更できる状態でのみ使用されるパラメータです)
 	 */
 	extern int SetWindowMinSize(int MinWidth, int MinHeight);
 
 	/**
-	 * メインウインドウの位置を設定する( 枠も含めた左上座標 )
+	 * メインウインドウの位置を設定する(枠も含めた左上座標)
 	 */
 	extern int SetWindowPosition(int x, int y);
 
@@ -398,7 +398,7 @@ extern (C++, DxLib) {
 	extern int SetSysCommandOffFlagWithStrLen(int Flag, const (dxlib_d.DxDataTypeWin.TCHAR)* HookDllPath = null, size_t HookDllPathLength = 0);
 
 	/**
-	 * メインウインドウの最大化ボタンが押されたときの挙動を設定する( BehaviorType 0:標準動作 1:標準動作は行わず、最大化ボタンが押されたかどうかは CheckWindowMaximizeButtonInput で判定する )
+	 * メインウインドウの最大化ボタンが押されたときの挙動を設定する(BehaviorType 0:標準動作 1:標準動作は行わず、最大化ボタンが押されたかどうかはCheckWindowMaximizeButtonInputで判定する)
 	 */
 	extern int SetWindowMaximizeButtonBehavior(int BehaviorType);
 
@@ -408,7 +408,7 @@ extern (C++, DxLib) {
 	extern int SetHookWinProc(dxlib_d.DxDataTypeWin.WNDPROC WinProc);
 
 	/**
-	 * SetHookWinProc で設定したウインドウプロージャの戻り値を使用するかどうかを設定する、SetHookWinProc で設定したウインドウプロージャの中でのみ使用可能
+	 * SetHookWinProcで設定したウインドウプロージャの戻り値を使用するかどうかを設定する、SetHookWinProcで設定したウインドウプロージャの中でのみ使用可能
 	 *
 	 * Params:
 	 *      UseFlag = TRUE:戻り値を使用して、DXライブラリのウインドウプロージャの処理は行わない  FALSE:戻り値は使用せず、ウインドウプロージャから出た後、DXライブラリのウインドウプロージャの処理を行う
@@ -419,7 +419,7 @@ extern (C++, DxLib) {
 	 * DXライブラリを使用したソフトの二重起動を可能にするかどうかの設定を行う
 	 *
 	 * Params:
-	 *      Flag = TRUE:可能にする  FALSE:不可能にする( デフォルト )
+	 *      Flag = TRUE:可能にする  FALSE:不可能にする(デフォルト)
 	 */
 	extern int SetDoubleStartValidFlag(int Flag);
 
@@ -449,7 +449,7 @@ extern (C++, DxLib) {
 	 * DXライブラリのウインドウ関連の機能を使用しないかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する( デフォルト )
+	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotWinFlag(int Flag);
 
@@ -457,7 +457,7 @@ extern (C++, DxLib) {
 	 * DXライブラリの描画機能を使うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する( デフォルト )
+	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotDrawFlag(int Flag);
 
@@ -465,7 +465,7 @@ extern (C++, DxLib) {
 	 * DXライブラリのサウンド機能を使うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する( デフォルト )
+	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotSoundFlag(int Flag);
 
@@ -473,7 +473,7 @@ extern (C++, DxLib) {
 	 * DXライブラリの入力状態の取得機能を使うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用しない  FALSE:使用する( デフォルト )
+	 *      Flag = TRUE:使用しない  FALSE:使用する(デフォルト)
 	 */
 	extern int SetNotInputFlag(int Flag);
 
@@ -502,38 +502,38 @@ extern (C++, DxLib) {
 	 * メインウインドウの×ボタンを押した時にDXライブラリが自動的にウインドウを閉じるかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:自動的に閉じる( デフォルト )  FALSE:閉じない
+	 *      Flag = TRUE:自動的に閉じる(デフォルト)  FALSE:閉じない
 	 */
 	extern int SetWindowUserCloseEnableFlag(int Flag);
 
 	/**
-	 * DXライブラリ終了時に PostQuitMessage を呼ぶかどうかを設定する
+	 * DXライブラリ終了時にPostQuitMessageを呼ぶかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:PostQuitMessage を呼ぶ( デフォルト )  FALSE:呼ばない
+	 *      Flag = TRUE:PostQuitMessageを呼ぶ(デフォルト)  FALSE:呼ばない
 	 */
 	extern int SetDxLibEndPostQuitMessageFlag(int Flag);
 
 	/**
-	 * DXライブラリで使用するウインドウのハンドルをセットする( DxLib_Init を実行する以前でのみ有効 )
+	 * DXライブラリで使用するウインドウのハンドルをセットする(DxLib_Initを実行する以前でのみ有効)
 	 */
 	extern int SetUserWindow(dxlib_d.DxDataTypeWin.HWND WindowHandle);
 
 	/**
-	 * DXライブラリで使用する表示用の子ウインドウのハンドルをセットする( DxLib_Init を実行する以前でのみ有効 )
+	 * DXライブラリで使用する表示用の子ウインドウのハンドルをセットする(DxLib_Initを実行する以前でのみ有効)
 	 */
 	extern int SetUserChildWindow(dxlib_d.DxDataTypeWin.HWND WindowHandle);
 
 	/**
-	 * SetUseWindow で設定したウインドウのメッセージループ処理をDXライブラリで行うかどうかを設定する
+	 * SetUseWindowで設定したウインドウのメッセージループ処理をDXライブラリで行うかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:DXライブラリで行う( デフォルト )  FALSE:DXライブラリでは行わない
+	 *      Flag = TRUE:DXライブラリで行う(デフォルト)  FALSE:DXライブラリでは行わない
 	 */
 	extern int SetUserWindowMessageProcessDXLibFlag(int Flag);
 
 	/**
-	 * FPUの精度を落とさない設定を使用するかどうかを設定する、DxLib_Init を呼び出す前のみ有効
+	 * FPUの精度を落とさない設定を使用するかどうかを設定する、DxLib_Initを呼び出す前のみ有効
 	 *
 	 * Params:
 	 *      Flag = TRUE:使用する(精度が落ちない)  FALSE:使用しない(精度を落とす(デフォルト)
@@ -544,7 +544,7 @@ extern (C++, DxLib) {
 	 * マウスポインタがウインドウのクライアントエリアの外にいけるかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:いける( デフォルト設定 )  FALSE:いけない
+	 *      Flag = TRUE:いける(デフォルト設定)  FALSE:いけない
 	 */
 	extern int SetValidMousePointerWindowOutClientAreaMoveFlag(int Flag);
 
@@ -552,12 +552,12 @@ extern (C++, DxLib) {
 	 * バックバッファの透過色の部分を透過させるかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:透過させる  FALSE:透過させない( デフォルト )
+	 *      Flag = TRUE:透過させる  FALSE:透過させない(デフォルト)
 	 */
 	extern int SetUseBackBufferTransColorFlag(int Flag);
 
 	/**
-	 * UpdateLayerdWindowForBaseImage や UpdateLayerdWindowForSoftImage を使用するかどうかを設定する
+	 * UpdateLayerdWindowForBaseImageやUpdateLayerdWindowForSoftImageを使用するかどうかを設定する
 	 *
 	 * Params:
 	 *      Flag = TRUE:使用する  FALSE:使用しない
@@ -565,7 +565,7 @@ extern (C++, DxLib) {
 	extern int SetUseUpdateLayerdWindowFlag(int Flag);
 
 	/**
-	 * リソースを読み込む際に使用するモジュールを設定する( null を指定すると初期状態に戻ります、デフォルトでは null )
+	 * リソースを読み込む際に使用するモジュールを設定する(nullを指定すると初期状態に戻ります、デフォルトではnull)
 	 *
 	 * Params:
 	 *      ResourceModule = ?
@@ -573,12 +573,12 @@ extern (C++, DxLib) {
 	extern int SetResourceModule(dxlib_d.DxDataTypeWin.HMODULE ResourceModule);
 
 	/**
-	 * WM_PAINT メッセージが来た際に『DXライブラリの WM_PAINTメッセージが来た際の処理』を行うかどうかを設定する( 別スレッドで描画処理を行う場合などで使用 )
+	 * WM_PAINT メッセージが来た際に『DXライブラリのWM_PAINTメッセージが来た際の処理』を行うかどうかを設定する(別スレッドで描画処理を行う場合などで使用)
 	 */
 	extern int SetUseDxLibWM_PAINTProcess(int Flag);
 
 	/**
-	 * Windows10 で WM_CHAR で短時間に連続して同じ文字が入力された場合の無効扱いにする時間を設定する( MilliSecond のミリ秒以内に連続して同じ文字が入力された場合に無効にする、MilliSecond の値をマイナスにするとデフォルトの設定に戻る )
+	 * Windows10でWM_CHARで短時間に連続して同じ文字が入力された場合の無効扱いにする時間を設定する(MilliSecondのミリ秒以内に連続して同じ文字が入力された場合に無効にする、MilliSecondの値をマイナスにするとデフォルトの設定に戻る)
 	 */
 	extern int SetWindows10_WM_CHAR_CancelTime(int MilliSecond);
 
@@ -619,7 +619,7 @@ extern (C++, DxLib) {
 	 *      Height = 縦ドット数
 	 *      MaskData = ドット情報配列の先頭アドレス
 	 *      Pitch = 1ラインあたりのbyteサイズ
-	 *      Byte = 1ドット辺りのbyteサイズ( 対応しているのは 1~4 )、ドットの数値が0かそれ以外かで判別
+	 *      Byte = 1ドット辺りのbyteサイズ(対応しているのは1~4)、ドットの数値が0かそれ以外かで判別
 	 */
 	extern dxlib_d.DxDataTypeWin.HRGN CreateRgnFromGraph(int Width, int Height, const (void)* MaskData, int Pitch, int Byte);
 
@@ -628,9 +628,9 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      BaseImage = 基本イメージデータのアドレス
-	 *      TransColorR = 透過色( 0~255 )
-	 *      TransColorG = 透過色( 0~255 )
-	 *      TransColorB = 透過色( 0~255 )
+	 *      TransColorR = 透過色(0~255)
+	 *      TransColorG = 透過色(0~255)
+	 *      TransColorB = 透過色(0~255)
 	 */
 	extern dxlib_d.DxDataTypeWin.HRGN CreateRgnFromBaseImage(dxlib_d.DxLib.BASEIMAGE* BaseImage, int TransColorR, int TransColorG, int TransColorB);
 
@@ -645,30 +645,30 @@ extern (C++, DxLib) {
 	extern int SetWindowRgnGraphWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* FileName, size_t FileNameLength);
 
 	/**
-	 * 描画先の画面の透過色の部分を透過させるRGNをセットする( 使用される透過色は関数 SetTransColor で設定した色 )
+	 * 描画先の画面の透過色の部分を透過させるRGNをセットする(使用される透過色は関数SetTransColorで設定した色)
 	 */
 	extern int UpdateTransColorWindowRgn();
 
 	// ツールバー関係
 
 	/**
-	 * ツールバーの準備、BitmapName に null, ResourceID に -1 を渡すとツールバーを解除
+	 * ツールバーの準備、BitmapNameにnull, ResourceIDに-1を渡すとツールバーを解除
 	 *
 	 * Params:
-	 *      BitmapName = ツールバーのボタンに使用する画像ファイルパス、ResourceID に -1 以外を渡す場合は null にする
+	 *      BitmapName = ツールバーのボタンに使用する画像ファイルパス、ResourceIDに-1以外を渡す場合はnullにする
 	 *      DivNum = ボタン画像中のボタンの数
-	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapName に null を渡すとこの引数が使用される
+	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapNameにnullを渡すとこの引数が使用される
 	 */
 	extern int SetupToolBar(const (dxlib_d.DxDataTypeWin.TCHAR)* BitmapName, int DivNum, int ResourceID = -1);
 
 	/**
-	 * ツールバーの準備、BitmapName に null, ResourceID に -1 を渡すとツールバーを解除
+	 * ツールバーの準備、BitmapNameにnull, ResourceIDに-1を渡すとツールバーを解除
 	 *
 	 * Params:
-	 *      BitmapName = ツールバーのボタンに使用する画像ファイルパス、ResourceID に -1 以外を渡す場合は null にする
+	 *      BitmapName = ツールバーのボタンに使用する画像ファイルパス、ResourceIDに-1以外を渡す場合はnullにする
 	 *      BitmapNameLength = ?
 	 *      DivNum = ボタン画像中のボタンの数
-	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapName に null を渡すとこの引数が使用される
+	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapNameにnullを渡すとこの引数が使用される
 	 */
 	extern int SetupToolBarWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* BitmapName, size_t BitmapNameLength, int DivNum, int ResourceID = -1);
 
@@ -676,12 +676,12 @@ extern (C++, DxLib) {
 	 * ツールバーにボタンを追加する
 	 *
 	 * Params:
-	 *      Type = ボタンタイプ( TOOLBUTTON_TYPE_NORMAL 等( 解説は #define の定義を参照してください ) )
-	 *      State = 初期状態( TOOLBUTTON_STATE_ENABLE 等( 解説は #define の定義を参照してください ) )
+	 *      Type = ボタンタイプ(TOOLBUTTON_TYPE_NORMAL等(解説は#defineの定義を参照してください))
+	 *      State = 初期状態(TOOLBUTTON_STATE_ENABLE等(解説は#defineの定義を参照してください))
 	 *      ImageIndex = 使用するボタンの画像番号
 	 *      ID = ボタンに割り当てる識別番号
 	 */
-	extern int AddToolBarButton(int Type /* TOOLBUTTON_TYPE_NORMAL 等 */, int State /* TOOLBUTTON_STATE_ENABLE 等 */, int ImageIndex, int ID);
+	extern int AddToolBarButton(int Type /* TOOLBUTTON_TYPE_NORMAL等 */, int State /* TOOLBUTTON_STATE_ENABLE等 */, int ImageIndex, int ID);
 
 	/**
 	 * ツールバーに隙間を追加する
@@ -694,7 +694,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      ID = AddToolBarButtonで設定したボタンの識別番号
 	 *
-	 * Returns: TRUE:押されている or 押された  FALSE:押されていない
+	 * Returns: TRUE:押されているor押された  FALSE:押されていない
 	 */
 	extern int GetToolBarButtonState(int ID);
 
@@ -703,9 +703,9 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ID = AddToolBarButtonで設定したボタンの識別番号
-	 *      State = 設定する状態( TOOLBUTTON_STATE_ENABLE 等( 解説は #define の定義を参照してください ))
+	 *      State = 設定する状態(TOOLBUTTON_STATE_ENABLE等(解説は#defineの定義を参照してください))
 	 */
-	extern int SetToolBarButtonState(int ID, int State /* TOOLBUTTON_STATE_ENABLE 等 */);
+	extern int SetToolBarButtonState(int ID, int State /* TOOLBUTTON_STATE_ENABLE等 */);
 
 	/**
 	 * ツールバーのボタンを全て削除する
@@ -734,12 +734,12 @@ extern (C++, DxLib) {
 	 * ショートカットキーを追加する
 	 *
 	 * Params:
-	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名( AddMenuItem で NewItemName に渡した名前 )、ItemID を使用する場合は null を渡す
-	 *      ItemID = メニュー項目の識別番号( AddMenuItem の引数 NewItemID で指定したもの )、ItemName を使用する場合は -1 を渡す
-	 *      KeyCode = ショートカットキーのキー( KEY_INPUT_L 等 )
-	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
-	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
-	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
+	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名(AddMenuItemでNewItemNameに渡した名前)、ItemIDを使用する場合はnullを渡す
+	 *      ItemID = メニュー項目の識別番号(AddMenuItemの引数 NewItemIDで指定したもの)、ItemNameを使用する場合は-1を渡す
+	 *      KeyCode = ショートカットキーのキー(KEY_INPUT_L等)
+	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
+	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
+	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
 	 */
 	extern int AddKeyAccel(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
@@ -747,28 +747,28 @@ extern (C++, DxLib) {
 	 * ショートカットキーを追加する
 	 *
 	 * Params:
-	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名( AddMenuItem で NewItemName に渡した名前 )、ItemID を使用する場合は null を渡す
+	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名(AddMenuItemでNewItemNameに渡した名前)、ItemIDを使用する場合はnullを渡す
 	 *      ItemNameLength = ?
-	 *      ItemID = メニュー項目の識別番号( AddMenuItem の引数 NewItemID で指定したもの )、ItemName を使用する場合は -1 を渡す
-	 *      KeyCode = ショートカットキーのキー( KEY_INPUT_L 等 )
-	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
-	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
-	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか( TRUE:押す必要がある  FALSE:押さなくても良い )
+	 *      ItemID = メニュー項目の識別番号(AddMenuItemの引数 NewItemIDで指定したもの)、ItemNameを使用する場合は-1を渡す
+	 *      KeyCode = ショートカットキーのキー(KEY_INPUT_L等)
+	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
+	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
+	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(TRUE:押す必要がある  FALSE:押さなくても良い)
 	 */
 	extern int AddKeyAccelWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
-	 * ショートカットキーを追加する( 各引数の解説は AddKeyAccel と同じ、ItemID が無くなっただけ )
+	 * ショートカットキーを追加する(各引数の解説はAddKeyAccelと同じ、ItemIDが無くなっただけ)
 	 */
 	extern int AddKeyAccel_Name(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
-	 * ショートカットキーを追加する( 各引数の解説は AddKeyAccel と同じ、ItemID が無くなっただけ )
+	 * ショートカットキーを追加する(各引数の解説はAddKeyAccelと同じ、ItemIDが無くなっただけ)
 	 */
 	extern int AddKeyAccel_NameWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
-	 * ショートカットキーを追加する( 各引数の解説は AddKeyAccel と同じ、ItemName が無くなっただけ )
+	 * ショートカットキーを追加する(各引数の解説はAddKeyAccelと同じ、ItemNameが無くなっただけ)
 	 */
 	extern int AddKeyAccel_ID(int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
@@ -781,10 +781,10 @@ extern (C++, DxLib) {
 	 * メニューに項目を追加する
 	 *
 	 * Params:
-	 *      AddType = 項目タイプ( MENUITEM_ADD_CHILD 等( 解説は #define の定義を参照してください ) )
-	 *      ItemName = AddType が MENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、null を指定すると ItemID が使用される
-	 *      ItemID = ItemName の代わりに識別番号で指定するもの、AddType毎の違いは ItemName の解説の通り、-1を指定すると ItemName が使用される
-	 *      SeparatorFlag = 区切り線を追加するかどうか( TRUE:区切り線を追加、この場合 NewItemName と NewItemID は無視される  FALSE:追加するのは区切り線ではない )
+	 *      AddType = 項目タイプ(MENUITEM_ADD_CHILD等(解説は#defineの定義を参照してください))
+	 *      ItemName = AddTypeがMENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、nullを指定するとItemIDが使用される
+	 *      ItemID = ItemNameの代わりに識別番号で指定するもの、AddType毎の違いはItemNameの解説の通り、-1を指定するとItemNameが使用される
+	 *      SeparatorFlag = 区切り線を追加するかどうか(TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  FALSE:追加するのは区切り線ではない)
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
 	 */
@@ -794,11 +794,11 @@ extern (C++, DxLib) {
 	 * メニューに項目を追加する
 	 *
 	 * Params:
-	 *      AddType = 項目タイプ( MENUITEM_ADD_CHILD 等( 解説は #define の定義を参照してください ) )
-	 *      ItemName = AddType が MENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、null を指定すると ItemID が使用される
+	 *      AddType = 項目タイプ(MENUITEM_ADD_CHILD等(解説は#defineの定義を参照してください))
+	 *      ItemName = AddTypeがMENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、nullを指定するとItemIDが使用される
 	 *      ItemNameLength = ?
-	 *      ItemID = ItemName の代わりに識別番号で指定するもの、AddType毎の違いは ItemName の解説の通り、-1を指定すると ItemName が使用される
-	 *      SeparatorFlag = 区切り線を追加するかどうか( TRUE:区切り線を追加、この場合 NewItemName と NewItemID は無視される  FALSE:追加するのは区切り線ではない )
+	 *      ItemID = ItemNameの代わりに識別番号で指定するもの、AddType毎の違いはItemNameの解説の通り、-1を指定するとItemNameが使用される
+	 *      SeparatorFlag = 区切り線を追加するかどうか(TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  FALSE:追加するのは区切り線ではない)
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemNameLength = ?
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
@@ -809,8 +809,8 @@ extern (C++, DxLib) {
 	 * メニューから選択項目を削除する
 	 *
 	 * Params:
-	 *      ItemName = 削除する項目の名前( AddMenuItem で NewItemName に渡した名前 )、null を指定すると ItemID が使用される
-	 *      ItemID = 削除する項目の識別番号( AddMenuItem で NewItemID に渡した番号 )、-1 を指定すると ItemName が使用される
+	 *      ItemName = 削除する項目の名前(AddMenuItemでNewItemNameに渡した名前)、nullを指定するとItemIDが使用される
+	 *      ItemID = 削除する項目の識別番号(AddMenuItemでNewItemIDに渡した番号)、-1を指定するとItemNameが使用される
 	 */
 	extern int DeleteMenuItem(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID);
 
@@ -818,65 +818,65 @@ extern (C++, DxLib) {
 	 * メニューから選択項目を削除する
 	 *
 	 * Params:
-	 *      ItemName = 削除する項目の名前( AddMenuItem で NewItemName に渡した名前 )、null を指定すると ItemID が使用される
+	 *      ItemName = 削除する項目の名前(AddMenuItemでNewItemNameに渡した名前)、nullを指定するとItemIDが使用される
 	 *      ItemNameLength = ?
-	 *      ItemID = 削除する項目の識別番号( AddMenuItem で NewItemID に渡した番号 )、-1 を指定すると ItemName が使用される
+	 *      ItemID = 削除する項目の識別番号(AddMenuItemでNewItemIDに渡した番号)、-1を指定するとItemNameが使用される
 	 */
 	extern int DeleteMenuItemWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
 
 	/**
-	 * メニューが選択されたかどうかを取得する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
+	 * メニューが選択されたかどうかを取得する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください)
 	 *
 	 * Returns: 0:選択されていない  1:選択された
 	 */
 	extern int CheckMenuItemSelect(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID);
 
 	/**
-	 * メニューが選択されたかどうかを取得する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
+	 * メニューが選択されたかどうかを取得する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください)
 	 *
 	 * Returns: 0:選択されていない  1:選択された
 	 */
 	extern int CheckMenuItemSelectWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
 
 	/**
-	 * メニューの項目を選択出来るかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
+	 * メニューの項目を選択出来るかどうかを設定する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください)
 	 *
 	 * Params:
 	 *      ItemName = ?
 	 *      ItemID = ?
-	 *      EnableFlag = 項目が選択できるかどうか( TRUE:選択できる   FALSE:選択できない )
+	 *      EnableFlag = 項目が選択できるかどうか(TRUE:選択できる   FALSE:選択できない)
 	 */
 	extern int SetMenuItemEnable(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID, int EnableFlag);
 
 	/**
-	 * メニューの項目を選択出来るかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください )
+	 * メニューの項目を選択出来るかどうかを設定する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください)
 	 *
 	 * Params:
 	 *      ItemName = ?
 	 *      ItemNameLength = ?
 	 *      ItemID = ?
-	 *      EnableFlag = 項目が選択できるかどうか( TRUE:選択できる   FALSE:選択できない )
+	 *      EnableFlag = 項目が選択できるかどうか(TRUE:選択できる   FALSE:選択できない)
 	 */
 	extern int SetMenuItemEnableWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int EnableFlag);
 
 	/**
-	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください ) )
+	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください))
 	 *
 	 * Params:
 	 *      ItemName = ?
 	 *      ItemID = ?
-	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等( 解説は #define の定義を参照してください )
+	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等(解説は#defineの定義を参照してください)
 	 */
 	extern int SetMenuItemMark(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int ItemID, int Mark);
 
 	/**
-	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する( ItemName と ItemID については関数 DeleteMenuItem の注釈を参照してください ) )
+	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください))
 	 *
 	 * Params:
 	 *      ItemName = ?
 	 *      ItemNameLength = ?
 	 *      ItemID = ?
-	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等( 解説は #define の定義を参照してください )
+	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等(解説は#defineの定義を参照してください)
 	 */
 	extern int SetMenuItemMarkWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int Mark);
 
@@ -992,7 +992,7 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ItemName = ?
-	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等 )
+	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等)
 	 */
 	extern int SetMenuItemMark_Name(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, int Mark);
 
@@ -1002,7 +1002,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      ItemName = ?
 	 *      ItemNameLength = ?
-	 *      Mark = 設定するマーク( MENUITEM_MARK_NONE 等 )
+	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等)
 	 */
 	extern int SetMenuItemMark_NameWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ItemName, size_t ItemNameLength, int Mark);
 
@@ -1053,7 +1053,7 @@ extern (C++, DxLib) {
 	extern int SetMenuItemEnable_ID(int ItemID, int EnableFlag);
 
 	/**
-	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する( Mark:設定するマーク( MENUITEM_MARK_NONE 等 ) )
+	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する(Mark:設定するマーク(MENUITEM_MARK_NONE等))
 	 *
 	 * Params:
 	 *      ItemID = ?
@@ -1131,7 +1131,7 @@ extern (C++, DxLib) {
 	version (DX_NON_NETWORK) {
 	} else {
 		/**
-		 * WinSock で最後に発生したエラーのコードを取得する
+		 * WinSockで最後に発生したエラーのコードを取得する
 		 */
 		extern int GetWinSockLastError();
 	}
@@ -1141,10 +1141,10 @@ extern (C++, DxLib) {
 	version (DX_NON_KEYEX) {
 	} else {
 		/**
-		 * IMEの漢字変換候補表示の処理に TSF を使用するかどうかを設定する
+		 * IMEの漢字変換候補表示の処理にTSFを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      UseFlag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int SetUseTSFFlag(int UseFlag);
 	}
@@ -1154,47 +1154,47 @@ extern (C++, DxLib) {
 	version (DX_NON_INPUT) {
 	} else {
 		/**
-		 * DirectInput のキーボードの協調レベルを排他レベルにするかどうかを設定する、DxLib_Init の呼び出し前でのみ実行可能
+		 * DirectInputのキーボードの協調レベルを排他レベルにするかどうかを設定する、DxLib_Initの呼び出し前でのみ実行可能
 		 *
 		 * Params:
-		 *      Flag = TRUE:排他レベルにする  FALSE:標準レベルにする( デフォルト )
+		 *      Flag = TRUE:排他レベルにする  FALSE:標準レベルにする(デフォルト)
 		 */
 		extern int SetKeyExclusiveCooperativeLevelFlag(int Flag);
 
 		/**
-		 * キーボードの入力処理に DirectInput を使わないかどうかを設定する
+		 * キーボードの入力処理にDirectInputを使わないかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:DirectInput を使わず、Windows標準機能を使用する  FALSE:DirectInput を使用する
+		 *      Flag = TRUE:DirectInputを使わず、Windows標準機能を使用する  FALSE:DirectInputを使用する
 		 */
 		extern int SetKeyboardNotDirectInputFlag(int Flag);
 
 		/**
-		 * 入力処理に DirectInput を使用するかどうかを設定する
+		 * 入力処理にDirectInputを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:DirectInput を使用する  FALSE:DirectInput を使わず、Windows標準機能を使用する
+		 *      UseFlag = TRUE:DirectInputを使用する  FALSE:DirectInputを使わず、Windows標準機能を使用する
 		 */
 		extern int SetUseDirectInputFlag(int UseFlag);
 
 		/**
-		 * マウスの入力処理に DirectInput を使用する場合の動作モードを設定する
+		 * マウスの入力処理にDirectInputを使用する場合の動作モードを設定する
 		 *
 		 * Params:
-		 *      Mode = 0:ウィンドウがアクティブな場合のみ DirectInput を使用する  1:ウィンドウのアクティブ状態に関係なく DirectInput を使用する
+		 *      Mode = 0:ウィンドウがアクティブな場合のみ DirectInputを使用する  1:ウィンドウのアクティブ状態に関係なく DirectInputを使用する
 		 */
 		extern int SetDirectInputMouseMode(int Mode);
 
 		/**
-		 * Xbox360コントローラの入力処理に XInput を使用するかどうかを設定する
+		 * Xbox360コントローラの入力処理にXInputを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:XInput を使用する( デフォルト )  FALSE:XInput を使用しない
+		 *      Flag = TRUE:XInputを使用する(デフォルト)  FALSE:XInputを使用しない
 		 */
 		extern int SetUseXInputFlag(int Flag);
 
 		/**
-		 * Xbox360コントローラや Xbox Oneコントローラを DirectInputコントローラとしても検出するかどうかを設定する、DxLib_Init の呼び出し前でのみ実行可能
+		 * Xbox360コントローラやXbox OneコントローラをDirectInputコントローラとしても検出するかどうかを設定する、DxLib_Initの呼び出し前でのみ実行可能
 		 *
 		 * Params:
 		 *      Flag = TRUE:DirectInputコントローラとしても検出する  FALSE:DirectInputコントローラとしては検出しない(デフォルト)
@@ -1207,12 +1207,12 @@ extern (C++, DxLib) {
 		extern int GetJoypadGUID(int PadIndex, dxlib_d.DxDataTypeWin.GUID* GuidInstanceBuffer, dxlib_d.DxDataTypeWin.GUID* GuidProductBuffer = null);
 
 		/**
-		 * ジョイパッドのデバイス登録名と製品登録名を取得する( InstanceNameBuffer, ProductNameBuffer 共に 260 以上のバッファサイズが必要 )
+		 * ジョイパッドのデバイス登録名と製品登録名を取得する(InstanceNameBuffer, ProductNameBuffer共に260以上のバッファサイズが必要)
 		 */
 		extern int GetJoypadName(int InputType, dxlib_d.DxDataTypeWin.TCHAR* InstanceNameBuffer, dxlib_d.DxDataTypeWin.TCHAR* ProductNameBuffer);
 
 		/**
-		 * DXライブラリのキーコード( KEY_INPUT_A など )に対応する Windows の仮想キーコード( VK_LEFT など ) を取得する
+		 * DXライブラリのキーコード(KEY_INPUT_Aなど)に対応するWindowsの仮想キーコード(VK_LEFTなど)を取得する
 		 *
 		 * Params:
 		 *      KeyCode = 変換したいDXライブラリのキーコード
@@ -1222,7 +1222,7 @@ extern (C++, DxLib) {
 		extern int ConvertKeyCodeToVirtualKey(int KeyCode);
 
 		/**
-		 * Windows の仮想キーコード( VK_LEFT など ) に対応するDXライブラリのキーコード( KEY_INPUT_A など )を取得する
+		 * Windowsの仮想キーコード(VK_LEFTなど)に対応するDXライブラリのキーコード(KEY_INPUT_Aなど)を取得する
 		 *
 		 * Params:
 		 *      VirtualKey = 変換したいWindowsの仮想キーコード
@@ -1247,7 +1247,7 @@ extern (C++, DxLib) {
 		extern int LoadDivGraphToResource(int ResourceID, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
 
 		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する( float型 )
+		 * 画像リソースを分割してグラフィックハンドルを作成する(float型)
 		 */
 		extern int LoadDivGraphFToResource(int ResourceID, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
@@ -1272,12 +1272,12 @@ extern (C++, DxLib) {
 		extern int LoadDivGraphToResourceWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataTypeWin.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
 
 		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する( float型 )
+		 * 画像リソースを分割してグラフィックハンドルを作成する(float型)
 		 */
 		extern int LoadDivGraphFToResource(const (dxlib_d.DxDataTypeWin.TCHAR)* ResourceName, const (dxlib_d.DxDataTypeWin.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
 		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する( float型 )
+		 * 画像リソースを分割してグラフィックハンドルを作成する(float型)
 		 */
 		extern int LoadDivGraphFToResourceWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataTypeWin.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
@@ -1292,17 +1292,17 @@ extern (C++, DxLib) {
 		// 画像情報関係関数
 
 		/**
-		 * グラフィックハンドルが持つ ID3D11Texture2D を取得する( Direct3D11 を使用している場合のみ有効 )( 戻り値を ID3D11Texture2D * にキャストしてください )
+		 * グラフィックハンドルが持つ ID3D11Texture2Dを取得する(Direct3D11を使用している場合のみ有効)(戻り値をID3D11Texture2D*にキャストしてください)
 		 */
 		extern const (void)* GetGraphID3D11Texture2D(int GrHandle);
 
 		/**
-		 * グラフィックハンドルが持つ ID3D11RenderTargetView を取得する( Direct3D11 を使用していて、且つ MakeScreen で作成したグラフィックハンドルでのみ有効 )( 戻り値を ID3D11RenderTargetView * にキャストしてください )
+		 * グラフィックハンドルが持つ ID3D11RenderTargetViewを取得する(Direct3D11を使用していて、且つ MakeScreenで作成したグラフィックハンドルでのみ有効)(戻り値をID3D11RenderTargetView*にキャストしてください)
 		 */
 		extern const (void)* GetGraphID3D11RenderTargetView(int GrHandle);
 
 		/**
-		 * グラフィックハンドルが持つ ID3D11DepthStencilView を取得する( Direct3D11 を使用していて、且つ MakeScreen で作成したグラフィックハンドルでのみ有効 )( 戻り値を ID3D11DepthStencilView * にキャストしてください )
+		 * グラフィックハンドルが持つ ID3D11DepthStencilViewを取得する(Direct3D11を使用していて、且つ MakeScreenで作成したグラフィックハンドルでのみ有効)(戻り値をID3D11DepthStencilView*にキャストしてください)
 		 */
 		extern const (void)* GetGraphID3D11DepthStencilView(int GrHandle);
 
@@ -1319,7 +1319,7 @@ extern (C++, DxLib) {
 		extern int BltRectBackScreenToWindow(dxlib_d.DxDataTypeWin.HWND Window, dxlib_d.DxDataTypeWin.RECT BackScreenRect, dxlib_d.DxDataTypeWin.RECT WindowClientRect);
 
 		/**
-		 * ScreenFlip で画像を転送する先のウインドウを設定する( null を指定すると設定解除 )
+		 * ScreenFlipで画像を転送する先のウインドウを設定する(nullを指定すると設定解除)
 		 */
 		extern int SetScreenFlipTargetWindow(dxlib_d.DxDataTypeWin.HWND TargetWindow, double ScaleX = 1.0, double ScaleY = 1.0);
 
@@ -1329,43 +1329,43 @@ extern (C++, DxLib) {
 		extern int GetDesktopScreenGraph(int x1, int y1, int x2, int y2, int GrHandle, int DestX = 0, int DestY = 0);
 
 		/**
-		 * デスクトップ画面から指定領域の画像のメモリイメージの先頭アドレスとイメージの幅・高さ・ストライドを取得する( イメージのフォーマットは ColorBitDepth = 32( バイト順で B8G8R8X8 の 32bitカラー ) ColorBitDepth = 24( バイト順で B8G8R8 の 24bitカラー ) )
+		 * デスクトップ画面から指定領域の画像のメモリイメージの先頭アドレスとイメージの幅・高さ・ストライドを取得する(イメージのフォーマットはColorBitDepth = 32(バイト順でB8G8R8X8の32bitカラー) ColorBitDepth = 24(バイト順でB8G8R8の24bitカラー))
 		 */
 		extern void* GetDesktopScreenGraphMemImage(int x1, int y1, int x2, int y2, int* Width, int* Height, int* Stride, int ColorBitDepth = 32);
 
 		// その他設定関係関数
 
 		/**
-		 * DirectDraw や Direct3D の協調レベルをマルチスレッド対応にするかどうかをセットする
+		 * DirectDrawやDirect3Dの協調レベルをマルチスレッド対応にするかどうかをセットする
 		 *
 		 * Params:
-		 *      Flag = TRUE:マルチスレッド対応にする  FALSE:マルチスレッド対応にしない( デフォルト )
+		 *      Flag = TRUE:マルチスレッド対応にする  FALSE:マルチスレッド対応にしない(デフォルト)
 		 */
 		extern int SetMultiThreadFlag(int Flag);
 
 		/**
-		 * 使用する DirectDraw デバイスのインデックスを設定する
+		 * 使用するDirectDrawデバイスのインデックスを設定する
 		 */
 		extern int SetUseDirectDrawDeviceIndex(int Index);
 
 		/**
-		 * Vista,7 の Windows Aero を無効にするかどうかを設定する( DxLib_Init の前に呼ぶ必要があります )
+		 * Vista,7のWindows Aeroを無効にするかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:無効にする( デフォルト )  FALSE:有効にする
+		 *      Flag = TRUE:無効にする(デフォルト)  FALSE:有効にする
 		 */
 		extern int SetAeroDisableFlag(int Flag);
 
 		/**
-		 * Vista以降の環境で Direct3D9Ex を使用するかどうかを設定する( DxLib_Init の前に呼ぶ必要があります )
+		 * Vista以降の環境でDirect3D9Exを使用するかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int SetUseDirect3D9Ex(int Flag);
 
 		/**
-		 * Direct3D11 を使用するかどうかを設定する
+		 * Direct3D11を使用するかどうかを設定する
 		 *
 		 * Params:
 		 *      Flag = TRUE:使用する  FALSE:使用しない
@@ -1373,38 +1373,38 @@ extern (C++, DxLib) {
 		extern int SetUseDirect3D11(int Flag);
 
 		/**
-		 * Direct3D11 で使用する最低機能レベルを指定する関数です、尚、DX_DIRECT3D_11_FEATURE_LEVEL_11_0 より低い機能レベルでの正常な動作は保証しません( デフォルトは DX_DIRECT3D_11_FEATURE_LEVEL_11_0 )
+		 * Direct3D11で使用する最低機能レベルを指定する関数です、尚、DX_DIRECT3D_11_FEATURE_LEVEL_11_0より低い機能レベルでの正常な動作は保証しません(デフォルトはDX_DIRECT3D_11_FEATURE_LEVEL_11_0)
 		 *
 		 * Params:
-		 *      Level = DX_DIRECT3D_11_FEATURE_LEVEL_10_0 など
+		 *      Level = DX_DIRECT3D_11_FEATURE_LEVEL_10_0など
 		 */
 		extern int SetUseDirect3D11MinFeatureLevel(int Level);
 
 		/**
-		 * D3D_DRIVER_TYPE_WARP タイプの Direct3D 11 ドライバを使用するかどうかを設定する
+		 * D3D_DRIVER_TYPE_WARP タイプのDirect3D 11ドライバを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない( デフォルト )
+		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
 		 */
 		extern int SetUseDirect3D11WARPDriver(int Flag);
 
 		/**
-		 * 使用する Direct3D のバージョンを設定する、DxLib_Init 呼び出しの前でのみ使用可能
+		 * 使用するDirect3Dのバージョンを設定する、DxLib_Init呼び出しの前でのみ使用可能
 		 *
 		 * Params:
-		 *      Version = DX_DIRECT3D_9 など
+		 *      Version = DX_DIRECT3D_9など
 		 */
 		extern int SetUseDirect3DVersion(int Version);
 
 		/**
-		 * 使用している Direct3D のバージョンを取得する
+		 * 使用しているDirect3Dのバージョンを取得する
 		 *
-		 * Returns: DX_DIRECT3D_9 など
+		 * Returns: DX_DIRECT3D_9など
 		 */
 		extern int GetUseDirect3DVersion();
 
 		/**
-		 * 使用している Direct3D11 の FeatureLevel ( DX_DIRECT3D_11_FEATURE_LEVEL_9_1 等 )を取得する
+		 * 使用しているDirect3D11のFeatureLevel(DX_DIRECT3D_11_FEATURE_LEVEL_9_1等)を取得する
 		 *
 		 * Returns: -1:エラー -1以外:Feature Level
 		 */
@@ -1416,7 +1416,7 @@ extern (C++, DxLib) {
 		extern int SetUseDirect3D11AdapterIndex(int Index);
 
 		/**
-		 * ( 同効果のSetUseSoftwareRenderModeFlag を使用して下さい )DirectDrawを使用するかどうかを設定する
+		 * (同効果のSetUseSoftwareRenderModeFlagを使用して下さい)DirectDrawを使用するかどうかを設定する
 		 */
 		extern int SetUseDirectDrawFlag(int Flag);
 
@@ -1436,77 +1436,77 @@ extern (C++, DxLib) {
 		extern int SetDDrawUseGuid(const (dxlib_d.DxDataTypeWin.GUID)* Guid);
 
 		/**
-		 * 現在使用しているDirectDrawオブジェクトのアドレスを取得する( 戻り値を IDirectDraw7 * にキャストして下さい )
+		 * 現在使用しているDirectDrawオブジェクトのアドレスを取得する(戻り値をIDirectDraw7*にキャストして下さい)
 		 */
 		extern const (void)* GetUseDDrawObj();
 
 		/**
-		 * 有効な DirectDraw デバイスの GUID を取得する
+		 * 有効な DirectDrawデバイスのGUIDを取得する
 		 */
 		extern const (dxlib_d.DxDataTypeWin.GUID)* GetDirectDrawDeviceGUID(int Number);
 
 		/**
-		 * 有効な DirectDraw デバイスの名前を取得する
+		 * 有効な DirectDrawデバイスの名前を取得する
 		 */
 		extern int GetDirectDrawDeviceDescription(int Number, char* StringBuffer);
 
 		/**
-		 * 有効な DirectDraw デバイスの数を取得する
+		 * 有効な DirectDrawデバイスの数を取得する
 		 */
 		extern int GetDirectDrawDeviceNum();
 
 		/**
-		 * 使用中のDirect3DDevice9オブジェクトを取得する( 戻り値を IDirect3DDevice9 * にキャストして下さい )
+		 * 使用中のDirect3DDevice9オブジェクトを取得する(戻り値をIDirect3DDevice9*にキャストして下さい)
 		 */
 		extern const (void)* GetUseDirect3DDevice9();
 
 		/**
-		 * 使用中のバックバッファのDirect3DSurface9オブジェクトを取得する( 戻り値を D_IDirect3DSurface9 * にキャストしてください )
+		 * 使用中のバックバッファのDirect3DSurface9オブジェクトを取得する(戻り値をD_IDirect3DSurface9*にキャストしてください)
 		 */
 		extern const (void)* GetUseDirect3D9BackBufferSurface();
 
 		/**
-		 * 使用中のID3D11Deviceオブジェクトを取得する( 戻り値を ID3D11Device * にキャストして下さい )
+		 * 使用中のID3D11Deviceオブジェクトを取得する(戻り値をID3D11Device*にキャストして下さい)
 		 */
 		extern const (void)* GetUseDirect3D11Device();
 
 		/**
-		 * 使用中のID3D11DeviceContextオブジェクトを取得する( 戻り値を ID3D11DeviceContext * にキャストして下さい )
+		 * 使用中のID3D11DeviceContextオブジェクトを取得する(戻り値をID3D11DeviceContext*にキャストして下さい)
 		 */
 		extern const (void)* GetUseDirect3D11DeviceContext();
 
 		/**
-		 * 使用中のバックバッファのID3D11Texture2Dオブジェクトを取得する( 戻り値を ID3D11Texture2D * にキャストしてください )
+		 * 使用中のバックバッファのID3D11Texture2Dオブジェクトを取得する(戻り値をID3D11Texture2D*にキャストしてください)
 		 */
 		extern const (void)* GetUseDirect3D11BackBufferTexture2D();
 
 		/**
-		 * 使用中のバックバッファのID3D11RenderTargetViewオブジェクトを取得する( 戻り値を ID3D11RenderTargetView * にキャストしてください )
+		 * 使用中のバックバッファのID3D11RenderTargetViewオブジェクトを取得する(戻り値をID3D11RenderTargetView*にキャストしてください)
 		 */
 		extern const (void)* GetUseDirect3D11BackBufferRenderTargetView();
 
 		/**
-		 * 使用中の深度ステンシルバッファのID3D11Texture2Dオブジェクトを取得する( 戻り値を ID3D11Texture2D * にキャストしてください )
+		 * 使用中の深度ステンシルバッファのID3D11Texture2Dオブジェクトを取得する(戻り値をID3D11Texture2D*にキャストしてください)
 		 */
 		extern const (void)* GetUseDirect3D11DepthStencilTexture2D();
 
 		/**
-		 * 指定の ID3D11RenderTargetView を描画対象にする( pID3D11DepthStencilView が null の場合はデフォルトの深度ステンシルバッファを使用する )
+		 * 指定のID3D11RenderTargetViewを描画対象にする(pID3D11DepthStencilViewがnullの場合はデフォルトの深度ステンシルバッファを使用する)
 		 */
 		extern int SetDrawScreen_ID3D11RenderTargetView(const (void)* pID3D11RenderTargetView, const (void)* pID3D11DepthStencilView = null);
 
 		/**
-		 * DXライブラリが行ったDirect3Dの設定を再度行う( 特殊用途 )
+		 * DXライブラリが行ったDirect3Dの設定を再度行う(特殊用途)
 		 */
 		extern int RefreshDxLibDirect3DSetting();
 
 		version (DX_NON_MEDIA_FOUNDATION) {
 		} else {
 			/**
-			 * Media Foundation を使用するかどうかを設定する
+			 * Media Foundationを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      Flag = TRUE:使用する( デフォルト )  FALSE:使用しない
+			 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
 			 */
 			extern int SetUseMediaFoundationFlag(int Flag);
 		}
@@ -1535,26 +1535,26 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のフォントファイルをシステムに追加する
 		 *
-		 * Returns: null:失敗  NULL以外:フォントハンドル( WindowsOS のものなので、DXライブラリのフォントハンドルとは別物です )
+		 * Returns: null:失敗  NULL以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です)
 		 */
 		extern dxlib_d.DxDataTypeWin.HANDLE AddFontFile(const (dxlib_d.DxDataTypeWin.TCHAR)* FontFilePath);
 
 		/**
 		 * 指定のフォントファイルをシステムに追加する
 		 *
-		 * Returns: null:失敗  NULL以外:フォントハンドル( WindowsOS のものなので、DXライブラリのフォントハンドルとは別物です )
+		 * Returns: null:失敗  NULL以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です)
 		 */
 		extern dxlib_d.DxDataTypeWin.HANDLE AddFontFileWithStrLen(const (dxlib_d.DxDataTypeWin.TCHAR)* FontFilePath, size_t FontFilePathLength);
 
 		/**
-		 * 指定のメモリアドレスに展開したフォントファイルイメージをシステムに追加する )
+		 * 指定のメモリアドレスに展開したフォントファイルイメージをシステムに追加する)
 		 *
-		 * Returns: null:失敗  NULL以外:フォントハンドル( WindowsOS のものなので、DXライブラリのフォントハンドルとは別物です
+		 * Returns: null:失敗  NULL以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です
 		 */
 		extern dxlib_d.DxDataTypeWin.HANDLE AddFontFileFromMem(const (void)* FontFileImage, int FontFileImageSize);
 
 		/**
-		 * 指定のフォントハンドルをシステムから削除する( 引数は AddFontFile や AddFontFileFromMem の戻り値 )
+		 * 指定のフォントハンドルをシステムから削除する(引数はAddFontFileやAddFontFileFromMemの戻り値)
 		 */
 		extern int RemoveFontFile(dxlib_d.DxDataTypeWin.HANDLE FontHandle);
 
@@ -1627,7 +1627,7 @@ extern (C++, DxLib) {
 	extern int ConvBitmapToGraphImage(const (dxlib_d.DxDataTypeWin.BITMAPINFO)* BmpInfo, void* GraphData, dxlib_d.DxLib.BASEIMAGE* GraphImage, int CopyFlag);
 
 	/**
-	 * 基本イメージデータをBMPデータに変換するGraphImage を BMP に変換する(アルファデータはあっても無視される)
+	 * 基本イメージデータをBMPデータに変換するGraphImageをBMPに変換する(アルファデータはあっても無視される)
 	 *
 	 * Returns: 0:正常終了  1:コピーを行った  -1:エラー
 	 */
@@ -1636,22 +1636,22 @@ extern (C++, DxLib) {
 	// 基本イメージデータ構造体関係
 
 	/**
-	 * 基本イメージデータを使用して UpdateLayerdWindow を行う
+	 * 基本イメージデータを使用して UpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForBaseImage(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage);
 
 	/**
-	 * 基本イメージデータの指定の範囲を使用して UpdateLayerdWindow を行う
+	 * 基本イメージデータの指定の範囲を使用して UpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForBaseImageRect(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage, int x1, int y1, int x2, int y2);
 
 	/**
-	 * 乗算済みアルファの基本イメージデータを使用して UpdateLayerdWindow を行う
+	 * 乗算済みアルファの基本イメージデータを使用して UpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForPremultipliedAlphaBaseImage(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage);
 
 	/**
-	 * 乗算済みアルファの基本イメージデータの指定の範囲を使用して UpdateLayerdWindow を行う
+	 * 乗算済みアルファの基本イメージデータの指定の範囲を使用して UpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForPremultipliedAlphaBaseImageRect(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage, int x1, int y1, int x2, int y2);
 
@@ -1666,22 +1666,22 @@ extern (C++, DxLib) {
 	version (DX_NON_SOFTIMAGE) {
 	} else {
 		/**
-		 * ソフトウエアイメージハンドルを使用して UpdateLayerdWindow を行う
+		 * ソフトウエアイメージハンドルを使用して UpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForSoftImage(int SIHandle);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定の範囲を使用して UpdateLayerdWindow を行う
+		 * ソフトウエアイメージハンドルの指定の範囲を使用して UpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForSoftImageRect(int SIHandle, int x1, int y1, int x2, int y2);
 
 		/**
-		 * 乗算済みアルファのソフトウエアイメージハンドルを使用して UpdateLayerdWindow を行う
+		 * 乗算済みアルファのソフトウエアイメージハンドルを使用して UpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForPremultipliedAlphaSoftImage(int SIHandle);
 
 		/**
-		 * 乗算済みアルファのソフトウエアイメージハンドルの指定の範囲を使用して UpdateLayerdWindow を行う
+		 * 乗算済みアルファのソフトウエアイメージハンドルの指定の範囲を使用して UpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForPremultipliedAlphaSoftImageRect(int SIHandle, int x1, int y1, int x2, int y2);
 
@@ -1714,7 +1714,7 @@ extern (C++, DxLib) {
 		 * サウンドの処理をソフトウエアで行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:ソフトウエア  FALSE:ハードウエア( デフォルト )
+		 *      Flag = TRUE:ソフトウエア  FALSE:ハードウエア(デフォルト)
 		 */
 		extern int SetUseSoftwareMixingSoundFlag(int Flag);
 
@@ -1722,7 +1722,7 @@ extern (C++, DxLib) {
 		 * サウンドの再生にXAudioを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない( デフォルト )
+		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
 		 */
 		extern int SetEnableXAudioFlag(int Flag);
 
@@ -1730,9 +1730,9 @@ extern (C++, DxLib) {
 		 * サウンドの再生にWASAPIを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない( デフォルト )
+		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
 		 *      IsExclusive = TRUE:排他モードを使用する  FALSE:排他モードを使用しない
-		 *      DevicePeriod = 再生遅延時間、100ナノ秒単位( 100000 で 10ミリ秒 )、-1でデフォルト値
+		 *      DevicePeriod = 再生遅延時間、100ナノ秒単位(100000で10ミリ秒)、-1でデフォルト値
 		 *      SamplePerSec = サンプリングレート
 		 */
 		extern int SetEnableWASAPIFlag(int Flag, int IsExclusive = dxlib_d.DxDataTypeWin.TRUE, int DevicePeriod = -1, int SamplePerSec = 44100);
@@ -1743,8 +1743,8 @@ extern (C++, DxLib) {
 			 * サウンドの再生にASIOを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      Flag = TRUE:使用する  FALSE:使用しない( デフォルト )
-			 *      BufferSize = 再生バッファのサイズ、小さいほど遅延が少なくなりますが、処理が間に合わずにブツブツノイズが発生する可能性も高くなります( -1 でデフォルト値 )
+			 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
+			 *      BufferSize = 再生バッファのサイズ、小さいほど遅延が少なくなりますが、処理が間に合わずにブツブツノイズが発生する可能性も高くなります(-1でデフォルト値)
 			 *      SamplePerSec = サンプリングレート
 			 */
 			extern int SetEnableASIOFlag(int Flag, int BufferSize = -1, int SamplePerSec = 44100);
@@ -1753,8 +1753,8 @@ extern (C++, DxLib) {
 		// 情報取得系関数
 
 		/**
-		 * DXライブラリが使用している DirectSound オブジェクトを取得する
-		 * 戻り値を IDirectSound* にキャストして下さい
+		 * DXライブラリが使用しているDirectSound オブジェクトを取得する
+		 * 戻り値をIDirectSound*にキャストして下さい
 		 */
 		extern const (void)* GetDSoundObj();
 

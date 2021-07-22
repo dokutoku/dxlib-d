@@ -86,10 +86,10 @@ extern (C++, DxLib) {
 	/**
 	 * 文字列入力ダイアログを出す
 	 *      StringBuffer = 入力された文字列を代入するバッファの先頭アドレス
-	 *      StringBufferBytes = 入力された文字列を代入するバッファのサイズ( 単位:バイト )
+	 *      StringBufferBytes = 入力された文字列を代入するバッファのサイズ(単位:バイト)
 	 *      Title = ダイアログのタイトル
 	 *      Message = ダイアログのメッセージ
-	 *      IsBlock = 入力が完了するまで関数から出てこないかどうか( 1:入力が完了するまで関数から出てこない  0:ダイアログを表示したら関数から出てくる( 入力完了のチェックは GetStateInputStringDialogBox で行う ) )
+	 *      IsBlock = 入力が完了するまで関数から出てこないかどうか(1:入力が完了するまで関数から出てこない  0:ダイアログを表示したら関数から出てくる(入力完了のチェックはGetStateInputStringDialogBoxで行う))
 	 *
 	 * Returns: 0:成功  2:キャンセルされた  -1:エラー発生
 	 */
@@ -109,7 +109,7 @@ extern (C++, DxLib) {
 
 	/**
 	 * 振動を再生する
-	 *      VibrationType = 振動の種類( IOS_VIBRATE_ONE_STRONG_LONG など )
+	 *      VibrationType = 振動の種類(IOS_VIBRATE_ONE_STRONG_LONGなど)
 	 */
 	extern int PlayVibration_iOS(int VibrationType);
 }

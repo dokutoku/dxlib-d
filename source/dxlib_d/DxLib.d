@@ -77,7 +77,7 @@ alias DX_CHAR = char;
 enum
 {
 	/**
-	 * 同時に持てるグラフィックハンドルの最大数( ハンドルエラーチェックのマスクに使用しているので 0x040000 以下の 2 のべき乗にして下さい )
+	 * 同時に持てるグラフィックハンドルの最大数(ハンドルエラーチェックのマスクに使用しているので0x040000以下の2のべき乗にして下さい)
 	 */
 	MAX_IMAGE_NUM = 0x040000,
 
@@ -92,7 +92,7 @@ enum
 	MAX_SHADOWMAP_NUM = 8192,
 
 	/**
-	 * 同時に持てるソフトイメージハンドルの最大数( ハンドルエラーチェックのマスクに使用しているので 0x040000 以下の 2 のべき乗にして下さい )
+	 * 同時に持てるソフトイメージハンドルの最大数(ハンドルエラーチェックのマスクに使用しているので0x040000以下の2のべき乗にして下さい)
 	 */
 	MAX_SOFTIMAGE_NUM = 8192,
 
@@ -177,7 +177,7 @@ enum
 	MAX_FILE_NUM = 32768,
 
 	/**
-	 * 同時に持てる Live2D Cubism 4 Model ハンドルの最大数
+	 * 同時に持てるLive2D Cubism 4 Modelハンドルの最大数
 	 */
 	MAX_LIVE2D_CUBISM4_MODEL_NUM = 32768,
 
@@ -223,7 +223,7 @@ enum
 	DEFAULT_FOV = 60.0F * 3.1415926535897932384626433832795F / 180.0F,
 
 	/**
-	 * tan( FOV * 0.5 )
+	 * tan(FOV * 0.5)
 	 */
 	DEFAULT_TAN_FOV_HALF = 0.57735026918962576450914878050196F,
 
@@ -427,42 +427,42 @@ enum
 }
 
 /**
- * Direct3D11 の Feature Level
+ * Direct3D11のFeature Level
  */
 enum
 {
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_9_1 = 0x9100,
 
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_9_2 = 0x9200,
 
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_9_3 = 0x9300,
 
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_10_0 = 0xA000,
 
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_10_1 = 0xA100,
 
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_11_0 = 0xB000,
 
 	/**
-	 * Direct3D11 の Feature Level
+	 * Direct3D11のFeature Level
 	 */
 	DX_DIRECT3D_11_FEATURE_LEVEL_11_1 = 0xB100,
 }
@@ -662,32 +662,32 @@ enum
 	DX_FONTTYPE_EDGE = 0x01,
 
 	/**
-	 * アンチエイリアスフォント( 標準機能アンチエイリアス )
+	 * アンチエイリアスフォント(標準機能アンチエイリアス)
 	 */
 	DX_FONTTYPE_ANTIALIASING = 0x02,
 
 	/**
-	 * アンチエイリアスフォント( 4x4サンプリング )
+	 * アンチエイリアスフォント(4x4サンプリング)
 	 */
 	DX_FONTTYPE_ANTIALIASING_4X4 = 0x12,
 
 	/**
-	 * アンチエイリアスフォント( 8x8サンプリング )
+	 * アンチエイリアスフォント(8x8サンプリング)
 	 */
 	DX_FONTTYPE_ANTIALIASING_8X8 = 0x22,
 
 	/**
-	 * アンチエイリアス&エッジ付きフォント( 標準機能アンチエイリアス )
+	 * アンチエイリアス&エッジ付きフォント(標準機能アンチエイリアス)
 	 */
 	DX_FONTTYPE_ANTIALIASING_EDGE = 0x03,
 
 	/**
-	 * アンチエイリアス&エッジ付きフォント( 4x4サンプリング )
+	 * アンチエイリアス&エッジ付きフォント(4x4サンプリング)
 	 */
 	DX_FONTTYPE_ANTIALIASING_EDGE_4X4 = 0x13,
 
 	/**
-	 * アンチエイリアス&エッジ付きフォント( 8x8サンプリング )
+	 * アンチエイリアス&エッジ付きフォント(8x8サンプリング)
 	 */
 	DX_FONTTYPE_ANTIALIASING_EDGE_8X8 = 0x23,
 }
@@ -754,7 +754,7 @@ enum
 	//DX_BLENDMODE_BLINEALPHA = 7,
 
 	/**
-	 * XORブレンド( ソフトウエアレンダリングモードでのみ有効 )
+	 * XORブレンド(ソフトウエアレンダリングモードでのみ有効)
 	 */
 	DX_BLENDMODE_XOR = 6,
 
@@ -834,27 +834,27 @@ enum
 	DX_BLENDMODE_PMA_ADD_X4 = 22,
 
 	/**
-	 * Live2D のブレンドモード Zero 用
+	 * Live2Dのブレンドモード Zero用
 	 */
 	DX_BLENDMODE_LIVE2D_ZERO = 23,
 
 	/**
-	 * Live2D のブレンドモード Normal 用
+	 * Live2Dのブレンドモード Normal用
 	 */
 	DX_BLENDMODE_LIVE2D_NORMAL = 24,
 
 	/**
-	 * Live2D のブレンドモード Add 用
+	 * Live2Dのブレンドモード Add用
 	 */
 	DX_BLENDMODE_LIVE2D_ADD = 25,
 
 	/**
-	 * Live2D のブレンドモード Mult 用
+	 * Live2Dのブレンドモード Mult用
 	 */
 	DX_BLENDMODE_LIVE2D_MULT = 26,
 
 	/**
-	 * Live2D のブレンドモード Mask 用
+	 * Live2Dのブレンドモード Mask用
 	 */
 	DX_BLENDMODE_LIVE2D_MASK = 27,
 
@@ -865,17 +865,17 @@ enum
 }
 
 /**
- * DrawGraphF 等の浮動小数点値で座標を指定する関数における座標タイプ
+ * DrawGraphF等の浮動小数点値で座標を指定する関数における座標タイプ
  */
 enum
 {
 	/**
-	 * Direct3D9タイプ( -0.5f の補正を行わないとテクスチャのピクセルが綺麗にマップされないタイプ )
+	 * Direct3D9タイプ(-0.5fの補正を行わないとテクスチャのピクセルが綺麗にマップされないタイプ)
 	 */
 	DX_DRAWFLOATCOORDTYPE_DIRECT3D9 = 0,
 
 	/**
-	 * Direct3D10タイプ( -0.5f の補正を行わななくてもテクスチャのピクセルが綺麗にマップされるタイプ )
+	 * Direct3D10タイプ(-0.5fの補正を行わななくてもテクスチャのピクセルが綺麗にマップされるタイプ)
 	 */
 	DX_DRAWFLOATCOORDTYPE_DIRECT3D10 = 1,
 }
@@ -1003,17 +1003,17 @@ enum
 	DX_GRAPH_FILTER_YUV_TO_RGB = 13,
 
 	/**
-	 * YUVカラーをRGBカラーに変換するフィルタ( UV成分が Y成分の半分・又は4分の1( 横・縦片方若しくは両方 )の解像度しかない場合用 )
+	 * YUVカラーをRGBカラーに変換するフィルタ(UV成分がY成分の半分・又は4分の1(横・縦片方若しくは両方)の解像度しかない場合用)
 	 */
 	DX_GRAPH_FILTER_Y2UV1_TO_RGB = 14,
 
 	/**
-	 * YUVカラーをRGBカラーに変換するフィルタ( 且つ右側半分のRの値をアルファ値として扱う )
+	 * YUVカラーをRGBカラーに変換するフィルタ(且つ右側半分のRの値をアルファ値として扱う)
 	 */
 	DX_GRAPH_FILTER_YUV_TO_RGB_RRA = 15,
 
 	/**
-	 * YUVカラーをRGBカラーに変換するフィルタ( UV成分が Y成分の半分・又は4分の1( 横・縦片方若しくは両方 )の解像度しかない場合用 )( 且つ右側半分のRの値をアルファ値として扱う )
+	 * YUVカラーをRGBカラーに変換するフィルタ(UV成分がY成分の半分・又は4分の1(横・縦片方若しくは両方)の解像度しかない場合用)(且つ右側半分のRの値をアルファ値として扱う)
 	 */
 	DX_GRAPH_FILTER_Y2UV1_TO_RGB_RRA = 16,
 
@@ -1164,87 +1164,87 @@ enum
 	DX_GRAPH_BLEND_MULTIPLE_A_ONLY = 16,
 
 	/**
-	 * 通常( 乗算済みα画像用 )
+	 * 通常(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_NORMAL = 17,
 
 	/**
-	 * RGBAの要素を選択して合成( 乗算済みα画像用 )
+	 * RGBAの要素を選択して合成(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_RGBA_SELECT_MIX = 18,
 
 	/**
-	 * 乗算( 乗算済みα画像用 )
+	 * 乗算(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_MULTIPLE = 19,
 
 	/**
-	 * 減算( 乗算済みα画像用 )
+	 * 減算(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_DIFFERENCE = 20,
 
 	/**
-	 * 加算( 乗算済みα画像用 )
+	 * 加算(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_ADD = 21,
 
 	/**
-	 * スクリーン( 乗算済みα画像用 )
+	 * スクリーン(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_SCREEN = 22,
 
 	/**
-	 * オーバーレイ( 乗算済みα画像用 )
+	 * オーバーレイ(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_OVERLAY = 23,
 
 	/**
-	 * 覆い焼き( 乗算済みα画像用 )
+	 * 覆い焼き(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_DODGE = 24,
 
 	/**
-	 * 焼き込み( 乗算済みα画像用 )
+	 * 焼き込み(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_BURN = 25,
 
 	/**
-	 * 比較(暗)( 乗算済みα画像用 )
+	 * 比較(暗)(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_DARKEN = 26,
 
 	/**
-	 * 比較(明)( 乗算済みα画像用 )
+	 * 比較(明)(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_LIGHTEN = 27,
 
 	/**
-	 * ソフトライト( 乗算済みα画像用 )
+	 * ソフトライト(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_SOFTLIGHT = 28,
 
 	/**
-	 * ハードライト( 乗算済みα画像用 )
+	 * ハードライト(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_HARDLIGHT = 29,
 
 	/**
-	 * 除外( 乗算済みα画像用 )
+	 * 除外(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_EXCLUSION = 30,
 
 	/**
-	 * αチャンネル付き画像の通常合成( 乗算済みα画像用 )
+	 * αチャンネル付き画像の通常合成(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_NORMAL_ALPHACH = 31,
 
 	/**
-	 * αチャンネル付き画像の加算合成( 乗算済みα画像用 )
+	 * αチャンネル付き画像の加算合成(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_ADD_ALPHACH = 32,
 
 	/**
-	 * アルファチャンネルのみの乗算( 乗算済みα画像用 )
+	 * アルファチャンネルのみの乗算(乗算済みα画像用)
 	 */
 	DX_GRAPH_BLEND_PMA_MULTIPLE_A_ONLY = 33,
 
@@ -1255,7 +1255,7 @@ enum
 }
 
 /**
- * DX_GRAPH_BLEND_RGBA_SELECT_MIX 用の色選択用定義
+ * DX_GRAPH_BLEND_RGBA_SELECT_MIX用の色選択用定義
  */
 enum
 {
@@ -1485,7 +1485,7 @@ enum
 	DX_MV1_MESHCATEGORY_OUTLINE = 1,
 
 	/**
-	 * 輪郭線描画用メッシュ( オリジナルシェーダーでの描画用 )
+	 * 輪郭線描画用メッシュ(オリジナルシェーダーでの描画用)
 	 */
 	DX_MV1_MESHCATEGORY_OUTLINE_ORIG_SHADER = 2,
 
@@ -1598,7 +1598,7 @@ enum
 	MV1_ANIMKEY_DATATYPE_TRANSLATE_Z = 13,
 
 	/**
-	 * 4×4行列の4列目( 0,0,0,1 )固定版
+	 * 4×4行列の4列目(0,0,0,1)固定版
 	 */
 	MV1_ANIMKEY_DATATYPE_MATRIX4X4C = 15,
 
@@ -1640,7 +1640,7 @@ enum
 enum
 {
 	/**
-	 * クォータニオン( Xファイルタイプ )
+	 * クォータニオン(Xファイルタイプ)
 	 */
 	MV1_ANIMKEY_TYPE_QUATERNION_X = 0,
 
@@ -1650,7 +1650,7 @@ enum
 	MV1_ANIMKEY_TYPE_VECTOR = 1,
 
 	/**
-	 * 4×4行列の4列目( 0,0,0,1 )固定版
+	 * 4×4行列の4列目(0,0,0,1)固定版
 	 */
 	MV1_ANIMKEY_TYPE_MATRIX4X4C = 2,
 
@@ -1675,7 +1675,7 @@ enum
 	MV1_ANIMKEY_TYPE_BLEND = 6,
 
 	/**
-	 * クォータニオン( VMDタイプ )
+	 * クォータニオン(VMDタイプ)
 	 */
 	MV1_ANIMKEY_TYPE_QUATERNION_VMD = 7,
 }
@@ -1874,17 +1874,17 @@ enum
 enum
 {
 	/**
-	 * PCM の読み込み処理
+	 * PCMの読み込み処理
 	 */
 	DX_READSOUNDFUNCTION_PCM = 1 << 0,
 
 	/**
-	 * Ogg Vorbis の読み込み処理
+	 * Ogg Vorbisの読み込み処理
 	 */
 	DX_READSOUNDFUNCTION_OGG = 1 << 1,
 
 	/**
-	 * Opus の読み込み処理
+	 * Opusの読み込み処理
 	 */
 	DX_READSOUNDFUNCTION_OPUS = 1 << 2,
 
@@ -2232,37 +2232,37 @@ enum
 	DX_MATERIAL_TYPE_TOON = 1,
 
 	/**
-	 * トゥーンレンダリング用マテリアル_タイプ2( MMD互換 )
+	 * トゥーンレンダリング用マテリアル_タイプ2(MMD互換)
 	 */
 	DX_MATERIAL_TYPE_TOON_2 = 2,
 
 	/**
-	 * マテリアルのスペキュラ色の輝度の指定の範囲の値を 0.0f ~ 1.0f の値に正規化して書き込むマテリアル
+	 * マテリアルのスペキュラ色の輝度の指定の範囲の値を0.0f~1.0fの値に正規化して書き込むマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_UNORM = 3,
 
 	/**
-	 * DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_UNORM に『指定の値未満の場合は書き込む値を 0.0f にする』という処理を加えたマテリアル
+	 * DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_UNORMに『指定の値未満の場合は書き込む値を0.0fにする』という処理を加えたマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CLIP_UNORM = 4,
 
 	/**
-	 * マテリアルのスペキュラ色の輝度が指定の閾値以上 の場合は 1.0f を、未満の場合は 0.0f を書き込むマテリアル
+	 * マテリアルのスペキュラ色の輝度が指定の閾値以上の場合は1.0fを、未満の場合は0.0fを書き込むマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CMP_GREATEREQUAL = 5,
 
 	/**
-	 * マテリアルのスペキュラハイライトの鮮明度の指定の範囲の値を 0.0f ~ 1.0f の値に正規化して書き込むマテリアル
+	 * マテリアルのスペキュラハイライトの鮮明度の指定の範囲の値を0.0f~1.0fの値に正規化して書き込むマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_POWER_UNORM = 6,
 
 	/**
-	 * DX_MATERIAL_TYPE_MAT_SPEC_POWER_UNORM に『指定の値未満の場合は書き込む値を 0.0f にする』という処理を加えたマテリアル
+	 * DX_MATERIAL_TYPE_MAT_SPEC_POWER_UNORMに『指定の値未満の場合は書き込む値を0.0fにする』という処理を加えたマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_POWER_CLIP_UNORM = 7,
 
 	/**
-	 * マテリアルのスペキュラハイライトの鮮明度が指定の閾値以上 の場合は 1.0f を、未満の場合は 0.0f を書き込むマテリアル
+	 * マテリアルのスペキュラハイライトの鮮明度が指定の閾値以上の場合は1.0fを、未満の場合は0.0fを書き込むマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_POWER_CMP_GREATEREQUAL = 8,
 
@@ -2434,7 +2434,7 @@ enum
 	DX_LOADMODEL_PHYSICS_DISABLENAMEWORD_ALWAYS = 0,
 
 	/**
-	 * vmdファイル名に NP を含めた「物理演算無効」のファイルに対してのみ無効名ワードを適用する( この場合、無効名ワードが適用されない剛体については物理演算が行われる )
+	 * vmdファイル名にNPを含めた「物理演算無効」のファイルに対してのみ無効名ワードを適用する(この場合、無効名ワードが適用されない剛体については物理演算が行われる)
 	 */
 	DX_LOADMODEL_PHYSICS_DISABLENAMEWORD_DISABLEPHYSICSFILEONLY = 1,
 
@@ -2445,17 +2445,17 @@ enum
 }
 
 /**
- * PMD, PMX ファイル読み込み時のアニメーションの FPS モード( 主に IK 部分の精度に影響します )
+ * PMD, PMXファイル読み込み時のアニメーションのFPSモード(主にIK分の精度に影響します)
  */
 enum
 {
 	/**
-	 * アニメーションを 30FPS で読み込む( IK部分の精度:低  データサイズ:小 )( デフォルト )
+	 * アニメーションを30FPSで読み込む(IK部分の精度:低  データサイズ:小)(デフォルト)
 	 */
 	DX_LOADMODEL_PMD_PMX_ANIMATION_FPSMODE_30 = 0,
 
 	/**
-	 * アニメーションを 60FPS で読み込む( IK部分の精度:高  データサイズ:大 )
+	 * アニメーションを60FPSで読み込む(IK部分の精度:高  データサイズ:大)
 	 */
 	DX_LOADMODEL_PMD_PMX_ANIMATION_FPSMODE_60 = 1,
 }
@@ -2855,27 +2855,27 @@ enum
 	DX_GRAPHICSIMAGE_FORMAT_3D_NUM = 49,
 
 	/**
-	 * 標準( DirectDrawSurface の場合はこれのみ )
+	 * 標準(DirectDrawSurfaceの場合はこれのみ)
 	 */
 	DX_GRAPHICSIMAGE_FORMAT_2D = 50,
 
 	/**
-	 * R5G6B5( MEMIMG 用 )
+	 * R5G6B5(MEMIMG用)
 	 */
 	DX_GRAPHICSIMAGE_FORMAT_R5G6B5 = 51,
 
 	/**
-	 * X8A8R5G6B5( MEMIMG 用 )
+	 * X8A8R5G6B5(MEMIMG用)
 	 */
 	DX_GRAPHICSIMAGE_FORMAT_X8A8R5G6B5 = 52,
 
 	/**
-	 * X8R8G8B8( MEMIMG 用 )
+	 * X8R8G8B8(MEMIMG用)
 	 */
 	DX_GRAPHICSIMAGE_FORMAT_X8R8G8B8 = 53,
 
 	/**
-	 * A8R8G8B8( MEMIMG 用 )
+	 * A8R8G8B8(MEMIMG用)
 	 */
 	DX_GRAPHICSIMAGE_FORMAT_A8R8G8B8 = 54,
 
@@ -2978,32 +2978,32 @@ enum
 }
 
 /**
- * SetUserScreenImage で渡す画面のピクセルフォーマット
+ * SetUserScreenImageで渡す画面のピクセルフォーマット
  */
 enum
 {
 	/**
-	 * R5G6B5( DXライブラリの描画関数も使用できます( ソフトウェアレンダリングモード相当 ) )
+	 * R5G6B5(DXライブラリの描画関数も使用できます(ソフトウェアレンダリングモード相当))
 	 */
 	DX_USER_SCREEN_PIXEL_FORMAT_R5G6B5 = 0,
 
 	/**
-	 * R5G5B5X1( DXライブラリの描画関数は使用できなくなります )
+	 * R5G5B5X1(DXライブラリの描画関数は使用できなくなります)
 	 */
 	DX_USER_SCREEN_PIXEL_FORMAT_R5G5B5X1 = 1,
 
 	/**
-	 * X1R5G5B5( DXライブラリの描画関数は使用できなくなります )
+	 * X1R5G5B5(DXライブラリの描画関数は使用できなくなります)
 	 */
 	DX_USER_SCREEN_PIXEL_FORMAT_X1R5G5B5 = 2,
 
 	/**
-	 * X8B8G8R8( DXライブラリの描画関数は使用できなくなります )
+	 * X8B8G8R8(DXライブラリの描画関数は使用できなくなります)
 	 */
 	DX_USER_SCREEN_PIXEL_FORMAT_X8B8G8R8 = 3,
 
 	/**
-	 * X8R8G8B8( DXライブラリの描画関数も使用できます( ソフトウェアレンダリングモード相当 ) )
+	 * X8R8G8B8(DXライブラリの描画関数も使用できます(ソフトウェアレンダリングモード相当))
 	 */
 	DX_USER_SCREEN_PIXEL_FORMAT_X8R8G8B8 = 4,
 
@@ -3034,7 +3034,7 @@ enum
 	DX_WIN_ZTYPE_TOP = 2,
 
 	/**
-	 * 全てのウインドウの一番手前に配置する( ウインドウがアクティブではないときも最前面に表示される )
+	 * 全てのウインドウの一番手前に配置する(ウインドウがアクティブではないときも最前面に表示される)
 	 */
 	DX_WIN_ZTYPE_TOPMOST = 3,
 }
@@ -3086,7 +3086,7 @@ enum
 	TOOLBUTTON_TYPE_CHECK = 1,
 
 	/**
-	 * 別の TOOLBUTTON_TYPE_GROUP タイプのボタンが押されるとOFFになるタイプのボタン(グループの区切りは隙間で)
+	 * 別のTOOLBUTTON_TYPE_GROUP タイプのボタンが押されるとOFFになるタイプのボタン(グループの区切りは隙間で)
 	 */
 	TOOLBUTTON_TYPE_GROUP = 2,
 
@@ -3170,7 +3170,7 @@ enum
 }
 
 /**
- * CheckHitKeyAll で調べる入力タイプ
+ * CheckHitKeyAllで調べる入力タイプ
  */
 enum
 {
@@ -4403,7 +4403,7 @@ enum
 }
 
 /**
- * SetKeyInputStringColor2 に渡す色変更対象を指定するための識別子
+ * SetKeyInputStringColor2に渡す色変更対象を指定するための識別子
  */
 enum
 {
@@ -4423,17 +4423,17 @@ enum
 	DX_KEYINPSTRCOLOR_NORMAL_CURSOR = 2,
 
 	/**
-	 * 入力文字列の選択部分( SHIFTキーを押しながら左右キーで選択 )の色
+	 * 入力文字列の選択部分(SHIFTキーを押しながら左右キーで選択)の色
 	 */
 	DX_KEYINPSTRCOLOR_SELECT_STR = 3,
 
 	/**
-	 * 入力文字列の選択部分( SHIFTキーを押しながら左右キーで選択 )の縁の色
+	 * 入力文字列の選択部分(SHIFTキーを押しながら左右キーで選択)の縁の色
 	 */
 	DX_KEYINPSTRCOLOR_SELECT_STR_EDGE = 4,
 
 	/**
-	 * 入力文字列の選択部分( SHIFTキーを押しながら左右キーで選択 )の周りの色
+	 * 入力文字列の選択部分(SHIFTキーを押しながら左右キーで選択)の周りの色
 	 */
 	DX_KEYINPSTRCOLOR_SELECT_STR_BACK = 5,
 
@@ -4534,7 +4534,7 @@ enum
 enum
 {
 	/**
-	 * 文字数が限界に達している状態で文字列の末端で文字が入力された場合は、最後の文字を上書き( デフォルト )
+	 * 文字数が限界に達している状態で文字列の末端で文字が入力された場合は、最後の文字を上書き(デフォルト)
 	 */
 	DX_KEYINPSTR_ENDCHARAMODE_OVERWRITE = 0,
 
@@ -4571,12 +4571,12 @@ enum
 enum
 {
 	/**
-	 * バイリニアモード( ピクセルが滲んでピクセルとピクセルの区切りがはっきりしない )
+	 * バイリニアモード(ピクセルが滲んでピクセルとピクセルの区切りがはっきりしない)
 	 */
 	DX_FSSCALINGMODE_BILINEAR = 0,
 
 	/**
-	 * 最近点モード( ピクセルが四角くくっきり表示される )
+	 * 最近点モード(ピクセルが四角くくっきり表示される)
 	 */
 	DX_FSSCALINGMODE_NEAREST = 1,
 }
@@ -4721,13 +4721,13 @@ version (DX_NON_NETWORK) {
 
 // データ型定義-------------------------------------------------------------------
 
-// WAVEFORMATEX の定義
+// WAVEFORMATEXの定義
 version (_WAVEFORMATEX_) {
 } else {
 	package struct tWAVEFORMATEX
 	{
 		/**
-		 * フォーマット( WAVE_FORMAT_PCM( 値は 1 ) 等 )
+		 * フォーマット(WAVE_FORMAT_PCM(値は1)等)
 		 */
 		dxlib_d.DxDataType.WORD wFormatTag;
 
@@ -4742,12 +4742,12 @@ version (_WAVEFORMATEX_) {
 		dxlib_d.DxDataType.DWORD nSamplesPerSec;
 
 		/**
-		 * 1秒辺りのバイト数( PCMの場合 nSamplesPerSec * nBlockAlign )
+		 * 1秒辺りのバイト数(PCMの場合 nSamplesPerSec * nBlockAlign)
 		 */
 		dxlib_d.DxDataType.DWORD nAvgBytesPerSec;
 
 		/**
-		 * 全チャンネルの1サンプルを合わせたバイト数( wBitsPerSample / 8 * nChannels )
+		 * 全チャンネルの1サンプルを合わせたバイト数(wBitsPerSample / 8 * nChannels)
 		 */
 		dxlib_d.DxDataType.WORD nBlockAlign;
 
@@ -4757,7 +4757,7 @@ version (_WAVEFORMATEX_) {
 		dxlib_d.DxDataType.WORD wBitsPerSample;
 
 		/**
-		 * 拡張情報のバイト数( 拡張情報が無い場合は 0 )
+		 * 拡張情報のバイト数(拡張情報が無い場合は0)
 		 */
 		dxlib_d.DxDataType.WORD cbSize;
 	}
@@ -4768,13 +4768,13 @@ version (_WAVEFORMATEX_) {
 	public alias LPWAVEFORMATEX = /* FAR */ .tWAVEFORMATEX*;
 }
 
-// WAVEFORMAT の定義
+// WAVEFORMATの定義
 version (WAVE_FORMAT_PCM) {
 } else {
 	package struct waveformat_tag
 	{
 		/**
-		 * フォーマット( WAVE_FORMAT_PCM( 値は 1 ) 等 )
+		 * フォーマット(WAVE_FORMAT_PCM(値は1)等)
 		 */
 		dxlib_d.DxDataType.WORD wFormatTag;
 
@@ -4789,12 +4789,12 @@ version (WAVE_FORMAT_PCM) {
 		dxlib_d.DxDataType.DWORD nSamplesPerSec;
 
 		/**
-		 * 1秒辺りのバイト数( PCMの場合 nSamplesPerSec * nBlockAlign )
+		 * 1秒辺りのバイト数(PCMの場合 nSamplesPerSec * nBlockAlign)
 		 */
 		dxlib_d.DxDataType.DWORD nAvgBytesPerSec;
 
 		/**
-		 * 全チャンネルの1サンプルを合わせたバイト数( wBitsPerSample / 8 * nChannels )
+		 * 全チャンネルの1サンプルを合わせたバイト数(wBitsPerSample / 8 * nChannels)
 		 */
 		dxlib_d.DxDataType.WORD nBlockAlign;
 	}
@@ -4853,17 +4853,17 @@ extern (C++, DxLib) {
 		int ClauseNum;
 
 		/**
-		 * 選択中の分節( -1 の場合はどの文節にも属していない( 末尾にカーソルがある ) )
+		 * 選択中の分節(-1の場合はどの文節にも属していない(末尾にカーソルがある))
 		 */
 		int SelectClause;
 
 		/**
-		 * 変換候補の数( 0の場合は変換中ではない )
+		 * 変換候補の数(0の場合は変換中ではない)
 		 */
 		int CandidateNum;
 
 		/**
-		 * 変換候補文字列リスト( 例:n番目の候補を描画する場合  DrawString(0, 0, data.CandidateList[ n ], GetColor(255,255,255)); )
+		 * 変換候補文字列リスト(例:n番目の候補を描画する場合  DrawString(0, 0, data.CandidateList[n], GetColor(255,255,255));)
 		 */
 		const (dxlib_d.DxDataType.TCHAR)** CandidateList;
 
@@ -4873,7 +4873,7 @@ extern (C++, DxLib) {
 		int SelectCandidate;
 
 		/**
-		 * 文字変換中かどうか( TRUE:変換中  FALSE:変換中ではない( 文字単位でカーソルが移動できる状態 ) )
+		 * 文字変換中かどうか(TRUE:変換中  FALSE:変換中ではない(文字単位でカーソルが移動できる状態))
 		 */
 		int ConvertFlag;
 	}
@@ -4941,7 +4941,7 @@ extern (C++, DxLib) {
 		int ColorBitDepth;
 
 		/**
-		 * リフレッシュレート( -1 の場合は規定値 )
+		 * リフレッシュレート(-1の場合は規定値)
 		 */
 		int RefreshRate;
 	}
@@ -4999,7 +4999,7 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.TCHAR[260] Name = '\0';
 
 		/**
-		 * ディレクトリかどうか( TRUE:ディレクトリ  FALSE:ファイル )
+		 * ディレクトリかどうか(TRUE:ディレクトリ  FALSE:ファイル)
 		 */
 		int DirFlag;
 
@@ -5023,7 +5023,7 @@ extern (C++, DxLib) {
 	public alias LPFILEINFO = .tagFILEINFO*;
 
 	/**
-	 * ファイル情報構造体( wchar_t 版 )
+	 * ファイル情報構造体(wchar_t版)
 	 */
 	package struct tagFILEINFOW
 	{
@@ -5033,7 +5033,7 @@ extern (C++, DxLib) {
 		.wchar_t[260] Name = '\0';
 
 		/**
-		 * ディレクトリかどうか( TRUE:ディレクトリ  FALSE:ファイル )
+		 * ディレクトリかどうか(TRUE:ディレクトリ  FALSE:ファイル)
 		 */
 		int DirFlag;
 
@@ -5114,7 +5114,7 @@ extern (C++, DxLib) {
 	public alias FLOAT2 = .tagFLOAT2;
 
 	/**
-	 * float 型のカラー値
+	 * float型のカラー値
 	 */
 	package struct tagCOLOR_F
 	{
@@ -5128,7 +5128,7 @@ extern (C++, DxLib) {
 	public alias LPCOLOR_F = .tagCOLOR_F*;
 
 	/**
-	 * ubyte 型のカラー値
+	 * ubyte型のカラー値
 	 */
 	package struct tagCOLOR_U8
 	{
@@ -5234,7 +5234,7 @@ extern (C++, DxLib) {
 		public alias VERTEX = .tagVERTEX;
 
 		/**
-		 * 3D描画に使用する頂点データ型( 旧バージョンのもの )
+		 * 3D描画に使用する頂点データ型(旧バージョンのもの)
 		 */
 		package struct tagVERTEX_3D
 		{
@@ -5300,8 +5300,8 @@ extern (C++, DxLib) {
 		public alias LPVERTEX3D = .tagVERTEX3D*;
 
 		/**
-		 * 3D描画に使用する頂点データ型( DrawPrimitive3DToShader用 )
-		 * 注意…メンバ変数に追加があるかもしれませんので、宣言時の初期化( VERTEX3DSHADER Vertex = { 0.0f, 0.0f, ... というようなもの )はしない方が良いです
+		 * 3D描画に使用する頂点データ型(DrawPrimitive3DToShader用)
+		 * 注意…メンバ変数に追加があるかもしれませんので、宣言時の初期化(VERTEX3DSHADER Vertex = { 0.0f, 0.0f, ...というようなもの)はしない方が良いです
 		 */
 		package struct tagVERTEX3DSHADER
 		{
@@ -5370,7 +5370,7 @@ extern (C++, DxLib) {
 		package struct tagLIGHTPARAM
 		{
 			/**
-			 * ライトのタイプ( DX_LIGHTTYPE_D3DLIGHT_POINT 等 )
+			 * ライトのタイプ(DX_LIGHTTYPE_D3DLIGHT_POINT等)
 			 */
 			int LightType;
 
@@ -5405,7 +5405,7 @@ extern (C++, DxLib) {
 			float Range = 0;
 
 			/**
-			 * フォールオフ 1.0f にしておくのが好ましい
+			 * フォールオフ 1.0fにしておくのが好ましい
 			 */
 			float Falloff = 0;
 
@@ -5425,7 +5425,7 @@ extern (C++, DxLib) {
 			float Attenuation2 = 0;
 
 			/**
-			 * スポットライトの内部コーンの照明角度( ラジアン )
+			 * スポットライトの内部コーンの照明角度(ラジアン)
 			 */
 			float Theta = 0;
 
@@ -5477,7 +5477,7 @@ extern (C++, DxLib) {
 	package struct tagHITRESULT_LINE
 	{
 		/**
-		 * 当たったかどうか( 1:当たった  0:当たらなかった )
+		 * 当たったかどうか(1:当たった  0:当たらなかった)
 		 */
 		int HitFlag;
 
@@ -5495,7 +5495,7 @@ extern (C++, DxLib) {
 	package struct tagHITRESULT_LINE_D
 	{
 		/**
-		 * 当たったかどうか( 1:当たった  0:当たらなかった )
+		 * 当たったかどうか(1:当たった  0:当たらなかった)
 		 */
 		int HitFlag;
 
@@ -5508,7 +5508,7 @@ extern (C++, DxLib) {
 	public alias HITRESULT_LINE_D = .tagHITRESULT_LINE_D;
 
 	/**
-	 * 関数 Segment_Segment_Analyse の結果を受け取る為の構造体
+	 * 関数Segment_Segment_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagSEGMENT_SEGMENT_RESULT
 	{
@@ -5518,12 +5518,12 @@ extern (C++, DxLib) {
 		float SegA_SegB_MinDist_Square = 0;
 
 		/**
-		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0f ~ 1.0f 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
+		 * 線分Aと線分Bに最も接近する座標の線分Aのt(0.0f~1.0f、最近点座標 = ((SegAPos2 - SegAPos1) * t) + SegAPos1)
 		 */
 		float SegA_MinDist_Pos1_Pos2_t = 0;
 
 		/**
-		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0f ~ 1.0f 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
+		 * 線分Bが線分Aに最も接近する座標の線分Bのt(0.0f~1.0f、最近点座標 = ((SegBPos2 - SegBPos1) * t) + SegBPos1)
 		 */
 		float SegB_MinDist_Pos1_Pos2_t = 0;
 
@@ -5541,7 +5541,7 @@ extern (C++, DxLib) {
 	public alias SEGMENT_SEGMENT_RESULT = .tagSEGMENT_SEGMENT_RESULT;
 
 	/**
-	 * 関数 Segment_Segment_Analyse の結果を受け取る為の構造体
+	 * 関数Segment_Segment_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagSEGMENT_SEGMENT_RESULT_D
 	{
@@ -5551,12 +5551,12 @@ extern (C++, DxLib) {
 		double SegA_SegB_MinDist_Square = 0;
 
 		/**
-		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0 ~ 1.0 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
+		 * 線分Aと線分Bに最も接近する座標の線分Aのt(0.0~1.0、最近点座標 = ((SegAPos2 - SegAPos1) * t) + SegAPos1)
 		 */
 		double SegA_MinDist_Pos1_Pos2_t = 0;
 
 		/**
-		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0 ~ 1.0 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
+		 * 線分Bが線分Aに最も接近する座標の線分Bのt(0.0~1.0、最近点座標 = ((SegBPos2 - SegBPos1) * t) + SegBPos1)
 		 */
 		double SegB_MinDist_Pos1_Pos2_t = 0;
 
@@ -5574,7 +5574,7 @@ extern (C++, DxLib) {
 	public alias SEGMENT_SEGMENT_RESULT_D = .tagSEGMENT_SEGMENT_RESULT_D;
 
 	/**
-	 * 関数 Segment_Point_Analyse の結果を受け取る為の構造体
+	 * 関数Segment_Point_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagSEGMENT_POINT_RESULT
 	{
@@ -5584,7 +5584,7 @@ extern (C++, DxLib) {
 		float Seg_Point_MinDist_Square = 0;
 
 		/**
-		 * 線分が点に最も接近する座標の線分の t ( 0.0f ~ 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が点に最も接近する座標の線分のt(0.0f~1.0f、最近点座標 = ((SegPos2 - SegPos1) * t) + SegPos1)
 		 */
 		float Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5597,7 +5597,7 @@ extern (C++, DxLib) {
 	public alias SEGMENT_POINT_RESULT = .tagSEGMENT_POINT_RESULT;
 
 	/**
-	 * 関数 Segment_Point_Analyse の結果を受け取る為の構造体
+	 * 関数Segment_Point_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagSEGMENT_POINT_RESULT_D
 	{
@@ -5607,7 +5607,7 @@ extern (C++, DxLib) {
 		double Seg_Point_MinDist_Square = 0;
 
 		/**
-		 * 線分が点に最も接近する座標の線分の t ( 0.0 ~ 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が点に最も接近する座標の線分のt(0.0~1.0、最近点座標 = ((SegPos2 - SegPos1) * t) + SegPos1)
 		 */
 		double Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5620,7 +5620,7 @@ extern (C++, DxLib) {
 	public alias SEGMENT_POINT_RESULT_D = .tagSEGMENT_POINT_RESULT_D;
 
 	/**
-	 * 関数 Segment_Triangle_Analyse の結果を受け取る為の構造体
+	 * 関数Segment_Triangle_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagSEGMENT_TRIANGLE_RESULT
 	{
@@ -5630,7 +5630,7 @@ extern (C++, DxLib) {
 		float Seg_Tri_MinDist_Square = 0;
 
 		/**
-		 * 線分が三角形に最も接近する座標の線分の t ( 0.0f ~ 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が三角形に最も接近する座標の線分のt(0.0f~1.0f、最近点座標 = ((SegPos2 - SegPos1) * t) + SegPos1)
 		 */
 		float Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5640,7 +5640,7 @@ extern (C++, DxLib) {
 		.VECTOR Seg_MinDist_Pos;
 
 		/**
-		 * 三角形が線分に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
+		 * 三角形が線分に最も接近する座標の三角形座標1の重み(最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w))
 		 */
 		float Tri_MinDist_Pos1_w = 0;
 
@@ -5663,7 +5663,7 @@ extern (C++, DxLib) {
 	public alias SEGMENT_TRIANGLE_RESULT = .tagSEGMENT_TRIANGLE_RESULT;
 
 	/**
-	 * 関数 Segment_Triangle_Analyse の結果を受け取る為の構造体
+	 * 関数Segment_Triangle_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagSEGMENT_TRIANGLE_RESULT_D
 	{
@@ -5673,7 +5673,7 @@ extern (C++, DxLib) {
 		double Seg_Tri_MinDist_Square = 0;
 
 		/**
-		 * 線分が三角形に最も接近する座標の線分の t ( 0.0 ~ 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が三角形に最も接近する座標の線分のt(0.0~1.0、最近点座標 = ((SegPos2 - SegPos1) * t) + SegPos1)
 		 */
 		double Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5683,7 +5683,7 @@ extern (C++, DxLib) {
 		.VECTOR_D Seg_MinDist_Pos;
 
 		/**
-		 * 三角形が線分に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
+		 * 三角形が線分に最も接近する座標の三角形座標1の重み(最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w))
 		 */
 		double Tri_MinDist_Pos1_w = 0;
 
@@ -5706,7 +5706,7 @@ extern (C++, DxLib) {
 	public alias SEGMENT_TRIANGLE_RESULT_D = .tagSEGMENT_TRIANGLE_RESULT_D;
 
 	/**
-	 * 関数 Triangle_Point_Analyse の結果を受け取る為の構造体
+	 * 関数Triangle_Point_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagTRIANGLE_POINT_RESULT
 	{
@@ -5716,7 +5716,7 @@ extern (C++, DxLib) {
 		float Tri_Pnt_MinDist_Square = 0;
 
 		/**
-		 * 三角形が点に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
+		 * 三角形が点に最も接近する座標の三角形座標1の重み(最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w))
 		 */
 		float Tri_MinDist_Pos1_w = 0;
 
@@ -5739,7 +5739,7 @@ extern (C++, DxLib) {
 	public alias TRIANGLE_POINT_RESULT = .tagTRIANGLE_POINT_RESULT;
 
 	/**
-	 * 関数 Triangle_Point_Analyse の結果を受け取る為の構造体
+	 * 関数Triangle_Point_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagTRIANGLE_POINT_RESULT_D
 	{
@@ -5749,7 +5749,7 @@ extern (C++, DxLib) {
 		double Tri_Pnt_MinDist_Square = 0;
 
 		/**
-		 * 三角形が点に最も接近する座標の三角形座標1の重み( 最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w) )
+		 * 三角形が点に最も接近する座標の三角形座標1の重み(最近点座標 = (TriPos1 * TriPos1_w) + (TriPos2 * TriPos2_w) + (TriPos3 * TriPos3_w))
 		 */
 		double Tri_MinDist_Pos1_w = 0;
 
@@ -5772,12 +5772,12 @@ extern (C++, DxLib) {
 	public alias TRIANGLE_POINT_RESULT_D = .tagTRIANGLE_POINT_RESULT_D;
 
 	/**
-	 * 関数 Plane_Point_Analyse の結果を受け取る為の構造体
+	 * 関数Plane_Point_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagPLANE_POINT_RESULT
 	{
 		/**
-		 * 点が平面の法線の側にあるかどうか( 1:法線の側にある  0:法線と反対側にある )
+		 * 点が平面の法線の側にあるかどうか(1:法線の側にある  0:法線と反対側にある)
 		 */
 		int Pnt_Plane_Normal_Side;
 
@@ -5795,12 +5795,12 @@ extern (C++, DxLib) {
 	public alias PLANE_POINT_RESULT = .tagPLANE_POINT_RESULT;
 
 	/**
-	 * 関数 Plane_Point_Analyse の結果を受け取る為の構造体
+	 * 関数Plane_Point_Analyseの結果を受け取る為の構造体
 	 */
 	package struct tagPLANE_POINT_RESULT_D
 	{
 		/**
-		 * 点が平面の法線の側にあるかどうか( 1:法線の側にある  0:法線と反対側にある )
+		 * 点が平面の法線の側にあるかどうか(1:法線の側にある  0:法線と反対側にある)
 		 */
 		int Pnt_Plane_Normal_Side;
 
@@ -5825,12 +5825,12 @@ extern (C++, DxLib) {
 		package struct tagMV1_COLL_RESULT_POLY
 		{
 			/**
-			 * ( MV1CollCheck_Line でのみ有効 )ヒットフラグ( 1:ヒットした  0:ヒットしなかった )
+			 * (MV1CollCheck_Lineでのみ有効)ヒットフラグ(1:ヒットした  0:ヒットしなかった)
 			 */
 			int HitFlag;
 
 			/**
-			 * ( MV1CollCheck_Line でのみ有効 )ヒット座標
+			 * (MV1CollCheck_Lineでのみ有効)ヒット座標
 			 */
 			.VECTOR HitPosition;
 
@@ -5840,7 +5840,7 @@ extern (C++, DxLib) {
 			int FrameIndex;
 
 			/**
-			 * 当たったポリゴンが含まれるメッシュの番号( メッシュ単位で判定した場合のみ有効 )
+			 * 当たったポリゴンが含まれるメッシュの番号(メッシュ単位で判定した場合のみ有効)
 			 */
 			int MeshIndex;
 
@@ -5865,7 +5865,7 @@ extern (C++, DxLib) {
 			.VECTOR Normal;
 
 			/**
-			 * 当たった座標は、当たったポリゴンの三点それぞれどの割合で影響しているか、の値( 当たった座標 = (Position[ 0 ] * PositionWeight[ 0 ]) + (Position[ 1 ] * PositionWeight[ 1 ]) + (Position[ 2 ] * PositionWeight[ 2 ]) )
+			 * 当たった座標は、当たったポリゴンの三点それぞれどの割合で影響しているか、の値(当たった座標 = (Position[0] * PositionWeight[0]) + (Position[1] * PositionWeight[1]) + (Position[2] * PositionWeight[2]))
 			 */
 			float[3] PositionWeight = 0;
 
@@ -5888,7 +5888,7 @@ extern (C++, DxLib) {
 			int HitNum;
 
 			/**
-			 * ヒットしたポリゴンの配列( HitNum個分存在する )
+			 * ヒットしたポリゴンの配列(HitNum個分存在する)
 			 */
 			.MV1_COLL_RESULT_POLY* Dim;
 		}
@@ -5926,7 +5926,7 @@ extern (C++, DxLib) {
 			.COLOR_U8 SpecularColor;
 
 			/**
-			 * 最も大きな影響を与えているフレーム( スキニングメッシュ用 )
+			 * 最も大きな影響を与えているフレーム(スキニングメッシュ用)
 			 */
 			int MaxWeightFrameIndex;
 		}
@@ -5954,7 +5954,7 @@ extern (C++, DxLib) {
 			ushort MaterialIndex;
 
 			/**
-			 * VIndex が指すインデックスの参照先( 1:フレーム  0:モデル全体 )
+			 * VIndexが指すインデックスの参照先(1:フレーム  0:モデル全体)
 			 */
 			ushort VIndexTarget;
 
@@ -6016,143 +6016,142 @@ extern (C++, DxLib) {
 	}
 
 	/**
-	 * 3Dサウンドリバーブエフェクトパラメータ構造体
-	 * ( 注釈は MSDN の XAUDIO2FX_REVERB_PARAMETERS 構造体の解説をほぼ引用しています )
+	 * 3Dサウンドリバーブエフェクトパラメータ構造体(注釈はMSDNのXAUDIO2FX_REVERB_PARAMETERS構造体の解説をほぼ引用しています)
 	 */
 	package struct tagSOUND3D_REVERB_PARAM
 	{
 		/**
-		 * リバーブとなる出力の割合( 指定可能範囲 0.0f ~ 100.0f )
+		 * リバーブとなる出力の割合(指定可能範囲0.0f~100.0f)
 		 */
 		float WetDryMix = 0;
 
 		/**
-		 * ダイレクト パスに対する初期反射の遅延時間、単位はミリ秒( 指定可能範囲 0 ~ 300 )
+		 * ダイレクト パスに対する初期反射の遅延時間、単位はミリ秒(指定可能範囲0~300)
 		 */
 		uint ReflectionsDelay;
 
 		/**
-		 * 初期反射に対するリバーブの遅延時間、単位はミリ秒( 指定可能範囲 0 ~ 85 )
+		 * 初期反射に対するリバーブの遅延時間、単位はミリ秒(指定可能範囲0~85)
 		 */
 		dxlib_d.DxDataType.BYTE ReverbDelay;
 
 		/**
-		 * 左後方出力および右後方出力の遅延時間、単位はミリ秒( 指定可能範囲 0 ~ 5 )
+		 * 左後方出力および右後方出力の遅延時間、単位はミリ秒(指定可能範囲0~5)
 		 */
 		dxlib_d.DxDataType.BYTE RearDelay;
 
 		/**
-		 * シミュレーション空間における視聴者に対する左入力の位置( 指定可能範囲 0 ~ 30 )
-		 * PositionLeft を最小値に設定した場合、左入力は視聴者の近くに配置されます。
+		 * シミュレーション空間における視聴者に対する左入力の位置(指定可能範囲0~30)
+		 * PositionLeftを最小値に設定した場合、左入力は視聴者の近くに配置されます。
 		 * この位置では、サウンド フィールドにおいて初期反射が優勢になり、残響減衰は弱まって、振幅が小さくなります。
-		 * PositionLeft を最大値に設定した場合、左入力はシミュレーション室内で視聴者から最大限遠い位置に配置されます。
-		 * PositionLeft は残響減衰時間 (部屋の残響効果) に影響せず、視聴者に対する音源の見かけの位置のみに影響します。
+		 * PositionLeftを最大値に設定した場合、左入力はシミュレーション室内で視聴者から最大限遠い位置に配置されます。
+		 * PositionLeftは残響減衰時間(部屋の残響効果)に影響せず、視聴者に対する音源の見かけの位置のみに影響します。
 		 */
 		dxlib_d.DxDataType.BYTE PositionLeft;
 
 		/**
-		 * PositionLeft と同効果の右入力値( 指定可能範囲 0 ~ 30 )、右入力にのみ影響を与える
+		 * PositionLeftと同効果の右入力値(指定可能範囲0~30)、右入力にのみ影響を与える
 		 */
 		dxlib_d.DxDataType.BYTE PositionRight;
 
 		/**
-		 * 音源から視聴者までの距離によるインプレッションを増減させる値( 指定可能範囲 0 ~ 30 )
+		 * 音源から視聴者までの距離によるインプレッションを増減させる値(指定可能範囲0~30)
 		 */
 		dxlib_d.DxDataType.BYTE PositionMatrixLeft;
 
 		/**
-		 * 音源から視聴者までの距離によるインプレッションを増減させま値( 指定可能範囲 0 ~ 30 )
+		 * 音源から視聴者までの距離によるインプレッションを増減させま値(指定可能範囲0~30)
 		 */
 		dxlib_d.DxDataType.BYTE PositionMatrixRight;
 
 		/**
-		 * 個々の壁の反射特性値( 指定可能範囲 0 ~ 15 )、( 堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
+		 * 個々の壁の反射特性値(指定可能範囲0~15)、(堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
 		 */
 		dxlib_d.DxDataType.BYTE EarlyDiffusion;
 
 		/**
-		 * 個々の壁のリバーブ特性値( 指定可能範囲 0 ~ 15 )、( 堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
+		 * 個々の壁のリバーブ特性値(指定可能範囲0~15)、(堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
 		 */
 		dxlib_d.DxDataType.BYTE LateDiffusion;
 
 		/**
-		 * 1 kHz における減衰時間を基準にして低周波数の減衰時間調整値( 指定可能範囲 0 ~ 12 )
+		 * 1kHzにおける減衰時間を基準にして低周波数の減衰時間調整値(指定可能範囲0~12)
 		 *
-		 * 値とゲイン (dB) の関係
+		 * 値とゲイン(dB)の関係
 		 * 値          0  1  2  3  4  5  6  7  8  9 10 11 12
 		 * ゲイン(dB) -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4
-		 * LowEQGain の値が 8 の場合、低周波数の減衰時間と 1 kHz における減衰時間が等しくなることに注意してください
+		 * LowEQGainの値が8の場合、低周波数の減衰時間と1kHzにおける減衰時間が等しくなることに注意してください
 		 */
 		dxlib_d.DxDataType.BYTE LowEQGain;
 
 		/**
-		 * LowEQGain パラメーターにより制御されるローパス フィルターの折点周波数の設定値( 指定可能範囲 0 ~ 9 )
+		 * LowEQGainパラメーターにより制御されるローパス フィルターの折点周波数の設定値(指定可能範囲0~9)
 		 *
-		 * 値と周波数 (Hz) の関係
+		 * 値と周波数(Hz)の関係
 		 * 値          0   1   2   3   4   5   6   7   8   9
 		 * 周波数(Hz) 50 100 150 200 250 300 350 400 450 500
 		 */
 		dxlib_d.DxDataType.BYTE LowEQCutoff;
 
 		/**
-		 * 1 kHz における減衰時間を基準にして高周波数の減衰時間調整値( 指定可能範囲 0 ~ 8 )
+		 * 1kHzにおける減衰時間を基準にして高周波数の減衰時間調整値(指定可能範囲0~8)
 		 *
-		 * 値とゲイン (dB) の関係
+		 * 値とゲイン(dB)の関係
 		 * 値          0  1  2  3  4  5  6  7 8
 		 * ゲイン(dB) -8 -7 -6 -5 -4 -3 -2 -1 0
-		 * 0 に設定すると、高周波数の音が 1 kHz の場合と同じ割合で減衰します。最大値に設定すると、高周波数の音が 1 kHz の場合よりもはるかに高い割合で減衰します。
+		 * 0に設定すると、高周波数の音が1kHzの場合と同じ割合で減衰します。最大値に設定すると、高周波数の音が1kHzの場合よりもはるかに高い割合で減衰します。
 		 */
 		dxlib_d.DxDataType.BYTE HighEQGain;
 
 		/**
-		 * HighEQGain パラメーターにより制御されるハイパス フィルターの折点周波数設定値( 指定可能範囲 0 ~ 14 )
+		 * HighEQGainパラメーターにより制御されるハイパス フィルターの折点周波数設定値(指定可能範囲0~14)
 		 *
-		 * 値と周波数 (kHz) の関係
+		 * 値と周波数(kHz)の関係
 		 * 値          0    1    2     3    4     5    6     7    8     9   10    11   12    13   14
 		 * 周波数(kHz) 1  1.5    2   2.5    3   3.5    4   4.5    5   5.5    6   6.5    7   7.5    8
 		 */
 		dxlib_d.DxDataType.BYTE HighEQCutoff;
 
 		/**
-		 * 室内エフェクトのローパス フィルターの折点周波数、単位は Hz ( 指定可能範囲 20.0f ~ 20000.0f )
+		 * 室内エフェクトのローパス フィルターの折点周波数、単位はHz(指定可能範囲20.0f~20000.0f)
 		 */
 		float RoomFilterFreq = 0;
 
 		/**
-		 * 初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f ~ 0.0f )
+		 * 初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位はdB(指定可能範囲-100.0f~0.0f)
 		 */
 		float RoomFilterMain = 0;
 
 		/**
-		 * 折点周波数 (RoomFilterFreq) での初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f ~ 0.0f )
+		 * 折点周波数(RoomFilterFreq)での初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位はdB(指定可能範囲-100.0f~0.0f)
 		 */
 		float RoomFilterHF = 0;
 
 		/**
-		 * 初期反射の強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f ~ 20.0f )
+		 * 初期反射の強度/レベルを調整値、単位はdB(指定可能範囲-100.0f~20.0f)
 		 */
 		float ReflectionsGain = 0;
 
 		/**
-		 * リバーブの強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f ~ 20.0f )
+		 * リバーブの強度/レベルを調整値、単位はdB(指定可能範囲-100.0f~20.0f)
 		 */
 		float ReverbGain = 0;
 
 		/**
-		 * 1 kHz における残響減衰時間、単位は秒 ( 指定可能範囲 0.1f ~ 上限値特になし )、これは、フル スケールの入力信号が 60 dB 減衰するまでの時間です。
+		 * 1kHzにおける残響減衰時間、単位は秒(指定可能範囲0.1f~上限値特になし)、これは、フル スケールの入力信号が60dB減衰するまでの時間です。
 		 */
 		float DecayTime = 0;
 
 		/**
-		 * 後期フィールド残響のモード密度を制御値、単位はパーセント( 指定可能範囲 0.0f ~ 100.0f )
-		 * 無色 (colorless) の空間では、Density を最大値 (100.0f ) に設定する必要があります。
-		 * Density を小さくすると、サウンドはくぐもった音 (くし形フィルターが適用された音) になります。
+		 * 後期フィールド残響のモード密度を制御値、単位はパーセント(指定可能範囲0.0f~100.0f)
+		 * 無色(colorless)の空間では、Densityを最大値(100.0f)に設定する必要があります。
+		 * Densityを小さくすると、サウンドはくぐもった音(くし形フィルターが適用された音)になります。
 		 * これはサイロをシミュレーションするときに有効なエフェクトです。
 		 */
 		float Density = 0;
 
 		/**
-		 * 音響空間の見かけ上のサイズ、単位はフィート( 指定可能範囲 1.0f (30.48 cm) ~ 100.0f (30.48 m) )
+		 * 音響空間の見かけ上のサイズ、単位はフィート(指定可能範囲1.0f(30.48cm)~100.0f(30.48m))
 		 */
 		float RoomSize = 0;
 	}
@@ -6194,7 +6193,7 @@ extern (C++, DxLib) {
 	public alias STREAMDATASHREDTYPE2 = .tagSTREAMDATASHREDTYPE2;
 
 	/**
-	 * ストリームデータ制御用関数ポインタ構造体タイプ2の wchar_t 使用版
+	 * ストリームデータ制御用関数ポインタ構造体タイプ2のwchar_t使用版
 	 */
 	package struct tagSTREAMDATASHREDTYPE2W
 	{
@@ -6280,7 +6279,7 @@ extern (C++, DxLib) {
 	package struct tagCOLORDATA
 	{
 		/**
-		 * フォーマット( DX_BASEIMAGE_FORMAT_NORMAL 等 )
+		 * フォーマット(DX_BASEIMAGE_FORMAT_NORMAL等)
 		 */
 		ubyte Format;
 
@@ -6295,7 +6294,7 @@ extern (C++, DxLib) {
 		ubyte ChannelBitDepth;
 
 		/**
-		 * 浮動小数点型かどうか( TRUE:浮動小数点型  FALSE:整数型 )
+		 * 浮動小数点型かどうか(TRUE:浮動小数点型  FALSE:整数型)
 		 */
 		ubyte FloatTypeFlag;
 
@@ -6304,7 +6303,7 @@ extern (C++, DxLib) {
 		 */
 		ubyte PixelByte;
 
-		// 以下は ChannelNum 又は ChannelBitDepth が 0 の時のみ有効
+		// 以下はChannelNum又はChannelBitDepthが0の時のみ有効
 
 		/**
 		 * ビット深度
@@ -6387,14 +6386,14 @@ extern (C++, DxLib) {
 		uint NoneMask;
 
 		/**
-		 * 使用しているパレット番号の最大値( 0 の場合は 255 とみなす )
+		 * 使用しているパレット番号の最大値(0の場合は255とみなす)
 		 */
 		int MaxPaletteNo;
 
-		// memo: ここより上にメンバー変数を追加したら DxBaseImage.cpp の NS_GraphColorMatchBltVer2 のアセンブラでのパレットデータ参照のリテラル値を修正する必要あり
+		// memo: ここより上にメンバー変数を追加したらDxBaseImage.cppのNS_GraphColorMatchBltVer2のアセンブラでのパレットデータ参照のリテラル値を修正する必要あり
 
 		/**
-		 * パレット( ColorBitDepth が8以下の場合のみ有効 )
+		 * パレット(ColorBitDepthが8以下の場合のみ有効)
 		 */
 		.COLORPALETTEDATA[256] Palette;
 	}
@@ -6552,27 +6551,27 @@ extern (C++, DxLib) {
 		package struct tagIMAGEFORMATDESC
 		{
 			/**
-			 * テクスチャか、フラグ( TRUE:テクスチャ  FALSE:標準サーフェス )
+			 * テクスチャか、フラグ(TRUE:テクスチャ  FALSE:標準サーフェス)
 			 */
 			ubyte TextureFlag;
 
 			/**
-			 * キューブマップテクスチャか、フラグ( TRUE:キューブマップテクスチャ FALSE:それ以外 )
+			 * キューブマップテクスチャか、フラグ(TRUE:キューブマップテクスチャ FALSE:それ以外)
 			 */
 			ubyte CubeMapTextureFlag;
 
 			/**
-			 * αチャンネルはあるか、フラグ    ( TRUE:ある  FALSE:ない )
+			 * αチャンネルはあるか、フラグ(TRUE:ある  FALSE:ない)
 			 */
 			ubyte AlphaChFlag;
 
 			/**
-			 * 描画可能か、フラグ( TRUE:可能  FALSE:不可能 )
+			 * 描画可能か、フラグ(TRUE:可能  FALSE:不可能)
 			 */
 			ubyte DrawValidFlag;
 
 			/**
-			 * システムメモリ上に存在しているか、フラグ( TRUE:システムメモリ上  FALSE:VRAM上 )( 標準サーフェスの時のみ有効 )
+			 * システムメモリ上に存在しているか、フラグ(TRUE:システムメモリ上  FALSE:VRAM上)(標準サーフェスの時のみ有効)
 			 */
 			ubyte SystemMemFlag;
 
@@ -6582,17 +6581,17 @@ extern (C++, DxLib) {
 			ubyte UseManagedTextureFlag;
 
 			/**
-			 * テクスチャのメモリデータ配置にリニアが選択できる場合はデータ配置方式をリニアにするかどうか( TRUE:リニアが可能な場合はリニアにする  FALSE:リニアが可能な場合も特にリニアを指定しない )
+			 * テクスチャのメモリデータ配置にリニアが選択できる場合はデータ配置方式をリニアにするかどうか(TRUE:リニアが可能な場合はリニアにする  FALSE:リニアが可能な場合も特にリニアを指定しない)
 			 */
 			ubyte UseLinearMapTextureFlag;
 
 			/**
-			 * 環境依存のテクスチャフォーマットを直接指定するために使用するための変数( DX_TEXTUREFORMAT_DIRECT3D9_R8G8B8 など )
+			 * 環境依存のテクスチャフォーマットを直接指定するために使用するための変数(DX_TEXTUREFORMAT_DIRECT3D9_R8G8B8など)
 			 */
 			ubyte PlatformTextureFormat;
 
 			/**
-			 * 基本フォーマット( DX_BASEIMAGE_FORMAT_NORMAL 等 )
+			 * 基本フォーマット(DX_BASEIMAGE_FORMAT_NORMAL等)
 			 */
 			ubyte BaseFormat;
 
@@ -6602,7 +6601,7 @@ extern (C++, DxLib) {
 			ubyte MipMapCount;
 
 			/**
-			 * αテストチャンネルはあるか、フラグ( TRUE:ある  FALSE:ない )( テクスチャの場合のみ有効 )
+			 * αテストチャンネルはあるか、フラグ(TRUE:ある  FALSE:ない)(テクスチャの場合のみ有効)
 			 */
 			ubyte AlphaTestFlag;
 
@@ -6612,7 +6611,7 @@ extern (C++, DxLib) {
 			ubyte FloatTypeFlag;
 
 			/**
-			 * 色深度( テクスチャの場合のみ有効 )
+			 * 色深度(テクスチャの場合のみ有効)
 			 */
 			ubyte ColorBitDepth;
 
@@ -6622,7 +6621,7 @@ extern (C++, DxLib) {
 			ubyte ChannelNum;
 
 			/**
-			 * 1チャンネル辺りのビット深度( テクスチャの場合のみ有効、0 の場合は ColorBitDepth が使用される )
+			 * 1チャンネル辺りのビット深度(テクスチャの場合のみ有効、0の場合はColorBitDepthが使用される)
 			 */
 			ubyte ChannelBitDepth;
 
@@ -6632,17 +6631,17 @@ extern (C++, DxLib) {
 			ubyte BlendGraphFlag;
 
 			/**
-			 * パレットを使用しているか、フラグ( SystemMemFlag が TRUE の場合のみ有効 )
+			 * パレットを使用しているか、フラグ(SystemMemFlagがTRUEの場合のみ有効)
 			 */
 			ubyte UsePaletteFlag;
 
 			/**
-			 * マルチサンプリング数( 描画対象の場合使用 )
+			 * マルチサンプリング数(描画対象の場合使用)
 			 */
 			ubyte MSSamples;
 
 			/**
-			 * マルチサンプリングクオリティ( 描画対象の場合使用 )
+			 * マルチサンプリングクオリティ(描画対象の場合使用)
 			 */
 			ubyte MSQuality;
 		}
@@ -6651,52 +6650,52 @@ extern (C++, DxLib) {
 	}
 
 	/**
-	 * DirectInput のジョイパッド入力情報
+	 * DirectInputのジョイパッド入力情報
 	 */
 	package struct tagDINPUT_JOYSTATE
 	{
 		/**
-		 * スティックのX軸パラメータ( -1000~1000 )
+		 * スティックのX軸パラメータ(-1000~1000)
 		 */
 		int X;
 
 		/**
-		 * スティックのY軸パラメータ( -1000~1000 )
+		 * スティックのY軸パラメータ(-1000~1000)
 		 */
 		int Y;
 
 		/**
-		 * スティックのZ軸パラメータ( -1000~1000 )
+		 * スティックのZ軸パラメータ(-1000~1000)
 		 */
 		int Z;
 
 		/**
-		 * スティックのX軸回転パラメータ( -1000~1000 )
+		 * スティックのX軸回転パラメータ(-1000~1000)
 		 */
 		int Rx;
 
 		/**
-		 * スティックのY軸回転パラメータ( -1000~1000 )
+		 * スティックのY軸回転パラメータ(-1000~1000)
 		 */
 		int Ry;
 
 		/**
-		 * スティックのZ軸回転パラメータ( -1000~1000 )
+		 * スティックのZ軸回転パラメータ(-1000~1000)
 		 */
 		int Rz;
 
 		/**
-		 * スライダー二つ( 0~65535 )
+		 * スライダー二つ(0~65535)
 		 */
 		int[2] Slider;
 
 		/**
-		 * ハットスイッチ4つ( 0xFFFFFFFF:入力なし 0:上 4500:右上 9000:右 13500:右下 18000:下 22500:左下 27000:左 31500:左上 )
+		 * ハットスイッチ4つ(0xFFFFFFFF:入力なし 0:上 4500:右上 9000:右 13500:右下 18000:下 22500:左下 27000:左 31500:左上)
 		 */
 		uint[4] POV;
 
 		/**
-		 * ボタン32個( 押されたボタンは 128 になる )
+		 * ボタン32個(押されたボタンは128になる)
 		 */
 		ubyte[32] Buttons;
 	}
@@ -6704,42 +6703,42 @@ extern (C++, DxLib) {
 	public alias DINPUT_JOYSTATE = .tagDINPUT_JOYSTATE;
 
 	/**
-	 * XInput のジョイパッド入力情報
+	 * XInputのジョイパッド入力情報
 	 */
 	package struct tagXINPUT_STATE
 	{
 		/**
-		 * ボタン16個( 添字には XINPUT_BUTTON_DPAD_UP 等を使用する、0:押されていない  1:押されている )
+		 * ボタン16個(添字にはXINPUT_BUTTON_DPAD_UP等を使用する、0:押されていない  1:押されている)
 		 */
 		ubyte[16] Buttons;
 
 		/**
-		 * 左トリガー( 0~255 )
+		 * 左トリガー(0~255)
 		 */
 		ubyte LeftTrigger;
 
 		/**
-		 * 右トリガー( 0~255 )
+		 * 右トリガー(0~255)
 		 */
 		ubyte RightTrigger;
 
 		/**
-		 * 左スティックの横軸値( -32768 ~ 32767 )
+		 * 左スティックの横軸値(-32768~32767)
 		 */
 		short ThumbLX;
 
 		/**
-		 * 左スティックの縦軸値( -32768 ~ 32767 )
+		 * 左スティックの縦軸値(-32768~32767)
 		 */
 		short ThumbLY;
 
 		/**
-		 * 右スティックの横軸値( -32768 ~ 32767 )
+		 * 右スティックの横軸値(-32768~32767)
 		 */
 		short ThumbRX;
 
 		/**
-		 * 右スティックの縦軸値( -32768 ~ 32767 )
+		 * 右スティックの縦軸値(-32768~32767)
 		 */
 		short ThumbRY;
 	}
@@ -6854,7 +6853,7 @@ extern (C++, DxLib) {
 	extern int DxLib_End();
 
 	/**
-	 * ライブラリの内部で使用している構造体をゼロ初期化して、DxLib_Init の前に行った設定を無効化する( DxLib_Init の前でのみ有効 )
+	 * ライブラリの内部で使用している構造体をゼロ初期化して、DxLib_Initの前に行った設定を無効化する(DxLib_Initの前でのみ有効)
 	 */
 	extern int DxLib_GlobalStructInitialize();
 
@@ -6870,7 +6869,7 @@ extern (C++, DxLib) {
 	/**
 	 * 最後に発生したエラーのエラーコードを取得する
 	 *
-	 * Returns: 0:エラーが発生していない、又はエラーコード出力に対応したエラーが発生していない  0以外:エラーコード、DX_ERRORCODE_WIN_DESKTOP_24BIT_COLOR など
+	 * Returns: 0:エラーが発生していない、又はエラーコード出力に対応したエラーが発生していない  0以外:エラーコード、DX_ERRORCODE_WIN_DESKTOP_24BIT_COLORなど
 	 */
 	extern int GetLastErrorCode();
 
@@ -6892,7 +6891,7 @@ extern (C++, DxLib) {
 	 * アプリが非アクティブ状態でも処理を実行するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:実行する  FALSE:停止する( デフォルト )
+	 *      Flag = TRUE:実行する  FALSE:停止する(デフォルト)
 	 */
 	extern int SetAlwaysRunFlag(int Flag);
 
@@ -6919,7 +6918,7 @@ extern (C++, DxLib) {
 	extern int GetNowCount(int UseRDTSCFlag = dxlib_d.DxDataType.FALSE);
 
 	/**
-	 * GetNowCountの高精度バージョン( μ秒単位の精度を持つカウンタの現在の値を得る )
+	 * GetNowCountの高精度バージョン(μ秒単位の精度を持つカウンタの現在の値を得る)
 	 */
 	extern dxlib_d.DxDataType.LONGLONG GetNowHiPerformanceCount(int UseRDTSCFlag = dxlib_d.DxDataType.FALSE);
 
@@ -6929,7 +6928,7 @@ extern (C++, DxLib) {
 	extern dxlib_d.DxDataType.ULONGLONG GetNowSysPerformanceCount();
 
 	/**
-	 * OSが提供する高精度カウンタの周波数( 1秒辺りのカウント数 )を得る
+	 * OSが提供する高精度カウンタの周波数(1秒辺りのカウント数)を得る
 	 */
 	extern dxlib_d.DxDataType.ULONGLONG GetSysPerformanceFrequency();
 
@@ -6996,7 +6995,7 @@ extern (C++, DxLib) {
 	// バッテリー関連
 
 	/**
-	 * 電池の残量を % で取得する
+	 * 電池の残量を%で取得する
 	 *
 	 * Returns: 100:フル充電状態  0:充電残量無し
 	 */
@@ -7010,7 +7009,7 @@ extern (C++, DxLib) {
 	 * Params:
 	 *      DestBuffer = 文字列を格納するバッファの先頭アドレス
 	 *
-	 * Returns: -1:クリップボードにテキストデータが無い  -1以外:クリップボードに格納されている文字列データのサイズ( 単位:byte )
+	 * Returns: -1:クリップボードにテキストデータが無い  -1以外:クリップボードに格納されている文字列データのサイズ(単位:byte)
 	 */
 	extern int GetClipboardText(dxlib_d.DxDataType.TCHAR* DestBuffer);
 
@@ -7027,44 +7026,44 @@ extern (C++, DxLib) {
 	// iniファイル関係
 
 	/**
-	 * GetPrivateProfileString のDXライブラリ版
+	 * GetPrivateProfileStringのDXライブラリ版
 	 */
-	extern int GetPrivateProfileStringDx(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, const (dxlib_d.DxDataType.TCHAR)* Default, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileStringDx(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, const (dxlib_d.DxDataType.TCHAR)* Default, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileString のDXライブラリ版
+	 * GetPrivateProfileStringのDXライブラリ版
 	 */
-	extern int GetPrivateProfileStringDxWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, const (dxlib_d.DxDataType.TCHAR)* Default, size_t DefaultLength, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, size_t IniFilePathLength, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileStringDxWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, const (dxlib_d.DxDataType.TCHAR)* Default, size_t DefaultLength, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, size_t IniFilePathLength, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileInt のDXライブラリ版
+	 * GetPrivateProfileIntのDXライブラリ版
 	 */
-	extern int GetPrivateProfileIntDx(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, int Default, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileIntDx(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, int Default, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileInt のDXライブラリ版
+	 * GetPrivateProfileIntのDXライブラリ版
 	 */
-	extern int GetPrivateProfileIntDxWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, int Default, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, size_t IniFilePathLength, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileIntDxWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, int Default, const (dxlib_d.DxDataType.TCHAR)* IniFilePath, size_t IniFilePathLength, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileStringDx のメモリから読み込む版
+	 * GetPrivateProfileStringDxのメモリから読み込む版
 	 */
-	extern int GetPrivateProfileStringDxForMem(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, const (dxlib_d.DxDataType.TCHAR)* Default, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileStringDxForMem(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, const (dxlib_d.DxDataType.TCHAR)* Default, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileStringDx のメモリから読み込む版
+	 * GetPrivateProfileStringDxのメモリから読み込む版
 	 */
-	extern int GetPrivateProfileStringDxForMemWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, const (dxlib_d.DxDataType.TCHAR)* Default, size_t DefaultLength, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileStringDxForMemWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, const (dxlib_d.DxDataType.TCHAR)* Default, size_t DefaultLength, dxlib_d.DxDataType.TCHAR* ReturnedStringBuffer, size_t ReturnedStringBufferBytes, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileIntDx のメモリから読み込む版
+	 * GetPrivateProfileIntDxのメモリから読み込む版
 	 */
-	extern int GetPrivateProfileIntDxForMem(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, int Default, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileIntDxForMem(const (dxlib_d.DxDataType.TCHAR)* AppName, const (dxlib_d.DxDataType.TCHAR)* KeyName, int Default, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	/**
-	 * GetPrivateProfileIntDx のメモリから読み込む版
+	 * GetPrivateProfileIntDxのメモリから読み込む版
 	 */
-	extern int GetPrivateProfileIntDxForMemWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, int Default, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS 等、-1 でデフォルト */);
+	extern int GetPrivateProfileIntDxForMemWithStrLen(const (dxlib_d.DxDataType.TCHAR)* AppName, size_t AppNameLength, const (dxlib_d.DxDataType.TCHAR)* KeyName, size_t KeyNameLength, int Default, const (void)* IniFileImage, size_t IniFileImageBytes, int IniFileCharCodeFormat = -1 /* DX_CHARCODEFORMAT_SHIFTJIS等、-1でデフォルト */);
 
 	version (iOS) {
 		version = ENABLE_MAIL;
@@ -7077,11 +7076,11 @@ extern (C++, DxLib) {
 		 * メールアプリを送信メール編集状態で起動する
 		 *
 		 * Params:
-		 *      MailAddr = 宛先( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
-		 *      MailCCAddr = CC の宛先( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
-		 *      MailBCCAddr = BCC の宛先( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
-		 *      Subject = タイトル( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
-		 *      Text = 本文( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      MailAddr = 宛先(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      MailCCAddr = CCの宛先(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      MailBCCAddr = BCCの宛先(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      Subject = タイトル(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      Text = 本文(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
 		 */
 		extern int MailApp_Send(const (dxlib_d.DxDataType.TCHAR)* MailAddr = null, const (dxlib_d.DxDataType.TCHAR)* MailCCAddr = null, const (dxlib_d.DxDataType.TCHAR)* MailBCCAddr = null, const (dxlib_d.DxDataType.TCHAR)* Subject = null, const (dxlib_d.DxDataType.TCHAR)* Text = null);
 
@@ -7089,14 +7088,14 @@ extern (C++, DxLib) {
 		 * メールアプリを送信メール編集状態で起動する
 		 *
 		 * Params:
-		 *      MailAddr = 宛先( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      MailAddr = 宛先(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
 		 *      MailAddrLength = ?
-		 *      MailCCAddr = CC の宛先( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      MailCCAddr = CCの宛先(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
 		 *      MailCCAddrLength = ?
-		 *      MailBCCAddr = BCC の宛先( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      MailBCCAddr = BCCの宛先(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
 		 *      MailBCCAddrLength = ?
-		 *      Subject = タイトル( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
-		 *      Text = 本文( null で無効 )、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      Subject = タイトル(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
+		 *      Text = 本文(nullで無効)、メールアドレスが複数ある場合はカンマ『,』で区切ってください
 		 */
 		extern int MailApp_SendWithStrLen(const (dxlib_d.DxDataType.TCHAR)* MailAddr = null, size_t MailAddrLength = 0, const (dxlib_d.DxDataType.TCHAR)* MailCCAddr = null, size_t MailCCAddrLength = 0, const (dxlib_d.DxDataType.TCHAR)* MailBCCAddr = null, size_t MailBCCAddrLength = 0, const (dxlib_d.DxDataType.TCHAR)* Subject = null, size_t SubjectLength = 0, const (dxlib_d.DxDataType.TCHAR)* Text = null, size_t TextLength = 0);
 	}
@@ -7108,90 +7107,90 @@ extern (C++, DxLib) {
 		// ログファイル関数
 
 		/**
-		 * ログファイル( Log.txt ) に文字列を出力する
+		 * ログファイル(Log.txt)に文字列を出力する
 		 */
 		extern int LogFileAdd(const (dxlib_d.DxDataType.TCHAR)* String);
 
 		/**
-		 * ログファイル( Log.txt ) に文字列を出力する
+		 * ログファイル(Log.txt)に文字列を出力する
 		 */
 		extern int LogFileAddWithStrLen(const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 		/**
-		 * 書式付きで ログファイル( Log.txt ) に文字列を出力する( 書式は printf と同じ )
+		 * 書式付きでログファイル(Log.txt)に文字列を出力する(書式はprintfと同じ)
 		 */
 		extern int LogFileFmtAdd(const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * ログファイル( Log.txt ) に出力する文字列の前に付けるタブの数を1つ増やす
+		 * ログファイル(Log.txt)に出力する文字列の前に付けるタブの数を1つ増やす
 		 */
 		extern int LogFileTabAdd();
 
 		/**
-		 * ログファイル( Log.txt ) に出力する文字列の前に付けるタブの数を1つ減らす
+		 * ログファイル(Log.txt)に出力する文字列の前に付けるタブの数を1つ減らす
 		 */
 		extern int LogFileTabSub();
 
 		/**
-		 * LogFileAdd の旧名称関数
+		 * LogFileAddの旧名称関数
 		 */
 		extern int ErrorLogAdd(const (dxlib_d.DxDataType.TCHAR)* String);
 
 		/**
-		 * LogFileFmtAdd の旧名称関数
+		 * LogFileFmtAddの旧名称関数
 		 */
 		extern int ErrorLogFmtAdd(const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * LogFileTabAdd の旧名称関数
+		 * LogFileTabAddの旧名称関数
 		 */
 		extern int ErrorLogTabAdd();
 
 		/**
-		 * LogFileTabSub の旧名称関数
+		 * LogFileTabSubの旧名称関数
 		 */
 		extern int ErrorLogTabSub();
 
 		/**
-		 * ログファイル( Log.txt ) に出力する文字列の前に起動してからの時間を付けるかどうかを設定する
+		 * ログファイル(Log.txt)に出力する文字列の前に起動してからの時間を付けるかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:付ける( デフォルト)  FALSE:付けない
+		 *      UseFlag = TRUE:付ける(デフォルト)  FALSE:付けない
 		 */
 		extern int SetUseTimeStampFlag(int UseFlag);
 
 		/**
-		 * LogFileFmtAdd と同じ機能の関数
+		 * LogFileFmtAddと同じ機能の関数
 		 */
 		extern int AppLogAdd(const (dxlib_d.DxDataType.TCHAR)* String, ...);
 
 		// ログ出力設定関数
 
 		/**
-		 * ログファイル( Log.txt ) を作成するかどうかを設定する、DxLib_Init の前でのみ使用可能
+		 * ログファイル(Log.txt)を作成するかどうかを設定する、DxLib_Initの前でのみ使用可能
 		 *
 		 * Params:
-		 *      Flag = TRUE:作成する( デフォルト )  FALSE:作成しない
+		 *      Flag = TRUE:作成する(デフォルト)  FALSE:作成しない
 		 */
 		extern int SetOutApplicationLogValidFlag(int Flag);
 
 		/**
-		 * ログファイルの名前を設定する( Log.txt 以外にしたい場合に使用 )
+		 * ログファイルの名前を設定する(Log.txt以外にしたい場合に使用)
 		 */
 		extern int SetApplicationLogFileName(const (dxlib_d.DxDataType.TCHAR)* FileName);
 
 		/**
-		 * ログファイルの名前を設定する( Log.txt 以外にしたい場合に使用 )
+		 * ログファイルの名前を設定する(Log.txt以外にしたい場合に使用)
 		 */
 		extern int SetApplicationLogFileNameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 		/**
-		 * ログファイル( Log.txt ) を保存するディレクトリパスを設定する
+		 * ログファイル(Log.txt)を保存するディレクトリパスを設定する
 		 */
 		extern int SetApplicationLogSaveDirectory(const (dxlib_d.DxDataType.TCHAR)* DirectoryPath);
 
 		/**
-		 * ログファイル( Log.txt ) を保存するディレクトリパスを設定する
+		 * ログファイル(Log.txt)を保存するディレクトリパスを設定する
 		 */
 		extern int SetApplicationLogSaveDirectoryWithStrLen(const (dxlib_d.DxDataType.TCHAR)* DirectoryPath, size_t DirectoryPathLength);
 
@@ -7199,7 +7198,7 @@ extern (C++, DxLib) {
 		 * ログファイル名に日付をつけるかどうかをセットする
 		 *
 		 * Params:
-		 *      Flag = TRUE:付ける  FALSE:付けない( デフォルト )
+		 *      Flag = TRUE:付ける  FALSE:付けない(デフォルト)
 		 */
 		extern int SetUseDateNameLogFile(int Flag);
 
@@ -7208,51 +7207,51 @@ extern (C++, DxLib) {
 			// ログ出力機能関数
 
 			/**
-			 * printfDx の結果を画面に出力するかどうかを設定する、TRUE:出力を行う  FALSE:出力を行わない( printfDx を実行すると内部で SetLogDrawOutFlag(TRUE); が呼ばれます )
+			 * printfDxの結果を画面に出力するかどうかを設定する、TRUE:出力を行う  FALSE:出力を行わない(printfDxを実行すると内部でSetLogDrawOutFlag(TRUE);が呼ばれます)
 			 */
 			extern int SetLogDrawOutFlag(int DrawFlag);
 
 			/**
-			 * printfDx の結果を画面に出力するかどうかの設定を取得する
+			 * printfDxの結果を画面に出力するかどうかの設定を取得する
 			 *
 			 * Returns: TRUE:出力を行う  FALSE:出力を行わない
 			 */
 			extern int GetLogDrawFlag();
 
 			/**
-			 * printfDx の結果を画面に出力する際に使用するフォントのサイズを設定する
+			 * printfDxの結果を画面に出力する際に使用するフォントのサイズを設定する
 			 */
 			extern int SetLogFontSize(int Size);
 
 			/**
-			 * printfDx の結果を画面に出力する際に使用するフォントのハンドルを変更する
+			 * printfDxの結果を画面に出力する際に使用するフォントのハンドルを変更する
 			 */
 			extern int SetLogFontHandle(int FontHandle);
 
 			/**
-			 * printfDx の結果を画面に出力する際の描画する領域を設定する
+			 * printfDxの結果を画面に出力する際の描画する領域を設定する
 			 */
 			extern int SetLogDrawArea(int x1, int y1, int x2, int y2);
 
 			// 簡易画面出力関数
 
 			/**
-			 * printf と同じ引数で画面に文字列を表示するための関数
+			 * printfと同じ引数で画面に文字列を表示するための関数
 			 */
 			extern int printfDx(const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 			/**
-			 * puts と同じ引数で画面に文字列を表示するための関数
+			 * putsと同じ引数で画面に文字列を表示するための関数
 			 */
 			extern int putsDx(const (dxlib_d.DxDataType.TCHAR)* String, int NewLine = dxlib_d.DxDataType.TRUE);
 
 			/**
-			 * puts と同じ引数で画面に文字列を表示するための関数
+			 * putsと同じ引数で画面に文字列を表示するための関数
 			 */
 			extern int putsDxWithStrLen(const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int NewLine = dxlib_d.DxDataType.TRUE);
 
 			/**
-			 * printfDx の結果をリセットするための関数
+			 * printfDxの結果をリセットするための関数
 			 */
 			extern int clsDx();
 		}
@@ -7265,17 +7264,17 @@ extern (C++, DxLib) {
 		// 非同期読み込み関係
 
 		/**
-		 * 読み込み処理系の関数で非同期読み込みを行うかどうかを設定する( 非同期読み込みに対応している関数のみ有効 )
+		 * 読み込み処理系の関数で非同期読み込みを行うかどうかを設定する(非同期読み込みに対応している関数のみ有効)
 		 *
 		 * Params:
-		 *      Flag = TRUE:非同期読み込みを行う  FALSE:非同期読み込みを行わない( デフォルト )
+		 *      Flag = TRUE:非同期読み込みを行う  FALSE:非同期読み込みを行わない(デフォルト)
 		 */
 		extern int SetUseASyncLoadFlag(int Flag);
 
 		/**
-		 * 読み込み処理系の関数で非同期読み込みを行うかどうかを取得する( 非同期読み込みに対応している関数のみ有効 )
+		 * 読み込み処理系の関数で非同期読み込みを行うかどうかを取得する(非同期読み込みに対応している関数のみ有効)
 		 *
-		 * Returns: TRUE:非同期読み込みを行う  FALSE:非同期読み込みを行わない( デフォルト )
+		 * Returns: TRUE:非同期読み込みを行う  FALSE:非同期読み込みを行わない(デフォルト)
 		 */
 		extern int GetUseASyncLoadFlag();
 
@@ -7287,7 +7286,7 @@ extern (C++, DxLib) {
 		extern int CheckHandleASyncLoad(int Handle);
 
 		/**
-		 * ハンドルの非同期読み込み処理の戻り値を取得する( 非同期読み込み中の場合は1つ前の非同期読み込み処理の戻り値が返ってきます )
+		 * ハンドルの非同期読み込み処理の戻り値を取得する(非同期読み込み中の場合は1つ前の非同期読み込み処理の戻り値が返ってきます)
 		 */
 		extern int GetHandleASyncLoadResult(int Handle);
 
@@ -7302,7 +7301,7 @@ extern (C++, DxLib) {
 		extern int GetASyncLoadNum();
 
 		/**
-		 * 非同期読み込み処理を行うスレッドの数を設定する( ThreadNum に指定できる数は 1 ~ 32 )
+		 * 非同期読み込み処理を行うスレッドの数を設定する(ThreadNumに指定できる数は1~32)
 		 */
 		extern int SetASyncLoadThreadNum(int ThreadNum);
 	}
@@ -7317,7 +7316,7 @@ extern (C++, DxLib) {
 	// マウス関係関数
 
 	/**
-	 * マウスポインタの表示状態を設定する( DispFlag:マウスポインタを表示するかどうか
+	 * マウスポインタの表示状態を設定する(DispFlag:マウスポインタを表示するかどうか
 	 *
 	 * Params:
 	 *      DispFlag = TRUE:表示する  FALSE:表示しない
@@ -7352,12 +7351,12 @@ extern (C++, DxLib) {
 		extern int GetMouseHWheelRotVol(int CounterReset = dxlib_d.DxDataType.TRUE);
 
 		/**
-		 * 垂直マウスホイールの回転量を取得する( 戻り値が float 型 )
+		 * 垂直マウスホイールの回転量を取得する(戻り値がfloat型)
 		 */
 		extern float GetMouseWheelRotVolF(int CounterReset = dxlib_d.DxDataType.TRUE);
 
 		/**
-		 * 水平マウスホイールの回転量を取得する( 戻り値が float 型 )
+		 * 水平マウスホイールの回転量を取得する(戻り値がfloat型)
 		 */
 		extern float GetMouseHWheelRotVolF(int CounterReset = dxlib_d.DxDataType.TRUE);
 
@@ -7365,12 +7364,12 @@ extern (C++, DxLib) {
 		 * マウスのボタンを押した情報を1つ取得する
 		 *
 		 * Params:
-		 *      Button = 押されたボタン( MOUSE_INPUT_LEFT 等 )を格納する変数のアドレス
+		 *      Button = 押されたボタン(MOUSE_INPUT_LEFT等)を格納する変数のアドレス
 		 *      ClickX = 押された時のX座標を格納する変数のアドレス
 		 *      ClickY = 押された時のY座標を格納する変数のアドレス
-		 *      LogDelete = 取得した押下情報1つ分をログから削除するかどうか( TRUE:削除する  FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる )
+		 *      LogDelete = 取得した押下情報1つ分をログから削除するかどうか(TRUE:削除する  FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる)
 		 *
-		 * Returns: 0:押された情報取得できた -1:押された情報が無かった、つまり前回の呼び出し( または起動時から最初の呼び出し )の間に一度もマウスのボタンが押されなかった
+		 * Returns: 0:押された情報取得できた -1:押された情報が無かった、つまり前回の呼び出し(または起動時から最初の呼び出し)の間に一度もマウスのボタンが押されなかった
 		 */
 		extern int GetMouseInputLog(int* Button, int* ClickX, int* ClickY, int LogDelete = dxlib_d.DxDataType.TRUE);
 
@@ -7378,13 +7377,13 @@ extern (C++, DxLib) {
 		 * マウスのボタンを押したり離したりした情報を1つ取得する
 		 *
 		 * Params:
-		 *      Button = 押されたり離されたりしたボタン( MOUSE_INPUT_LEFT 等 )を格納する変数のアドレス
+		 *      Button = 押されたり離されたりしたボタン(MOUSE_INPUT_LEFT等)を格納する変数のアドレス
 		 *      ClickX = 押されたり離されたりした時のX座標を格納する変数のアドレス
 		 *      ClickY = 押されたり離されたりした時のY座標を格納する変数のアドレス
-		 *      LogType = 押されたのか( MOUSE_INPUT_LOG_DOWN )離されたのか( MOUSE_INPUT_LOG_UP )、等の情報を格納する変数のアドレス
-		 *      LogDelete = 取得した押されたり離されたりした情報1つ分をログから削除するかどうか( TRUE:削除する  FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる )
+		 *      LogType = 押されたのか(MOUSE_INPUT_LOG_DOWN)離されたのか(MOUSE_INPUT_LOG_UP)、等の情報を格納する変数のアドレス
+		 *      LogDelete = 取得した押されたり離されたりした情報1つ分をログから削除するかどうか(TRUE:削除する  FALSE:削除しない、つまり次にこの関数が呼ばれたときに同じ値を取得することになる)
 		 *
-		 * Returns: 0:押されたり離されたりした情報取得できた -1:押されたり離されたりした情報が無かった、つまり前回の呼び出し( または起動時から最初の呼び出し )の間に一度もマウスのボタンが押されたり離されたりしなかった
+		 * Returns: 0:押されたり離されたりした情報取得できた -1:押されたり離されたりした情報が無かった、つまり前回の呼び出し(または起動時から最初の呼び出し)の間に一度もマウスのボタンが押されたり離されたりしなかった
 		 */
 		extern int GetMouseInputLog2(int* Button, int* ClickX, int* ClickY, int* LogType, int LogDelete = dxlib_d.DxDataType.TRUE);
 	}
@@ -7477,42 +7476,42 @@ extern (C++, DxLib) {
 	 * 指定のサイズのメモリを確保する
 	 *
 	 * Params:
-	 *      AllocSize = 確保するメモリのサイズ( 単位:byte )
-	 *      File = DxAllocを呼んだソースファイル名( デバッグ用 )
-	 *      Line = DxAllocを呼んだソースファイル中の行番号( デバッグ用 )
+	 *      AllocSize = 確保するメモリのサイズ(単位:byte)
+	 *      File = DxAllocを呼んだソースファイル名(デバッグ用)
+	 *      Line = DxAllocを呼んだソースファイル中の行番号(デバッグ用)
 	 *
 	 * Returns: null:メモリの確保失敗   NULL以外:確保したメモリ領域の先頭アドレス
 	 */
 	extern void* DxAlloc(size_t AllocSize, const (char)* File = null, int Line = -1);
 
 	/**
-	 * 指定のサイズのメモリを確保する( アライン指定版 )
+	 * 指定のサイズのメモリを確保する(アライン指定版)
 	 *
 	 * Params:
-	 *      AllocSize = 確保するメモリのサイズ( 単位:byte )
+	 *      AllocSize = 確保するメモリのサイズ(単位:byte)
 	 *      Alignment = 確保するメモリ領域のアドレス値の倍数
-	 *      File = DxAllocを呼んだソースファイル名( デバッグ用 )
-	 *      Line = DxAllocを呼んだソースファイル中の行番号( デバッグ用 )
+	 *      File = DxAllocを呼んだソースファイル名(デバッグ用)
+	 *      Line = DxAllocを呼んだソースファイル中の行番号(デバッグ用)
 	 *
 	 * Returns: null:メモリの確保失敗   NULL以外:確保したメモリ領域の先頭アドレス
 	 */
 	extern void* DxAllocAligned(size_t AllocSize, size_t Alignment, const (char)* File = null, int Line = -1);
 
 	/**
-	 * 指定のサイズのメモリを確保して、0で埋める、初期化後に0で埋める以外は DxAlloc と動作は同じ
+	 * 指定のサイズのメモリを確保して、0で埋める、初期化後に0で埋める以外はDxAllocと動作は同じ
 	 */
 	extern void* DxCalloc(size_t AllocSize, const (char)* File = null, int Line = -1);
 
 	/**
-	 * 指定のサイズのメモリを確保して、0で埋める、初期化後に0で埋める以外は DxAllocAligned と動作は同じ
+	 * 指定のサイズのメモリを確保して、0で埋める、初期化後に0で埋める以外はDxAllocAlignedと動作は同じ
 	 */
 	extern void* DxCallocAligned(size_t AllocSize, size_t Alignment, const (char)* File = null, int Line = -1);
 
 	/**
-	 * メモリの再確保を行う( FileとLine の説明は DxAlloc の注釈の通り )
+	 * メモリの再確保を行う(FileとLineの説明はDxAllocの注釈の通り)
 	 *
 	 * Params:
-	 *      Memory = 再確保を行うメモリ領域の先頭アドレス( DxAlloc の戻り値 )
+	 *      Memory = 再確保を行うメモリ領域の先頭アドレス(DxAllocの戻り値)
 	 *      AllocSize = 新しい確保サイズ
 	 *      File = ?
 	 *      Line = ?
@@ -7522,10 +7521,10 @@ extern (C++, DxLib) {
 	extern void* DxRealloc(void* Memory, size_t AllocSize, const (char)* File = null, int Line = -1);
 
 	/**
-	 * メモリの再確保を行う( アライン指定版 )( FileとLine の説明は DxAlloc の注釈の通り )
+	 * メモリの再確保を行う(アライン指定版)(FileとLineの説明はDxAllocの注釈の通り)
 	 *
 	 * Params:
-	 *      Memory = 再確保を行うメモリ領域の先頭アドレス( DxAlloc の戻り値 )
+	 *      Memory = 再確保を行うメモリ領域の先頭アドレス(DxAllocの戻り値)
 	 *      AllocSize = 新しい確保サイズ
 	 *      Alignment = 新しく確保するメモリ領域のアドレス値の倍数
 	 *      File = ?
@@ -7539,7 +7538,7 @@ extern (C++, DxLib) {
 	 * メモリを解放する
 	 *
 	 * Params:
-	 *      Memory = 解放するメモリ領域の先頭アドレス( DxAlloc の戻り値 )
+	 *      Memory = 解放するメモリ領域の先頭アドレス(DxAllocの戻り値)
 	 */
 	extern void DxFree(void* Memory);
 
@@ -7554,22 +7553,22 @@ extern (C++, DxLib) {
 	extern int DxSetAllocPrintFlag(int Flag);
 
 	/**
-	 * DxAlloc や DxCalloc で確保しているメモリサイズを取得する
+	 * DxAllocやDxCallocで確保しているメモリサイズを取得する
 	 */
 	extern size_t DxGetAllocSize();
 
 	/**
-	 * DxAlloc や DxCalloc で確保しているメモリの数を取得する
+	 * DxAllocやDxCallocで確保しているメモリの数を取得する
 	 */
 	extern int DxGetAllocNum();
 
 	/**
-	 * DxAlloc や DxCalloc で確保しているメモリを列挙する
+	 * DxAllocやDxCallocで確保しているメモリを列挙する
 	 */
 	extern void DxDumpAlloc();
 
 	/**
-	 * DxAlloc や DxCalloc で確保しているメモリの状況を描画する
+	 * DxAllocやDxCallocで確保しているメモリの状況を描画する
 	 */
 	extern void DxDrawAlloc(int x, int y, int Width, int Height);
 
@@ -7598,7 +7597,7 @@ extern (C++, DxLib) {
 	 * 文字列の先頭の文字のバイト数を取得する
 	 *
 	 * Params:
-	 *      CharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS 等
+	 *      CharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS等
 	 *      String = ?
 	 */
 	extern int GetCharBytes(int CharCodeFormat, const (void)* String);
@@ -7607,307 +7606,307 @@ extern (C++, DxLib) {
 	 * 文字列の文字コード形式を別の文字コード形式に変換する
 	 *
 	 * Params:
-	 *      SrcCharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS 等
+	 *      SrcCharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS等
 	 *      SrcString = ?
-	 *      DestCharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS 等
+	 *      DestCharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS等
 	 *      DestStringBuffer = ?
 	 */
 	extern int ConvertStringCharCodeFormat(int SrcCharCodeFormat, const (void)* SrcString, int DestCharCodeFormat, void* DestStringBuffer);
 
 	/**
-	 * 文字列の引数の文字コード形式を設定する( 文字列描画系関数とその他一部関数を除く )( UNICODE版では無効 )
+	 * 文字列の引数の文字コード形式を設定する(文字列描画系関数とその他一部関数を除く)(UNICODE版では無効)
 	 *
 	 * Params:
-	 *      CharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS 等
+	 *      CharCodeFormat = DX_CHARCODEFORMAT_SHIFTJIS等
 	 */
 	extern int SetUseCharCodeFormat(int CharCodeFormat);
 
 	/**
-	 * 文字列の引数の文字コード形式を取得する( UNICODE版では無効 )
+	 * 文字列の引数の文字コード形式を取得する(UNICODE版では無効)
 	 *
-	 * Returns: 文字コード形式( DX_CHARCODEFORMAT_SHIFTJIS 等 )
+	 * Returns: 文字コード形式(DX_CHARCODEFORMAT_SHIFTJIS等)
 	 */
 	extern int GetUseCharCodeFormat();
 
 	/**
 	 * wchar_t型の文字コード形式を取得する
 	 *
-	 * Returns: DX_CHARCODEFORMAT_UTF16LE など
+	 * Returns: DX_CHARCODEFORMAT_UTF16LEなど
 	 */
 	extern int Get_wchar_t_CharCodeFormat();
 
 	// 文字列関係
 
 	/**
-	 * strcpy と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strcpyと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strcpyDx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src);
 
 	/**
-	 * strcpy_s と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strcpy_sと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strcpy_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src);
 
 	/**
-	 * 位置指定付き strcpy、Pos はコピー開始位置 ( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * 位置指定付きstrcpy、Posはコピー開始位置(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpcpyDx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos);
 
 	/**
-	 * 位置指定付き strcpy_s、Pos はコピー開始位置 ( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * 位置指定付きstrcpy_s、Posはコピー開始位置(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpcpy_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos);
 
 	/**
-	 * 位置指定付き strcpy、Pos はコピー開始位置( 全角文字も 1 扱い ) ( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * 位置指定付きstrcpy、Posはコピー開始位置(全角文字も1扱い)(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpcpy2Dx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos);
 
 	/**
-	 * 位置指定付き strcpy_s、Pos はコピー開始位置( 全角文字も 1 扱い ) ( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * 位置指定付きstrcpy_s、Posはコピー開始位置(全角文字も1扱い)(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpcpy2_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos);
 
 	/**
-	 * strncpy と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpyと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strncpyDx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy_s と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpy_sと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strncpy_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy の Num が文字数( 全角文字も 1 扱い )になったもの、終端に必ずヌル文字が代入される( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpyのNumが文字数(全角文字も1扱い)になったもの、終端に必ずヌル文字が代入される(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strncpy2Dx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy_s の Num が文字数( 全角文字も 1 扱い )になったもの、終端に必ずヌル文字が代入される( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpy_sのNumが文字数(全角文字も1扱い)になったもの、終端に必ずヌル文字が代入される(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strncpy2_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy の文字列の終端からの文字数指定版( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpyの文字列の終端からの文字数指定版(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strrncpyDx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy_s の文字列の終端からの文字数指定版( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpy_sの文字列の終端からの文字数指定版(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strrncpy_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy の文字列の終端からの文字数( 全角文字も 1 扱い )指定版、終端に必ずヌル文字が代入される( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpyの文字列の終端からの文字数(全角文字も1扱い)指定版、終端に必ずヌル文字が代入される(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strrncpy2Dx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy_s の文字列の終端からの文字数( 全角文字も 1 扱い )指定版、終端に必ずヌル文字が代入される( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpy_sの文字列の終端からの文字数(全角文字も1扱い)指定版、終端に必ずヌル文字が代入される(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strrncpy2_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Num);
 
 	/**
-	 * strncpy のコピー開始位置指定版、Pos はコピー開始位置、Num は文字数( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpyのコピー開始位置指定版、Posはコピー開始位置、Numは文字数(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpncpyDx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos, int Num);
 
 	/**
-	 * strncpy_s のコピー開始位置指定版、Pos はコピー開始位置、Num は文字数( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpy_sのコピー開始位置指定版、Posはコピー開始位置、Numは文字数(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpncpy_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos, int Num);
 
 	/**
-	 * strncpy のコピー開始位置指定版、Pos はコピー開始位置( 全角文字も 1 扱い )、Num は文字数( 全角文字も 1 扱い )、終端に必ずヌル文字が代入される( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpyのコピー開始位置指定版、Posはコピー開始位置(全角文字も1扱い)、Numは文字数(全角文字も1扱い)、終端に必ずヌル文字が代入される(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpncpy2Dx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos, int Num);
 
 	/**
-	 * strncpy_s のコピー開始位置指定版、Pos はコピー開始位置( 全角文字も 1 扱い )、Num は文字数( 全角文字も 1 扱い )、終端に必ずヌル文字が代入される( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncpy_sのコピー開始位置指定版、Posはコピー開始位置(全角文字も1扱い)、Numは文字数(全角文字も1扱い)、終端に必ずヌル文字が代入される(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strpncpy2_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src, int Pos, int Num);
 
 	/**
-	 * strcat と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strcatと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strcatDx(dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* Src);
 
 	/**
-	 * strcat_s と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strcat_sと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern void strcat_sDx(dxlib_d.DxDataType.TCHAR* Dest, size_t DestBytes, const (dxlib_d.DxDataType.TCHAR)* Src);
 
 	/**
-	 * strlen と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strlenと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern size_t strlenDx(const (dxlib_d.DxDataType.TCHAR)* Str);
 
 	/**
-	 * strlen の戻り値が文字数( 全角文字も 1 扱い )になったもの( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strlenの戻り値が文字数(全角文字も1扱い)になったもの(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern size_t strlen2Dx(const (dxlib_d.DxDataType.TCHAR)* Str);
 
 	/**
-	 * strcmp と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strcmpと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strcmpDx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2);
 
 	/**
-	 * stricmp と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * stricmpと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int stricmpDx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2);
 
 	/**
-	 * strncmp と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncmpと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strncmpDx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2, int Num);
 
 	/**
-	 * strncmp の Num が文字数( 全角文字も 1 扱い )になったもの( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncmpのNumが文字数(全角文字も1扱い)になったもの(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strncmp2Dx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2, int Num);
 
 	/**
-	 * strncmp の比較開始位置指定版、Pos が Str1 の比較開始位置、Num が文字数( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncmpの比較開始位置指定版、PosがStr1の比較開始位置、Numが文字数(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strpncmpDx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2, int Pos, int Num);
 
 	/**
-	 * strncmp の比較開始位置指定版、Pos が Str1 の比較開始位置( 全角文字も 1 扱い )、Num が文字数( 全角文字も 1 扱い )( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strncmpの比較開始位置指定版、PosがStr1の比較開始位置(全角文字も1扱い)、Numが文字数(全角文字も1扱い)(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strpncmp2Dx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2, int Pos, int Num);
 
 	/**
-	 * 文字列の指定の位置の文字コードを取得する、Pos は取得する位置、CharNums は文字数を代入する変数のアドレス
+	 * 文字列の指定の位置の文字コードを取得する、Posは取得する位置、CharNumsは文字数を代入する変数のアドレス
 	 *
-	 * Returns: 文字コード( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * Returns: 文字コード(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern dxlib_d.DxDataType.DWORD strgetchrDx(const (dxlib_d.DxDataType.TCHAR)* Str, int Pos, int* CharNums = null);
 
 	/**
-	 * 文字列の指定の位置の文字コードを取得する、Pos は取得する位置( 全角文字も 1 扱い )、CharNums は文字数を代入する変数のアドレス、
+	 * 文字列の指定の位置の文字コードを取得する、Posは取得する位置(全角文字も1扱い)、CharNumsは文字数を代入する変数のアドレス、
 	 *
-	 * Returns: 文字コード( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * Returns: 文字コード(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern dxlib_d.DxDataType.DWORD strgetchr2Dx(const (dxlib_d.DxDataType.TCHAR)* Str, int Pos, int* CharNums = null);
 
 	/**
-	 * 文字列の指定の位置に文字コードを書き込む、Pos は書き込む位置、CharCode は文字コード
+	 * 文字列の指定の位置に文字コードを書き込む、Posは書き込む位置、CharCodeは文字コード
 	 *
-	 * Returns: 書き込んだ文字数( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * Returns: 書き込んだ文字数(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strputchrDx(dxlib_d.DxDataType.TCHAR* Str, int Pos, dxlib_d.DxDataType.DWORD CharCode);
 
 	/**
-	 * 文字列の指定の位置に文字コードを書き込む、Pos は書き込む位置( 全角文字も 1 扱い )、CharCode は文字コード
+	 * 文字列の指定の位置に文字コードを書き込む、Posは書き込む位置(全角文字も1扱い)、CharCodeは文字コード
 	 *
-	 * Returns: 書き込んだ文字数( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * Returns: 書き込んだ文字数(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strputchr2Dx(dxlib_d.DxDataType.TCHAR* Str, int Pos, dxlib_d.DxDataType.DWORD CharCode);
 
 	/**
-	 * 文字列の指定の位置のアドレスを取得する、Pos は取得する位置 ( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * 文字列の指定の位置のアドレスを取得する、Posは取得する位置(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern const (dxlib_d.DxDataType.TCHAR)* strposDx(const (dxlib_d.DxDataType.TCHAR)* Str, int Pos);
 
 	/**
-	 * 文字列の指定の位置のアドレスを取得する、Pos は取得する位置( 全角文字も 1 扱い ) ( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * 文字列の指定の位置のアドレスを取得する、Posは取得する位置(全角文字も1扱い)(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern const (dxlib_d.DxDataType.TCHAR)* strpos2Dx(const (dxlib_d.DxDataType.TCHAR)* Str, int Pos);
 
 	/**
-	 * strstr と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strstrと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern const (dxlib_d.DxDataType.TCHAR)* strstrDx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2);
 
 	/**
-	 * strstr の戻り値が文字列先頭からの文字数( 全角文字も 1 扱い ) になったもの( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strstrの戻り値が文字列先頭からの文字数(全角文字も1扱い)になったもの(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strstr2Dx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2);
 
 	/**
-	 * strrstr と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strrstrと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern const (dxlib_d.DxDataType.TCHAR)* strrstrDx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2);
 
 	/**
-	 * strrstr の戻り値が文字列先頭からの文字数( 全角文字も 1 扱い ) になったもの( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strrstrの戻り値が文字列先頭からの文字数(全角文字も1扱い)になったもの(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strrstr2Dx(const (dxlib_d.DxDataType.TCHAR)* Str1, const (dxlib_d.DxDataType.TCHAR)* Str2);
 
 	/**
-	 * strchr と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strchrと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern const (dxlib_d.DxDataType.TCHAR)* strchrDx(const (dxlib_d.DxDataType.TCHAR)* Str, dxlib_d.DxDataType.DWORD CharCode);
 
 	/**
-	 * strchr の戻り値が文字列先頭からの文字数( 全角文字も 1 扱い ) になったもの( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strchrの戻り値が文字列先頭からの文字数(全角文字も1扱い)になったもの(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strchr2Dx(const (dxlib_d.DxDataType.TCHAR)* Str, dxlib_d.DxDataType.DWORD CharCode);
 
 	/**
-	 * strrchr と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strrchrと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern const (dxlib_d.DxDataType.TCHAR)* strrchrDx(const (dxlib_d.DxDataType.TCHAR)* Str, dxlib_d.DxDataType.DWORD CharCode);
 
 	/**
-	 * strrchr の戻り値が文字列先頭からの文字数( 全角文字も 1 扱い ) になったもの( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * strrchrの戻り値が文字列先頭からの文字数(全角文字も1扱い)になったもの(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int strrchr2Dx(const (dxlib_d.DxDataType.TCHAR)* Str, dxlib_d.DxDataType.DWORD CharCode);
 
 	/**
-	 * strupr と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * struprと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern dxlib_d.DxDataType.TCHAR* struprDx(dxlib_d.DxDataType.TCHAR* Str);
 
 	/**
-	 * vsprintf と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * vsprintfと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int vsprintfDx(dxlib_d.DxDataType.TCHAR* Buffer, const (dxlib_d.DxDataType.TCHAR)* FormatString, core.stdc.stdarg.va_list Arg);
 
 	/**
-	 * vsnprintf と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * vsnprintfと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int vsnprintfDx(dxlib_d.DxDataType.TCHAR* Buffer, size_t BufferSize, const (dxlib_d.DxDataType.TCHAR)* FormatString, core.stdc.stdarg.va_list Arg);
 
 	/**
-	 * sprintf と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * sprintfと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int sprintfDx(dxlib_d.DxDataType.TCHAR* Buffer, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 	/**
-	 * snprintf と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * snprintfと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int snprintfDx(dxlib_d.DxDataType.TCHAR* Buffer, size_t BufferSize, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 	/**
-	 * itoa と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * itoaと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern dxlib_d.DxDataType.TCHAR* itoaDx(int Value, dxlib_d.DxDataType.TCHAR* Buffer, int Radix);
 
 	/**
-	 * itoa_s と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * itoa_sと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern dxlib_d.DxDataType.TCHAR* itoa_sDx(int Value, dxlib_d.DxDataType.TCHAR* Buffer, size_t BufferBytes, int Radix);
 
 	/**
-	 * atoi と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * atoiと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int atoiDx(const (dxlib_d.DxDataType.TCHAR)* Str);
 
 	/**
-	 * atof と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * atofと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern double atofDx(const (dxlib_d.DxDataType.TCHAR)* Str);
 
 	/**
-	 * vsscanf と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * vsscanfと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int vsscanfDx(const (dxlib_d.DxDataType.TCHAR)* String, const (dxlib_d.DxDataType.TCHAR)* FormatString, core.stdc.stdarg.va_list Arg);
 
 	/**
-	 * sscanf と同等の機能( マルチバイト文字列版では文字コード形式として SetUseCharCodeFormat で設定した形式が使用されます )
+	 * sscanfと同等の機能(マルチバイト文字列版では文字コード形式として SetUseCharCodeFormatで設定した形式が使用されます)
 	 */
 	extern int sscanfDx(const (dxlib_d.DxDataType.TCHAR)* String, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -7923,52 +7922,52 @@ extern (C++, DxLib) {
 		extern int ProcessNetMessage(int RunReleaseProcess = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * DNSサーバーを使ってホスト名からIPアドレスを取得する( IPv4版 )
+		 * DNSサーバーを使ってホスト名からIPアドレスを取得する(IPv4版)
 		 */
 		extern int GetHostIPbyName(const (dxlib_d.DxDataType.TCHAR)* HostName, .IPDATA* IPDataBuf, int IPDataBufLength = 1, int* IPDataGetNum = null);
 
 		/**
-		 * DNSサーバーを使ってホスト名からIPアドレスを取得する( IPv4版 )
+		 * DNSサーバーを使ってホスト名からIPアドレスを取得する(IPv4版)
 		 */
 		extern int GetHostIPbyNameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* HostName, size_t HostNameLength, .IPDATA* IPDataBuf, int IPDataBufLength = 1, int* IPDataGetNum = null);
 
 		/**
-		 * DNSサーバーを使ってホスト名からIPアドレスを取得する( IPv6版 )
+		 * DNSサーバーを使ってホスト名からIPアドレスを取得する(IPv6版)
 		 */
 		extern int GetHostIPbyName_IPv6(const (dxlib_d.DxDataType.TCHAR)* HostName, .IPDATA_IPv6* IPDataBuf, int IPDataBufLength = 1, int* IPDataGetNum = null);
 
 		/**
-		 * DNSサーバーを使ってホスト名からIPアドレスを取得する( IPv6版 )
+		 * DNSサーバーを使ってホスト名からIPアドレスを取得する(IPv6版)
 		 */
 		extern int GetHostIPbyName_IPv6WithStrLen(const (dxlib_d.DxDataType.TCHAR)* HostName, size_t HostNameLength, .IPDATA_IPv6* IPDataBuf, int IPDataBufLength = 1, int* IPDataGetNum = null);
 
 		/**
-		 * 他マシンに接続する( IPv4版 )
+		 * 他マシンに接続する(IPv4版)
 		 */
 		extern int ConnectNetWork(.IPDATA IPData, int Port = -1);
 
 		/**
-		 * 他マシンに接続する( IPv6版 )
+		 * 他マシンに接続する(IPv6版)
 		 */
 		extern int ConnectNetWork_IPv6(.IPDATA_IPv6 IPData, int Port = -1);
 
 		/**
-		 * 他マシンに接続する( IPv4版 )、非同期版
+		 * 他マシンに接続する(IPv4版)、非同期版
 		 */
 		extern int ConnectNetWork_ASync(.IPDATA IPData, int Port = -1);
 
 		/**
-		 * 他マシンに接続する( IPv6版 )、非同期版
+		 * 他マシンに接続する(IPv6版)、非同期版
 		 */
 		extern int ConnectNetWork_IPv6_ASync(.IPDATA_IPv6 IPData, int Port = -1);
 
 		/**
-		 * 接続を受けられる状態にする( IPv4版 )
+		 * 接続を受けられる状態にする(IPv4版)
 		 */
 		extern int PreparationListenNetWork(int Port = -1);
 
 		/**
-		 * 接続を受けられる状態にする( IPv6版 )
+		 * 接続を受けられる状態にする(IPv6版)
 		 */
 		extern int PreparationListenNetWork_IPv6(int Port = -1);
 
@@ -8008,12 +8007,12 @@ extern (C++, DxLib) {
 		extern int GetLostNetWork();
 
 		/**
-		 * 接続先のIPを得る( IPv4版 )
+		 * 接続先のIPを得る(IPv4版)
 		 */
 		extern int GetNetWorkIP(int NetHandle, .IPDATA* IpBuf);
 
 		/**
-		 * 接続先のIPを得る( IPv6版 )
+		 * 接続先のIPを得る(IPv6版)
 		 */
 		extern int GetNetWorkIP_IPv6(int NetHandle, .IPDATA_IPv6* IpBuf);
 
@@ -8043,12 +8042,12 @@ extern (C++, DxLib) {
 		extern int GetUseDXNetWorkProtocol();
 
 		/**
-		 * SetUseDXNetWorkProtocol の別名
+		 * SetUseDXNetWorkProtocolの別名
 		 */
 		extern int SetUseDXProtocol(int Flag);
 
 		/**
-		 * GetUseDXNetWorkProtocol の別名
+		 * GetUseDXNetWorkProtocolの別名
 		 */
 		extern int GetUseDXProtocol();
 
@@ -8101,12 +8100,12 @@ extern (C++, DxLib) {
 		extern int NetWorkSend(int NetHandle, const (void)* Buffer, int Length);
 
 		/**
-		 * UDPを使用した通信を行うソケットハンドルを作成する( RecvPort を -1 にすると送信専用のソケットハンドルになります )
+		 * UDPを使用した通信を行うソケットハンドルを作成する(RecvPortを-1にすると送信専用のソケットハンドルになります)
 		 */
 		extern int MakeUDPSocket(int RecvPort = -1);
 
 		/**
-		 * UDPを使用した通信を行うソケットハンドルを作成する( RecvPort を -1 にすると送信専用のソケットハンドルになります )( IPv6版 )
+		 * UDPを使用した通信を行うソケットハンドルを作成する(RecvPortを-1にすると送信専用のソケットハンドルになります)(IPv6版)
 		 */
 		extern int MakeUDPSocket_IPv6(int RecvPort = -1);
 
@@ -8116,28 +8115,28 @@ extern (C++, DxLib) {
 		extern int DeleteUDPSocket(int NetUDPHandle);
 
 		/**
-		 * UDPを使用した通信で指定のIPにデータを送信する、Length は最大65507、SendPort を -1 にすると MakeUDPSocket に RecvPort で渡したポートが使用されます
+		 * UDPを使用した通信で指定のIPにデータを送信する、Lengthは最大65507、SendPortを-1にするとMakeUDPSocketにRecvPortで渡したポートが使用されます
 		 *
 		 * Returns: 0以上;送信できたデータサイズ  -1:エラー  -2:送信データが大きすぎる  -3:送信準備ができていない
 		 */
 		extern int NetWorkSendUDP(int NetUDPHandle, .IPDATA SendIP, int SendPort, const (void)* Buffer, int Length);
 
 		/**
-		 * UDPを使用した通信で指定のIPにデータを送信する、Length は最大65507、SendPort を -1 にすると MakeUDPSocket に RecvPort で渡したポートが使用されます( IPv6版 )
+		 * UDPを使用した通信で指定のIPにデータを送信する、Lengthは最大65507、SendPortを-1にするとMakeUDPSocketにRecvPortで渡したポートが使用されます(IPv6版)
 		 *
 		 * Returns: 0以上;送信できたデータサイズ  -1:エラー  -2:送信データが大きすぎる  -3:送信準備ができていない
 		 */
 		extern int NetWorkSendUDP_IPv6(int NetUDPHandle, .IPDATA_IPv6 SendIP, int SendPort, const (void)* Buffer, int Length);
 
 		/**
-		 * UDPを使用した通信でデータを受信する、Peek に TRUE を渡すと受信に成功してもデータを受信キューから削除しません
+		 * UDPを使用した通信でデータを受信する、PeekにTRUEを渡すと受信に成功してもデータを受信キューから削除しません
 		 *
 		 * Returns: 0以上:受信したデータのサイズ  -1:エラー  -2:バッファのサイズが足りない  -3:受信データがない
 		 */
 		extern int NetWorkRecvUDP(int NetUDPHandle, .IPDATA* RecvIP, int* RecvPort, void* Buffer, int Length, int Peek);
 
 		/**
-		 * UDPを使用した通信でデータを受信する、Peek に TRUE を渡すと受信に成功してもデータを受信キューから削除しません( IPv6版 )
+		 * UDPを使用した通信でデータを受信する、PeekにTRUEを渡すと受信に成功してもデータを受信キューから削除しません(IPv6版)
 		 *
 		 * Returns: 0以上:受信したデータのサイズ  -1:エラー  -2:バッファのサイズが足りない  -3:受信データがない
 		 */
@@ -8161,49 +8160,49 @@ extern (C++, DxLib) {
 		//使用不可
 
 		/**
-		 * HTTP を使用してネットワーク上のファイルをダウンロードする
+		 * HTTPを使用してネットワーク上のファイルをダウンロードする
 		 */
 		@disable
 		extern int HTTP_FileDownload(const (char)* FileURL, const (char)* SavePath = null, void** SaveBufferP = null, int* FileSize = null, char** ParamList = null);
 
 		/**
-		 * HTTP を使用してネットワーク上のファイルのサイズを得る
+		 * HTTPを使用してネットワーク上のファイルのサイズを得る
 		 */
 		@disable
 		extern int HTTP_GetFileSize(const (char)* FileURL);
 
 		/**
-		 * HTTP を使用したネットワーク上のファイルをダウンロードする処理を開始する
+		 * HTTPを使用したネットワーク上のファイルをダウンロードする処理を開始する
 		 */
 		@disable
 		extern int HTTP_StartFileDownload(const (char)* FileURL, const (char)* SavePath, void** SaveBufferP = null, char** ParamList = null);
 
 		/**
-		 * HTTP を使用したネットワーク上のファイルのサイズを得る処理を開始する
+		 * HTTPを使用したネットワーク上のファイルのサイズを得る処理を開始する
 		 */
 		@disable
 		extern int HTTP_StartGetFileSize(const (char)* FileURL);
 
 		/**
-		 * HTTP の処理を終了し、ハンドルを解放する
+		 * HTTPの処理を終了し、ハンドルを解放する
 		 */
 		@disable
 		extern int HTTP_Close(int HttpHandle);
 
 		/**
-		 * 全てのハンドルに対して HTTP_Close を行う
+		 * 全てのハンドルに対して HTTP_Closeを行う
 		 */
 		@disable
 		extern int HTTP_CloseAll();
 
 		/**
-		 * HTTP 処理の現在の状態を得る( NET_RES_COMPLETE 等 )
+		 * HTTP 処理の現在の状態を得る(NET_RES_COMPLETE等)
 		 */
 		@disable
 		extern int HTTP_GetState(int HttpHandle);
 
 		/**
-		 * HTTP 処理でエラーが発生した場合、エラーの内容を得る( HTTP_ERR_NONE 等 )
+		 * HTTP 処理でエラーが発生した場合、エラーの内容を得る(HTTP_ERR_NONE等)
 		 */
 		@disable
 		extern int HTTP_GetError(int HttpHandle);
@@ -8223,7 +8222,7 @@ extern (C++, DxLib) {
 		extern int HTTP_GetDownloadedFileSize(int HttpHandle);
 
 		/**
-		 * fgets のネットワークハンドル版( -1:取得できず 0:取得できた )
+		 * fgetsのネットワークハンドル版(-1:取得できず 0:取得できた)
 		 */
 		@disable
 		extern int fgetsForNetHandle(int NetHandle, char* strbuffer);
@@ -8235,7 +8234,7 @@ extern (C++, DxLib) {
 		extern int URLAnalys(const (char)* URL, char* HostBuf = null, char* PathBuf = null, char* FileNameBuf = null, int* PortBuf = null);
 
 		/**
-		 * HTTP に渡せない記号が使われた文字列を渡せるような文字列に変換する
+		 * HTTPに渡せない記号が使われた文字列を渡せるような文字列に変換する
 		 *
 		 * Returns: -1:エラー  0以上:変換後の文字列のサイズ
 		 */
@@ -8243,7 +8242,7 @@ extern (C++, DxLib) {
 		extern int URLConvert(char* URL, int ParamConvert = dxlib_d.DxDataType.TRUE, int NonConvert = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * HTTP 用パラメータリストから1つのパラメータ文字列を作成する
+		 * HTTP用パラメータリストから1つのパラメータ文字列を作成する
 		 *
 		 * Returns: -1:エラー  0以上:パラメータの文字列の長さ
 		 */
@@ -8311,7 +8310,7 @@ extern (C++, DxLib) {
 		extern int GetUseIMEFlag();
 
 		/**
-		 * IMEで入力できる最大文字数を MakeKeyInput の設定に合わせるかどうかをセットする
+		 * IMEで入力できる最大文字数をMakeKeyInputの設定に合わせるかどうかをセットする
 		 *
 		 * Params:
 		 *      Flag = TRUE:あわせる  FALSE:あわせない(デフォルト)
@@ -8319,7 +8318,7 @@ extern (C++, DxLib) {
 		extern int SetInputStringMaxLengthIMESync(int Flag);
 
 		/**
-		 * IMEで一度に入力できる最大文字数を設定する( 0:制限なし  1以上:指定の文字数で制限 )
+		 * IMEで一度に入力できる最大文字数を設定する(0:制限なし  1以上:指定の文字数で制限)
 		 *
 		 * Params:
 		 *      Length = ?
@@ -8365,12 +8364,12 @@ extern (C++, DxLib) {
 		extern int DrawObtainsNString(int x, int y, int AddY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint StrColor, uint StrEdgeColor = 0, int FontHandle = -1, uint SelectBackColor = 0xFFFFFFFF, uint SelectStrColor = 0, uint SelectStrEdgeColor = 0xFFFFFFFF, int SelectStart = -1, int SelectEnd = -1);
 
 		/**
-		 * 描画可能領域に収まるように改行しながら文字列を描画( クリップが文字単位 )
+		 * 描画可能領域に収まるように改行しながら文字列を描画(クリップが文字単位)
 		 */
 		extern int DrawObtainsString_CharClip(int x, int y, int AddY, const (dxlib_d.DxDataType.TCHAR)* String, uint StrColor, uint StrEdgeColor = 0, int FontHandle = -1, uint SelectBackColor = 0xFFFFFFFF, uint SelectStrColor = 0, uint SelectStrEdgeColor = 0xFFFFFFFF, int SelectStart = -1, int SelectEnd = -1);
 
 		/**
-		 * 描画可能領域に収まるように改行しながら文字列を描画( クリップが文字単位 )
+		 * 描画可能領域に収まるように改行しながら文字列を描画(クリップが文字単位)
 		 */
 		extern int DrawObtainsNString_CharClip(int x, int y, int AddY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint StrColor, uint StrEdgeColor = 0, int FontHandle = -1, uint SelectBackColor = 0xFFFFFFFF, uint SelectStrColor = 0, uint SelectStrEdgeColor = 0xFFFFFFFF, int SelectStart = -1, int SelectEnd = -1);
 
@@ -8380,7 +8379,7 @@ extern (C++, DxLib) {
 		extern int GetObtainsStringCharPosition(int x, int y, int AddY, const (dxlib_d.DxDataType.TCHAR)* String, int StrLen, int* PosX, int* PosY, int FontHandle = -1);
 
 		/**
-		 * 描画可能領域に収まるように改行しながら文字列を描画した場合の文字列の末端の座標を取得する( クリップが文字単位 )
+		 * 描画可能領域に収まるように改行しながら文字列を描画した場合の文字列の末端の座標を取得する(クリップが文字単位)
 		 */
 		extern int GetObtainsStringCharPosition_CharClip(int x, int y, int AddY, const (dxlib_d.DxDataType.TCHAR)* String, int StrLen, int* PosX, int* PosY, int FontHandle = -1);
 	}
@@ -8423,19 +8422,19 @@ extern (C++, DxLib) {
 		extern const (.IMEINPUTDATA)* GetIMEInputData();
 
 		/**
-		 * ( SetKeyInputStringColor2 の旧関数 )InputString関数使用時の文字の各色を変更する
+		 * (SetKeyInputStringColor2の旧関数)InputString関数使用時の文字の各色を変更する
 		 */
 		extern int SetKeyInputStringColor(dxlib_d.DxDataType.ULONGLONG NmlStr, dxlib_d.DxDataType.ULONGLONG NmlCur, dxlib_d.DxDataType.ULONGLONG IMEStrBack, dxlib_d.DxDataType.ULONGLONG IMECur, dxlib_d.DxDataType.ULONGLONG IMELine, dxlib_d.DxDataType.ULONGLONG IMESelectStr, dxlib_d.DxDataType.ULONGLONG IMEModeStr, dxlib_d.DxDataType.ULONGLONG NmlStrE = 0, dxlib_d.DxDataType.ULONGLONG IMESelectStrE = 0, dxlib_d.DxDataType.ULONGLONG IMEModeStrE = 0, dxlib_d.DxDataType.ULONGLONG IMESelectWinE = 0xFFFFFFFFFFFFFFFFUL, dxlib_d.DxDataType.ULONGLONG IMESelectWinF = 0xFFFFFFFFFFFFFFFFUL, dxlib_d.DxDataType.ULONGLONG SelectStrBackColor = 0xFFFFFFFFFFFFFFFFUL, dxlib_d.DxDataType.ULONGLONG SelectStrColor = 0xFFFFFFFFFFFFFFFFUL, dxlib_d.DxDataType.ULONGLONG SelectStrEdgeColor = 0xFFFFFFFFFFFFFFFFUL, dxlib_d.DxDataType.ULONGLONG IMEStr = 0xFFFFFFFFFFFFFFFFUL, dxlib_d.DxDataType.ULONGLONG IMEStrE = 0xFFFFFFFFFFFFFFFFUL);
 
 		/**
 		 * InputString関数使用時の文字の各色を変更する
 		 */
-		extern int SetKeyInputStringColor2(int TargetColor /* DX_KEYINPSTRCOLOR_NORMAL_STR 等 */, uint Color);
+		extern int SetKeyInputStringColor2(int TargetColor /* DX_KEYINPSTRCOLOR_NORMAL_STR等 */, uint Color);
 
 		/**
-		 * SetKeyInputStringColor2 で設定した色をデフォルトに戻す
+		 * SetKeyInputStringColor2で設定した色をデフォルトに戻す
 		 */
-		extern int ResetKeyInputStringColor2(int TargetColor /* DX_KEYINPSTRCOLOR_NORMAL_STR 等 */);
+		extern int ResetKeyInputStringColor2(int TargetColor /* DX_KEYINPSTRCOLOR_NORMAL_STR等 */);
 
 		/**
 		 * キー入力文字列描画関連で使用するフォントのハンドルを変更する(-1でデフォルトのフォントハンドル)
@@ -8445,7 +8444,7 @@ extern (C++, DxLib) {
 		/**
 		 * キー入力文字列処理の入力文字数が限界に達している状態で、文字列の末端部分で入力が行われた場合の処理モードを変更する
 		 */
-		extern int SetKeyInputStringEndCharaMode(int EndCharaMode /* DX_KEYINPSTR_ENDCHARAMODE_OVERWRITE 等 */);
+		extern int SetKeyInputStringEndCharaMode(int EndCharaMode /* DX_KEYINPSTR_ENDCHARAMODE_OVERWRITE等 */);
 
 		/**
 		 * 入力モード文字列を描画する
@@ -8468,7 +8467,7 @@ extern (C++, DxLib) {
 		extern int DeleteKeyInput(int InputHandle);
 
 		/**
-		 * 指定のキー入力ハンドルをアクティブにする( -1 を指定するとアクティブなキー入力ハンドルが無い状態になります )
+		 * 指定のキー入力ハンドルをアクティブにする(-1を指定するとアクティブなキー入力ハンドルが無い状態になります)
 		 */
 		extern int SetActiveKeyInput(int InputHandle);
 
@@ -8503,7 +8502,7 @@ extern (C++, DxLib) {
 		extern int SetKeyInputDrawArea(int x1, int y1, int x2, int y2, int InputHandle);
 
 		/**
-		 * キー入力ハンドルの指定の領域を選択状態にする( SelectStart と SelectEnd に -1 を指定すると選択状態が解除されます )
+		 * キー入力ハンドルの指定の領域を選択状態にする(SelectStartとSelectEndに-1を指定すると選択状態が解除されます)
 		 */
 		extern int SetKeyInputSelectArea(int SelectStart, int SelectEnd, int InputHandle);
 
@@ -8638,9 +8637,9 @@ extern (C++, DxLib) {
 	extern int FileRead_eof(int FileHandle);
 
 	/**
-	 * ファイルの文字コード形式を設定する( テキストファイル用 )
+	 * ファイルの文字コード形式を設定する(テキストファイル用)
 	 */
-	extern int FileRead_set_format(int FileHandle, int CharCodeFormat /* DX_CHARCODEFORMAT_SHIFTJIS 等 */);
+	extern int FileRead_set_format(int FileHandle, int CharCodeFormat /* DX_CHARCODEFORMAT_SHIFTJIS等 */);
 
 	/**
 	 * ファイルから文字列を読み出す
@@ -8715,31 +8714,31 @@ extern (C++, DxLib) {
 	extern int FileRead_findClose(dxlib_d.DxDataType.DWORD_PTR FindHandle);
 
 	/**
-	 * 指定のファイルの内容を全てメモリに読み込み、その情報のアクセスに必要なハンドルを返す、使い終わったらハンドルは FileRead_fullyLoad_delete で削除する必要があります
+	 * 指定のファイルの内容を全てメモリに読み込み、その情報のアクセスに必要なハンドルを返す、使い終わったらハンドルはFileRead_fullyLoad_deleteで削除する必要があります
 	 *
 	 * Returns: -1:エラー  -1以外:ハンドル
 	 */
 	extern int FileRead_fullyLoad(const (dxlib_d.DxDataType.TCHAR)* FilePath);
 
 	/**
-	 * 指定のファイルの内容を全てメモリに読み込み、その情報のアクセスに必要なハンドルを返す、使い終わったらハンドルは FileRead_fullyLoad_delete で削除する必要があります
+	 * 指定のファイルの内容を全てメモリに読み込み、その情報のアクセスに必要なハンドルを返す、使い終わったらハンドルはFileRead_fullyLoad_deleteで削除する必要があります
 	 *
 	 * Returns: -1:エラー  -1以外:ハンドル
 	 */
 	extern int FileRead_fullyLoad_WithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength);
 
 	/**
-	 * FileRead_fullyLoad で読み込んだファイルのハンドルを削除する
+	 * FileRead_fullyLoadで読み込んだファイルのハンドルを削除する
 	 */
 	extern int FileRead_fullyLoad_delete(int FLoadHandle);
 
 	/**
-	 * FileRead_fullyLoad で読み込んだファイルの内容を格納したメモリアドレスを取得する
+	 * FileRead_fullyLoadで読み込んだファイルの内容を格納したメモリアドレスを取得する
 	 */
 	extern const (void)* FileRead_fullyLoad_getImage(int FLoadHandle);
 
 	/**
-	 * FileRead_fullyLoad で読み込んだファイルのサイズを取得する
+	 * FileRead_fullyLoadで読み込んだファイルのサイズを取得する
 	 */
 	extern dxlib_d.DxDataType.LONGLONG FileRead_fullyLoad_getSize(int FLoadHandle);
 
@@ -8758,19 +8757,19 @@ extern (C++, DxLib) {
 	extern int ChangeStreamFunction(const (.STREAMDATASHREDTYPE2)* StreamThread);
 
 	/**
-	 * DXライブラリでストリームデータアクセスに使用する関数を変更する( wchar_t 使用版 )
+	 * DXライブラリでストリームデータアクセスに使用する関数を変更する(wchar_t使用版)
 	 */
 	extern int ChangeStreamFunctionW(const (.STREAMDATASHREDTYPE2W)* StreamThreadW);
 
 	// 補助関係関数
 
 	/**
-	 * フルパスではないパス文字列をフルパスに変換する( CurrentDir はフルパスである必要がある(語尾に『\』があっても無くても良い) )( CurrentDir が null の場合は現在のカレントディレクトリを使用する )
+	 * フルパスではないパス文字列をフルパスに変換する(CurrentDirはフルパスである必要がある(語尾に『\』があっても無くても良い))(CurrentDirがnullの場合は現在のカレントディレクトリを使用する)
 	 */
 	extern int ConvertFullPath(const (dxlib_d.DxDataType.TCHAR)* Src, dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* CurrentDir = null);
 
 	/**
-	 * フルパスではないパス文字列をフルパスに変換する( CurrentDir はフルパスである必要がある(語尾に『\』があっても無くても良い) )( CurrentDir が null の場合は現在のカレントディレクトリを使用する )
+	 * フルパスではないパス文字列をフルパスに変換する(CurrentDirはフルパスである必要がある(語尾に『\』があっても無くても良い))(CurrentDirがnullの場合は現在のカレントディレクトリを使用する)
 	 */
 	extern int ConvertFullPathWithStrLen(const (dxlib_d.DxDataType.TCHAR)* Src, size_t SrcLength, dxlib_d.DxDataType.TCHAR* Dest, const (dxlib_d.DxDataType.TCHAR)* CurrentDir = null, size_t CurrentDirLength = 0);
 
@@ -8788,7 +8787,7 @@ extern (C++, DxLib) {
 		/**
 		 * どれか1つでもキーが押されているかどうかを取得
 		 *
-		 * Returns: 押されていたら 0 以外
+		 * Returns: 押されていたら0以外
 		 */
 		extern int CheckHitKeyAll(int CheckType = DX_CHECKINPUT_ALL);
 
@@ -8821,24 +8820,24 @@ extern (C++, DxLib) {
 		extern int GetJoypadAnalogInput(int* XBuf, int* YBuf, int InputType);
 
 		/**
-		 * ( 使用非推奨 )ジョイパッドのアナログ的なスティック入力情報を得る(右スティック用)
+		 * (使用非推奨)ジョイパッドのアナログ的なスティック入力情報を得る(右スティック用)
 		 */
 		extern int GetJoypadAnalogInputRight(int* XBuf, int* YBuf, int InputType);
 
 		/**
-		 * DirectInput から得られるジョイパッドの生のデータを取得する( DX_INPUT_KEY や DX_INPUT_KEY_PAD1 など、キーボードが絡むタイプを InputType に渡すとエラーとなり -1 を返す )
+		 * DirectInput から得られるジョイパッドの生のデータを取得する(DX_INPUT_KEYやDX_INPUT_KEY_PAD1など、キーボードが絡むタイプをInputTypeに渡すとエラーとなり -1を返す)
 		 */
 		extern int GetJoypadDirectInputState(int InputType, .DINPUT_JOYSTATE* DInputState);
 
 		/**
-		 * 指定の入力デバイスが XInput に対応しているかどうかを取得する( DX_INPUT_KEY や DX_INPUT_KEY_PAD1 など、キーボードが絡むタイプを InputType に渡すとエラーとなり -1 を返す )
+		 * 指定の入力デバイスがXInputに対応しているかどうかを取得する(DX_INPUT_KEYやDX_INPUT_KEY_PAD1など、キーボードが絡むタイプをInputTypeに渡すとエラーとなり -1を返す)
 		 *
 		 * Returns: TRUE:XInput対応の入力デバイス  FALSE:XInput非対応の入力デバイス   -1:エラー
 		 */
 		extern int CheckJoypadXInput(int InputType);
 
 		/**
-		 * XInput から得られる入力デバイス( Xbox360コントローラ等 )の生のデータを取得する( XInput非対応のパッドの場合はエラーとなり -1 を返す、DX_INPUT_KEY や DX_INPUT_KEY_PAD1 など、キーボードが絡むタイプを InputType に渡すとエラーとなり -1 を返す )
+		 * XInput から得られる入力デバイス(Xbox360コントローラ等)の生のデータを取得する(XInput非対応のパッドの場合はエラーとなり -1を返す、DX_INPUT_KEYやDX_INPUT_KEY_PAD1など、キーボードが絡むタイプをInputTypeに渡すとエラーとなり -1を返す)
 		 */
 		extern int GetJoypadXInputState(int InputType, .XINPUT_STATE* XInputState);
 
@@ -8846,9 +8845,9 @@ extern (C++, DxLib) {
 		 * ジョイパッドの入力に対応したキーボードの入力を設定する
 		 *
 		 * Params:
-		 *      InputType = 設定を変更するパッドの識別子( DX_INPUT_PAD1等 )
-		 *      PadInput = 設定を変更するパッドボタンの識別子( PAD_INPUT_1 等 )
-		 *      KeyInput1 = PadInput を押下したことにするキーコード( KEY_INPUT_A など )その1
+		 *      InputType = 設定を変更するパッドの識別子(DX_INPUT_PAD1等)
+		 *      PadInput = 設定を変更するパッドボタンの識別子(PAD_INPUT_1等)
+		 *      KeyInput1 = PadInputを押下したことにするキーコード(KEY_INPUT_Aなど)その1
 		 *      KeyInput2 = その2、-1で設定なし
 		 *      KeyInput3 = その3、-1で設定なし
 		 *      KeyInput4 = その4、-1で設定なし
@@ -8856,7 +8855,7 @@ extern (C++, DxLib) {
 		extern int SetJoypadInputToKeyInput(int InputType, int PadInput, int KeyInput1, int KeyInput2 = -1, int KeyInput3 = -1, int KeyInput4 = -1);
 
 		/**
-		 * ジョイパッドの無効ゾーンの設定を行う( InputType:設定を変更するパッドの識別子( DX_INPUT_PAD1等 )   Zone:新しい無効ゾーン( 0.0 ~ 1.0 )、デフォルト値は 0.35 )
+		 * ジョイパッドの無効ゾーンの設定を行う(InputType:設定を変更するパッドの識別子(DX_INPUT_PAD1等)   Zone:新しい無効ゾーン(0.0~1.0)、デフォルト値は0.35)
 		 *
 		 * Params:
 		 *      InputType = ?
@@ -8868,9 +8867,9 @@ extern (C++, DxLib) {
 		 * ジョイパッドの無効ゾーンの設定を取得する
 		 *
 		 * Params:
-		 *      InputType = 設定を変更するパッドの識別子( DX_INPUT_PAD1等 )
+		 *      InputType = 設定を変更するパッドの識別子(DX_INPUT_PAD1等)
 		 *
-		 * Returns: 無効ゾーン( 0.0 ~ 1.0 )
+		 * Returns: 無効ゾーン(0.0~1.0)
 		 */
 		extern double GetJoypadDeadZone(int InputType);
 
@@ -8887,12 +8886,12 @@ extern (C++, DxLib) {
 		/**
 		 * ジョイパッドのPOV入力の状態を得る
 		 *
-		 * Returns: 指定のPOVデータの角度、単位は角度の100倍( 90度なら 9000 ) 中心位置にある場合は -1 が返る
+		 * Returns: 指定のPOVデータの角度、単位は角度の100倍(90度なら9000) 中心位置にある場合は-1が返る
 		 */
 		extern int GetJoypadPOVState(int InputType, int POVNumber);
 
 		/**
-		 * ジョイパッドの再セットアップを行う( 新たに接続されたジョイパッドがあったら検出される )
+		 * ジョイパッドの再セットアップを行う(新たに接続されたジョイパッドがあったら検出される)
 		 */
 		extern int ReSetupJoypad();
 
@@ -8917,7 +8916,7 @@ extern (C++, DxLib) {
 		extern int MakeGraph(int SizeX, int SizeY, int NotUse3DFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * SetDrawScreen で描画対象にできるグラフィックハンドルを作成する
+		 * SetDrawScreenで描画対象にできるグラフィックハンドルを作成する
 		 */
 		extern int MakeScreen(int SizeX, int SizeY, int UseAlphaChannel = dxlib_d.DxDataType.FALSE);
 
@@ -8927,7 +8926,7 @@ extern (C++, DxLib) {
 		extern int DerivationGraph(int SrcX, int SrcY, int Width, int Height, int SrcGraphHandle);
 
 		/**
-		 * 指定のグラフィックハンドルの指定部分だけを抜き出して新たなグラフィックハンドルを作成する( float版 )
+		 * 指定のグラフィックハンドルの指定部分だけを抜き出して新たなグラフィックハンドルを作成する(float版)
 		 */
 		extern int DerivationGraphF(float SrcX, float SrcY, float Width, float Height, int SrcGraphHandle);
 
@@ -8937,7 +8936,7 @@ extern (C++, DxLib) {
 		extern int DeleteGraph(int GrHandle, int LogOutFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 指定のグラフィックハンドルと、同じグラフィックハンドルから派生しているグラフィックハンドル( DerivationGraph で派生したハンドル、LoadDivGraph 読み込んで作成された複数のハンドル )を一度に削除する
+		 * 指定のグラフィックハンドルと、同じグラフィックハンドルから派生しているグラフィックハンドル(DerivationGraphで派生したハンドル、LoadDivGraph 読み込んで作成された複数のハンドル)を一度に削除する
 		 */
 		extern int DeleteSharingGraph(int GrHandle);
 
@@ -8957,7 +8956,7 @@ extern (C++, DxLib) {
 		extern int FillRectGraph(int GrHandle, int x, int y, int Width, int Height, int Red, int Green, int Blue, int Alpha = 255);
 
 		/**
-		 * 指定のグラフィックハンドルが削除された際に 1 にする変数のアドレスを設定する
+		 * 指定のグラフィックハンドルが削除された際に1にする変数のアドレスを設定する
 		 */
 		extern int SetGraphLostFlag(int GrHandle, int* LostFlag);
 
@@ -8999,17 +8998,17 @@ extern (C++, DxLib) {
 		extern int ShadowMap_DrawEnd();
 
 		/**
-		 * 描画で使用するシャドウマップを指定する、有効なスロットは0~2、SmHandle に -1 を渡すと指定のスロットのシャドウマップを解除
+		 * 描画で使用するシャドウマップを指定する、有効なスロットは0~2、SmHandleに-1を渡すと指定のスロットのシャドウマップを解除
 		 */
 		extern int SetUseShadowMap(int SmSlotIndex, int SmHandle);
 
 		/**
-		 * シャドウマップに描画する際の範囲を設定する( この関数で描画範囲を設定しない場合は視錐台を拡大した範囲が描画範囲となる )
+		 * シャドウマップに描画する際の範囲を設定する(この関数で描画範囲を設定しない場合は視錐台を拡大した範囲が描画範囲となる)
 		 */
 		extern int SetShadowMapDrawArea(int SmHandle, .VECTOR MinPosition, .VECTOR MaxPosition);
 
 		/**
-		 * SetShadowMapDrawArea の設定を解除する
+		 * SetShadowMapDrawAreaの設定を解除する
 		 */
 		extern int ResetShadowMapDrawArea(int SmHandle);
 
@@ -9041,22 +9040,22 @@ extern (C++, DxLib) {
 		extern int BltBmpToDivGraph(const (.COLORDATA)* BmpColorData, dxlib_d.DxDataType.HBITMAP RgbBmp, dxlib_d.DxDataType.HBITMAP AlphaBmp, int AllNum, int XNum, int YNum, int Width, int Height, const (int)* GrHandle, int ReverseFlag);
 
 		/**
-		 * BMP か BASEIMAGE をグラフィックハンドルに転送
+		 * BMP か BASEIMAGEをグラフィックハンドルに転送
 		 */
 		extern int BltBmpOrGraphImageToGraph(const (.COLORDATA)* BmpColorData, dxlib_d.DxDataType.HBITMAP RgbBmp, dxlib_d.DxDataType.HBITMAP AlphaBmp, int BmpFlag, const (.BASEIMAGE)* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int CopyPointX, int CopyPointY, int GrHandle);
 
 		/**
-		 * BMP か BASEIMAGE の指定の領域をグラフィックハンドルに転送
+		 * BMP か BASEIMAGEの指定の領域をグラフィックハンドルに転送
 		 */
 		extern int BltBmpOrGraphImageToGraph2(const (.COLORDATA)* BmpColorData, dxlib_d.DxDataType.HBITMAP RgbBmp, dxlib_d.DxDataType.HBITMAP AlphaBmp, int BmpFlag, const (.BASEIMAGE)* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, const (dxlib_d.DxDataType.RECT)* SrcRect, int DestX, int DestY, int GrHandle);
 
 		/**
-		 * BMP か BASEIMAGE を分割作成したグラフィックハンドルたちに転送
+		 * BMP か BASEIMAGEを分割作成したグラフィックハンドルたちに転送
 		 */
 		extern int BltBmpOrGraphImageToDivGraph(const (.COLORDATA)* BmpColorData, dxlib_d.DxDataType.HBITMAP RgbBmp, dxlib_d.DxDataType.HBITMAP AlphaBmp, int BmpFlag, const (.BASEIMAGE)* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int AllNum, int XNum, int YNum, int Width, int Height, const (int)* GrHandle, int ReverseFlag);
 
 		/**
-		 * BMP か BASEIMAGE を分割作成したグラフィックハンドルたちに転送( float型 )
+		 * BMP か BASEIMAGEを分割作成したグラフィックハンドルたちに転送(float型)
 		 */
 		extern int BltBmpOrGraphImageToDivGraphF(const (.COLORDATA)* BmpColorData, dxlib_d.DxDataType.HBITMAP RgbBmp, dxlib_d.DxDataType.HBITMAP AlphaBmp, int BmpFlag, const (.BASEIMAGE)* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int AllNum, int XNum, int YNum, float Width, float Height, const (int)* GrHandle, int ReverseFlag);
 
@@ -9178,7 +9177,7 @@ extern (C++, DxLib) {
 		extern int CreateDivGraphFromMem(const (void)* RGBFileImage, int RGBFileImageSize, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (void)* AlphaFileImage = null, int AlphaFileImageSize = 0);
 
 		/**
-		 * メモリ上の画像イメージから分割グラフィックハンドルを作成する( float版 )
+		 * メモリ上の画像イメージから分割グラフィックハンドルを作成する(float版)
 		 */
 		extern int CreateDivGraphFFromMem(const (void)* RGBFileImage, int RGBFileImageSize, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (void)* AlphaFileImage = null, int AlphaFileImageSize = 0);
 
@@ -9188,7 +9187,7 @@ extern (C++, DxLib) {
 		extern int ReCreateDivGraphFromMem(const (void)* RGBFileImage, int RGBFileImageSize, int AllNum, int XNum, int YNum, int SizeX, int SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (void)* AlphaFileImage = null, int AlphaFileImageSize = 0);
 
 		/**
-		 * メモリ上の画像イメージから既存の分割グラフィックハンドルにデータを転送する( float版 )
+		 * メモリ上の画像イメージから既存の分割グラフィックハンドルにデータを転送する(float版)
 		 */
 		extern int ReCreateDivGraphFFromMem(const (void)* RGBFileImage, int RGBFileImageSize, int AllNum, int XNum, int YNum, float SizeX, float SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (void)* AlphaFileImage = null, int AlphaFileImageSize = 0);
 
@@ -9208,7 +9207,7 @@ extern (C++, DxLib) {
 		extern int CreateDivGraphFromBmp(const (dxlib_d.DxDataType.BITMAPINFO)* RGBBmpInfo, const (void)* RGBBmpImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.BITMAPINFO)* AlphaBmpInfo = null, const (void)* AlphaBmpImage = null);
 
 		/**
-		 * ビットマップデータから分割グラフィックハンドルを作成する( float版 )
+		 * ビットマップデータから分割グラフィックハンドルを作成する(float版)
 		 */
 		extern int CreateDivGraphFFromBmp(const (dxlib_d.DxDataType.BITMAPINFO)* RGBBmpInfo, const (void)* RGBBmpImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.BITMAPINFO)* AlphaBmpInfo = null, const (void)* AlphaBmpImage = null);
 
@@ -9218,7 +9217,7 @@ extern (C++, DxLib) {
 		extern int ReCreateDivGraphFromBmp(const (dxlib_d.DxDataType.BITMAPINFO)* RGBBmpInfo, const (void)* RGBBmpImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.BITMAPINFO)* AlphaBmpInfo = null, const (void)* AlphaBmpImage = null);
 
 		/**
-		 * ビットマップデータから既存の分割グラフィックハンドルにデータを転送する( float版 )
+		 * ビットマップデータから既存の分割グラフィックハンドルにデータを転送する(float版)
 		 */
 		extern int ReCreateDivGraphFFromBmp(const (dxlib_d.DxDataType.BITMAPINFO)* RGBBmpInfo, const (void)* RGBBmpImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.BITMAPINFO)* AlphaBmpInfo = null, const (void)* AlphaBmpImage = null);
 
@@ -9253,7 +9252,7 @@ extern (C++, DxLib) {
 		extern int CreateDivGraphFromGraphImage(.BASEIMAGE* RgbBaseImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 基本イメージデータから分割グラフィックハンドルを作成する( float版 )
+		 * 基本イメージデータから分割グラフィックハンドルを作成する(float版)
 		 */
 		extern int CreateDivGraphFFromGraphImage(.BASEIMAGE* RgbBaseImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
@@ -9263,7 +9262,7 @@ extern (C++, DxLib) {
 		extern int CreateDivGraphFromGraphImage(.BASEIMAGE* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 基本イメージデータから分割グラフィックハンドルを作成する( float版 )
+		 * 基本イメージデータから分割グラフィックハンドルを作成する(float版)
 		 */
 		extern int CreateDivGraphFFromGraphImage(.BASEIMAGE* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
@@ -9273,7 +9272,7 @@ extern (C++, DxLib) {
 		extern int ReCreateDivGraphFromGraphImage(.BASEIMAGE* RgbBaseImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 基本イメージデータから既存の分割グラフィックハンドルにデータを転送する( float版 )
+		 * 基本イメージデータから既存の分割グラフィックハンドルにデータを転送する(float版)
 		 */
 		extern int ReCreateDivGraphFFromGraphImage(.BASEIMAGE* RgbBaseImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
@@ -9283,7 +9282,7 @@ extern (C++, DxLib) {
 		extern int ReCreateDivGraphFromGraphImage(.BASEIMAGE* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 基本イメージデータから既存の分割グラフィックハンドルにデータを転送する( float版 )
+		 * 基本イメージデータから既存の分割グラフィックハンドルにデータを転送する(float版)
 		 */
 		extern int ReCreateDivGraphFFromGraphImage(.BASEIMAGE* RgbBaseImage, const (.BASEIMAGE)* AlphaBaseImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, const (int)* HandleArray, int TextureFlag = dxlib_d.DxDataType.TRUE, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
@@ -9298,7 +9297,7 @@ extern (C++, DxLib) {
 		extern int CreateDivGraph(int Width, int Height, int Pitch, const (void)* RGBImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray, const (void)* AlphaImage = null);
 
 		/**
-		 * メモリ上のビットマップイメージから分割グラフィックハンドルを作成する( float版 )
+		 * メモリ上のビットマップイメージから分割グラフィックハンドルを作成する(float版)
 		 */
 		extern int CreateDivGraphF(int Width, int Height, int Pitch, const (void)* RGBImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray, const (void)* AlphaImage = null);
 
@@ -9346,7 +9345,7 @@ extern (C++, DxLib) {
 			extern int CreateDivGraphFromSoftImage(int SIHandle, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray);
 
 			/**
-			 * ソフトウエアで扱うイメージから分割グラフィックハンドルを作成する( float版 )
+			 * ソフトウエアで扱うイメージから分割グラフィックハンドルを作成する(float版)
 			 */
 			extern int CreateDivGraphFFromSoftImage(int SIHandle, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray);
 
@@ -9356,7 +9355,7 @@ extern (C++, DxLib) {
 			extern int ReCreateDivGraphFromSoftImage(int SIHandle, int AllNum, int XNum, int YNum, int SizeX, int SizeY, const (int)* HandleArray);
 
 			/**
-			 * ソフトウエアで扱うイメージから既存の分割グラフィックハンドルにデータを転送する( float版 )
+			 * ソフトウエアで扱うイメージから既存の分割グラフィックハンドルにデータを転送する(float版)
 			 */
 			extern int ReCreateDivGraphFFromSoftImage(int SIHandle, int AllNum, int XNum, int YNum, float SizeX, float SizeY, const (int)* HandleArray);
 		}
@@ -9387,7 +9386,7 @@ extern (C++, DxLib) {
 		extern int CreateDivGraphFromBaseImage(.BASEIMAGE* BaseImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, int* HandleArray);
 
 		/**
-		 * 基本イメージデータから分割グラフィックハンドルを作成する( float版 )
+		 * 基本イメージデータから分割グラフィックハンドルを作成する(float版)
 		 */
 		extern int CreateDivGraphFFromBaseImage(.BASEIMAGE* BaseImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, int* HandleArray);
 
@@ -9397,7 +9396,7 @@ extern (C++, DxLib) {
 		extern int ReCreateDivGraphFromBaseImage(.BASEIMAGE* BaseImage, int AllNum, int XNum, int YNum, int SizeX, int SizeY, const (int)* HandleArray);
 
 		/**
-		 * 基本イメージデータから既存の分割グラフィックハンドルにデータを転送する( float版 )
+		 * 基本イメージデータから既存の分割グラフィックハンドルにデータを転送する(float版)
 		 */
 		extern int ReCreateDivGraphFFromBaseImage(.BASEIMAGE* BaseImage, int AllNum, int XNum, int YNum, float SizeX, float SizeY, const (int)* HandleArray);
 
@@ -9422,54 +9421,54 @@ extern (C++, DxLib) {
 		extern int ReloadDivGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int AllNum, int XNum, int YNum, int XSize, int YSize, const (int)* HandleArray, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像ファイルからグラフィックハンドルたちへ画像データを分割転送する( float版 )
+		 * 画像ファイルからグラフィックハンドルたちへ画像データを分割転送する(float版)
 		 */
 		extern int ReloadDivGraphF(const (dxlib_d.DxDataType.TCHAR)* FileName, int AllNum, int XNum, int YNum, float XSize, float YSize, const (int)* HandleArray, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像ファイルからグラフィックハンドルたちへ画像データを分割転送する( float版 )
+		 * 画像ファイルからグラフィックハンドルたちへ画像データを分割転送する(float版)
 		 */
 		extern int ReloadDivGraphFWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int AllNum, int XNum, int YNum, float XSize, float YSize, const (int)* HandleArray, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * ReloadGraph の画像反転処理追加版
+		 * ReloadGraphの画像反転処理追加版
 		 */
 		extern int ReloadReverseGraph(const (dxlib_d.DxDataType.TCHAR)* FileName, int GrHandle);
 
 		/**
-		 * ReloadGraph の画像反転処理追加版
+		 * ReloadGraphの画像反転処理追加版
 		 */
 		extern int ReloadReverseGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int GrHandle);
 
 		/**
-		 * ReloadDivGraph の画像反転処理追加版
+		 * ReloadDivGraphの画像反転処理追加版
 		 */
 		extern int ReloadReverseDivGraph(const (dxlib_d.DxDataType.TCHAR)* FileName, int AllNum, int XNum, int YNum, int XSize, int YSize, const (int)* HandleArray);
 
 		/**
-		 * ReloadDivGraph の画像反転処理追加版
+		 * ReloadDivGraphの画像反転処理追加版
 		 */
 		extern int ReloadReverseDivGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int AllNum, int XNum, int YNum, int XSize, int YSize, const (int)* HandleArray);
 
 		/**
-		 * ReloadDivGraph の画像反転処理追加版( float版 )
+		 * ReloadDivGraphの画像反転処理追加版(float版)
 		 */
 		extern int ReloadReverseDivGraphF(const (dxlib_d.DxDataType.TCHAR)* FileName, int AllNum, int XNum, int YNum, float XSize, float YSize, const (int)* HandleArray);
 
 		/**
-		 * ReloadDivGraph の画像反転処理追加版( float版 )
+		 * ReloadDivGraphの画像反転処理追加版(float版)
 		 */
 		extern int ReloadReverseDivGraphFWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int AllNum, int XNum, int YNum, float XSize, float YSize, const (int)* HandleArray);
 
 		// グラフィックハンドル作成時設定係関数
 
 		/**
-		 * SetCreateGraphColorBitDepth の旧名称
+		 * SetCreateGraphColorBitDepthの旧名称
 		 */
 		extern int SetGraphColorBitDepth(int ColorBitDepth);
 
 		/**
-		 * GetCreateGraphColorBitDepth の旧名称
+		 * GetCreateGraphColorBitDepthの旧名称
 		 */
 		extern int GetGraphColorBitDepth();
 
@@ -9494,20 +9493,20 @@ extern (C++, DxLib) {
 		extern int GetCreateGraphChannelBitDepth();
 
 		/**
-		 * SetDrawScreen に引数として渡せる( 描画対象として使用できる )グラフィックハンドルを作成するかどうかを設定する
+		 * SetDrawScreenに引数として渡せる(描画対象として使用できる)グラフィックハンドルを作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:描画可能グラフィックハンドルを作成する  FLASE:通常のグラフィックハンドルを作成する( デフォルト )
+		 *      Flag = TRUE:描画可能グラフィックハンドルを作成する  FLASE:通常のグラフィックハンドルを作成する(デフォルト)
 		 */
 		extern int SetDrawValidGraphCreateFlag(int Flag);
 
 		/**
-		 * SetDrawScreen に引数として渡せる( 描画対象として使用できる )グラフィックハンドルを作成するかどうかを設定を取得する
+		 * SetDrawScreenに引数として渡せる(描画対象として使用できる)グラフィックハンドルを作成するかどうかを設定を取得する
 		 */
 		extern int GetDrawValidGraphCreateFlag();
 
 		/**
-		 * SetDrawValidGraphCreateFlag の旧名称
+		 * SetDrawValidGraphCreateFlagの旧名称
 		 */
 		extern int SetDrawValidFlagOf3DGraph(int Flag);
 
@@ -9515,7 +9514,7 @@ extern (C++, DxLib) {
 		 * 画像ファイルからグラフィックハンドルを作成する際に画像左上の色を透過色として扱うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:透過色として扱う  FALSE:透過色として扱わない( デフォルト )
+		 *      Flag = TRUE:透過色として扱う  FALSE:透過色として扱わない(デフォルト)
 		 */
 		extern int SetLeftUpColorIsTransColorFlag(int Flag);
 
@@ -9523,20 +9522,20 @@ extern (C++, DxLib) {
 		 * 読み込む画像がパレット画像の場合、パレット画像として使用できる場合はパレット画像として使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:パレット画像として使用できる場合はパレット画像として使用する( デフォルト )  FALSE:パレット画像として使用できる場合もパレット画像としては使用しない( 通常タイプの画像に変換して使用する )
+		 *      Flag = TRUE:パレット画像として使用できる場合はパレット画像として使用する(デフォルト)  FALSE:パレット画像として使用できる場合もパレット画像としては使用しない(通常タイプの画像に変換して使用する)
 		 */
 		extern int SetUsePaletteGraphFlag(int Flag);
 
 		/**
-		 * ブレンド処理用画像を作成するかどうか( 要は画像の赤成分をα成分として扱うかどうか )の設定を行う
+		 * ブレンド処理用画像を作成するかどうか(要は画像の赤成分をα成分として扱うかどうか)の設定を行う
 		 *
 		 * Params:
-		 *      Flag = TRUE:ブレンド画像として読み込む  FALSE:通常画像として読み込む( デフォルト )
+		 *      Flag = TRUE:ブレンド画像として読み込む  FALSE:通常画像として読み込む(デフォルト)
 		 */
 		extern int SetUseBlendGraphCreateFlag(int Flag);
 
 		/**
-		 * ブレンド処理用画像を作成するかどうか( 要は画像の赤成分をα成分として扱うかどうか )の設定を取得する
+		 * ブレンド処理用画像を作成するかどうか(要は画像の赤成分をα成分として扱うかどうか)の設定を取得する
 		 */
 		extern int GetUseBlendGraphCreateFlag();
 
@@ -9544,7 +9543,7 @@ extern (C++, DxLib) {
 		 * アルファテストを使用するグラフィックハンドルを作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:アルファテストを使用する( デフォルト )  FALSE:アルファテストを使用しない
+		 *      Flag = TRUE:アルファテストを使用する(デフォルト)  FALSE:アルファテストを使用しない
 		 */
 		extern int SetUseAlphaTestGraphCreateFlag(int Flag);
 
@@ -9554,12 +9553,12 @@ extern (C++, DxLib) {
 		extern int GetUseAlphaTestGraphCreateFlag();
 
 		/**
-		 * SetUseAlphaTestGraphCreateFlag の旧名称
+		 * SetUseAlphaTestGraphCreateFlagの旧名称
 		 */
 		extern int SetUseAlphaTestFlag(int Flag);
 
 		/**
-		 * GetUseAlphaTestGraphCreateFlag の旧名称
+		 * GetUseAlphaTestGraphCreateFlagの旧名称
 		 */
 		extern int GetUseAlphaTestFlag();
 
@@ -9574,54 +9573,54 @@ extern (C++, DxLib) {
 		extern int GetCubeMapTextureCreateFlag();
 
 		/**
-		 * SetDrawBlendMode 関数の第1引数に DX_BLENDMODE_NOBLEND を代入した際に、デフォルトでは第二引数は内部で255を指定したことになるが、その自動255化をしないかどうかを設定する。αチャンネル付き画像に対して描画を行う場合のみ意味がある関数
+		 * SetDrawBlendMode関数の第1引数にDX_BLENDMODE_NOBLENDを代入した際に、デフォルトでは第二引数は内部で255を指定したことになるが、その自動255化をしないかどうかを設定する。αチャンネル付き画像に対して描画を行う場合のみ意味がある関数
 		 *
 		 * Params:
-		 *      Flag = TRUE:しない(第二引数の値が使用される)   FALSE:する(第二引数の値は無視されて 255 が常に使用される)(デフォルト)
+		 *      Flag = TRUE:しない(第二引数の値が使用される)   FALSE:する(第二引数の値は無視されて 255が常に使用される)(デフォルト)
 		 */
 		extern int SetUseNoBlendModeParam(int Flag);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )αチャンネル付きグラフィックハンドルを作成するかどうかを設定する( SetDrawValidGraphCreateFlag 関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません )
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)αチャンネル付きグラフィックハンドルを作成するかどうかを設定する(SetDrawValidGraphCreateFlag関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません)
 		 *
 		 * Params:
-		 *      Flag = TRUE:αチャンネル付き   FALSE:αチャンネルなし( デフォルト )
+		 *      Flag = TRUE:αチャンネル付き   FALSE:αチャンネルなし(デフォルト)
 		 */
 		extern int SetDrawValidAlphaChannelGraphCreateFlag(int Flag);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )αチャンネル付きグラフィックハンドルを作成するかどうかを取得する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)αチャンネル付きグラフィックハンドルを作成するかどうかを取得する
 		 */
 		extern int GetDrawValidAlphaChannelGraphCreateFlag();
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )ピクセルフォーマットが浮動小数点型のグラフィックハンドルを作成するかどうかを設定する( SetDrawValidGraphCreateFlag 関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません )、グラフィックスデバイスが浮動小数点型のピクセルフォーマットに対応していない場合はグラフィックハンドルの作成に失敗する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)ピクセルフォーマットが浮動小数点型のグラフィックハンドルを作成するかどうかを設定する(SetDrawValidGraphCreateFlag関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません)、グラフィックスデバイスが浮動小数点型のピクセルフォーマットに対応していない場合はグラフィックハンドルの作成に失敗する
 		 *
 		 * Params:
-		 *      Flag = TRUE:浮動小数点型  FALSE:整数型( デフォルト )
+		 *      Flag = TRUE:浮動小数点型  FALSE:整数型(デフォルト)
 		 */
 		extern int SetDrawValidFloatTypeGraphCreateFlag(int Flag);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )ピクセルフォーマットが浮動小数点型のグラフィックハンドルを作成するかどうかを取得する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)ピクセルフォーマットが浮動小数点型のグラフィックハンドルを作成するかどうかを取得する
 		 */
 		extern int GetDrawValidFloatTypeGraphCreateFlag();
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルを作成する際に専用のZバッファも作成するかどうかを設定する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルを作成する際に専用のZバッファも作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:専用のZバッファを作成する( デフォルト )  FALSE:専用のZバッファは作成しない
+		 *      Flag = TRUE:専用のZバッファを作成する(デフォルト)  FALSE:専用のZバッファは作成しない
 		 */
 		extern int SetDrawValidGraphCreateZBufferFlag(int Flag);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルを作成する際に専用のZバッファも作成するかどうかを取得する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルを作成する際に専用のZバッファも作成するかどうかを取得する
 		 */
 		extern int GetDrawValidGraphCreateZBufferFlag();
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用するZバッファのビット深度を設定する( BitDepth:ビット深度( 指定可能な値は 16, 24, 32 の何れか( SetDrawValidGraphCreateFlag 関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません )
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用するZバッファのビット深度を設定する(BitDepth:ビット深度(指定可能な値は16, 24, 32の何れか(SetDrawValidGraphCreateFlag関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません)
 		 *
 		 * Params:
 		 *      BitDepth = ?
@@ -9629,22 +9628,22 @@ extern (C++, DxLib) {
 		extern int SetCreateDrawValidGraphZBufferBitDepth(int BitDepth);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用するZバッファのビット深度を取得する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用するZバッファのビット深度を取得する
 		 */
 		extern int GetCreateDrawValidGraphZBufferBitDepth();
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用するMipMapのレベルを設定する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用するMipMapのレベルを設定する
 		 */
 		extern int SetCreateDrawValidGraphMipLevels(int MipLevels);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用するMipMapのレベルを取得する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用するMipMapのレベルを取得する
 		 */
 		extern int GetCreateDrawValidGraphMipLevels();
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用する色のチャンネル数を設定する( ChannelNum:チャンネル数( 指定可能な値は 1, 2, 4 の何れか( SetDrawValidGraphCreateFlag 関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません )
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用する色のチャンネル数を設定する(ChannelNum:チャンネル数(指定可能な値は1, 2, 4の何れか(SetDrawValidGraphCreateFlag関数で描画対象として使用できるグラフィックハンドルを作成するように設定されていないと効果ありません)
 		 *
 		 * Params:
 		 *      ChannelNum = ?
@@ -9652,12 +9651,12 @@ extern (C++, DxLib) {
 		extern int SetCreateDrawValidGraphChannelNum(int ChannelNum);
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用する色のチャンネル数を取得する
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用する色のチャンネル数を取得する
 		 */
 		extern int GetCreateDrawValidGraphChannelNum();
 
 		/**
-		 * SetDrawScreen の引数として渡せる( 描画対象として使用できる )グラフィックハンドルに適用するマルチサンプリング( アンチエイリアシング )設定を行う( Samples:マルチサンプル処理に使用するドット数( 多いほど重くなります )  Quality:マルチサンプル処理の品質 )
+		 * SetDrawScreenの引数として渡せる(描画対象として使用できる)グラフィックハンドルに適用するマルチサンプリング(アンチエイリアシング)設定を行う(Samples:マルチサンプル処理に使用するドット数(多いほど重くなります)  Quality:マルチサンプル処理の品質)
 		 *
 		 * Params:
 		 *      Samples = ?
@@ -9666,12 +9665,12 @@ extern (C++, DxLib) {
 		extern int SetCreateDrawValidGraphMultiSample(int Samples, int Quality);
 
 		/**
-		 * SetCreateDrawValidGraphMultiSample の旧名称
+		 * SetCreateDrawValidGraphMultiSampleの旧名称
 		 */
 		extern int SetDrawValidMultiSample(int Samples, int Quality);
 
 		/**
-		 * 指定のマルチサンプル数で使用できる最大クオリティ値を取得する( 戻り値がマイナスの場合は引数のサンプル数が使用できないことを示します )
+		 * 指定のマルチサンプル数で使用できる最大クオリティ値を取得する(戻り値がマイナスの場合は引数のサンプル数が使用できないことを示します)
 		 */
 		extern int GetMultiSampleQuality(int Samples);
 
@@ -9679,22 +9678,22 @@ extern (C++, DxLib) {
 		 * 透過色機能を使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int SetUseTransColor(int Flag);
 
 		/**
-		 * 透過色機能を使用することを前提とした画像データの読み込み処理を行うかどうかを設定する( TRUE にすると SetDrawMode(DX_DRAWMODE_BILINEAR); をした状態で DrawGraphF 等の浮動小数点型座標を受け取る関数で小数点以下の値を指定した場合に発生する描画結果の不自然を緩和する効果があります ( デフォルトは FALSE ) )
+		 * 透過色機能を使用することを前提とした画像データの読み込み処理を行うかどうかを設定する(TRUEにするとSetDrawMode(DX_DRAWMODE_BILINEAR);をした状態でDrawGraphF等の浮動小数点型座標を受け取る関数で小数点以下の値を指定した場合に発生する描画結果の不自然を緩和する効果があります (デフォルトはFALSE))
 		 */
 		extern int SetUseTransColorGraphCreateFlag(int Flag);
 
 		/**
-		 * SetUseAlphaChannelGraphCreateFlag の旧名称
+		 * SetUseAlphaChannelGraphCreateFlagの旧名称
 		 */
 		extern int SetUseGraphAlphaChannel(int Flag);
 
 		/**
-		 * GetUseAlphaChannelGraphCreateFlag の旧名称
+		 * GetUseAlphaChannelGraphCreateFlagの旧名称
 		 */
 		extern int GetUseGraphAlphaChannel();
 
@@ -9714,20 +9713,20 @@ extern (C++, DxLib) {
 		extern int GetUseAlphaChannelGraphCreateFlag();
 
 		/**
-		 * Direct3D の管理テクスチャ機能を使用するグラフィックハンドルを作成するかどうかを設定する、管理機能を使用するとグラフィックスデバイスのVRAM容量以上の画像を扱うことができる代わりにシステムメモリの使用量が増えます
+		 * Direct3Dの管理テクスチャ機能を使用するグラフィックハンドルを作成するかどうかを設定する、管理機能を使用するとグラフィックスデバイスのVRAM容量以上の画像を扱うことができる代わりにシステムメモリの使用量が増えます
 		 *
 		 * Params:
-		 *      Flag = TRUE:管理機能を使用する( デフォルト )  FALSE:管理機能を使用しない
+		 *      Flag = TRUE:管理機能を使用する(デフォルト)  FALSE:管理機能を使用しない
 		 */
 		extern int SetUseNotManageTextureFlag(int Flag);
 
 		/**
-		 * Direct3D の管理テクスチャ機能を使用するグラフィックハンドルを作成するかどうかを取得する
+		 * Direct3Dの管理テクスチャ機能を使用するグラフィックハンドルを作成するかどうかを取得する
 		 */
 		extern int GetUseNotManageTextureFlag();
 
 		/**
-		 * 作成するグラフィックハンドルで使用する環境依存のテクスチャフォーマットを指定する( Direct3D9環境なら DX_TEXTUREFORMAT_DIRECT3D9_R8G8B8 など、0 を渡すと解除 )
+		 * 作成するグラフィックハンドルで使用する環境依存のテクスチャフォーマットを指定する(Direct3D9環境ならDX_TEXTUREFORMAT_DIRECT3D9_R8G8B8など、0を渡すと解除)
 		 */
 		extern int SetUsePlatformTextureFormat(int PlatformTextureFormat);
 
@@ -9740,9 +9739,9 @@ extern (C++, DxLib) {
 		 * 作成するグラフィックハンドルに適用する透過色を設定する
 		 *
 		 * Params:
-		 *      Red = 透過色を光の3原色で表したもの( 0~255 )
-		 *      Green = 透過色を光の3原色で表したもの( 0~255 )
-		 *      Blue = 透過色を光の3原色で表したもの( 0~255 )
+		 *      Red = 透過色を光の3原色で表したもの(0~255)
+		 *      Green = 透過色を光の3原色で表したもの(0~255)
+		 *      Blue = 透過色を光の3原色で表したもの(0~255)
 		 */
 		extern int SetTransColor(int Red, int Green, int Blue);
 
@@ -9755,53 +9754,53 @@ extern (C++, DxLib) {
 		 * 2のn乗ではないサイズの画像を複数のテクスチャを使用してVRAMの無駄を省くかどうかを設定する、複数のテクスチャを使用する場合はVRAM容量の節約ができる代わりに速度の低下やバイリニアフィルタリング描画時にテクスチャとテクスチャの境目が良く見るとわかる等の弊害があります
 		 *
 		 * Params:
-		 *      Flag = TRUE:複数のテクスチャを使用する   FALSE:なるべく1枚のテクスチャで済ます( デフォルト )
+		 *      Flag = TRUE:複数のテクスチャを使用する   FALSE:なるべく1枚のテクスチャで済ます(デフォルト)
 		 */
 		extern int SetUseDivGraphFlag(int Flag);
 
 		/**
-		 * LoadGraph などの際にファイル名の末尾に _a が付いたアルファチャンネル用の画像ファイルを追加で読み込む処理を行うかどうかを設定する
+		 * LoadGraphなどの際にファイル名の末尾に_aが付いたアルファチャンネル用の画像ファイルを追加で読み込む処理を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う( デフォルト )  FALSE:行わない
+		 *      Flag = TRUE:行う(デフォルト)  FALSE:行わない
 		 */
 		extern int SetUseAlphaImageLoadFlag(int Flag);
 
 		/**
-		 * 使用するテクスチャーの最大サイズを設定する( デフォルトではグラフィックスデバイスが対応している最大テクスチャーサイズ、引数に 0 を渡すとデフォルト設定になります )
+		 * 使用するテクスチャーの最大サイズを設定する(デフォルトではグラフィックスデバイスが対応している最大テクスチャーサイズ、引数に0を渡すとデフォルト設定になります)
 		 */
 		extern int SetUseMaxTextureSize(int Size);
 
 		/**
-		 * グラフィックハンドルを作成する際に使用した画像データのバックアップをして Direct3DDevice のデバイスロスト時に使用するかどうかを設定する、バックアップをしないとメモリの節約になりますが、復帰に掛かる時間が長くなり、メモリ上のファイルイメージからグラフィックハンドルを作成した場合は自動復帰ができないなどの弊害があります
+		 * グラフィックハンドルを作成する際に使用した画像データのバックアップをして Direct3DDeviceのデバイスロスト時に使用するかどうかを設定する、バックアップをしないとメモリの節約になりますが、復帰に掛かる時間が長くなり、メモリ上のファイルイメージからグラフィックハンドルを作成した場合は自動復帰ができないなどの弊害があります
 		 *
 		 * Params:
-		 *      Flag = TRUE:バックアップをする( デフォルト )  FALSE:バックアップをしない
+		 *      Flag = TRUE:バックアップをする(デフォルト)  FALSE:バックアップをしない
 		 */
 		extern int SetUseGraphBaseDataBackup(int Flag);
 
 		/**
-		 * グラフィックハンドルを作成する際に使用した画像データのバックアップをして Direct3DDevice のデバイスロスト時に使用するかどうかを取得する
+		 * グラフィックハンドルを作成する際に使用した画像データのバックアップをして Direct3DDeviceのデバイスロスト時に使用するかどうかを取得する
 		 */
 		extern int GetUseGraphBaseDataBackup();
 
 		/**
-		 * ( 現在効果なし )グラフィックハンドルが持つ画像データをシステムメモリ上に作成するかどうかを設定する
+		 * (現在効果なし)グラフィックハンドルが持つ画像データをシステムメモリ上に作成するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:システムメモリ上に作成  FALSE:VRAM上に作成( デフォルト )
+		 *      Flag = TRUE:システムメモリ上に作成  FALSE:VRAM上に作成(デフォルト)
 		 */
 		extern int SetUseSystemMemGraphCreateFlag(int Flag);
 
 		/**
-		 * ( 現在効果なし )グラフィックハンドルが持つ画像データをシステムメモリ上に作成するかどうかを取得する
+		 * (現在効果なし)グラフィックハンドルが持つ画像データをシステムメモリ上に作成するかどうかを取得する
 		 */
 		extern int GetUseSystemMemGraphCreateFlag();
 
 		// 画像情報関係関数
 
 		/**
-		 * 指定のグラフィックハンドルのARGB8イメージを取得する( 現在動画ファイルをグラフィックハンドルで読み込んだ場合のみ使用可能 )
+		 * 指定のグラフィックハンドルのARGB8イメージを取得する(現在動画ファイルをグラフィックハンドルで読み込んだ場合のみ使用可能)
 		 */
 		extern const (uint)* GetFullColorImage(int GrHandle);
 
@@ -9819,14 +9818,14 @@ extern (C++, DxLib) {
 		 * グラフィックハンドル専用のZバッファを持つかどうかを設定する
 		 *
 		 * Params:
-		 *      GrHandle = 対象となるグラフィックハンドル( 描画対象として使用可能なグラフィックハンドルのみ有効 )
-		 *      UseFlag = 専用のZバッファを持つかどうか( TRUE:持つ( デフォルト )  FALSE:持たない )
-		 *      BitDepth = ビット深度( 16 or 24 or 32 )
+		 *      GrHandle = 対象となるグラフィックハンドル(描画対象として使用可能なグラフィックハンドルのみ有効)
+		 *      UseFlag = 専用のZバッファを持つかどうか(TRUE:持つ(デフォルト)  FALSE:持たない)
+		 *      BitDepth = ビット深度(16 or 24 or 32)
 		 */
 		extern int SetUseGraphZBuffer(int GrHandle, int UseFlag, int BitDepth = -1);
 
 		/**
-		 * グラフィックハンドルのZバッファの状態を別のグラフィックハンドルのZバッファにコピーする( DestGrHandle も SrcGrHandle もZバッファを持っている描画対象にできるグラフィックハンドルで、サイズが同じであり、且つマルチサンプリング( アンチエイリアス )設定が無いことが条件 )
+		 * グラフィックハンドルのZバッファの状態を別のグラフィックハンドルのZバッファにコピーする(DestGrHandle も SrcGrHandle もZバッファを持っている描画対象にできるグラフィックハンドルで、サイズが同じであり、且つマルチサンプリング(アンチエイリアス)設定が無いことが条件)
 		 */
 		extern int CopyGraphZBufferImage(int DestGrHandle, int SrcGrHandle);
 
@@ -9845,7 +9844,7 @@ extern (C++, DxLib) {
 		extern int GetGraphSize(int GrHandle, int* SizeXBuf, int* SizeYBuf);
 
 		/**
-		 * グラフィックハンドルが持つ画像のサイズを得る( float型 )
+		 * グラフィックハンドルが持つ画像のサイズを得る(float型)
 		 */
 		extern int GetGraphSizeF(int GrHandle, float* SizeXBuf, float* SizeYBuf);
 
@@ -9855,7 +9854,7 @@ extern (C++, DxLib) {
 		extern int GetGraphTextureSize(int GrHandle, int* SizeXBuf, int* SizeYBuf);
 
 		/**
-		 * LoadDivGraph や DerivationGraph で元画像の一部分を使用している場合に、指定のグラフィックハンドルが使用している元画像の範囲を取得する
+		 * LoadDivGraphやDerivationGraphで元画像の一部分を使用している場合に、指定のグラフィックハンドルが使用している元画像の範囲を取得する
 		 */
 		extern int GetGraphUseBaseGraphArea(int GrHandle, int* UseX, int* UseY, int* UseSizeX, int* UseSizeY);
 
@@ -9870,7 +9869,7 @@ extern (C++, DxLib) {
 		extern int GetGraphFilePath(int GrHandle, dxlib_d.DxDataType.TCHAR* FilePathBuffer);
 
 		/**
-		 * 指定のグラフィックハンドルが描画対象にできる( SetDrawScreen の引数に渡せる )グラフィックハンドルかどうかを取得する
+		 * 指定のグラフィックハンドルが描画対象にできる(SetDrawScreenの引数に渡せる)グラフィックハンドルかどうかを取得する
 		 *
 		 * Returns: TRUE:描画対象にできるグラフィックハンドル FALSE:描画対象にできないグラフィックハンドル
 		 */
@@ -9904,29 +9903,29 @@ extern (C++, DxLib) {
 		extern int GetValidRestoreShredPoint();
 
 		/**
-		 * ( 現在効果なし )これから新たにグラフィックを作成する場合に使用するカラー情報を取得する
+		 * (現在効果なし)これから新たにグラフィックを作成する場合に使用するカラー情報を取得する
 		 */
 		extern int GetCreateGraphColorData(.COLORDATA* ColorData, .IMAGEFORMATDESC* Format);
 
-		// 画像パレット操作関係関数( ソフトウエア画像のみ使用可能 )
+		// 画像パレット操作関係関数(ソフトウエア画像のみ使用可能)
 
 		/**
-		 * グラフィックハンドルのパレットを取得する( ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能 )
+		 * グラフィックハンドルのパレットを取得する(ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能)
 		 */
 		extern int GetGraphPalette(int GrHandle, int ColorIndex, int* Red, int* Green, int* Blue);
 
 		/**
-		 * グラフィックハンドルの SetGraphPalette で変更する前のパレットを取得する( ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能 )
+		 * グラフィックハンドルのSetGraphPaletteで変更する前のパレットを取得する(ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能)
 		 */
 		extern int GetGraphOriginalPalette(int GrHandle, int ColorIndex, int* Red, int* Green, int* Blue);
 
 		/**
-		 * グラフィックハンドルのパレットを変更する( ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能 )
+		 * グラフィックハンドルのパレットを変更する(ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能)
 		 */
 		extern int SetGraphPalette(int GrHandle, int ColorIndex, uint Color);
 
 		/**
-		 * SetGraphPalette で変更したパレットを全て元に戻す( ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能 )
+		 * SetGraphPaletteで変更したパレットを全て元に戻す(ソフトウエアレンダリングモードで、且つパレット画像の場合のみ使用可能)
 		 */
 		extern int ResetGraphPalette(int GrHandle);
 
@@ -9938,7 +9937,7 @@ extern (C++, DxLib) {
 		extern int DrawLine(int x1, int y1, int x2, int y2, uint Color, int Thickness = 1);
 
 		/**
-		 * 線を描画する( アンチエイリアス付き )
+		 * 線を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawLineAA(float x1, float y1, float x2, float y2, uint Color, float Thickness = 1.0f);
 
@@ -9948,7 +9947,7 @@ extern (C++, DxLib) {
 		extern int DrawBox(int x1, int y1, int x2, int y2, uint Color, int FillFlag);
 
 		/**
-		 * 四角形を描画する( アンチエイリアス付き )
+		 * 四角形を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawBoxAA(float x1, float y1, float x2, float y2, uint Color, int FillFlag, float LineThickness = 1.0f);
 
@@ -9968,7 +9967,7 @@ extern (C++, DxLib) {
 		extern int DrawCircle(int x, int y, int r, uint Color, int FillFlag = dxlib_d.DxDataType.TRUE, int LineThickness = 1);
 
 		/**
-		 * 円を描画する( アンチエイリアス付き )
+		 * 円を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawCircleAA(float x, float y, float r, int posnum, uint Color, int FillFlag = dxlib_d.DxDataType.TRUE, float LineThickness = 1.0f);
 
@@ -9978,12 +9977,12 @@ extern (C++, DxLib) {
 		extern int DrawOval(int x, int y, int rx, int ry, uint Color, int FillFlag, int LineThickness = 1);
 
 		/**
-		 * 楕円を描画する( アンチエイリアス付き )
+		 * 楕円を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawOvalAA(float x, float y, float rx, float ry, int posnum, uint Color, int FillFlag, float LineThickness = 1.0f);
 
 		/**
-		 * 指定の矩形に収まる円( 楕円 )を描画する
+		 * 指定の矩形に収まる円(楕円)を描画する
 		 */
 		extern int DrawOval_Rect(int x1, int y1, int x2, int y2, uint Color, int FillFlag);
 
@@ -9993,7 +9992,7 @@ extern (C++, DxLib) {
 		extern int DrawTriangle(int x1, int y1, int x2, int y2, int x3, int y3, uint Color, int FillFlag);
 
 		/**
-		 * 三角形を描画する( アンチエイリアス付き )
+		 * 三角形を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawTriangleAA(float x1, float y1, float x2, float y2, float x3, float y3, uint Color, int FillFlag, float LineThickness = 1.0f);
 
@@ -10003,7 +10002,7 @@ extern (C++, DxLib) {
 		extern int DrawQuadrangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, uint Color, int FillFlag);
 
 		/**
-		 * 四角形を描画する( アンチエイリアス付き )
+		 * 四角形を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawQuadrangleAA(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, int FillFlag, float LineThickness = 1.0f);
 
@@ -10013,17 +10012,17 @@ extern (C++, DxLib) {
 		extern int DrawRoundRect(int x1, int y1, int x2, int y2, int rx, int ry, uint Color, int FillFlag);
 
 		/**
-		 * 角の丸い四角形を描画する( アンチエイリアス付き )
+		 * 角の丸い四角形を描画する(アンチエイリアス付き)
 		 */
 		extern int DrawRoundRectAA(float x1, float y1, float x2, float y2, float rx, float ry, int posnum, uint Color, int FillFlag, float LineThickness = 1.0f);
 
 		/**
-		 * DrawTriangleAA などのアンチエイリアス付き図形描画の準備を行う
+		 * DrawTriangleAAなどのアンチエイリアス付き図形描画の準備を行う
 		 */
 		extern int BeginAADraw();
 
 		/**
-		 * DrawTriangleAA などのアンチエイリアス付き図形描画の後始末を行う
+		 * DrawTriangleAAなどのアンチエイリアス付き図形描画の後始末を行う
 		 */
 		extern int EndAADraw();
 
@@ -10033,7 +10032,7 @@ extern (C++, DxLib) {
 		extern int DrawPixel(int x, int y, uint Color);
 
 		/**
-		 * 指定点から境界色があるところまで塗りつぶす(境界色を -1 にすると指定点の色の領域を塗りつぶす)
+		 * 指定点から境界色があるところまで塗りつぶす(境界色を-1にすると指定点の色の領域を塗りつぶす)
 		 */
 		extern int Paint(int x, int y, uint FillColor, dxlib_d.DxDataType.ULONGLONG BoundaryColor = 0xFFFFFFFFFFFFFFFFUL);
 
@@ -10150,27 +10149,27 @@ extern (C++, DxLib) {
 		extern int DrawRotaGraph(int x, int y, double ExRate, double Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画2( 回転中心指定付き )
+		 * 画像の回転描画2(回転中心指定付き)
 		 */
 		extern int DrawRotaGraph2(int x, int y, int cx, int cy, double ExtRate, double Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画3( 回転中心指定付き+縦横拡大率別指定版 )
+		 * 画像の回転描画3(回転中心指定付き+縦横拡大率別指定版)
 		 */
 		extern int DrawRotaGraph3(int x, int y, int cx, int cy, double ExtRateX, double ExtRateY, double Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の回転描画(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRotaGraphFast(int x, int y, float ExRate, float Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画2( 回転中心指定付き )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の回転描画2(回転中心指定付き)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRotaGraphFast2(int x, int y, int cx, int cy, float ExtRate, float Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の回転描画3(回転中心指定付き+縦横拡大率別指定版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRotaGraphFast3(int x, int y, int cx, int cy, float ExtRateX, float ExtRateY, float Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
@@ -10190,57 +10189,57 @@ extern (C++, DxLib) {
 		extern int DrawReverseGraph(int x, int y, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の描画( 座標指定が float 版 )
+		 * 画像の描画(座標指定がfloat版)
 		 */
 		extern int DrawGraphF(float xf, float yf, int GrHandle, int TransFlag);
 
 		/**
-		 * 画像の拡大描画( 座標指定が float 版 )
+		 * 画像の拡大描画(座標指定がfloat版)
 		 */
 		extern int DrawExtendGraphF(float x1f, float y1f, float x2f, float y2, int GrHandle, int TransFlag);
 
 		/**
-		 * 画像の回転描画( 座標指定が float 版 )
+		 * 画像の回転描画(座標指定がfloat版)
 		 */
 		extern int DrawRotaGraphF(float xf, float yf, double ExRate, double Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画2( 回転中心指定付き )( 座標指定が float 版 )
+		 * 画像の回転描画2(回転中心指定付き)(座標指定がfloat版)
 		 */
 		extern int DrawRotaGraph2F(float xf, float yf, float cxf, float cyf, double ExtRate, double Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 座標指定が float 版 )
+		 * 画像の回転描画3(回転中心指定付き+縦横拡大率別指定版)(座標指定がfloat版)
 		 */
 		extern int DrawRotaGraph3F(float xf, float yf, float cxf, float cyf, double ExtRateX, double ExtRateY, double Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画( 座標指定が float 版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の回転描画(座標指定がfloat版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRotaGraphFastF(float xf, float yf, float ExRate, float Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画2( 回転中心指定付き )( 座標指定が float 版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の回転描画2(回転中心指定付き)(座標指定がfloat版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRotaGraphFast2F(float xf, float yf, float cxf, float cyf, float ExtRate, float Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 座標指定が float 版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の回転描画3(回転中心指定付き+縦横拡大率別指定版)(座標指定がfloat版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRotaGraphFast3F(float xf, float yf, float cxf, float cyf, float ExtRateX, float ExtRateY, float Angle, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の自由変形描画( 座標指定が float 版 )
+		 * 画像の自由変形描画(座標指定がfloat版)
 		 */
 		extern int DrawModiGraphF(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, int GrHandle, int TransFlag);
 
 		/**
-		 * 画像の左右反転描画( 座標指定が float 版 )
+		 * 画像の左右反転描画(座標指定がfloat版)
 		 */
 		extern int DrawTurnGraphF(float xf, float yf, int GrHandle, int TransFlag);
 
 		/**
-		 * 画像の反転描画( 座標指定が float 版 )
+		 * 画像の反転描画(座標指定がfloat版)
 		 */
 		extern int DrawReverseGraphF(float xf, float yf, int GrHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
@@ -10275,27 +10274,27 @@ extern (C++, DxLib) {
 		extern int DrawRectRotaGraph(int x, int y, int SrcX, int SrcY, int Width, int Height, double ExtRate, double Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画2( 回転中心指定付き )
+		 * 画像の指定矩形部分のみを回転描画2(回転中心指定付き)
 		 */
 		extern int DrawRectRotaGraph2(int x, int y, int SrcX, int SrcY, int Width, int Height, int cx, int cy, double ExtRate, double Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画3( 回転中心指定付き+縦横拡大率別指定版 )
+		 * 画像の指定矩形部分のみを回転描画3(回転中心指定付き+縦横拡大率別指定版)
 		 */
 		extern int DrawRectRotaGraph3(int x, int y, int SrcX, int SrcY, int Width, int Height, int cx, int cy, double ExtRateX, double ExtRateY, double Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の指定矩形部分のみを回転描画(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRectRotaGraphFast(int x, int y, int SrcX, int SrcY, int Width, int Height, float ExtRate, float Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画2( 回転中心指定付き )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の指定矩形部分のみを回転描画2(回転中心指定付き)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRectRotaGraphFast2(int x, int y, int SrcX, int SrcY, int Width, int Height, int cx, int cy, float ExtRate, float Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の指定矩形部分のみを回転描画3(回転中心指定付き+縦横拡大率別指定版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRectRotaGraphFast3(int x, int y, int SrcX, int SrcY, int Width, int Height, int cx, int cy, float ExtRateX, float ExtRateY, float Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
@@ -10305,47 +10304,47 @@ extern (C++, DxLib) {
 		extern int DrawRectModiGraph(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int SrcX, int SrcY, int Width, int Height, int GraphHandle, int TransFlag);
 
 		/**
-		 * 画像の指定矩形部分のみを等倍描画( 座標指定が float 版 )
+		 * 画像の指定矩形部分のみを等倍描画(座標指定がfloat版)
 		 */
 		extern int DrawRectGraphF(float DestX, float DestY, int SrcX, int SrcY, int Width, int Height, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを拡大描画( 座標指定が float 版 )
+		 * 画像の指定矩形部分のみを拡大描画(座標指定がfloat版)
 		 */
 		extern int DrawRectExtendGraphF(float DestX1, float DestY1, float DestX2, float DestY2, int SrcX, int SrcY, int SrcWidth, int SrcHeight, int GraphHandle, int TransFlag);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画( 座標指定が float 版 )
+		 * 画像の指定矩形部分のみを回転描画(座標指定がfloat版)
 		 */
 		extern int DrawRectRotaGraphF(float x, float y, int SrcX, int SrcY, int Width, int Height, double ExtRate, double Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画2( 回転中心指定付き )( 座標指定が float 版 )
+		 * 画像の指定矩形部分のみを回転描画2(回転中心指定付き)(座標指定がfloat版)
 		 */
 		extern int DrawRectRotaGraph2F(float x, float y, int SrcX, int SrcY, int Width, int Height, float cxf, float cyf, double ExtRate, double Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 座標指定が float 版 )
+		 * 画像の指定矩形部分のみを回転描画3(回転中心指定付き+縦横拡大率別指定版)(座標指定がfloat版)
 		 */
 		extern int DrawRectRotaGraph3F(float x, float y, int SrcX, int SrcY, int Width, int Height, float cxf, float cyf, double ExtRateX, double ExtRateY, double Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画( 座標指定が float 版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の指定矩形部分のみを回転描画(座標指定がfloat版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRectRotaGraphFastF(float x, float y, int SrcX, int SrcY, int Width, int Height, float ExtRate, float Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画2( 回転中心指定付き )( 座標指定が float 版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の指定矩形部分のみを回転描画2(回転中心指定付き)(座標指定がfloat版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRectRotaGraphFast2F(float x, float y, int SrcX, int SrcY, int Width, int Height, float cxf, float cyf, float ExtRate, float Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 座標指定が float 版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * 画像の指定矩形部分のみを回転描画3(回転中心指定付き+縦横拡大率別指定版)(座標指定がfloat版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
 		extern int DrawRectRotaGraphFast3F(float x, float y, int SrcX, int SrcY, int Width, int Height, float cxf, float cyf, float ExtRateX, float ExtRateY, float Angle, int GraphHandle, int TransFlag, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 画像の指定矩形部分のみを自由変形描画( 座標指定が float 版 )
+		 * 画像の指定矩形部分のみを自由変形描画(座標指定がfloat版)
 		 */
 		extern int DrawRectModiGraphF(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, int SrcX, int SrcY, int Width, int Height, int GraphHandle, int TransFlag);
 
@@ -10355,108 +10354,108 @@ extern (C++, DxLib) {
 		extern int DrawBlendGraph(int x, int y, int GrHandle, int TransFlag, int BlendGraph, int BorderParam, int BorderRange);
 
 		/**
-		 * ブレンド画像と合成して画像を等倍描画する( ブレンド画像の起点座標を指定する引数付き )
+		 * ブレンド画像と合成して画像を等倍描画する(ブレンド画像の起点座標を指定する引数付き)
 		 */
 		extern int DrawBlendGraphPos(int x, int y, int GrHandle, int TransFlag, int bx, int by, int BlendGraph, int BorderParam, int BorderRange);
 
 		/**
-		 * 円グラフ的な描画を行う( GrHandle の画像の上下左右の端は透過色にしておく必要があります )
+		 * 円グラフ的な描画を行う(GrHandleの画像の上下左右の端は透過色にしておく必要があります)
 		 */
 		extern int DrawCircleGauge(int CenterX, int CenterY, double Percent, int GrHandle, double StartPercent = 0.0, double Scale = 1.0, int ReverseX = dxlib_d.DxDataType.FALSE, int ReverseY = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 円グラフ的な描画を行う( GrHandle の画像の上下左右の端は透過色にしておく必要があります )( 座標指定が float 版 )
+		 * 円グラフ的な描画を行う(GrHandleの画像の上下左右の端は透過色にしておく必要があります)(座標指定がfloat版)
 		 */
 		extern int DrawCircleGaugeF(float CenterX, float CenterY, double Percent, int GrHandle, double StartPercent = 0.0, double Scale = 1.0, int ReverseX = dxlib_d.DxDataType.FALSE, int ReverseY = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * Zバッファに対して画像の等倍描画
 		 */
-		extern int DrawGraphToZBuffer(int X, int Y, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawGraphToZBuffer(int X, int Y, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して画像の左右反転描画
 		 */
-		extern int DrawTurnGraphToZBuffer(int x, int y, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawTurnGraphToZBuffer(int x, int y, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して画像の反転描画
 		 */
-		extern int DrawReverseGraphToZBuffer(int x, int y, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawReverseGraphToZBuffer(int x, int y, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * Zバッファに対して画像の拡大描画
 		 */
-		extern int DrawExtendGraphToZBuffer(int x1, int y1, int x2, int y2, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawExtendGraphToZBuffer(int x1, int y1, int x2, int y2, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して画像の回転描画
 		 */
-		extern int DrawRotaGraphToZBuffer(int x, int y, double ExRate, double Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawRotaGraphToZBuffer(int x, int y, double ExRate, double Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * Zバッファに対して画像の回転描画2( 回転中心指定付き )
+		 * Zバッファに対して画像の回転描画2(回転中心指定付き)
 		 */
-		extern int DrawRotaGraph2ToZBuffer(int x, int y, int cx, int cy, double ExtRate, double Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawRotaGraph2ToZBuffer(int x, int y, int cx, int cy, double ExtRate, double Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * Zバッファに対して画像の回転描画3( 回転中心指定付き+縦横拡大率別指定版 )
+		 * Zバッファに対して画像の回転描画3(回転中心指定付き+縦横拡大率別指定版)
 		 */
-		extern int DrawRotaGraph3ToZBuffer(int x, int y, int cx, int cy, double ExtRateX, double ExtRateY, double Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawRotaGraph3ToZBuffer(int x, int y, int cx, int cy, double ExtRateX, double ExtRateY, double Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * Zバッファに対して画像の回転描画( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * Zバッファに対して画像の回転描画(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
-		extern int DrawRotaGraphFastToZBuffer(int x, int y, float ExRate, float Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawRotaGraphFastToZBuffer(int x, int y, float ExRate, float Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * Zバッファに対して画像の回転描画2( 回転中心指定付き )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * Zバッファに対して画像の回転描画2(回転中心指定付き)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
-		extern int DrawRotaGraphFast2ToZBuffer(int x, int y, int cx, int cy, float ExtRate, float Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawRotaGraphFast2ToZBuffer(int x, int y, int cx, int cy, float ExtRate, float Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * Zバッファに対して画像の回転描画3( 回転中心指定付き+縦横拡大率別指定版 )( 高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です )
+		 * Zバッファに対して画像の回転描画3(回転中心指定付き+縦横拡大率別指定版)(高速版、座標計算のアルゴリズムが簡略化されています、描画結果に不都合が無ければこちらの方が高速です)
 		 */
-		extern int DrawRotaGraphFast3ToZBuffer(int x, int y, int cx, int cy, float ExtRateX, float ExtRateY, float Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawRotaGraphFast3ToZBuffer(int x, int y, int cx, int cy, float ExtRateX, float ExtRateY, float Angle, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int ReverseXFlag = dxlib_d.DxDataType.FALSE, int ReverseYFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * Zバッファに対して画像の自由変形描画
 		 */
-		extern int DrawModiGraphToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawModiGraphToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int GrHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して矩形の描画
 		 */
-		extern int DrawBoxToZBuffer(int x1, int y1, int x2, int y2, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawBoxToZBuffer(int x1, int y1, int x2, int y2, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して円の描画
 		 */
-		extern int DrawCircleToZBuffer(int x, int y, int r, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawCircleToZBuffer(int x, int y, int r, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して三角形を描画する
 		 */
-		extern int DrawTriangleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawTriangleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して四角形を描画する
 		 */
-		extern int DrawQuadrangleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawQuadrangleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * Zバッファに対して角の丸い四角形を描画する
 		 */
-		extern int DrawRoundRectToZBuffer(int x1, int y1, int x2, int y2, int rx, int ry, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawRoundRectToZBuffer(int x1, int y1, int x2, int y2, int rx, int ry, int FillFlag, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * 2Dポリゴンを描画する
 		 *
 		 * Params:
-		 *      Vertex = 三角形を形成する頂点配列の先頭アドレス( 頂点の数はポリゴンの数×3 )
+		 *      Vertex = 三角形を形成する頂点配列の先頭アドレス(頂点の数はポリゴンの数×3)
 		 *      PolygonNum = 描画するポリゴンの数
 		 *      GrHandle = 使用するグラフィックハンドル
-		 *      TransFlag = 透過色処理を行うかどうか( TRUE:行う  FALSE:行わない )
+		 *      TransFlag = 透過色処理を行うかどうか(TRUE:行う  FALSE:行わない)
 		 *      UVScaling = 基本FALSEでOK
 		 */
 		extern int DrawPolygon(const (.VERTEX)* VertexArray, int PolygonNum, int GrHandle, int TransFlag, int UVScaling = dxlib_d.DxDataType.FALSE);
@@ -10472,54 +10471,54 @@ extern (C++, DxLib) {
 		extern int DrawPolygon3D(const (.VERTEX3D)* VertexArray, int PolygonNum, int GrHandle, int TransFlag);
 
 		/**
-		 * 2Dポリゴンを描画する( 頂点インデックスを使用 )
+		 * 2Dポリゴンを描画する(頂点インデックスを使用)
 		 */
 		extern int DrawPolygonIndexed2D(const (.VERTEX2D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int PolygonNum, int GrHandle, int TransFlag);
 
 		/**
-		 * 3Dポリゴンを描画する( 頂点インデックスを使用 )
+		 * 3Dポリゴンを描画する(頂点インデックスを使用)
 		 */
 		extern int DrawPolygonIndexed3D(const (.VERTEX3D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int PolygonNum, int GrHandle, int TransFlag);
 
 		/**
-		 * 3Dポリゴンを描画する( 頂点インデックスを使用 )( 旧バージョン用 )
+		 * 3Dポリゴンを描画する(頂点インデックスを使用)(旧バージョン用)
 		 */
-		extern int DrawPolygonIndexed3DBase(const (.VERTEX_3D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPolygonIndexed3DBase(const (.VERTEX_3D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
-		 * 3Dポリゴンを描画する( 旧バージョン用 )
+		 * 3Dポリゴンを描画する(旧バージョン用)
 		 */
-		extern int DrawPolygon3DBase(const (.VERTEX_3D)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPolygon3DBase(const (.VERTEX_3D)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
-		 * 3Dポリゴンを描画する( 旧バージョン用 )
+		 * 3Dポリゴンを描画する(旧バージョン用)
 		 */
 		extern int DrawPolygon3D(const (.VERTEX_3D)* VertexArray, int PolygonNum, int GrHandle, int TransFlag);
 
 		/**
 		 * 2Dプリミティブを描画する
 		 */
-		extern int DrawPolygonBase(const (.VERTEX)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag, int UVScaling = dxlib_d.DxDataType.FALSE);
+		extern int DrawPolygonBase(const (.VERTEX)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag, int UVScaling = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * 2Dプリミティブを描画する
 		 */
-		extern int DrawPrimitive2D(const (.VERTEX2D)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPrimitive2D(const (.VERTEX2D)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
 		 * 3Dプリミティブを描画する
 		 */
-		extern int DrawPrimitive3D(const (.VERTEX3D)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPrimitive3D(const (.VERTEX3D)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
 		 * 2Dプリミティブを描画する(頂点インデックス使用)
 		 */
-		extern int DrawPrimitiveIndexed2D(const (.VERTEX2D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPrimitiveIndexed2D(const (.VERTEX2D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
 		 * 3Dプリミティブを描画する(頂点インデックス使用)
 		 */
-		extern int DrawPrimitiveIndexed3D(const (.VERTEX3D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPrimitiveIndexed3D(const (.VERTEX3D)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
 		 * 頂点バッファを使用して3Dポリゴンを描画する
@@ -10529,12 +10528,12 @@ extern (C++, DxLib) {
 		/**
 		 * 頂点バッファを使用して3Dプリミティブを描画する
 		 */
-		extern int DrawPrimitive3D_UseVertexBuffer(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPrimitive3D_UseVertexBuffer(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
 		 * 頂点バッファを使用して3Dプリミティブを描画する
 		 */
-		extern int DrawPrimitive3D_UseVertexBuffer2(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int StartVertex, int UseVertexNum, int GrHandle, int TransFlag);
+		extern int DrawPrimitive3D_UseVertexBuffer2(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int StartVertex, int UseVertexNum, int GrHandle, int TransFlag);
 
 		/**
 		 * 頂点バッファとインデックスバッファを使用して3Dポリゴンを描画する
@@ -10544,12 +10543,12 @@ extern (C++, DxLib) {
 		/**
 		 * 頂点バッファとインデックスバッファを使用して3Dプリミティブを描画する
 		 */
-		extern int DrawPrimitiveIndexed3D_UseVertexBuffer(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int GrHandle, int TransFlag);
+		extern int DrawPrimitiveIndexed3D_UseVertexBuffer(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int GrHandle, int TransFlag);
 
 		/**
 		 * 頂点バッファとインデックスバッファを使用して3Dプリミティブを描画する
 		 */
-		extern int DrawPrimitiveIndexed3D_UseVertexBuffer2(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int BaseVertex, int StartVertex, int UseVertexNum, int StartIndex, int UseIndexNum, int GrHandle, int TransFlag);
+		extern int DrawPrimitiveIndexed3D_UseVertexBuffer2(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int BaseVertex, int StartVertex, int UseVertexNum, int StartIndex, int UseIndexNum, int GrHandle, int TransFlag);
 
 		/**
 		 * 画像の3D描画
@@ -10604,7 +10603,7 @@ extern (C++, DxLib) {
 		extern int GetDrawBlendMode(int* BlendMode, int* BlendParam);
 
 		/**
-		 * 描画時のアルファテストの設定を行う( TestMode:テストモード( DX_CMP_GREATER等 -1でデフォルト動作に戻す )  TestParam:描画アルファ値との比較に使用する値( 0~255 ) )
+		 * 描画時のアルファテストの設定を行う(TestMode:テストモード(DX_CMP_GREATER等 -1でデフォルト動作に戻す)  TestParam:描画アルファ値との比較に使用する値(0~255))
 		 *
 		 * Params:
 		 *      TestMode = ?
@@ -10613,7 +10612,7 @@ extern (C++, DxLib) {
 		extern int SetDrawAlphaTest(int TestMode, int TestParam);
 
 		/**
-		 * 描画時のアルファテストの設定を取得する( TestMode:テストモード( DX_CMP_GREATER等 -1でデフォルト動作に戻す )  TestParam:描画アルファ値との比較に使用する値( 0~255 ) )
+		 * 描画時のアルファテストの設定を取得する(TestMode:テストモード(DX_CMP_GREATER等 -1でデフォルト動作に戻す)  TestParam:描画アルファ値との比較に使用する値(0~255))
 		 *
 		 * Params:
 		 *      TestMode = ?
@@ -10622,16 +10621,16 @@ extern (C++, DxLib) {
 		extern int GetDrawAlphaTest(int* TestMode, int* TestParam);
 
 		/**
-		 * ( SetBlendGraphParam の BlendType = DX_BLENDGRAPHTYPE_WIPE の処理を行う旧関数 )描画処理時に描画する画像とブレンドするαチャンネル付き画像をセットする( BlendGraph を -1 でブレンド機能を無効 )
+		 * (SetBlendGraphParamのBlendType = DX_BLENDGRAPHTYPE_WIPEの処理を行う旧関数)描画処理時に描画する画像とブレンドするαチャンネル付き画像をセットする(BlendGraphを-1でブレンド機能を無効)
 		 */
 		extern int SetBlendGraph(int BlendGraph, int BorderParam, int BorderRange);
 
 		/**
-		 * 描画処理時に描画する画像とブレンドする画像のブレンド設定を行う、BlendGraph を -1 にすれば設定を解除、その場合 BlendType とその後ろのパラメータは無視される
+		 * 描画処理時に描画する画像とブレンドする画像のブレンド設定を行う、BlendGraphを-1にすれば設定を解除、その場合BlendTypeとその後ろのパラメータは無視される
 		 */
 		extern int SetBlendGraphParam(int BlendGraph, int BlendType, ...);
 
-		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_NORMAL, int Ratio = ( 0( ブレンド率0% )~255( ブレンド率100% ) ));
+		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_NORMAL, int Ratio = (0(ブレンド率0%)~255(ブレンド率100%)));
 		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_WIPE, int BorderParam = 境界位置(0~255), int BorderRange = 境界幅(指定できる値は1、64、128、255の4つ));
 		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_ALPHA);
 
@@ -10643,7 +10642,7 @@ extern (C++, DxLib) {
 		/**
 		 * ブレンド画像の適応座標モードを設定する
 		 */
-		extern int SetBlendGraphPositionMode(int BlendGraphPositionMode /* DX_BLENDGRAPH_POSMODE_DRAWGRAPH など */);
+		extern int SetBlendGraphPositionMode(int BlendGraphPositionMode /* DX_BLENDGRAPH_POSMODE_DRAWGRAPHなど */);
 
 		/**
 		 * 描画輝度を設定する
@@ -10659,14 +10658,14 @@ extern (C++, DxLib) {
 		 * 描画先のアルファチャンネルの内容を書き換えるかを設定する
 		 *
 		 * Params:
-		 *      Flag = FALSE:書き換えない  TRUE:書き換える( デフォルト )
+		 *      Flag = FALSE:書き換えない  TRUE:書き換える(デフォルト)
 		 */
 		extern int SetWriteAlphaChannelFlag(int Flag);
 
 		/**
 		 * 描画先のアルファチャンネルの内容を書き換えるかを取得する
 		 *
-		 * Returns: FALSE:書き換えない  TRUE:書き換える( デフォルト )
+		 * Returns: FALSE:書き換えない  TRUE:書き換える(デフォルト)
 		 */
 		extern int GetWriteAlphaChannelFlag();
 
@@ -10681,7 +10680,7 @@ extern (C++, DxLib) {
 		 * 描画する画像のRGB成分を無視するかどうかを指定する
 		 *
 		 * Params:
-		 *      EnableFlag = この機能を使うかどうか( TRUE:使う  FALSE:使わない( デフォルト ) )
+		 *      EnableFlag = この機能を使うかどうか(TRUE:使う  FALSE:使わない(デフォルト))
 		 */
 		extern int SetIgnoreDrawGraphColor(int EnableFlag);
 
@@ -10696,39 +10695,39 @@ extern (C++, DxLib) {
 		extern int GetMaxAnisotropy();
 
 		/**
-		 * 3D処理で使用する座標値が 10000000.0f などの大きな値になっても描画の崩れを小さく抑える処理を使用するかどうかを設定する、DxLib_Init の呼び出し前でのみ使用可能
+		 * 3D処理で使用する座標値が10000000.0fなどの大きな値になっても描画の崩れを小さく抑える処理を使用するかどうかを設定する、DxLib_Initの呼び出し前でのみ使用可能
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:描画の崩れを抑える処理を使用する( CPU負荷が上がります )  FALSE:描画の崩れを抑える処理は使用しない( デフォルト )
+		 *      UseFlag = TRUE:描画の崩れを抑える処理を使用する(CPU負荷が上がります)  FALSE:描画の崩れを抑える処理は使用しない(デフォルト)
 		 */
 		extern int SetUseLarge3DPositionSupport(int UseFlag);
 
 		/**
-		 * Zバッファを使用するかどうかを設定する( 2Dと3D描画に影響 )
+		 * Zバッファを使用するかどうかを設定する(2Dと3D描画に影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:Zバッファを使用する  FALSE:Zバッファを使用しない( デフォルト )
+		 *      Flag = TRUE:Zバッファを使用する  FALSE:Zバッファを使用しない(デフォルト)
 		 */
 		extern int SetUseZBufferFlag(int Flag);
 
 		/**
-		 * Zバッファに書き込みを行うかどうかを設定する( 2Dと3D描画に影響 )
+		 * Zバッファに書き込みを行うかどうかを設定する(2Dと3D描画に影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:書き込みを行う  FALSE:書き込みを行わない( デフォルト )
+		 *      Flag = TRUE:書き込みを行う  FALSE:書き込みを行わない(デフォルト)
 		 */
 		extern int SetWriteZBufferFlag(int Flag);
 
 		/**
-		 * ZバッファのZ値と書き込むZ値との比較モードを設定する( 2Dと3D描画に影響 )
+		 * ZバッファのZ値と書き込むZ値との比較モードを設定する(2Dと3D描画に影響)
 		 *
 		 * Params:
-		 *      CmpType = DX_CMP_NEVER等( デフォルト:DX_CMP_LESSEQUAL )
+		 *      CmpType = DX_CMP_NEVER等(デフォルト:DX_CMP_LESSEQUAL)
 		 */
-		extern int SetZBufferCmpType(int CmpType /* DX_CMP_NEVER 等 */);
+		extern int SetZBufferCmpType(int CmpType /* DX_CMP_NEVER等 */);
 
 		/**
-		 * 書き込むZ値のバイアスを設定する( 2Dと3D描画に影響 )( Bias:バイアス値( デフォルト:0 ) )
+		 * 書き込むZ値のバイアスを設定する(2Dと3D描画に影響)(Bias:バイアス値(デフォルト:0))
 		 *
 		 * Params:
 		 *      Bias = ?
@@ -10736,31 +10735,31 @@ extern (C++, DxLib) {
 		extern int SetZBias(int Bias);
 
 		/**
-		 * Zバッファを使用するかどうかを設定する( 3D描画のみに影響 )
+		 * Zバッファを使用するかどうかを設定する(3D描画のみに影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:Zバッファを使用する  FALSE:Zバッファを使用しない( デフォルト )
+		 *      Flag = TRUE:Zバッファを使用する  FALSE:Zバッファを使用しない(デフォルト)
 		 */
 		extern int SetUseZBuffer3D(int Flag);
 
 		/**
-		 * Zバッファに書き込みを行うかどうかを設定する( 3D描画のみに影響 )
+		 * Zバッファに書き込みを行うかどうかを設定する(3D描画のみに影響)
 		 *
 		 * Params:
-		 *      Flag = TRUE:書き込みを行う  FALSE:書き込みを行わない( デフォルト )
+		 *      Flag = TRUE:書き込みを行う  FALSE:書き込みを行わない(デフォルト)
 		 */
 		extern int SetWriteZBuffer3D(int Flag);
 
 		/**
-		 * ZバッファのZ値と書き込むZ値との比較モードを設定する( 3D描画のみに影響 )
+		 * ZバッファのZ値と書き込むZ値との比較モードを設定する(3D描画のみに影響)
 		 *
 		 * Params:
-		 *      CmpType = DX_CMP_NEVER等( デフォルト:DX_CMP_LESSEQUAL )
+		 *      CmpType = DX_CMP_NEVER等(デフォルト:DX_CMP_LESSEQUAL)
 		 */
-		extern int SetZBufferCmpType3D(int CmpType /* DX_CMP_NEVER 等 */);
+		extern int SetZBufferCmpType3D(int CmpType /* DX_CMP_NEVER等 */);
 
 		/**
-		 * 書き込むZ値のバイアスを設定する( 3D描画のみに影響 )( Bias:バイアス値( デフォルト:0 ) )
+		 * 書き込むZ値のバイアスを設定する(3D描画のみに影響)(Bias:バイアス値(デフォルト:0))
 		 *
 		 * Params:
 		 *      Bias = ?
@@ -10768,7 +10767,7 @@ extern (C++, DxLib) {
 		extern int SetZBias3D(int Bias);
 
 		/**
-		 * 2D描画でZバッファに書き込むZ値を設定する( Z:書き込むZ値( デフォルト:0.2f ) )
+		 * 2D描画でZバッファに書き込むZ値を設定する(Z:書き込むZ値(デフォルト:0.2f))
 		 *
 		 * Params:
 		 *      Z = ?
@@ -10796,7 +10795,7 @@ extern (C++, DxLib) {
 		extern int SetDraw3DScale(float Scale);
 
 		/**
-		 * SetRestoreGraphCallback の旧名
+		 * SetRestoreGraphCallbackの旧名
 		 */
 		extern int SetRestoreShredPoint(void function() ShredPoint);
 
@@ -10991,24 +10990,24 @@ extern (C++, DxLib) {
 		extern .VECTOR_D ConvScreenPosToWorldPosD(.VECTOR_D ScreenPos);
 
 		/**
-		 * スクリーン座標をワールド座標に変換する( Z座標が線形 )
+		 * スクリーン座標をワールド座標に変換する(Z座標が線形)
 		 */
 		extern .VECTOR ConvScreenPosToWorldPos_ZLinear(.VECTOR ScreenPos);
 
 		/**
-		 * スクリーン座標をワールド座標に変換する( Z座標が線形 )
+		 * スクリーン座標をワールド座標に変換する(Z座標が線形)
 		 */
 		extern .VECTOR_D ConvScreenPosToWorldPos_ZLinearD(.VECTOR_D ScreenPos);
 
 		/**
-		 * SetUseBackCulling の旧名称
+		 * SetUseBackCullingの旧名称
 		 */
 		extern int SetUseCullingFlag(int Flag);
 
 		/**
 		 * ポリゴンカリングモードを設定する
 		 */
-		extern int SetUseBackCulling(int Flag /* DX_CULLING_LEFT 等 */);
+		extern int SetUseBackCulling(int Flag /* DX_CULLING_LEFT等 */);
 
 		/**
 		 * ポリゴンカリングモードを取得する
@@ -11018,10 +11017,10 @@ extern (C++, DxLib) {
 		/**
 		 * テクスチャアドレスモードを設定する
 		 */
-		extern int SetTextureAddressMode(int Mode /* DX_TEXADDRESS_WRAP 等 */, int Stage = -1);
+		extern int SetTextureAddressMode(int Mode /* DX_TEXADDRESS_WRAP等 */, int Stage = -1);
 
 		/**
-		 * テクスチャアドレスモードを設定する( U と V を別々に設定する )
+		 * テクスチャアドレスモードを設定する(UとVを別々に設定する)
 		 */
 		extern int SetTextureAddressModeUV(int ModeU, int ModeV, int Stage = -1);
 
@@ -11058,7 +11057,7 @@ extern (C++, DxLib) {
 		/**
 		 * フォグモードを設定する
 		 */
-		extern int SetFogMode(int Mode /* DX_FOGMODE_NONE 等 */);
+		extern int SetFogMode(int Mode /* DX_FOGMODE_NONE等 */);
 
 		/**
 		 * フォグモードを取得する
@@ -11076,22 +11075,22 @@ extern (C++, DxLib) {
 		extern int GetFogColor(int* r, int* g, int* b);
 
 		/**
-		 * フォグが始まる距離と終了する距離を設定する( 0.0f ~ 1.0f )
+		 * フォグが始まる距離と終了する距離を設定する(0.0f~1.0f)
 		 */
 		extern int SetFogStartEnd(float start, float end);
 
 		/**
-		 * フォグが始まる距離と終了する距離を取得する( 0.0f ~ 1.0f )
+		 * フォグが始まる距離と終了する距離を取得する(0.0f~1.0f)
 		 */
 		extern int GetFogStartEnd(float* start, float* end);
 
 		/**
-		 * フォグの密度を設定する( 0.0f ~ 1.0f )
+		 * フォグの密度を設定する(0.0f~1.0f)
 		 */
 		extern int SetFogDensity(float density);
 
 		/**
-		 * フォグの密度を取得する( 0.0f ~ 1.0f )
+		 * フォグの密度を取得する(0.0f~1.0f)
 		 */
 		extern float GetFogDensity();
 
@@ -11103,7 +11102,7 @@ extern (C++, DxLib) {
 		extern uint GetPixel(int x, int y);
 
 		/**
-		 * 指定座標の色を取得する( float型 )
+		 * 指定座標の色を取得する(float型)
 		 */
 		extern .COLOR_F GetPixelF(int x, int y);
 
@@ -11135,7 +11134,7 @@ extern (C++, DxLib) {
 		extern int GetDrawScreenGraph(int x1, int y1, int x2, int y2, int GrHandle, int UseClientFlag = dxlib_d.DxDataType.TRUE);
 
 		/**
-		 * SetDrawScreen で描画対象にできるグラフィックハンドルから指定領域の画像情報を別のグラフィックハンドルに転送する
+		 * SetDrawScreenで描画対象にできるグラフィックハンドルから指定領域の画像情報を別のグラフィックハンドルに転送する
 		 */
 		extern int BltDrawValidGraph(int TargetDrawValidGrHandle, int x1, int y1, int x2, int y2, int DestX, int DestY, int DestGrHandle);
 
@@ -11170,7 +11169,7 @@ extern (C++, DxLib) {
 		extern int ClsDrawScreen();
 
 		/**
-		 * 描画先画面を設定する( MakeScreen で作成したグラフィックハンドルも渡すことができます )
+		 * 描画先画面を設定する(MakeScreenで作成したグラフィックハンドルも渡すことができます)
 		 */
 		extern int SetDrawScreen(int DrawScreen);
 
@@ -11180,25 +11179,25 @@ extern (C++, DxLib) {
 		extern int GetDrawScreen();
 
 		/**
-		 * GetDrawScreen の旧名称
+		 * GetDrawScreenの旧名称
 		 */
 		extern int GetActiveGraph();
 
 		/**
-		 * SetDrawScreen を実行した際にカメラや描画範囲の設定をリセットするかを設定する
+		 * SetDrawScreenを実行した際にカメラや描画範囲の設定をリセットするかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:リセットする( デフォルト )  FALSE:リセットしない
+		 *      UseFlag = TRUE:リセットする(デフォルト)  FALSE:リセットしない
 		 */
 		extern int SetUseSetDrawScreenSettingReset(int UseFlag);
 
 		/**
-		 * SetDrawScreen を実行した際にカメラや描画範囲の設定をリセットするかを取得する
+		 * SetDrawScreenを実行した際にカメラや描画範囲の設定をリセットするかを取得する
 		 */
 		extern int GetUseSetDrawScreenSettingReset();
 
 		/**
-		 * 描画先Zバッファのセット( DrawScreen 付属のZバッファを描画先Zバッファにする、DrawScreen を -1 にするとデフォルトの描画先Zバッファに戻る )
+		 * 描画先Zバッファのセット(DrawScreen 付属のZバッファを描画先Zバッファにする、DrawScreenを-1にするとデフォルトの描画先Zバッファに戻る)
 		 */
 		extern int SetDrawZBuffer(int DrawScreen);
 
@@ -11208,24 +11207,24 @@ extern (C++, DxLib) {
 		extern int SetGraphMode(int ScreenSizeX, int ScreenSizeY, int ColorBitDepth, int RefreshRate = 60);
 
 		/**
-		 * 画面のメモリイメージをセットする( DxLib_Init の前で呼ぶ必要がある( DxLib_Init の前に一度でも呼んでいれば、DxLib_Init 後は Image のアドレスのみの変更目的で呼ぶことは可能 )、PixelFormat に DX_USER_SCREEN_PIXEL_FORMAT_R5G6B5 又は DX_USER_SCREEN_PIXEL_FORMAT_X8R8G8B8 の二つ以外を指定した場合はDXライブラリの描画関数は一切使用できなくなります )
+		 * 画面のメモリイメージをセットする(DxLib_Initの前で呼ぶ必要がある(DxLib_Initの前に一度でも呼んでいれば、DxLib_Init後はImageのアドレスのみの変更目的で呼ぶことは可能)、PixelFormatにDX_USER_SCREEN_PIXEL_FORMAT_R5G6B5又はDX_USER_SCREEN_PIXEL_FORMAT_X8R8G8B8の二つ以外を指定した場合はDXライブラリの描画関数は一切使用できなくなります)
 		 */
-		extern int SetUserScreenImage(void* Image, int PixelFormat /* DX_USER_SCREEN_PIXEL_FORMAT_R5G6B5 等 */);
+		extern int SetUserScreenImage(void* Image, int PixelFormat /* DX_USER_SCREEN_PIXEL_FORMAT_R5G6B5等 */);
 
 		/**
 		 * フルスクリーン解像度モードを設定する
 		 */
-		extern int SetFullScreenResolutionMode(int ResolutionMode /* DX_FSRESOLUTIONMODE_NATIVE 等 */);
+		extern int SetFullScreenResolutionMode(int ResolutionMode /* DX_FSRESOLUTIONMODE_NATIVE等 */);
 
 		/**
-		 * フルスクリーン解像度モードを取得する( UseResolutionMode は実際に使用されている解像度モード( 例えば DX_FSRESOLUTIONMODE_NATIVE を指定していてもモニタが指定の解像度に対応していない場合は UseResolutionMode が DX_FSRESOLUTIONMODE_DESKTOP や DX_FSRESOLUTIONMODE_MAXIMUM になります ) )
+		 * フルスクリーン解像度モードを取得する(UseResolutionModeは実際に使用されている解像度モード(例えば DX_FSRESOLUTIONMODE_NATIVEを指定していてもモニタが指定の解像度に対応していない場合はUseResolutionModeがDX_FSRESOLUTIONMODE_DESKTOPやDX_FSRESOLUTIONMODE_MAXIMUMになります))
 		 */
 		extern int GetFullScreenResolutionMode(int* ResolutionMode, int* UseResolutionMode);
 
 		/**
 		 * フルスクリーンモード時の画面拡大モードを設定する
 		 */
-		extern int SetFullScreenScalingMode(int ScalingMode /* DX_FSSCALINGMODE_NEAREST 等 */, int FitScaling = dxlib_d.DxDataType.FALSE);
+		extern int SetFullScreenScalingMode(int ScalingMode /* DX_FSSCALINGMODE_NEAREST等 */, int FitScaling = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * 640x480の画面で320x240の画面解像度にするかどうかを設定する、640x480以外の解像度では無効
@@ -11241,7 +11240,7 @@ extern (C++, DxLib) {
 		extern int SetZBufferSize(int ZBufferSizeX, int ZBufferSizeY);
 
 		/**
-		 * 画面用のZバッファのビット深度を設定する( 16 or 24 or 32 )
+		 * 画面用のZバッファのビット深度を設定する(16 or 24 or 32)
 		 */
 		extern int SetZBufferBitDepth(int BitDepth);
 
@@ -11256,20 +11255,20 @@ extern (C++, DxLib) {
 		extern int GetWaitVSyncFlag();
 
 		/**
-		 * 画面のフルスクリーンアンチエイリアスモードの設定を行う( DxLib_Init の前でのみ使用可能 )
+		 * 画面のフルスクリーンアンチエイリアスモードの設定を行う(DxLib_Initの前でのみ使用可能)
 		 */
 		extern int SetFullSceneAntiAliasingMode(int Samples, int Quality);
 
 		/**
-		 * ScreenFlip 時に表画面全体に転送する裏画面の領域を設定する( DxLib_Init の前でのみ使用可能 )
+		 * ScreenFlip 時に表画面全体に転送する裏画面の領域を設定する(DxLib_Initの前でのみ使用可能)
 		 */
 		extern int SetGraphDisplayArea(int x1, int y1, int x2, int y2);
 
 		/**
-		 * 画面モード変更時( とウインドウモード変更時 )にグラフィックスシステムの設定やグラフィックハンドルをリセットするかどうかを設定する
+		 * 画面モード変更時(とウインドウモード変更時)にグラフィックスシステムの設定やグラフィックハンドルをリセットするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:リセットする( デフォルト )  FALSE:リセットしない
+		 *      Flag = TRUE:リセットする(デフォルト)  FALSE:リセットしない
 		 */
 		extern int SetChangeScreenModeGraphicsSystemResetFlag(int Flag);
 
@@ -11289,7 +11288,7 @@ extern (C++, DxLib) {
 		extern int GetScreenBitDepth();
 
 		/**
-		 * GetScreenBitDepth の旧名称
+		 * GetScreenBitDepthの旧名称
 		 */
 		extern int GetColorBitDepth();
 
@@ -11299,7 +11298,7 @@ extern (C++, DxLib) {
 		extern int GetChangeDisplayFlag();
 
 		/**
-		 * ( 現在正常に動作しません )ビデオメモリの容量を得る
+		 * (現在正常に動作しません)ビデオメモリの容量を得る
 		 */
 		extern int GetVideoMemorySize(int* AllSize, int* FreeSize);
 
@@ -11324,7 +11323,7 @@ extern (C++, DxLib) {
 		extern int GetDisplayModeNum(int DisplayIndex = 0);
 
 		/**
-		 * 変更可能なディスプレイモードの情報を取得する( ModeIndex は 0 ~ GetDisplayModeNum の戻り値-1 )
+		 * 変更可能なディスプレイモードの情報を取得する(ModeIndexは0~GetDisplayModeNumの戻り値-1)
 		 */
 		extern .DISPLAYMODEDATA GetDisplayMode(int ModeIndex, int DisplayIndex = 0);
 
@@ -11344,9 +11343,9 @@ extern (C++, DxLib) {
 		extern int GetMultiDrawScreenNum();
 
 		/**
-		 * DrawGraphF 等の浮動小数点値で座標を指定する関数における座標タイプを取得する
+		 * DrawGraphF等の浮動小数点値で座標を指定する関数における座標タイプを取得する
 		 *
-		 * Returns: DX_DRAWFLOATCOORDTYPE_DIRECT3D9 など
+		 * Returns: DX_DRAWFLOATCOORDTYPE_DIRECT3D9など
 		 */
 		extern int GetDrawFloatCoordType();
 
@@ -11356,25 +11355,25 @@ extern (C++, DxLib) {
 		 * 通常描画にプログラマブルシェーダーを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int SetUseNormalDrawShader(int Flag);
 
 		/**
-		 * ソフトウエアレンダリングモードを使用するかどうかを設定する( DxLib_Init の前に呼ぶ必要があります )
+		 * ソフトウエアレンダリングモードを使用するかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する  FALSE:使用しない( デフォルト )
+		 *      Flag = TRUE:使用する  FALSE:使用しない(デフォルト)
 		 */
 		extern int SetUseSoftwareRenderModeFlag(int Flag);
 
 		/**
-		 * ( 同効果のSetUseSoftwareRenderModeFlag を使用して下さい )3D機能を使わないかどうかを設定する
+		 * (同効果のSetUseSoftwareRenderModeFlagを使用して下さい)3D機能を使わないかどうかを設定する
 		 */
 		extern int SetNotUse3DFlag(int Flag);
 
 		/**
-		 * ( 同効果のSetUseSoftwareRenderModeFlag を使用して下さい )3D機能を使うかどうかを設定する
+		 * (同効果のSetUseSoftwareRenderModeFlagを使用して下さい)3D機能を使うかどうかを設定する
 		 */
 		extern int SetUse3DFlag(int Flag);
 
@@ -11384,7 +11383,7 @@ extern (C++, DxLib) {
 		extern int GetUse3DFlag();
 
 		/**
-		 * ( 同効果のSetUseSoftwareRenderModeFlag を使用して下さい )画面のピクセルデータをVRAMに置くかどうかを設定する
+		 * (同効果のSetUseSoftwareRenderModeFlagを使用して下さい)画面のピクセルデータをVRAMに置くかどうかを設定する
 		 */
 		extern int SetScreenMemToVramFlag(int Flag);
 
@@ -11404,10 +11403,10 @@ extern (C++, DxLib) {
 		extern int RestoreGraphSystem();
 
 		/**
-		 * ハードウエアの頂点演算処理機能を使用するかどうかを設定する( DxLib_Init の前に呼ぶ必要があります )
+		 * ハードウエアの頂点演算処理機能を使用するかどうかを設定する(DxLib_Initの前に呼ぶ必要があります)
 		 *
 		 * Params:
-		 *      Flag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int SetUseHardwareVertexProcessing(int Flag);
 
@@ -11415,54 +11414,54 @@ extern (C++, DxLib) {
 		 * ピクセル単位でライティングを行うかどうかを設定する、要 ShaderModel 3.0
 		 *
 		 * Params:
-		 *      Flag = TRUE:ピクセル単位のライティングを行う  FALSE:頂点単位のライティングを行う( デフォルト )
+		 *      Flag = TRUE:ピクセル単位のライティングを行う  FALSE:頂点単位のライティングを行う(デフォルト)
 		 */
 		extern int SetUsePixelLighting(int Flag);
 
 		/**
-		 * 古いバージョンの DrawModiGraph 関数のコードを使用するかどうかを設定する
+		 * 古いバージョンのDrawModiGraph関数のコードを使用するかどうかを設定する
 		 */
 		extern int SetUseOldDrawModiGraphCodeFlag(int Flag);
 
 		/**
-		 * ( 現在効果なし )VRAMを使用するかのフラグをセットする
+		 * (現在効果なし)VRAMを使用するかのフラグをセットする
 		 */
 		extern int SetUseVramFlag(int Flag);
 
 		/**
-		 * ( 現在効果なし )2Dグラフィックサーフェス作成時にシステムメモリーを使用するかのフラグ取得
+		 * (現在効果なし)2Dグラフィックサーフェス作成時にシステムメモリーを使用するかのフラグ取得
 		 */
 		extern int GetUseVramFlag();
 
 		/**
-		 * ( 現在効果なし )簡略化ブレンド処理を行うか否かのフラグをセットする
+		 * (現在効果なし)簡略化ブレンド処理を行うか否かのフラグをセットする
 		 */
 		extern int SetBasicBlendFlag(int Flag);
 
 		/**
-		 * ( 現在効果なし )単純図形の描画に3Dデバイスの機能を使用するかどうかを設定する
+		 * (現在効果なし)単純図形の描画に3Dデバイスの機能を使用するかどうかを設定する
 		 */
 		extern int SetUseBasicGraphDraw3DDeviceMethodFlag(int Flag);
 
 		/**
-		 * DXライブラリのウインドウを表示するディスプレイデバイスを設定する( -1 を指定するとマウスカーソルがあるディスプレイデバイスにDXライブラリのウインドウを表示する )
+		 * DXライブラリのウインドウを表示するディスプレイデバイスを設定する(-1を指定するとマウスカーソルがあるディスプレイデバイスにDXライブラリのウインドウを表示する)
 		 */
 		extern int SetUseDisplayIndex(int Index);
 
 		/**
-		 * 頂点バッファに溜まった頂点データを描画する( 特殊用途 )
+		 * 頂点バッファに溜まった頂点データを描画する(特殊用途)
 		 */
 		extern int RenderVertex();
 
 		// 描画パフォーマンス関係関数
 
 		/**
-		 * 前々回の ScreenFlip 呼び出しから、前回の ScreenFlip 呼び出しまでの間に行われた描画コールの回数を取得する
+		 * 前々回のScreenFlip 呼び出しから、前回のScreenFlip 呼び出しまでの間に行われた描画コールの回数を取得する
 		 */
 		extern int GetDrawCallCount();
 
 		/**
-		 * フレームレート( 1秒間に呼ばれる ScreenFlip の回数 )を取得する
+		 * フレームレート(1秒間に呼ばれるScreenFlipの回数)を取得する
 		 */
 		extern float GetFPS();
 
@@ -11470,7 +11469,7 @@ extern (C++, DxLib) {
 		} else {
 			// 描画先画面保存関数
 			// Jpeg_Quality         = 0:低画質~100:高画質
-			// Png_CompressionLevel = 0:無圧縮~  9:最高圧縮
+			// Png_CompressionLevel = 0:無圧縮~9:最高圧縮
 
 			/**
 			 * 現在描画対象になっている画面をファイルで保存する
@@ -11524,7 +11523,7 @@ extern (C++, DxLib) {
 
 			// 描画対象にできるグラフィックハンドル保存関数
 			// Jpeg_Quality         = 0:低画質~100:高画質
-			// Png_CompressionLevel = 0:無圧縮~  9:最高圧縮
+			// Png_CompressionLevel = 0:無圧縮~9:最高圧縮
 
 			/**
 			 * 描画対象にできるグラフィックハンドルをファイルで保存する
@@ -11584,7 +11583,7 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: -1:エラー  0以上:頂点バッファハンドル
 		 */
-		extern int CreateVertexBuffer(int VertexNum, int VertexType /* DX_VERTEX_TYPE_NORMAL_3D 等 */);
+		extern int CreateVertexBuffer(int VertexNum, int VertexType /* DX_VERTEX_TYPE_NORMAL_3D等 */);
 
 		/**
 		 * 頂点バッファを削除する
@@ -11607,7 +11606,7 @@ extern (C++, DxLib) {
 		extern void* GetBufferVertexBuffer(int VertexBufHandle);
 
 		/**
-		 * 頂点バッファハンドルの頂点バッファへの変更を適用する( GetBufferVertexBuffer で取得したバッファへの変更を反映する )
+		 * 頂点バッファハンドルの頂点バッファへの変更を適用する(GetBufferVertexBufferで取得したバッファへの変更を反映する)
 		 */
 		extern int UpdateVertexBuffer(int VertexBufHandle, int UpdateStartIndex, int UpdateVertexNum);
 
@@ -11616,7 +11615,7 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: -1:エラー 0以上:インデックスバッファハンドル
 		 */
-		extern int CreateIndexBuffer(int IndexNum, int IndexType /* DX_INDEX_TYPE_16BIT 等 */);
+		extern int CreateIndexBuffer(int IndexNum, int IndexType /* DX_INDEX_TYPE_16BIT等 */);
 
 		/**
 		 * インデックスバッファを削除する
@@ -11639,7 +11638,7 @@ extern (C++, DxLib) {
 		extern void* GetBufferIndexBuffer(int IndexBufHandle);
 
 		/**
-		 * インデックスバッファハンドルのインデックスバッファへの変更を適用する( GetBufferIndexBuffer で取得したバッファへの変更を反映する )
+		 * インデックスバッファハンドルのインデックスバッファへの変更を適用する(GetBufferIndexBufferで取得したバッファへの変更を反映する)
 		 */
 		extern int UpdateIndexBuffer(int IndexBufHandle, int UpdateStartIndex, int UpdateIndexNum);
 
@@ -11656,7 +11655,7 @@ extern (C++, DxLib) {
 		// シェーダー関係関数
 
 		/**
-		 * 使用できるシェーダーのバージョンを取得する( 0:使えない  200:シェーダーモデル2.0が使用可能  300:シェーダーモデル3.0が使用可能 )
+		 * 使用できるシェーダーのバージョンを取得する(0:使えない  200:シェーダーモデル2.0が使用可能  300:シェーダーモデル3.0が使用可能)
 		 */
 		extern int GetValidShaderVersion();
 
@@ -11724,12 +11723,12 @@ extern (C++, DxLib) {
 		extern int LoadPixelShaderFromMem(const (void)* ImageAddress, int ImageSize);
 
 		/**
-		 * シェーダーハンドルの削除( 頂点シェーダー・ピクセルシェーダー共通 )
+		 * シェーダーハンドルの削除(頂点シェーダー・ピクセルシェーダー共通)
 		 */
 		extern int DeleteShader(int ShaderHandle);
 
 		/**
-		 * シェーダーハンドルを全て削除する( 頂点シェーダーハンドル・ピクセルシェーダーハンドルどちらもすべて削除 )
+		 * シェーダーハンドルを全て削除する(頂点シェーダーハンドル・ピクセルシェーダーハンドルどちらもすべて削除)
 		 */
 		extern int InitShader();
 
@@ -11764,177 +11763,177 @@ extern (C++, DxLib) {
 		extern const (.FLOAT4)* GetConstDefaultParamFToShaderWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ConstantName, size_t ConstantNameLength, int ShaderHandle);
 
 		/**
-		 * 頂点シェーダーの float 型定数を設定する
+		 * 頂点シェーダーのfloat型定数を設定する
 		 */
 		extern int SetVSConstSF(int ConstantIndex, float Param);
 
 		/**
-		 * 頂点シェーダーの float 型定数を設定する
+		 * 頂点シェーダーのfloat型定数を設定する
 		 */
 		extern int SetVSConstF(int ConstantIndex, .FLOAT4 Param);
 
 		/**
-		 * 頂点シェーダーの float 型定数に行列を設定する
+		 * 頂点シェーダーのfloat型定数に行列を設定する
 		 */
 		extern int SetVSConstFMtx(int ConstantIndex, .MATRIX Param);
 
 		/**
-		 * 頂点シェーダーの float 型定数に転置した行列を設定する
+		 * 頂点シェーダーのfloat型定数に転置した行列を設定する
 		 */
 		extern int SetVSConstFMtxT(int ConstantIndex, .MATRIX Param);
 
 		/**
-		 * 頂点シェーダーの int   型定数を設定する
+		 * 頂点シェーダーのint型定数を設定する
 		 */
 		extern int SetVSConstSI(int ConstantIndex, int Param);
 
 		/**
-		 * 頂点シェーダーの int   型定数を設定する
+		 * 頂点シェーダーのint型定数を設定する
 		 */
 		extern int SetVSConstI(int ConstantIndex, .INT4 Param);
 
 		/**
-		 * 頂点シェーダーの BOOL  型定数を設定する
+		 * 頂点シェーダーのBOOL型定数を設定する
 		 */
 		extern int SetVSConstB(int ConstantIndex, dxlib_d.DxDataType.BOOL Param);
 
 		/**
-		 * 頂点シェーダーの float 型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのfloat型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstSFArray(int ConstantIndex, const (float)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの float 型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのfloat型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstFArray(int ConstantIndex, const (.FLOAT4)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの float 型定数に行列を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのfloat型定数に行列を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstFMtxArray(int ConstantIndex, const (.MATRIX)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの float 型定数に転置した行列を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのfloat型定数に転置した行列を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstFMtxTArray(int ConstantIndex, const (.MATRIX)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの int   型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのint型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstSIArray(int ConstantIndex, const (int)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの int   型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのint型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstIArray(int ConstantIndex, const (.INT4)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの BOOL  型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * 頂点シェーダーのBOOL型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetVSConstBArray(int ConstantIndex, const (dxlib_d.DxDataType.BOOL)* ParamArray, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの float 型定数の設定をリセットする
+		 * 頂点シェーダーのfloat型定数の設定をリセットする
 		 */
 		extern int ResetVSConstF(int ConstantIndex, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの int   型定数の設定をリセットする
+		 * 頂点シェーダーのint型定数の設定をリセットする
 		 */
 		extern int ResetVSConstI(int ConstantIndex, int ParamNum);
 
 		/**
-		 * 頂点シェーダーの BOOL  型定数の設定をリセットする
+		 * 頂点シェーダーのBOOL型定数の設定をリセットする
 		 */
 		extern int ResetVSConstB(int ConstantIndex, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの float 型定数を設定する
+		 * ピクセルシェーダーのfloat型定数を設定する
 		 */
 		extern int SetPSConstSF(int ConstantIndex, float Param);
 
 		/**
-		 * ピクセルシェーダーの float 型定数を設定する
+		 * ピクセルシェーダーのfloat型定数を設定する
 		 */
 		extern int SetPSConstF(int ConstantIndex, .FLOAT4 Param);
 
 		/**
-		 * ピクセルシェーダーの float 型定数に行列を設定する
+		 * ピクセルシェーダーのfloat型定数に行列を設定する
 		 */
 		extern int SetPSConstFMtx(int ConstantIndex, .MATRIX Param);
 
 		/**
-		 * ピクセルシェーダーの float 型定数に転置した行列を設定する
+		 * ピクセルシェーダーのfloat型定数に転置した行列を設定する
 		 */
 		extern int SetPSConstFMtxT(int ConstantIndex, .MATRIX Param);
 
 		/**
-		 * ピクセルシェーダーの int   型定数を設定する
+		 * ピクセルシェーダーのint型定数を設定する
 		 */
 		extern int SetPSConstSI(int ConstantIndex, int Param);
 
 		/**
-		 * ピクセルシェーダーの int   型定数を設定する
+		 * ピクセルシェーダーのint型定数を設定する
 		 */
 		extern int SetPSConstI(int ConstantIndex, .INT4 Param);
 
 		/**
-		 * ピクセルシェーダーの BOOL  型定数を設定する
+		 * ピクセルシェーダーのBOOL型定数を設定する
 		 */
 		extern int SetPSConstB(int ConstantIndex, dxlib_d.DxDataType.BOOL Param);
 
 		/**
-		 * ピクセルシェーダーの float 型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのfloat型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstSFArray(int ConstantIndex, const (float)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの float 型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのfloat型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstFArray(int ConstantIndex, const (.FLOAT4)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの float 型定数に行列を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのfloat型定数に行列を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstFMtxArray(int ConstantIndex, const (.MATRIX)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの float 型定数に転置した行列を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのfloat型定数に転置した行列を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstFMtxTArray(int ConstantIndex, const (.MATRIX)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの int   型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのint型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstSIArray(int ConstantIndex, const (int)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの int   型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのint型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstIArray(int ConstantIndex, const (.INT4)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの BOOL  型定数を設定する( 配列を使って連番インデックスに一度に設定 )
+		 * ピクセルシェーダーのBOOL型定数を設定する(配列を使って連番インデックスに一度に設定)
 		 */
 		extern int SetPSConstBArray(int ConstantIndex, const (dxlib_d.DxDataType.BOOL)* ParamArray, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの float 型定数の設定をリセットする
+		 * ピクセルシェーダーのfloat型定数の設定をリセットする
 		 */
 		extern int ResetPSConstF(int ConstantIndex, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの int   型定数の設定をリセットする
+		 * ピクセルシェーダーのint型定数の設定をリセットする
 		 */
 		extern int ResetPSConstI(int ConstantIndex, int ParamNum);
 
 		/**
-		 * ピクセルシェーダーの BOOL  型定数の設定をリセットする
+		 * ピクセルシェーダーのBOOL型定数の設定をリセットする
 		 */
 		extern int ResetPSConstB(int ConstantIndex, int ParamNum);
 
 		/**
-		 * シェーダーを使用した描画での描画先を設定する( DrawScreen に -1 を渡すと無効化 )
+		 * シェーダーを使用した描画での描画先を設定する(DrawScreenに-1を渡すと無効化)
 		 */
 		extern int SetRenderTargetToShader(int TargetIndex, int DrawScreen, int SurfaceIndex = 0, int MipLevel = 0);
 
@@ -11944,17 +11943,17 @@ extern (C++, DxLib) {
 		extern int SetUseTextureToShader(int StageIndex, int GraphHandle);
 
 		/**
-		 * シェーダーを使用した描画に使用する頂点シェーダーを設定する( -1を渡すと解除 )
+		 * シェーダーを使用した描画に使用する頂点シェーダーを設定する(-1を渡すと解除)
 		 */
 		extern int SetUseVertexShader(int ShaderHandle);
 
 		/**
-		 * シェーダーを使用した描画に使用するジオメトリシェーダーを設定する( -1を渡すと解除 )
+		 * シェーダーを使用した描画に使用するジオメトリシェーダーを設定する(-1を渡すと解除)
 		 */
 		extern int SetUseGeometryShader(int ShaderHandle);
 
 		/**
-		 * シェーダーを使用した描画に使用するピクセルシェーダーを設定する( -1を渡すと解除 )
+		 * シェーダーを使用した描画に使用するピクセルシェーダーを設定する(-1を渡すと解除)
 		 */
 		extern int SetUsePixelShader(int ShaderHandle);
 
@@ -11964,7 +11963,7 @@ extern (C++, DxLib) {
 		extern int CalcPolygonBinormalAndTangentsToShader(.VERTEX3DSHADER* VertexArray, int PolygonNum);
 
 		/**
-		 * ポリゴンの頂点の接線と従法線をUV座標から計算してセットする( 頂点インデックスを使用する )
+		 * ポリゴンの頂点の接線と従法線をUV座標から計算してセットする(頂点インデックスを使用する)
 		 */
 		extern int CalcPolygonIndexedBinormalAndTangentsToShader(.VERTEX3DSHADER* VertexArray, int VertexNum, const (ushort)* IndexArray, int PolygonNum);
 
@@ -11984,64 +11983,64 @@ extern (C++, DxLib) {
 		extern int DrawPolygon3DToShader(const (.VERTEX3DSHADER)* VertexArray, int PolygonNum);
 
 		/**
-		 * シェーダーを使って2Dポリゴンを描画する( 頂点インデックスを使用する )
+		 * シェーダーを使って2Dポリゴンを描画する(頂点インデックスを使用する)
 		 */
 		extern int DrawPolygonIndexed2DToShader(const (.VERTEX2DSHADER)* VertexArray, int VertexNum, const (ushort)* IndexArray, int PolygonNum);
 
 		/**
-		 * シェーダーを使って3Dポリゴンを描画する( 頂点インデックスを使用する )
+		 * シェーダーを使って3Dポリゴンを描画する(頂点インデックスを使用する)
 		 */
 		extern int DrawPolygonIndexed3DToShader(const (.VERTEX3DSHADER)* VertexArray, int VertexNum, const (ushort)* IndexArray, int PolygonNum);
 
 		/**
 		 * シェーダーを使って2Dプリミティブを描画する
 		 */
-		extern int DrawPrimitive2DToShader(const (.VERTEX2DSHADER)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */);
+		extern int DrawPrimitive2DToShader(const (.VERTEX2DSHADER)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */);
 
 		/**
 		 * シェーダーを使って3Dプリミティブを描画する
 		 */
-		extern int DrawPrimitive3DToShader(const (.VERTEX3DSHADER)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */);
+		extern int DrawPrimitive3DToShader(const (.VERTEX3DSHADER)* VertexArray, int VertexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */);
 
 		/**
-		 * シェーダーを使って2Dプリミティブを描画する( 頂点インデックスを使用する )
+		 * シェーダーを使って2Dプリミティブを描画する(頂点インデックスを使用する)
 		 */
-		extern int DrawPrimitiveIndexed2DToShader(const (.VERTEX2DSHADER)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */);
+		extern int DrawPrimitiveIndexed2DToShader(const (.VERTEX2DSHADER)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */);
 
 		/**
-		 * シェーダーを使って3Dプリミティブを描画する( 頂点インデックスを使用する )
+		 * シェーダーを使って3Dプリミティブを描画する(頂点インデックスを使用する)
 		 */
-		extern int DrawPrimitiveIndexed3DToShader(const (.VERTEX3DSHADER)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */);
+		extern int DrawPrimitiveIndexed3DToShader(const (.VERTEX3DSHADER)* VertexArray, int VertexNum, const (ushort)* IndexArray, int IndexNum, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */);
 
 		/**
-		 * シェーダーを使って3Dポリゴンを描画する( 頂点バッファ使用版 )
+		 * シェーダーを使って3Dポリゴンを描画する(頂点バッファ使用版)
 		 */
 		extern int DrawPolygon3DToShader_UseVertexBuffer(int VertexBufHandle);
 
 		/**
-		 * シェーダーを使って3Dポリゴンを描画する( 頂点バッファとインデックスバッファ使用版 )
+		 * シェーダーを使って3Dポリゴンを描画する(頂点バッファとインデックスバッファ使用版)
 		 */
 		extern int DrawPolygonIndexed3DToShader_UseVertexBuffer(int VertexBufHandle, int IndexBufHandle);
 
 		/**
-		 * シェーダーを使って3Dプリミティブを描画する( 頂点バッファ使用版 )
+		 * シェーダーを使って3Dプリミティブを描画する(頂点バッファ使用版)
 		 */
-		extern int DrawPrimitive3DToShader_UseVertexBuffer(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */);
+		extern int DrawPrimitive3DToShader_UseVertexBuffer(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */);
 
 		/**
-		 * シェーダーを使って3Dプリミティブを描画する( 頂点バッファ使用版 )
+		 * シェーダーを使って3Dプリミティブを描画する(頂点バッファ使用版)
 		 */
-		extern int DrawPrimitive3DToShader_UseVertexBuffer2(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int StartVertex, int UseVertexNum);
+		extern int DrawPrimitive3DToShader_UseVertexBuffer2(int VertexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int StartVertex, int UseVertexNum);
 
 		/**
-		 * シェーダーを使って3Dプリミティブを描画する( 頂点バッファとインデックスバッファ使用版 )
+		 * シェーダーを使って3Dプリミティブを描画する(頂点バッファとインデックスバッファ使用版)
 		 */
-		extern int DrawPrimitiveIndexed3DToShader_UseVertexBuffer(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */);
+		extern int DrawPrimitiveIndexed3DToShader_UseVertexBuffer(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */);
 
 		/**
-		 * シェーダーを使って3Dプリミティブを描画する( 頂点バッファとインデックスバッファ使用版 )
+		 * シェーダーを使って3Dプリミティブを描画する(頂点バッファとインデックスバッファ使用版)
 		 */
-		extern int DrawPrimitiveIndexed3DToShader_UseVertexBuffer2(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST 等 */, int BaseVertex, int StartVertex, int UseVertexNum, int StartIndex, int UseIndexNum);
+		extern int DrawPrimitiveIndexed3DToShader_UseVertexBuffer2(int VertexBufHandle, int IndexBufHandle, int PrimitiveType /* DX_PRIMTYPE_TRIANGLELIST等 */, int BaseVertex, int StartVertex, int UseVertexNum, int StartIndex, int UseIndexNum);
 
 		// シェーダー用定数バッファ関係関数
 
@@ -12073,42 +12072,42 @@ extern (C++, DxLib) {
 		/**
 		 * シェーダー用定数バッファハンドルの定数バッファを指定のシェーダーの指定のスロットにセットする
 		 */
-		extern int SetShaderConstantBuffer(int SConstBufHandle, int TargetShader /* DX_SHADERTYPE_VERTEX など */, int Slot);
+		extern int SetShaderConstantBuffer(int SConstBufHandle, int TargetShader /* DX_SHADERTYPE_VERTEXなど */, int Slot);
 
 		// フィルター関係関数
 		version (DX_NON_FILTER) {
 		} else {
 			/**
-			 * GraphFilterBlt や GraphBlendBlt の結果を転送先に転送する際のブレンドモードを設定する( 現状で対応しているのは DX_BLENDMODE_NOBLEND と DX_BLENDMODE_ALPHA のみ )
+			 * GraphFilterBltやGraphBlendBltの結果を転送先に転送する際のブレンドモードを設定する(現状で対応しているのはDX_BLENDMODE_NOBLENDとDX_BLENDMODE_ALPHAのみ)
 			 */
-			extern int SetGraphFilterBltBlendMode(int BlendMode /* DX_BLENDMODE_ALPHA など */);
+			extern int SetGraphFilterBltBlendMode(int BlendMode /* DX_BLENDMODE_ALPHAなど */);
 
 			/**
 			 * 画像にフィルター処理を行う
 			 */
-			extern int GraphFilter(int GrHandle, int FilterType /* DX_GRAPH_FILTER_GAUSS 等 */, ...);
+			extern int GraphFilter(int GrHandle, int FilterType /* DX_GRAPH_FILTER_GAUSS等 */, ...);
 
 			/**
 			 * 画像のフィルター付き転送を行う
 			 */
-			extern int GraphFilterBlt(int SrcGrHandle, int DestGrHandle, int FilterType /* DX_GRAPH_FILTER_GAUSS 等 */, ...);
+			extern int GraphFilterBlt(int SrcGrHandle, int DestGrHandle, int FilterType /* DX_GRAPH_FILTER_GAUSS等 */, ...);
 
 			/**
-			 * 画像のフィルター付き転送を行う( 矩形指定 )
+			 * 画像のフィルター付き転送を行う(矩形指定)
 			 */
-			extern int GraphFilterRectBlt(int SrcGrHandle, int DestGrHandle, int SrcX1, int SrcY1, int SrcX2, int SrcY2, int DestX, int DestY, int FilterType /* DX_GRAPH_FILTER_GAUSS 等 */, ...);
+			extern int GraphFilterRectBlt(int SrcGrHandle, int DestGrHandle, int SrcX1, int SrcY1, int SrcX2, int SrcY2, int DestX, int DestY, int FilterType /* DX_GRAPH_FILTER_GAUSS等 */, ...);
 
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_MONO, int Cb = 青色差( -255 ~ 255 ), int Cr = 赤色差( -255 ~ 255 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GAUSS, int PixelWidth = 使用ピクセル幅( 8 , 16 , 32 の何れか ), int Param = ぼかしパラメータ( 100 で約1ピクセル分の幅 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_DOWN_SCALE, int DivNum = 元のサイズの何分の1か、という値( 2 , 4 , 8 の何れか ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_CLIP, int CmpType = クリップタイプ( DX_CMP_LESS:CmpParam以下をクリップ  又は  DX_CMP_GREATER:CmpParam以上をクリップ ), int CmpParam = クリップパラメータ( 0 ~ 255 ), int ClipFillFlag = クリップしたピクセルを塗りつぶすかどうか( TRUE:塗りつぶす  FALSE:塗りつぶさない ), uint ClipFillColor = クリップしたピクセルに塗る色値( GetColor で取得する )( ClipFillFlag が FALSE の場合は使用しない ), int ClipFillAlpha = クリップしたピクセルに塗るα値( 0 ~ 255 )( ClipFillFlag が FALSE の場合は使用しない ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_SCALE, int MinBright = 変換後に真っ暗になる明るさ( 0 ~ 255 ), int MaxBright = 変換後に真っ白になる明るさ( 0 ~ 255 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_HSB, int HueType = Hue の意味( 0:相対値  1:絶対値 ), int Hue = 色相パラメータ( HueType が 0 の場合 = ピクセルの色相に対する相対値( -180 ~ 180 )   HueType が 1 の場合 = 色相の絶対値( 0 ~ 360 ) ), int Saturation = 彩度( -255 ~ ), int Bright = 輝度( -255 ~ 255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_MONO, int Cb = 青色差(-255~255), int Cr = 赤色差(-255~255));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GAUSS, int PixelWidth = 使用ピクセル幅(8 , 16 , 32の何れか), int Param = ぼかしパラメータ(100で約1ピクセル分の幅));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_DOWN_SCALE, int DivNum = 元のサイズの何分の1か、という値(2 , 4 , 8の何れか));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_CLIP, int CmpType = クリップタイプ(DX_CMP_LESS:CmpParam以下をクリップ又はDX_CMP_GREATER:CmpParam以上をクリップ), int CmpParam = クリップパラメータ(0~255), int ClipFillFlag = クリップしたピクセルを塗りつぶすかどうか(TRUE:塗りつぶす  FALSE:塗りつぶさない), uint ClipFillColor = クリップしたピクセルに塗る色値(GetColorで取得する)(ClipFillFlagがFALSEの場合は使用しない), int ClipFillAlpha = クリップしたピクセルに塗るα値(0~255)(ClipFillFlagがFALSEの場合は使用しない));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_SCALE, int MinBright = 変換後に真っ暗になる明るさ(0~255), int MaxBright = 変換後に真っ白になる明るさ(0~255));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_HSB, int HueType = Hueの意味(0:相対値  1:絶対値), int Hue = 色相パラメータ(HueTypeが0の場合 = ピクセルの色相に対する相対値(-180~180)   HueTypeが1の場合 = 色相の絶対値(0~360)), int Saturation = 彩度(-255~), int Bright = 輝度(-255~255));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_INVERT);
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_LEVEL, int Min = 変換元の下限値( 0 ~ 255 ), int Max = 変換元の上限値( 0 ~ 255 ), int Gamma = ガンマ値( 100 でガンマ補正無し、0 とそれ以下の値は不可 ), int AfterMin = 変換後の最低値( 0 ~ 255 ), int AfterMax = 変換後の最大値( 0 ~ 255 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_TWO_COLOR, int Threshold = 閾値( 0 ~ 255 ), uint LowColor = 閾値より値が低かったピクセルの変換後の色値( GetColor で取得する ), int LowAlpha = 閾値より値が低かったピクセルの変換後のα値( 0 ~ 255 ), uint HighColor = 閾値より値が高かったピクセルの変換後の色値( GetColor で取得する ), int HighAlpha = 閾値より値が高かったピクセルの変換後のα値( 0 ~ 255 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GRADIENT_MAP, int MapGrHandle = グラデーションマップのグラフィックハンドル( 元画像の輝度からグラデーションマップ画像の x 座標を算出しますので縦幅は1dotでもOK ), int Reverse = グラデーションマップ左右反転フラグ( TRUE:グラデーションマップを左右反転して使う  FALSE:左右反転しない ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_REPLACEMENT, int TargetR, int TargetG, int TargetB, int TargetA = 置換対象の色( 0~255 ), int R, int G, int B, int A = 置換後の色( 0~255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_LEVEL, int Min = 変換元の下限値(0~255), int Max = 変換元の上限値(0~255), int Gamma = ガンマ値(100でガンマ補正無し、0とそれ以下の値は不可), int AfterMin = 変換後の最低値(0~255), int AfterMax = 変換後の最大値(0~255));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_TWO_COLOR, int Threshold = 閾値(0~255), uint LowColor = 閾値より値が低かったピクセルの変換後の色値(GetColorで取得する), int LowAlpha = 閾値より値が低かったピクセルの変換後のα値(0~255), uint HighColor = 閾値より値が高かったピクセルの変換後の色値(GetColorで取得する), int HighAlpha = 閾値より値が高かったピクセルの変換後のα値(0~255));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GRADIENT_MAP, int MapGrHandle = グラデーションマップのグラフィックハンドル(元画像の輝度からグラデーションマップ画像のx座標を算出しますので縦幅は1dotでもOK), int Reverse = グラデーションマップ左右反転フラグ(TRUE:グラデーションマップを左右反転して使う  FALSE:左右反転しない));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_REPLACEMENT, int TargetR, int TargetG, int TargetB, int TargetA = 置換対象の色(0~255), int R, int G, int B, int A = 置換後の色(0~255));
 
 			/*
 			 * 通常のアルファチャンネル付き画像を乗算済みアルファ画像に変換するフィルタ
@@ -12126,19 +12125,19 @@ extern (C++, DxLib) {
 			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_YUV_TO_RGB);
 
 			/*
-			 * YUVカラーをRGBカラーに変換するフィルタ( UV成分が Y成分の半分・又は4分の1( 横・縦片方若しくは両方 )の解像度しかない場合用 )
+			 * YUVカラーをRGBカラーに変換するフィルタ(UV成分がY成分の半分・又は4分の1(横・縦片方若しくは両方)の解像度しかない場合用)
 			 */
-			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_Y2UV1_TO_RGB, int UVGrHandle = YUVカラーのUV成分のみで、且つYに対して解像度が半分( 若しくは 4 分の 1 )のグラフィックハンドル( U=R, V=G ));
+			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_Y2UV1_TO_RGB, int UVGrHandle = YUVカラーのUV成分のみで、且つYに対して解像度が半分(若しくは4分の1)のグラフィックハンドル(U=R, V=G));
 
 			/*
-			 * YUVカラーをRGBカラーに変換するフィルタ( 且つ右側半分のRの値をアルファ値として扱う )
+			 * YUVカラーをRGBカラーに変換するフィルタ(且つ右側半分のRの値をアルファ値として扱う)
 			 */
 			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_YUV_TO_RGB_RRA);
 
 			/*
-			 * YUVカラーをRGBカラーに変換するフィルタ( UV成分が Y成分の半分・又は4分の1( 横・縦片方若しくは両方 )の解像度しかない場合用 )( 且つ右側半分のRの値をアルファ値として扱う )
+			 * YUVカラーをRGBカラーに変換するフィルタ(UV成分がY成分の半分・又は4分の1(横・縦片方若しくは両方)の解像度しかない場合用)(且つ右側半分のRの値をアルファ値として扱う)
 			 */
-			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_Y2UV1_TO_RGB_RRA, int UVGrHandle = YUVカラーのUV成分のみで、且つYに対して解像度が半分( 若しくは 4 分の 1 )のグラフィックハンドル( U=R, V=G ));
+			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_Y2UV1_TO_RGB_RRA, int UVGrHandle = YUVカラーのUV成分のみで、且つYに対して解像度が半分(若しくは4分の1)のグラフィックハンドル(U=R, V=G));
 
 			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BICUBIC_SCALE, int DestSizeX = スケーリング後の横ピクセル数, int DestSizeY = スケーリング後の縦ピクセル数);
 			//int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_LANCZOS3_SCALE, int DestSizeX = スケーリング後の横ピクセル数, int DestSizeY = スケーリング後の縦ピクセル数);
@@ -12146,20 +12145,20 @@ extern (C++, DxLib) {
 			/**
 			 * 二つの画像をブレンドする
 			 */
-			extern int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio /* ブレンド効果の影響度( 0:0%  255:100% ) */, int BlendType /* DX_GRAPH_BLEND_ADD 等 */, ...);
+			extern int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio /* ブレンド効果の影響度(0:0%  255:100%) */, int BlendType /* DX_GRAPH_BLEND_ADD等 */, ...);
 
 			/**
 			 * 二つの画像をブレンドして結果を指定の画像に出力する
 			 */
-			extern int GraphBlendBlt(int SrcGrHandle, int BlendGrHandle, int DestGrHandle, int BlendRatio /* ブレンド効果の影響度( 0:0%  255:100% ) */, int BlendType /* DX_GRAPH_BLEND_ADD 等 */, ...);
+			extern int GraphBlendBlt(int SrcGrHandle, int BlendGrHandle, int DestGrHandle, int BlendRatio /* ブレンド効果の影響度(0:0%  255:100%) */, int BlendType /* DX_GRAPH_BLEND_ADD等 */, ...);
 
 			/**
-			 * 二つの画像をブレンドして結果を指定の画像に出力する( 矩形指定 )
+			 * 二つの画像をブレンドして結果を指定の画像に出力する(矩形指定)
 			 */
-			extern int GraphBlendRectBlt(int SrcGrHandle, int BlendGrHandle, int DestGrHandle, int SrcX1, int SrcY1, int SrcX2, int SrcY2, int BlendX, int BlendY, int DestX, int DestY, int BlendRatio /* ブレンド効果の影響度( 0:0%  255:100% ) */, int BlendType /* DX_GRAPH_BLEND_ADD 等 */, ...);
+			extern int GraphBlendRectBlt(int SrcGrHandle, int BlendGrHandle, int DestGrHandle, int SrcX1, int SrcY1, int SrcX2, int SrcY2, int BlendX, int BlendY, int DestX, int DestY, int BlendRatio /* ブレンド効果の影響度(0:0%  255:100%) */, int BlendType /* DX_GRAPH_BLEND_ADD等 */, ...);
 
 			// int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio, int BlendType = DX_GRAPH_BLEND_NORMAL);
-			// int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio, int BlendType = DX_GRAPH_BLEND_RGBA_SELECT_MIX, int SelectR = ( 出力の赤分となる成分 DX_RGBA_SELECT_SRC_R 等 ), int SelectG = ( 出力の緑成分となる成分 DX_RGBA_SELECT_SRC_R 等 ), int SelectB = ( 出力の青成分となる成分 DX_RGBA_SELECT_SRC_R 等 ), int SelectA = ( 出力のα成分となる成分 DX_RGBA_SELECT_SRC_R 等 ));
+			// int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio, int BlendType = DX_GRAPH_BLEND_RGBA_SELECT_MIX, int SelectR = (出力の赤分となる成分 DX_RGBA_SELECT_SRC_R等), int SelectG = (出力の緑成分となる成分 DX_RGBA_SELECT_SRC_R等), int SelectB = (出力の青成分となる成分 DX_RGBA_SELECT_SRC_R等), int SelectA = (出力のα成分となる成分 DX_RGBA_SELECT_SRC_R等));
 			// int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio, int BlendType = DX_GRAPH_BLEND_MULTIPLE);
 			// int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio, int BlendType = DX_GRAPH_BLEND_DIFFERENCE);
 			// int GraphBlend(int GrHandle, int BlendGrHandle, int BlendRatio, int BlendType = DX_GRAPH_BLEND_ADD);
@@ -12228,7 +12227,7 @@ extern (C++, DxLib) {
 			extern int PauseMovieToGraph(int GraphHandle, int SysPause = 0);
 
 			/**
-			 * 動画ファイルの再生フレームを進める、戻すことは出来ない( 動画ファイルが停止状態で、且つ Ogg Theora のみ有効 )
+			 * 動画ファイルの再生フレームを進める、戻すことは出来ない(動画ファイルが停止状態で、且つ Ogg Theoraのみ有効)
 			 */
 			extern int AddMovieFrameToGraph(int GraphHandle, uint FrameNum);
 
@@ -12238,7 +12237,7 @@ extern (C++, DxLib) {
 			extern int SeekMovieToGraph(int GraphHandle, int Time);
 
 			/**
-			 * 動画ファイルの再生速度を設定する( 1.0 = 等倍速  2.0 = 2倍速 )、一部のファイルフォーマットのみで有効な機能です
+			 * 動画ファイルの再生速度を設定する(1.0 = 等倍速  2.0 = 2倍速)、一部のファイルフォーマットのみで有効な機能です
 			 */
 			extern int SetPlaySpeedRateMovieToGraph(int GraphHandle, double SpeedRate);
 
@@ -12258,12 +12257,12 @@ extern (C++, DxLib) {
 			extern int ChangeMovieVolumeToGraph(int Volume, int GraphHandle);
 
 			/**
-			 * 動画ファイルの基本イメージデータを取得する( ImageUpdateFlag に int 型変数のアドレスを渡すと、イメージが更新された場合は 1 が、更新されていない場合は 0 が格納されます、 ImageUpdateFlagSetOnly を TRUE にすると戻り値の BASEIMAGE は有効な画像データではなくなりますが、BASEIMAGE の更新処理が行われませんので、ImageUpdateFlag を利用して画像が更新されたかどうかだけをチェックしたい場合は TRUE にしてください )
+			 * 動画ファイルの基本イメージデータを取得する(ImageUpdateFlagにint型変数のアドレスを渡すと、イメージが更新された場合は1が、更新されていない場合は0が格納されます、ImageUpdateFlagSetOnlyをTRUEにすると戻り値のBASEIMAGEは有効な画像データではなくなりますが、BASEIMAGEの更新処理が行われませんので、ImageUpdateFlagを利用して画像が更新されたかどうかだけをチェックしたい場合はTRUEにしてください)
 			 */
 			extern const (.BASEIMAGE)* GetMovieBaseImageToGraph(int GraphHandle, int* ImageUpdateFlag = null, int ImageUpdateFlagSetOnly = dxlib_d.DxDataType.FALSE);
 
 			/**
-			 * 動画ファイルの総フレーム数を得る( Ogg Theora と mp4 でのみ有効 )
+			 * 動画ファイルの総フレーム数を得る(Ogg Theoraとmp4でのみ有効)
 			 */
 			extern int GetMovieTotalFrameToGraph(int GraphHandle);
 
@@ -12298,15 +12297,15 @@ extern (C++, DxLib) {
 			 * 読み込む動画ファイル映像の右半分の赤成分をα情報として扱うかどうかをセットする
 			 *
 			 * Params:
-			 *      Flag = TRUE:α情報として扱う  FALSE:α情報として扱わない( デフォルト )
+			 *      Flag = TRUE:α情報として扱う  FALSE:α情報として扱わない(デフォルト)
 			 */
 			extern int SetMovieRightImageAlphaFlag(int Flag);
 
 			/**
-			 * 読み込む動画ファイルが32bitカラーだった場合、A8R8G8B8 形式として扱うかどうかをセットする、32bitカラーではない動画ファイルに対しては無効
+			 * 読み込む動画ファイルが32bitカラーだった場合、A8R8G8B8形式として扱うかどうかをセットする、32bitカラーではない動画ファイルに対しては無効
 			 *
 			 * Params:
-			 *      Flag = TRUE:A8R8G8B8として扱う  FALSE:X8R8G8B8として扱う( デフォルト )
+			 *      Flag = TRUE:A8R8G8B8として扱う  FALSE:X8R8G8B8として扱う(デフォルト)
 			 */
 			extern int SetMovieColorA8R8G8B8Flag(int Flag);
 
@@ -12314,7 +12313,7 @@ extern (C++, DxLib) {
 			 * YUVフォーマットのサーフェスが使用できる場合はYUVフォーマットのサーフェスを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      Flag = TRUE:使用する( デフォルト ) FALSE:RGBフォーマットのサーフェスを使用する
+			 *      Flag = TRUE:使用する(デフォルト) FALSE:RGBフォーマットのサーフェスを使用する
 			 */
 			extern int SetMovieUseYUVFormatSurfaceFlag(int Flag);
 		}
@@ -12322,22 +12321,22 @@ extern (C++, DxLib) {
 		// カメラ関係関数
 
 		/**
-		 * カメラの Nearクリップ面と Farクリップ面の距離を設定する
+		 * カメラのNearクリップ面とFarクリップ面の距離を設定する
 		 */
 		extern int SetCameraNearFar(float Near, float Far);
 
 		/**
-		 * カメラの Nearクリップ面と Farクリップ面の距離を設定する
+		 * カメラのNearクリップ面とFarクリップ面の距離を設定する
 		 */
 		extern int SetCameraNearFarD(double Near, double Far);
 
 		/**
-		 * カメラの視点、注視点、アップベクトルを設定する( アップベクトルはY軸方向から導き出す )
+		 * カメラの視点、注視点、アップベクトルを設定する(アップベクトルはY軸方向から導き出す)
 		 */
 		extern int SetCameraPositionAndTarget_UpVecY(.VECTOR Position, .VECTOR Target);
 
 		/**
-		 * カメラの視点、注視点、アップベクトルを設定する( アップベクトルはY軸方向から導き出す )
+		 * カメラの視点、注視点、アップベクトルを設定する(アップベクトルはY軸方向から導き出す)
 		 */
 		extern int SetCameraPositionAndTarget_UpVecYD(.VECTOR_D Position, .VECTOR_D Target);
 
@@ -12352,12 +12351,12 @@ extern (C++, DxLib) {
 		extern int SetCameraPositionAndTargetAndUpVecD(.VECTOR_D Position, .VECTOR_D TargetPosition, .VECTOR_D UpVector);
 
 		/**
-		 * カメラの視点、注視点、アップベクトルを設定する( 注視点とアップベクトルは垂直回転角度、水平回転角度、捻り回転角度から導き出す )
+		 * カメラの視点、注視点、アップベクトルを設定する(注視点とアップベクトルは垂直回転角度、水平回転角度、捻り回転角度から導き出す)
 		 */
 		extern int SetCameraPositionAndAngle(.VECTOR Position, float VRotate, float HRotate, float TRotate);
 
 		/**
-		 * カメラの視点、注視点、アップベクトルを設定する( 注視点とアップベクトルは垂直回転角度、水平回転角度、捻り回転角度から導き出す )
+		 * カメラの視点、注視点、アップベクトルを設定する(注視点とアップベクトルは垂直回転角度、水平回転角度、捻り回転角度から導き出す)
 		 */
 		extern int SetCameraPositionAndAngleD(.VECTOR_D Position, double VRotate, double HRotate, double TRotate);
 
@@ -12438,14 +12437,14 @@ extern (C++, DxLib) {
 		/**
 		 * 指定の座標がカメラの視界に入っているかどうかを判定する、戻り値で外れている方向も知ることができる
 		 *
-		 * Returns: 0:視界に入っている  0以外:視界に入っていない( DX_CAMERACLIP_LEFT や DX_CAMERACLIP_RIGHT が or 演算で混合されたもの、and 演算で方向を確認できる )
+		 * Returns: 0:視界に入っている  0以外:視界に入っていない(DX_CAMERACLIP_LEFTやDX_CAMERACLIP_RIGHTがor演算で混合されたもの、and演算で方向を確認できる)
 		 */
 		extern int CheckCameraViewClip_Dir(.VECTOR CheckPos);
 
 		/**
 		 * 指定の座標がカメラの視界に入っているかどうかを判定する、戻り値で外れている方向も知ることができる
 		 *
-		 * Returns: 0:視界に入っている  0以外:視界に入っていない( DX_CAMERACLIP_LEFT や DX_CAMERACLIP_RIGHT が or 演算で混合されたもの、and 演算で方向を確認できる )
+		 * Returns: 0:視界に入っている  0以外:視界に入っていない(DX_CAMERACLIP_LEFTやDX_CAMERACLIP_RIGHTがor演算で混合されたもの、and演算で方向を確認できる)
 		 */
 		extern int CheckCameraViewClip_DirD(.VECTOR_D CheckPos);
 
@@ -12464,22 +12463,22 @@ extern (C++, DxLib) {
 		extern int CheckCameraViewClip_BoxD(.VECTOR_D BoxPos1, .VECTOR_D BoxPos2);
 
 		/**
-		 * カメラの Near クリップ面の距離を取得する
+		 * カメラのNearクリップ面の距離を取得する
 		 */
 		extern float GetCameraNear();
 
 		/**
-		 * カメラの Near クリップ面の距離を取得する
+		 * カメラのNearクリップ面の距離を取得する
 		 */
 		extern double GetCameraNearD();
 
 		/**
-		 * カメラの Far クリップ面の距離を取得する
+		 * カメラのFarクリップ面の距離を取得する
 		 */
 		extern float GetCameraFar();
 
 		/**
-		 * カメラの Far クリップ面の距離を取得する
+		 * カメラのFarクリップ面の距離を取得する
 		 */
 		extern double GetCameraFarD();
 
@@ -12733,7 +12732,7 @@ extern (C++, DxLib) {
 		/**
 		 * デフォルトライトのタイプを取得する
 		 *
-		 * Returns: DX_LIGHTTYPE_DIRECTIONAL 等
+		 * Returns: DX_LIGHTTYPE_DIRECTIONAL等
 		 */
 		extern int GetLightType();
 
@@ -12800,31 +12799,31 @@ extern (C++, DxLib) {
 		extern .VECTOR GetLightPosition();
 
 		/**
-		 * デフォルトライトの距離減衰パラメータを設定する( 有効距離、距離減衰係数0、1、2 )
+		 * デフォルトライトの距離減衰パラメータを設定する(有効距離、距離減衰係数0、1、2)
 		 */
 		extern int SetLightRangeAtten(float Range, float Atten0, float Atten1, float Atten2);
 
 		/**
-		 * デフォルトライトの距離減衰パラメータを取得する( 有効距離、距離減衰係数0、1、2 )
+		 * デフォルトライトの距離減衰パラメータを取得する(有効距離、距離減衰係数0、1、2)
 		 */
 		extern int GetLightRangeAtten(float* Range, float* Atten0, float* Atten1, float* Atten2);
 
 		/**
-		 * デフォルトライトのスポットライトのパラメータを設定する( 外部コーン角度、内部コーン角度 )
+		 * デフォルトライトのスポットライトのパラメータを設定する(外部コーン角度、内部コーン角度)
 		 */
 		extern int SetLightAngle(float OutAngle, float InAngle);
 
 		/**
-		 * デフォルトライトのスポットライトのパラメータを取得する( 外部コーン角度、内部コーン角度 )
+		 * デフォルトライトのスポットライトのパラメータを取得する(外部コーン角度、内部コーン角度)
 		 */
 		extern int GetLightAngle(float* OutAngle, float* InAngle);
 
 		/**
-		 * デフォルトライトに SetUseShadowMap で指定したシャドウマップを適用するかどうかを設定する
+		 * デフォルトライトにSetUseShadowMapで指定したシャドウマップを適用するかどうかを設定する
 		 *
 		 * Params:
-		 *      SmSlotIndex = シャドウマップスロット( SetUseShadowMap の第1引数に設定する値 )
-		 *      UseFlag = 適用にするかどうかのフラグ( TRUE:適用する( デフォルト )  FALSE:適用しない )
+		 *      SmSlotIndex = シャドウマップスロット(SetUseShadowMapの第1引数に設定する値)
+		 *      UseFlag = 適用にするかどうかのフラグ(TRUE:適用する(デフォルト)  FALSE:適用しない)
 		 */
 		extern int SetLightUseShadowMap(int SmSlotIndex, int UseFlag);
 
@@ -12854,7 +12853,7 @@ extern (C++, DxLib) {
 		extern int DeleteLightHandleAll();
 
 		/**
-		 * ライトハンドルのライトのタイプを変更する( DX_LIGHTTYPE_DIRECTIONAL 等 )
+		 * ライトハンドルのライトのタイプを変更する(DX_LIGHTTYPE_DIRECTIONAL等)
 		 */
 		extern int SetLightTypeHandle(int LHandle, int LightType);
 
@@ -12893,29 +12892,29 @@ extern (C++, DxLib) {
 		extern int SetLightPositionHandle(int LHandle, .VECTOR Position);
 
 		/**
-		 * ライトハンドルのライトの距離減衰パラメータを設定する( 有効距離、距離減衰係数0、1、2 )
+		 * ライトハンドルのライトの距離減衰パラメータを設定する(有効距離、距離減衰係数0、1、2)
 		 */
 		extern int SetLightRangeAttenHandle(int LHandle, float Range, float Atten0, float Atten1, float Atten2);
 
 		/**
-		 * ライトハンドルのライトのスポットライトのパラメータを設定する( 外部コーン角度、内部コーン角度 )
+		 * ライトハンドルのライトのスポットライトのパラメータを設定する(外部コーン角度、内部コーン角度)
 		 */
 		extern int SetLightAngleHandle(int LHandle, float OutAngle, float InAngle);
 
 		/**
-		 * ライトハンドルのライトに SetUseShadowMap で指定したシャドウマップを適用するかどうかを設定する
+		 * ライトハンドルのライトにSetUseShadowMapで指定したシャドウマップを適用するかどうかを設定する
 		 *
 		 * Params:
 		 *      LHandle = ?
-		 *      SmSlotIndex = シャドウマップスロット( SetUseShadowMap の第1引数に設定する値 )
-		 *      UseFlag = 適用にするかどうかのフラグ( TRUE:適用する( デフォルト )  FALSE:適用しない )
+		 *      SmSlotIndex = シャドウマップスロット(SetUseShadowMapの第1引数に設定する値)
+		 *      UseFlag = 適用にするかどうかのフラグ(TRUE:適用する(デフォルト)  FALSE:適用しない)
 		 */
 		extern int SetLightUseShadowMapHandle(int LHandle, int SmSlotIndex, int UseFlag);
 
 		/**
 		 * ライトハンドルのライトのタイプを取得する
 		 *
-		 * Returns: DX_LIGHTTYPE_DIRECTIONAL 等
+		 * Returns: DX_LIGHTTYPE_DIRECTIONAL等
 		 */
 		extern int GetLightTypeHandle(int LHandle);
 
@@ -12952,12 +12951,12 @@ extern (C++, DxLib) {
 		extern .VECTOR GetLightPositionHandle(int LHandle);
 
 		/**
-		 * ライトハンドルのライトの距離減衰パラメータを取得する( 有効距離、距離減衰係数0、1、2 )
+		 * ライトハンドルのライトの距離減衰パラメータを取得する(有効距離、距離減衰係数0、1、2)
 		 */
 		extern int GetLightRangeAttenHandle(int LHandle, float* Range, float* Atten0, float* Atten1, float* Atten2);
 
 		/**
-		 * ライトハンドルのライトのスポットライトのパラメータを取得する( 外部コーン角度、内部コーン角度 )
+		 * ライトハンドルのライトのスポットライトのパラメータを取得する(外部コーン角度、内部コーン角度)
 		 */
 		extern int GetLightAngleHandle(int LHandle, float* OutAngle, float* InAngle);
 
@@ -12995,7 +12994,7 @@ extern (C++, DxLib) {
 			extern int DeleteMaskScreen();
 
 			/**
-			 * マスクスクリーンにメモリ上のビットマップデータを転送する( MaskData は 1byte で 1dot 表す1ラインあたり Width byte のデータ配列の先頭アドレス )
+			 * マスクスクリーンにメモリ上のビットマップデータを転送する(MaskDataは1byteで1dot 表す1ラインあたり Width byteのデータ配列の先頭アドレス)
 			 */
 			extern int DrawMaskToDirectData(int x, int y, int Width, int Height, const (void)* MaskData, int TransMode);
 
@@ -13008,7 +13007,7 @@ extern (C++, DxLib) {
 			 * マスクスクリーンを使用するかどうかを設定する
 			 *
 			 * Params:
-			 *      ValidFlag = 使用するかどうか( TRUE:使用する  FALSE:使用しない( デフォルト )
+			 *      ValidFlag = 使用するかどうか(TRUE:使用する  FALSE:使用しない(デフォルト)
 			 */
 			extern int SetUseMaskScreenFlag(int ValidFlag);
 
@@ -13023,14 +13022,14 @@ extern (C++, DxLib) {
 			extern int FillMaskScreen(int Flag);
 
 			/**
-			 * マスクスクリーンとして使用するグラフィックのハンドルを設定する、-1を渡すと解除( 引数で渡すグラフィックハンドルは MakeScreen で作成した「アルファチャンネル付きの描画対象にできるグラフィックハンドル」である必要があります( アルファチャンネルがマスクに使用されます ) )
+			 * マスクスクリーンとして使用するグラフィックのハンドルを設定する、-1を渡すと解除(引数で渡すグラフィックハンドルはMakeScreenで作成した「アルファチャンネル付きの描画対象にできるグラフィックハンドル」である必要があります(アルファチャンネルがマスクに使用されます))
 			 */
 			extern int SetMaskScreenGraph(int GraphHandle);
 
 			/**
-			 * マスクスクリーンとして使用するグラフィックの、どのチャンネルをマスクとして使用するかを設定する( デフォルトは DX_MASKGRAPH_CH_A、 尚、DX_MASKGRAPH_CH_A以外を使用する場合はグラフィックスデバイスがシェーダーモデル2.0以降に対応している必要があります )
+			 * マスクスクリーンとして使用するグラフィックの、どのチャンネルをマスクとして使用するかを設定する(デフォルトはDX_MASKGRAPH_CH_A、尚、DX_MASKGRAPH_CH_A以外を使用する場合はグラフィックスデバイスがシェーダーモデル2.0以降に対応している必要があります)
 			 */
-			extern int SetMaskScreenGraphUseChannel(int UseChannel /* DX_MASKGRAPH_CH_A 等 */);
+			extern int SetMaskScreenGraphUseChannel(int UseChannel /* DX_MASKGRAPH_CH_A等 */);
 
 			/**
 			 * マスクハンドルをすべて削除する
@@ -13048,7 +13047,7 @@ extern (C++, DxLib) {
 			extern int GetMaskSize(int* WidthBuf, int* HeightBuf, int MaskHandle);
 
 			/**
-			 * マスクハンドルが持つマスクイメージのBASEIMAGEデータを取得する( フォーマットが変更されるような操作をすると正常に動作しなくなります、あと、ReleaseBaseImage は実行する必要はありません )
+			 * マスクハンドルが持つマスクイメージのBASEIMAGEデータを取得する(フォーマットが変更されるような操作をすると正常に動作しなくなります、あと、ReleaseBaseImageは実行する必要はありません)
 			 */
 			extern int GetMaskBaseImageInfo(.BASEIMAGE* BaseImage, int MaskHandle);
 
@@ -13110,7 +13109,7 @@ extern (C++, DxLib) {
 				extern int DrawFormatStringMask(int x, int y, int Flag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 				/**
-				 * 書式指定ありの文字列をマスクスクリーンに描画する( フォントハンドル指定版 )( SetFontCacheToTextureFlag(FALSE); にして作成したフォントハンドルのみ使用可能 )
+				 * 書式指定ありの文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(FALSE);にして作成したフォントハンドルのみ使用可能)
 				 */
 				extern int DrawFormatStringMaskToHandle(int x, int y, int Flag, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -13125,23 +13124,23 @@ extern (C++, DxLib) {
 				extern int DrawNStringMask(int x, int y, int Flag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 				/**
-				 * 文字列をマスクスクリーンに描画する( フォントハンドル指定版 )( SetFontCacheToTextureFlag(FALSE); にして作成したフォントハンドルのみ使用可能 )
+				 * 文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(FALSE);にして作成したフォントハンドルのみ使用可能)
 				 */
 				extern int DrawStringMaskToHandle(int x, int y, int Flag, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* String);
 
 				/**
-				 * 文字列をマスクスクリーンに描画する( フォントハンドル指定版 )( SetFontCacheToTextureFlag(FALSE); にして作成したフォントハンドルのみ使用可能 )
+				 * 文字列をマスクスクリーンに描画する(フォントハンドル指定版)(SetFontCacheToTextureFlag(FALSE);にして作成したフォントハンドルのみ使用可能)
 				 */
 				extern int DrawNStringMaskToHandle(int x, int y, int Flag, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 			}
 
 			/**
-			 * マスクハンドルが持つマスクイメージをマスクスクリーンいっぱいに描画する( タイル状に並べる )
+			 * マスクハンドルが持つマスクイメージをマスクスクリーンいっぱいに描画する(タイル状に並べる)
 			 */
 			extern int DrawFillMask(int x1, int y1, int x2, int y2, int MaskHandle);
 
 			/**
-			 * マスクイメージ内の数値に対する効果を逆転させる( 旧バージョンとの互換性の為の機能 )
+			 * マスクイメージ内の数値に対する効果を逆転させる(旧バージョンとの互換性の為の機能)
 			 */
 			extern int SetMaskReverseEffectFlag(int ReverseFlag);
 
@@ -13164,38 +13163,38 @@ extern (C++, DxLib) {
 		// フォント、文字列描画関係関数
 
 		/**
-		 * 使用可能なフォントの名前を列挙する( NameBuffer に 64バイト区切りで名前が格納されます )
+		 * 使用可能なフォントの名前を列挙する(NameBufferに64バイト区切りで名前が格納されます)
 		 */
 		extern int EnumFontName(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, int JapanOnlyFlag = dxlib_d.DxDataType.TRUE);
 
 		/**
-		 * 使用可能なフォントの名前を列挙する( NameBuffer に 64バイト区切りで名前が格納されます )( 文字セット指定版 )
+		 * 使用可能なフォントの名前を列挙する(NameBufferに64バイト区切りで名前が格納されます)(文字セット指定版)
 		 */
-		extern int EnumFontNameEx(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, int CharSet = -1 /* DX_CHARSET_DEFAULT 等 */);
+		extern int EnumFontNameEx(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
 		/**
 		 * 指定のフォント名のフォントを列挙する
 		 */
-		extern int EnumFontNameEx2(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, const (dxlib_d.DxDataType.TCHAR)* EnumFontName, int CharSet = -1 /* DX_CHARSET_DEFAULT 等 */);
+		extern int EnumFontNameEx2(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, const (dxlib_d.DxDataType.TCHAR)* EnumFontName, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
 		/**
 		 * 指定のフォント名のフォントを列挙する
 		 */
-		extern int EnumFontNameEx2WithStrLen(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, const (dxlib_d.DxDataType.TCHAR)* EnumFontName, size_t EnumFontNameLength, int CharSet = -1 /* DX_CHARSET_DEFAULT 等 */);
+		extern int EnumFontNameEx2WithStrLen(dxlib_d.DxDataType.TCHAR* NameBuffer, int NameBufferNum, const (dxlib_d.DxDataType.TCHAR)* EnumFontName, size_t EnumFontNameLength, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
 		/**
 		 * 指定のフォント名のフォントが存在するかどうかをチェックする
 		 *
 		 * Returns: TRUE:存在する  FALSE:存在しない
 		 */
-		extern int CheckFontName(const (dxlib_d.DxDataType.TCHAR)* FontName, int CharSet = -1 /* DX_CHARSET_DEFAULT 等 */);
+		extern int CheckFontName(const (dxlib_d.DxDataType.TCHAR)* FontName, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
 		/**
 		 * 指定のフォント名のフォントが存在するかどうかをチェックする
 		 *
 		 * Returns: TRUE:存在する  FALSE:存在しない
 		 */
-		extern int CheckFontNameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int CharSet = -1 /* DX_CHARSET_DEFAULT 等 */);
+		extern int CheckFontNameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int CharSet = -1 /* DX_CHARSET_DEFAULT等 */);
 
 		/**
 		 * 全てのフォントハンドルを削除する
@@ -13238,9 +13237,9 @@ extern (C++, DxLib) {
 		extern int SetFontLineSpaceToHandle(int Pixel, int FontHandle);
 
 		/**
-		 * 指定のフォントハンドルを使用する関数の引数に渡す文字列の文字コード形式を設定する( UNICODE版では無効 )
+		 * 指定のフォントハンドルを使用する関数の引数に渡す文字列の文字コード形式を設定する(UNICODE版では無効)
 		 */
-		extern int SetFontCharCodeFormatToHandle(int CharCodeFormat /* DX_CHARCODEFORMAT_SHIFTJIS 等 */, int FontHandle);
+		extern int SetFontCharCodeFormatToHandle(int CharCodeFormat /* DX_CHARCODEFORMAT_SHIFTJIS等 */, int FontHandle);
 
 		/**
 		 * フォントハンドルを削除する
@@ -13248,7 +13247,7 @@ extern (C++, DxLib) {
 		extern int DeleteFontToHandle(int FontHandle);
 
 		/**
-		 * フォントハンドルを削除した際に TRUE を代入する変数のアドレスを設定する
+		 * フォントハンドルを削除した際にTRUEを代入する変数のアドレスを設定する
 		 */
 		extern int SetFontLostFlag(int FontHandle, int* LostFlag);
 
@@ -13273,7 +13272,7 @@ extern (C++, DxLib) {
 		extern int SubFontImageToHandleWithStrLen(int FontHandle, const (dxlib_d.DxDataType.TCHAR)* Char, size_t CharLength);
 
 		/**
-		 * 代替フォントハンドル( FontHandle に無い文字を描画しようとしたときに代わりに使用されるフォントハンドル )を登録する
+		 * 代替フォントハンドル(FontHandleに無い文字を描画しようとしたときに代わりに使用されるフォントハンドル)を登録する
 		 */
 		extern int AddSubstitutionFontToHandle(int FontHandle, int SubstitutionFontHandle, int DrawX, int DrawY);
 
@@ -13285,12 +13284,12 @@ extern (C++, DxLib) {
 		/**
 		 * デフォルトフォントハンドルで使用するフォントを変更
 		 */
-		extern int ChangeFont(const (dxlib_d.DxDataType.TCHAR)* FontName, int CharSet = -1 /* DX_CHARSET_SHFTJIS 等 */);
+		extern int ChangeFont(const (dxlib_d.DxDataType.TCHAR)* FontName, int CharSet = -1 /* DX_CHARSET_SHFTJIS等 */);
 
 		/**
 		 * デフォルトフォントハンドルで使用するフォントを変更
 		 */
-		extern int ChangeFontWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int CharSet = -1 /* DX_CHARSET_SHFTJIS 等 */);
+		extern int ChangeFontWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int CharSet = -1 /* DX_CHARSET_SHFTJIS等 */);
 
 		/**
 		 * デフォルトフォントハンドルのフォントタイプの変更
@@ -13343,9 +13342,9 @@ extern (C++, DxLib) {
 		extern int GetFontLineSpace();
 
 		/**
-		 * デフォルトフォントハンドルを使用する関数の引数に渡す文字列の文字コード形式を設定する( UNICODE版では無効 )
+		 * デフォルトフォントハンドルを使用する関数の引数に渡す文字列の文字コード形式を設定する(UNICODE版では無効)
 		 */
-		extern int SetFontCharCodeFormat(int CharCodeFormat /* DX_CHARCODEFORMAT_SHIFTJIS 等 */);
+		extern int SetFontCharCodeFormat(int CharCodeFormat /* DX_CHARCODEFORMAT_SHIFTJIS等 */);
 
 		/**
 		 * デフォルトフォントハンドルの設定を変更する
@@ -13393,17 +13392,17 @@ extern (C++, DxLib) {
 		extern int GetDrawFormatStringWidth(const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用した文字列の描画幅を取得する( 拡大率付き )
+		 * デフォルトフォントハンドルを使用した文字列の描画幅を取得する(拡大率付き)
 		 */
 		extern int GetDrawExtendStringWidth(double ExRateX, const (dxlib_d.DxDataType.TCHAR)* String, int StrLen, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * デフォルトフォントハンドルを使用した文字列の描画幅を取得する( 拡大率付き )
+		 * デフォルトフォントハンドルを使用した文字列の描画幅を取得する(拡大率付き)
 		 */
 		extern int GetDrawExtendNStringWidth(double ExRateX, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * デフォルトフォントハンドルを使用した書式付き文字列の描画幅を取得する( 拡大率付き )
+		 * デフォルトフォントハンドルを使用した書式付き文字列の描画幅を取得する(拡大率付き)
 		 */
 		extern int GetDrawExtendFormatStringWidth(double ExRateX, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -13423,17 +13422,17 @@ extern (C++, DxLib) {
 		extern int GetDrawFormatStringSize(int* SizeX, int* SizeY, int* LineCount, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用した文字列の描画幅・高さ・行数を取得する( 拡大率付き )
+		 * デフォルトフォントハンドルを使用した文字列の描画幅・高さ・行数を取得する(拡大率付き)
 		 */
 		extern int GetDrawExtendStringSize(int* SizeX, int* SizeY, int* LineCount, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int StrLen, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * デフォルトフォントハンドルを使用した文字列の描画幅・高さ・行数を取得する( 拡大率付き )
+		 * デフォルトフォントハンドルを使用した文字列の描画幅・高さ・行数を取得する(拡大率付き)
 		 */
 		extern int GetDrawExtendNStringSize(int* SizeX, int* SizeY, int* LineCount, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * デフォルトフォントハンドルを使用した書式付き文字列の描画幅・高さ・行数を取得する( 拡大率付き )
+		 * デフォルトフォントハンドルを使用した書式付き文字列の描画幅・高さ・行数を取得する(拡大率付き)
 		 */
 		extern int GetDrawExtendFormatStringSize(int* SizeX, int* SizeY, int* LineCount, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -13471,7 +13470,7 @@ extern (C++, DxLib) {
 		 * デフォルトフォントハンドルを使用した二つの文字のペアのカーニング情報を取得する
 		 *
 		 * Params:
-		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列( 2文字以上あっても先頭の2文字だけ使用されます )
+		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列(2文字以上あっても先頭の2文字だけ使用されます)
 		 *      KernAmount = 2文字目の文字を基本の位置からずらすドット数を代入するint型変数のアドレス
 		 */
 		extern int GetDrawStringKerningPairInfo(const (dxlib_d.DxDataType.TCHAR)* PairChar, int* KernAmount);
@@ -13480,7 +13479,7 @@ extern (C++, DxLib) {
 		 * デフォルトフォントハンドルを使用した二つの文字のペアのカーニング情報を取得する
 		 *
 		 * Params:
-		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列( 2文字以上あっても先頭の2文字だけ使用されます )
+		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列(2文字以上あっても先頭の2文字だけ使用されます)
 		 *      PairCharLength = ?
 		 *      KernAmount = 2文字目の文字を基本の位置からずらすドット数を代入するint型変数のアドレス
 		 */
@@ -13630,7 +13629,7 @@ extern (C++, DxLib) {
 		 * フォントハンドルを使用した二つの文字のペアのカーニング情報を取得する
 		 *
 		 * Params:
-		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列( 2文字以上あっても先頭の2文字だけ使用されます )
+		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列(2文字以上あっても先頭の2文字だけ使用されます)
 		 *      KernAmount = 2文字目の文字を基本の位置からずらすドット数を代入するint型変数のアドレス
 		 *      FontHandle = ?
 		 */
@@ -13640,7 +13639,7 @@ extern (C++, DxLib) {
 		 * フォントハンドルを使用した二つの文字のペアのカーニング情報を取得する
 		 *
 		 * Params:
-		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列( 2文字以上あっても先頭の2文字だけ使用されます )
+		 *      PairChar = カーニング情報を調べるペアとなる2文字の文字列(2文字以上あっても先頭の2文字だけ使用されます)
 		 *      KernAmount = 2文字目の文字を基本の位置からずらすドット数を代入するint型変数のアドレス
 		 *      FontHandle = ?
 		 */
@@ -13657,7 +13656,7 @@ extern (C++, DxLib) {
 		extern int CheckFontCacheToTextureFlag(int FontHandle);
 
 		/**
-		 * CheckFontCacheToTextureFlag の誤字版
+		 * CheckFontCacheToTextureFlagの誤字版
 		 */
 		extern int CheckFontChacheToTextureFlag(int FontHandle);
 
@@ -13675,7 +13674,7 @@ extern (C++, DxLib) {
 		 * フォントのキャッシュにテクスチャを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:テクスチャを使用する( デフォルト )  FALSE:テクスチャは使用しない
+		 *      Flag = TRUE:テクスチャを使用する(デフォルト)  FALSE:テクスチャは使用しない
 		 */
 		extern int SetFontCacheToTextureFlag(int Flag);
 
@@ -13685,17 +13684,17 @@ extern (C++, DxLib) {
 		extern int GetFontCacheToTextureFlag();
 
 		/**
-		 * SetFontCacheToTextureFlag の誤字版
+		 * SetFontCacheToTextureFlagの誤字版
 		 */
 		extern int SetFontChacheToTextureFlag(int Flag);
 
 		/**
-		 * GetFontCacheToTextureFlag の誤字版
+		 * GetFontCacheToTextureFlagの誤字版
 		 */
 		extern int GetFontChacheToTextureFlag();
 
 		/**
-		 * フォントのキャッシュとして使用するテクスチャのカラービット深度を設定する( 16 又は 32 のみ指定可能  デフォルトは 32 )
+		 * フォントのキャッシュとして使用するテクスチャのカラービット深度を設定する(16又は32のみ指定可能  デフォルトは32)
 		 */
 		extern int SetFontCacheTextureColorBitDepth(int ColorBitDepth);
 
@@ -13720,7 +13719,7 @@ extern (C++, DxLib) {
 		 * フォントキャッシュとして保存する画像の形式を乗算済みαチャンネル付き画像にするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:乗算済みαを使用する  FLASE:乗算済みαを使用しない( デフォルト )
+		 *      Flag = TRUE:乗算済みαを使用する  FLASE:乗算済みαを使用しない(デフォルト)
 		 */
 		extern int SetFontCacheUsePremulAlphaFlag(int Flag);
 
@@ -13733,7 +13732,7 @@ extern (C++, DxLib) {
 		 * フォントのサイズを補正する処理を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う( デフォルト )  FALSE:行わない
+		 *      Flag = TRUE:行う(デフォルト)  FALSE:行わない
 		 */
 		extern int SetFontUseAdjustSizeFlag(int Flag);
 
@@ -13742,25 +13741,25 @@ extern (C++, DxLib) {
 		 */
 		extern int GetFontUseAdjustSizeFlag();
 
-		// FontCacheStringDraw の代わりに DrawString を使ってください
+		// FontCacheStringDrawの代わりにDrawStringを使ってください
 
 		/**
 		 * ?
 		 */
-		extern int FontCacheStringDrawToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, uint Color, uint EdgeColor, .BASEIMAGE* DestImage, const (dxlib_d.DxDataType.RECT)* ClipRect /* null 可 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE, dxlib_d.DxDataType.SIZE* DrawSizeP = null);
+		extern int FontCacheStringDrawToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, uint Color, uint EdgeColor, .BASEIMAGE* DestImage, const (dxlib_d.DxDataType.RECT)* ClipRect /* null可 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE, dxlib_d.DxDataType.SIZE* DrawSizeP = null);
 
 		/**
 		 * ?
 		 */
-		extern int FontCacheStringDrawToHandleWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, uint Color, uint EdgeColor, .BASEIMAGE* DestImage, const (dxlib_d.DxDataType.RECT)* ClipRect /* null 可 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE, dxlib_d.DxDataType.SIZE* DrawSizeP = null);
+		extern int FontCacheStringDrawToHandleWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, uint Color, uint EdgeColor, .BASEIMAGE* DestImage, const (dxlib_d.DxDataType.RECT)* ClipRect /* null可 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE, dxlib_d.DxDataType.SIZE* DrawSizeP = null);
 
 		/**
-		 * 基本イメージに文字列を描画する( デフォルトフォントハンドルを使用する )
+		 * 基本イメージに文字列を描画する(デフォルトフォントハンドルを使用する)
 		 */
 		extern int FontBaseImageBlt(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, .BASEIMAGE* DestImage, .BASEIMAGE* DestEdgeImage, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 基本イメージに文字列を描画する( デフォルトフォントハンドルを使用する )
+		 * 基本イメージに文字列を描画する(デフォルトフォントハンドルを使用する)
 		 */
 		extern int FontBaseImageBltWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, .BASEIMAGE* DestImage, .BASEIMAGE* DestEdgeImage, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
@@ -13775,7 +13774,7 @@ extern (C++, DxLib) {
 		extern int FontBaseImageBltToHandleWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, .BASEIMAGE* DestImage, .BASEIMAGE* DestEdgeImage, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * 2バイト文字か調べる( TRUE:2バイト文字  FALSE:1バイト文字 )
+		 * 2バイト文字か調べる(TRUE:2バイト文字  FALSE:1バイト文字)
 		 *
 		 * Returns: TRUE:2バイト文字  FALSE:1バイト文字
 		 */
@@ -13794,12 +13793,12 @@ extern (C++, DxLib) {
 		extern int DrawNString(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用して文字列を描画する(縦書き)
 		 */
 		extern int DrawVString(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用して文字列を描画する(縦書き)
 		 */
 		extern int DrawNVString(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
@@ -13809,7 +13808,7 @@ extern (C++, DxLib) {
 		extern int DrawFormatString(int x, int y, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を描画する(縦書き)
 		 */
 		extern int DrawFormatVString(int x, int y, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -13824,12 +13823,12 @@ extern (C++, DxLib) {
 		extern int DrawExtendNString(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列の拡大描画( 縦書き )
+		 * デフォルトフォントハンドルを使用して文字列の拡大描画(縦書き)
 		 */
 		extern int DrawExtendVString(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列の拡大描画( 縦書き )
+		 * デフォルトフォントハンドルを使用して文字列の拡大描画(縦書き)
 		 */
 		extern int DrawExtendNVString(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
@@ -13839,7 +13838,7 @@ extern (C++, DxLib) {
 		extern int DrawExtendFormatString(int x, int y, double ExRateX, double ExRateY, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を拡大描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を拡大描画する(縦書き)
 		 */
 		extern int DrawExtendFormatVString(int x, int y, double ExRateX, double ExRateY, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -13874,92 +13873,92 @@ extern (C++, DxLib) {
 		extern int DrawModiFormatString(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* FormatString = null, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を描画する(座標指定がfloat版)
 		 */
 		extern int DrawStringF(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を描画する(座標指定がfloat版)
 		 */
 		extern int DrawNStringF(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を描画する( 縦書き )( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawVStringF(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を描画する( 縦書き )( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawNVStringF(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を描画する(座標指定がfloat版)
 		 */
 		extern int DrawFormatStringF(float x, float y, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を描画する( 縦書き )( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawFormatVStringF(float x, float y, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列の拡大描画( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列の拡大描画(座標指定がfloat版)
 		 */
 		extern int DrawExtendStringF(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列の拡大描画( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列の拡大描画(座標指定がfloat版)
 		 */
 		extern int DrawExtendNStringF(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列の拡大描画( 縦書き )( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列の拡大描画(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawExtendVStringF(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列の拡大描画( 縦書き )( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列の拡大描画(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawExtendNVStringF(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, uint EdgeColor = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を拡大描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を拡大描画する(座標指定がfloat版)
 		 */
 		extern int DrawExtendFormatStringF(float x, float y, double ExRateX, double ExRateY, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を拡大描画する( 縦書き )( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を拡大描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawExtendFormatVStringF(float x, float y, double ExRateX, double ExRateY, uint Color, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を回転描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を回転描画する(座標指定がfloat版)
 		 */
 		extern int DrawRotaStringF(float x, float y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* String = null);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を回転描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を回転描画する(座標指定がfloat版)
 		 */
 		extern int DrawRotaNStringF(float x, float y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* String = null, size_t StringLength = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を回転描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を回転描画する(座標指定がfloat版)
 		 */
 		extern int DrawRotaFormatStringF(float x, float y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* FormatString = null, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を変形描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を変形描画する(座標指定がfloat版)
 		 */
 		extern int DrawModiStringF(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* String = null);
 
 		/**
-		 * デフォルトフォントハンドルを使用して文字列を変形描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して文字列を変形描画する(座標指定がfloat版)
 		 */
 		extern int DrawModiNStringF(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* String = null, size_t StringLength = 0);
 
 		/**
-		 * デフォルトフォントハンドルを使用して書式指定文字列を変形描画する( 座標指定が float 版 )
+		 * デフォルトフォントハンドルを使用して書式指定文字列を変形描画する(座標指定がfloat版)
 		 */
 		extern int DrawModiFormatStringF(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* FormatString = null, ...);
 
@@ -13986,92 +13985,92 @@ extern (C++, DxLib) {
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を描画する
 		 */
-		extern int DrawStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を描画する
 		 */
-		extern int DrawNStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawNStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を描画する(縦書き)
 		 */
-		extern int DrawVStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawVStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を描画する(縦書き)
 		 */
-		extern int DrawNVStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawNVStringToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を描画する
 		 */
-		extern int DrawFormatStringToZBuffer(int x, int y, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawFormatStringToZBuffer(int x, int y, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を描画する(縦書き)
 		 */
-		extern int DrawFormatVStringToZBuffer(int x, int y, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
-
-		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する
-		 */
-		extern int DrawExtendStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawFormatVStringToZBuffer(int x, int y, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する
 		 */
-		extern int DrawExtendNStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawExtendStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する
 		 */
-		extern int DrawExtendVStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawExtendNStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する(縦書き)
 		 */
-		extern int DrawExtendNVStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawExtendVStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int WriteZMode /* DX_ZWRITE_MASK等 */);
+
+		/**
+		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を拡大描画する(縦書き)
+		 */
+		extern int DrawExtendNVStringToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を拡大描画する
 		 */
-		extern int DrawExtendFormatStringToZBuffer(int x, int y, double ExRateX, double ExRateY, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawExtendFormatStringToZBuffer(int x, int y, double ExRateX, double ExRateY, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を拡大描画する( 縦書き )
+		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を拡大描画する(縦書き)
 		 */
-		extern int DrawExtendFormatVStringToZBuffer(int x, int y, double ExRateX, double ExRateY, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
-
-		/**
-		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を回転描画する
-		 */
-		extern int DrawRotaStringToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
+		extern int DrawExtendFormatVStringToZBuffer(int x, int y, double ExRateX, double ExRateY, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を回転描画する
 		 */
-		extern int DrawRotaNStringToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
+		extern int DrawRotaStringToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
+
+		/**
+		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を回転描画する
+		 */
+		extern int DrawRotaNStringToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を回転描画する
 		 */
-		extern int DrawRotaFormatStringToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawRotaFormatStringToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を変形描画する
 		 */
-		extern int DrawModiStringToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
+		extern int DrawModiStringToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して文字列を変形描画する
 		 */
-		extern int DrawModiNStringToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
+		extern int DrawModiNStringToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 		/**
 		 * デフォルトフォントハンドルを使用してZバッファに対して書式指定文字列を変形描画する
 		 */
-		extern int DrawModiFormatStringToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawModiFormatStringToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * フォントハンドルを使用して文字列を描画する
@@ -14084,12 +14083,12 @@ extern (C++, DxLib) {
 		extern int DrawNStringToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用して文字列を描画する( 縦書き )
+		 * フォントハンドルを使用して文字列を描画する(縦書き)
 		 */
 		extern int DrawVStringToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, int FontHandle, uint EdgeColor = 0);
 
 		/**
-		 * フォントハンドルを使用して文字列を描画する( 縦書き )
+		 * フォントハンドルを使用して文字列を描画する(縦書き)
 		 */
 		extern int DrawNVStringToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0);
 
@@ -14099,7 +14098,7 @@ extern (C++, DxLib) {
 		extern int DrawFormatStringToHandle(int x, int y, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を描画する( 縦書き )
+		 * フォントハンドルを使用して書式指定文字列を描画する(縦書き)
 		 */
 		extern int DrawFormatVStringToHandle(int x, int y, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -14114,12 +14113,12 @@ extern (C++, DxLib) {
 		extern int DrawExtendNStringToHandle(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用して文字列を拡大描画する( 縦書き )
+		 * フォントハンドルを使用して文字列を拡大描画する(縦書き)
 		 */
 		extern int DrawExtendVStringToHandle(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, int FontHandle, uint EdgeColor = 0);
 
 		/**
-		 * フォントハンドルを使用して文字列を拡大描画する( 縦書き )
+		 * フォントハンドルを使用して文字列を拡大描画する(縦書き)
 		 */
 		extern int DrawExtendNVStringToHandle(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0);
 
@@ -14129,7 +14128,7 @@ extern (C++, DxLib) {
 		extern int DrawExtendFormatStringToHandle(int x, int y, double ExRateX, double ExRateY, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を拡大描画する( 縦書き )
+		 * フォントハンドルを使用して書式指定文字列を拡大描画する(縦書き)
 		 */
 		extern int DrawExtendFormatVStringToHandle(int x, int y, double ExRateX, double ExRateY, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -14164,92 +14163,92 @@ extern (C++, DxLib) {
 		extern int DrawModiFormatStringToHandle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, uint Color, int FontHandle, uint EdgeColor, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して文字列を描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を描画する(座標指定がfloat版)
 		 */
 		extern int DrawStringFToHandle(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用して文字列を描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を描画する(座標指定がfloat版)
 		 */
 		extern int DrawNStringFToHandle(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用して文字列を描画する( 縦書き )( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawVStringFToHandle(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, int FontHandle, uint EdgeColor = 0);
 
 		/**
-		 * フォントハンドルを使用して文字列を描画する( 縦書き )( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawNVStringFToHandle(float x, float y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して書式指定文字列を描画する(座標指定がfloat版)
 		 */
 		extern int DrawFormatStringFToHandle(float x, float y, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を描画する( 縦書き )( 座標指定が float 版 )
+		 * フォントハンドルを使用して書式指定文字列を描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawFormatVStringFToHandle(float x, float y, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して文字列を拡大描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を拡大描画する(座標指定がfloat版)
 		 */
 		extern int DrawExtendStringFToHandle(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用して文字列を拡大描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を拡大描画する(座標指定がfloat版)
 		 */
 		extern int DrawExtendNStringFToHandle(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用して文字列を拡大描画する( 縦書き )( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を拡大描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawExtendVStringFToHandle(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, uint Color, int FontHandle, uint EdgeColor = 0);
 
 		/**
-		 * フォントハンドルを使用して文字列を拡大描画する( 縦書き )( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を拡大描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawExtendNVStringFToHandle(float x, float y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, uint Color, int FontHandle, uint EdgeColor = 0);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を拡大描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して書式指定文字列を拡大描画する(座標指定がfloat版)
 		 */
 		extern int DrawExtendFormatStringFToHandle(float x, float y, double ExRateX, double ExRateY, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を拡大描画する( 縦書き )( 座標指定が float 版 )
+		 * フォントハンドルを使用して書式指定文字列を拡大描画する(縦書き)(座標指定がfloat版)
 		 */
 		extern int DrawExtendFormatVStringFToHandle(float x, float y, double ExRateX, double ExRateY, uint Color, int FontHandle, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用して文字列を回転描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を回転描画する(座標指定がfloat版)
 		 */
 		extern int DrawRotaStringFToHandle(float x, float y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* String = null);
 
 		/**
-		 * フォントハンドルを使用して文字列を回転描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を回転描画する(座標指定がfloat版)
 		 */
 		extern int DrawRotaNStringFToHandle(float x, float y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* String = null, size_t StringLength = 0);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を回転描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して書式指定文字列を回転描画する(座標指定がfloat版)
 		 */
 		extern int DrawRotaFormatStringFToHandle(float x, float y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, uint Color, int FontHandle, uint EdgeColor = 0, int VerticalFlag = dxlib_d.DxDataType.FALSE, const (dxlib_d.DxDataType.TCHAR)* FormatString = null, ...);
 
 		/**
-		 * フォントハンドルを使用して文字列を変形描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を変形描画する(座標指定がfloat版)
 		 */
 		extern int DrawModiStringFToHandle(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, int FontHandle, uint EdgeColor, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
 
 		/**
-		 * フォントハンドルを使用して文字列を変形描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して文字列を変形描画する(座標指定がfloat版)
 		 */
 		extern int DrawModiNStringFToHandle(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, int FontHandle, uint EdgeColor, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 		/**
-		 * フォントハンドルを使用して書式指定文字列を変形描画する( 座標指定が float 版 )
+		 * フォントハンドルを使用して書式指定文字列を変形描画する(座標指定がfloat版)
 		 */
 		extern int DrawModiFormatStringFToHandle(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, uint Color, int FontHandle, uint EdgeColor, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
@@ -14276,92 +14275,92 @@ extern (C++, DxLib) {
 		/**
 		 * フォントハンドルを使用してZバッファに対して文字列を描画する
 		 */
-		extern int DrawStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して文字列を描画する
 		 */
-		extern int DrawNStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawNStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用してZバッファに対して文字列を描画する( 縦書き )
+		 * フォントハンドルを使用してZバッファに対して文字列を描画する(縦書き)
 		 */
-		extern int DrawVStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawVStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
-		 * フォントハンドルを使用してZバッファに対して文字列を描画する( 縦書き )
+		 * フォントハンドルを使用してZバッファに対して文字列を描画する(縦書き)
 		 */
-		extern int DrawNVStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawNVStringToHandleToZBuffer(int x, int y, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して書式指定文字列を描画する
 		 */
-		extern int DrawFormatStringToHandleToZBuffer(int x, int y, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawFormatStringToHandleToZBuffer(int x, int y, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用してZバッファに対して書式指定文字列を描画する( 縦書き )
+		 * フォントハンドルを使用してZバッファに対して書式指定文字列を描画する(縦書き)
 		 */
-		extern int DrawFormatVStringToHandleToZBuffer(int x, int y, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
-
-		/**
-		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する
-		 */
-		extern int DrawExtendStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawFormatVStringToHandleToZBuffer(int x, int y, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する
 		 */
-		extern int DrawExtendNStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
+		extern int DrawExtendStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する( 縦書き )
+		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する
 		 */
-		extern int DrawExtendVStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawExtendNStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 		/**
-		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する( 縦書き )
+		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する(縦書き)
 		 */
-		extern int DrawExtendNVStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */);
+		extern int DrawExtendVStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
+
+		/**
+		 * フォントハンドルを使用してZバッファに対して文字列を拡大描画する(縦書き)
+		 */
+		extern int DrawExtendNVStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して書式指定文字列を拡大描画する
 		 */
-		extern int DrawExtendFormatStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawExtendFormatStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
-		 * フォントハンドルを使用してZバッファに対して書式指定文字列を拡大描画する( 縦書き )
+		 * フォントハンドルを使用してZバッファに対して書式指定文字列を拡大描画する(縦書き)
 		 */
-		extern int DrawExtendFormatVStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
-
-		/**
-		 * フォントハンドルを使用してZバッファに対して文字列を回転描画する
-		 */
-		extern int DrawRotaStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
+		extern int DrawExtendFormatVStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して文字列を回転描画する
 		 */
-		extern int DrawRotaNStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
+		extern int DrawRotaStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
+
+		/**
+		 * フォントハンドルを使用してZバッファに対して文字列を回転描画する
+		 */
+		extern int DrawRotaNStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して書式指定文字列を回転描画する
 		 */
-		extern int DrawRotaFormatStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawRotaFormatStringToHandleToZBuffer(int x, int y, double ExRateX, double ExRateY, double RotCenterX, double RotCenterY, double RotAngle, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して文字列を変形描画する
 		 */
-		extern int DrawModiStringToHandleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
+		extern int DrawModiStringToHandleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して文字列を変形描画する
 		 */
-		extern int DrawModiNStringToHandleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
+		extern int DrawModiNStringToHandleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* String, size_t StringLength);
 
 		/**
 		 * フォントハンドルを使用してZバッファに対して書式指定文字列を変形描画する
 		 */
-		extern int DrawModiFormatStringToHandleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK 等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
+		extern int DrawModiFormatStringToHandleToZBuffer(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int FontHandle, int WriteZMode /* DX_ZWRITE_MASK等 */, int VerticalFlag, const (dxlib_d.DxDataType.TCHAR)* FormatString, ...);
 	}
 
 	// DxMath.cpp 関数プロトタイプ宣言
@@ -14733,22 +14732,22 @@ extern (C++, DxLib) {
 	extern int VectorMultiplyD(.VECTOR_D* Out, const (.VECTOR_D)* In1, const (.VECTOR_D)* In2);
 
 	/**
-	 * Out = In1 - In2 のベクトル計算をする
+	 * Out = In1 - In2のベクトル計算をする
 	 */
 	extern int VectorSub(.VECTOR* Out, const (.VECTOR)* In1, const (.VECTOR)* In2);
 
 	/**
-	 * Out = In1 - In2 のベクトル計算をする
+	 * Out = In1 - In2のベクトル計算をする
 	 */
 	extern int VectorSubD(.VECTOR_D* Out, const (.VECTOR_D)* In1, const (.VECTOR_D)* In2);
 
 	/**
-	 * Out = In1 + In2 のベクトル計算をする
+	 * Out = In1 + In2のベクトル計算をする
 	 */
 	extern int VectorAdd(.VECTOR* Out, const (.VECTOR)* In1, const (.VECTOR)* In2);
 
 	/**
-	 * Out = In1 + In2 のベクトル計算をする
+	 * Out = In1 + In2のベクトル計算をする
 	 */
 	extern int VectorAddD(.VECTOR_D* Out, const (.VECTOR_D)* In1, const (.VECTOR_D)* In2);
 
@@ -14803,12 +14802,12 @@ extern (C++, DxLib) {
 	extern int VectorRotationZD(.VECTOR_D* Out, const (.VECTOR_D)* In, double Angle);
 
 	/**
-	 * ベクトル行列と4x4正方行列を乗算する( w は 1 と仮定 )
+	 * ベクトル行列と4x4正方行列を乗算する(wは1と仮定)
 	 */
 	extern int VectorTransform(.VECTOR* Out, const (.VECTOR)* InVec, const (.MATRIX)* InMatrix);
 
 	/**
-	 * ベクトル行列と4x4正方行列を乗算する( w は 1 と仮定 )
+	 * ベクトル行列と4x4正方行列を乗算する(wは1と仮定)
 	 */
 	extern int VectorTransformD(.VECTOR_D* Out, const (.VECTOR_D)* InVec, const (.MATRIX_D)* InMatrix);
 
@@ -14823,12 +14822,12 @@ extern (C++, DxLib) {
 	extern int VectorTransformSRD(.VECTOR_D* Out, const (.VECTOR_D)* InVec, const (.MATRIX_D)* InMatrix);
 
 	/**
-	 * ベクトル行列と4x4正方行列を乗算する( w の要素を渡す )
+	 * ベクトル行列と4x4正方行列を乗算する(wの要素を渡す)
 	 */
 	extern int VectorTransform4(.VECTOR* Out, float* V4Out, const (.VECTOR)* InVec, const (float)* V4In, const (.MATRIX)* InMatrix);
 
 	/**
-	 * ベクトル行列と4x4正方行列を乗算する( w の要素を渡す )
+	 * ベクトル行列と4x4正方行列を乗算する(wの要素を渡す)
 	 */
 	extern int VectorTransform4D(.VECTOR_D* Out, double* V4Out, const (.VECTOR_D)* InVec, const (double)* V4In, const (.MATRIX_D)* InMatrix);
 
@@ -15037,14 +15036,14 @@ extern (C++, DxLib) {
 	extern int HitCheck_Triangle_TriangleD(.VECTOR_D Triangle1Pos1, .VECTOR_D Triangle1Pos2, .VECTOR_D Triangle1Pos3, .VECTOR_D Triangle2Pos1, .VECTOR_D Triangle2Pos2, .VECTOR_D Triangle2Pos3);
 
 	/**
-	 * 三角形と三角形の当たり判定( 2D版 )
+	 * 三角形と三角形の当たり判定(2D版)
 	 *
 	 * Returns: TRUE:当たっている  FALSE:当たっていない
 	 */
 	extern int HitCheck_Triangle_Triangle_2D(.VECTOR Triangle1Pos1, .VECTOR Triangle1Pos2, .VECTOR Triangle1Pos3, .VECTOR Triangle2Pos1, .VECTOR Triangle2Pos2, .VECTOR Triangle2Pos3);
 
 	/**
-	 * 三角形と三角形の当たり判定( 2D版 )
+	 * 三角形と三角形の当たり判定(2D版)
 	 *
 	 * Returns: TRUE:当たっている  FALSE:当たっていない
 	 */
@@ -15166,7 +15165,7 @@ extern (C++, DxLib) {
 	extern int RectClipping(dxlib_d.DxDataType.RECT* Rect, const (dxlib_d.DxDataType.RECT)* ClippuRect);
 
 	/**
-	 * 矩形の left が right より値が大きい場合などの誤りを補正する
+	 * 矩形のleftがrightより値が大きい場合などの誤りを補正する
 	 */
 	extern int RectAdjust(dxlib_d.DxDataType.RECT* Rect);
 
@@ -15268,12 +15267,12 @@ extern (C++, DxLib) {
 	extern .MATRIX_D MGetRotAxisD(.VECTOR_D RotateAxis, double Rotate);
 
 	/**
-	 * In1 の向きから In2 の向きへ変換する回転行列を取得する( In2 と In1 が真逆のベクトルの場合は回転軸は不定 )
+	 * In1の向きからIn2の向きへ変換する回転行列を取得する(In2とIn1が真逆のベクトルの場合は回転軸は不定)
 	 */
 	extern .MATRIX MGetRotVec2(.VECTOR In1, .VECTOR In2);
 
 	/**
-	 * In1 の向きから In2 の向きへ変換する回転行列を取得する( In2 と In1 が真逆のベクトルの場合は回転軸は不定 )
+	 * In1の向きからIn2の向きへ変換する回転行列を取得する(In2とIn1が真逆のベクトルの場合は回転軸は不定)
 	 */
 	extern .MATRIX_D MGetRotVec2D(.VECTOR_D In1, .VECTOR_D In2);
 
@@ -15288,22 +15287,22 @@ extern (C++, DxLib) {
 	extern .MATRIX_D MGetTranslateD(.VECTOR_D Trans);
 
 	/**
-	 * 指定の3軸ローカルのベクトルを基本軸上のベクトルに変換する行列を取得する( x' = (XAxis.x * x) + (YAixs.x * y) + (ZAxis.z * z) + Pos.x   y' = (XAxis.y * x) + (YAixs.y * y) + (ZAxis.y * z) + Pos.y      z' = (XAxis.z * x) + (YAixs.z * y) + (ZAxis.z * z) + Pos.z )
+	 * 指定の3軸ローカルのベクトルを基本軸上のベクトルに変換する行列を取得する(x' = (XAxis.x * x) + (YAixs.x * y) + (ZAxis.z * z) + Pos.x   y' = (XAxis.y * x) + (YAixs.y * y) + (ZAxis.y * z) + Pos.y      z' = (XAxis.z * x) + (YAixs.z * y) + (ZAxis.z * z) + Pos.z)
 	 */
 	extern .MATRIX MGetAxis1(.VECTOR XAxis, .VECTOR YAxis, .VECTOR ZAxis, .VECTOR Pos);
 
 	/**
-	 * 指定の3軸ローカルのベクトルを基本軸上のベクトルに変換する行列を取得する( x' = (XAxis.x * x) + (YAixs.x * y) + (ZAxis.z * z) + Pos.x   y' = (XAxis.y * x) + (YAixs.y * y) + (ZAxis.y * z) + Pos.y      z' = (XAxis.z * x) + (YAixs.z * y) + (ZAxis.z * z) + Pos.z )
+	 * 指定の3軸ローカルのベクトルを基本軸上のベクトルに変換する行列を取得する(x' = (XAxis.x * x) + (YAixs.x * y) + (ZAxis.z * z) + Pos.x   y' = (XAxis.y * x) + (YAixs.y * y) + (ZAxis.y * z) + Pos.y      z' = (XAxis.z * x) + (YAixs.z * y) + (ZAxis.z * z) + Pos.z)
 	 */
 	extern .MATRIX_D MGetAxis1D(.VECTOR_D XAxis, .VECTOR_D YAxis, .VECTOR_D ZAxis, .VECTOR_D Pos);
 
 	/**
-	 * 基本軸上のベクトルを指定の3軸上に投影したベクトルに変換する行列を取得する( x' = (XAxis.x * ( x - Pos.x )) + (XAxis.y * ( x - Pos.x )) + (XAxis.z * ( x - Pos.x ))    y' = (YAxis.x * ( x - Pos.x )) + (YAxis.y * ( x - Pos.x )) + (YAxis.z * ( x - Pos.x ))    z' = (ZAxis.x * ( x - Pos.x )) + (ZAxis.y * ( x - Pos.x )) + (ZAxis.z * ( x - Pos.x )) )
+	 * 基本軸上のベクトルを指定の3軸上に投影したベクトルに変換する行列を取得する(x' = (XAxis.x * (x - Pos.x)) + (XAxis.y * (x - Pos.x)) + (XAxis.z * (x - Pos.x))    y' = (YAxis.x * (x - Pos.x)) + (YAxis.y * (x - Pos.x)) + (YAxis.z * (x - Pos.x))    z' = (ZAxis.x * (x - Pos.x)) + (ZAxis.y * (x - Pos.x)) + (ZAxis.z * (x - Pos.x)))
 	 */
 	extern .MATRIX MGetAxis2(.VECTOR XAxis, .VECTOR YAxis, .VECTOR ZAxis, .VECTOR Pos);
 
 	/**
-	 * 基本軸上のベクトルを指定の3軸上に投影したベクトルに変換する行列を取得する( x' = (XAxis.x * ( x - Pos.x )) + (XAxis.y * ( x - Pos.x )) + (XAxis.z * ( x - Pos.x ))    y' = (YAxis.x * ( x - Pos.x )) + (YAxis.y * ( x - Pos.x )) + (YAxis.z * ( x - Pos.x ))    z' = (ZAxis.x * ( x - Pos.x )) + (ZAxis.y * ( x - Pos.x )) + (ZAxis.z * ( x - Pos.x )) )
+	 * 基本軸上のベクトルを指定の3軸上に投影したベクトルに変換する行列を取得する(x' = (XAxis.x * (x - Pos.x)) + (XAxis.y * (x - Pos.x)) + (XAxis.z * (x - Pos.x))    y' = (YAxis.x * (x - Pos.x)) + (YAxis.y * (x - Pos.x)) + (YAxis.z * (x - Pos.x))    z' = (ZAxis.x * (x - Pos.x)) + (ZAxis.y * (x - Pos.x)) + (ZAxis.z * (x - Pos.x)))
 	 */
 	extern .MATRIX_D MGetAxis2D(.VECTOR_D XAxis, .VECTOR_D YAxis, .VECTOR_D ZAxis, .VECTOR_D Pos);
 
@@ -15837,7 +15836,7 @@ extern (C++, DxLib) {
 	}
 
 	/**
-	 * 行列を使った座標変換( スケーリング+回転成分のみ )
+	 * 行列を使った座標変換(スケーリング+回転成分のみ)
 	 */
 	pragma(inline, true)
 	pure nothrow @safe @nogc @live
@@ -15878,12 +15877,12 @@ extern (C++, DxLib) {
 	extern double VCosD(.VECTOR_D In1, .VECTOR_D In2);
 
 	/**
-	 * 二つのベクトルが成す角の角度を得る( 単位:ラジアン )
+	 * 二つのベクトルが成す角の角度を得る(単位:ラジアン)
 	 */
 	extern float VRad(.VECTOR In1, .VECTOR In2);
 
 	/**
-	 * 二つのベクトルが成す角の角度を得る( 単位:ラジアン )
+	 * 二つのベクトルが成す角の角度を得る(単位:ラジアン)
 	 */
 	extern double VRadD(.VECTOR_D In1, .VECTOR_D In2);
 
@@ -15980,12 +15979,12 @@ extern (C++, DxLib) {
 	/**
 	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージを読み込み、基本イメージデータ若しくはBMPデータを構築する
 	 */
-	extern int CreateGraphImageOrDIBGraph(const (dxlib_d.DxDataType.TCHAR)* FileName, const (void)* DataImage, int DataImageSize, int DataImageType /* LOADIMAGE_TYPE_FILE 等 */, int BmpFlag, int ReverseFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData);
+	extern int CreateGraphImageOrDIBGraph(const (dxlib_d.DxDataType.TCHAR)* FileName, const (void)* DataImage, int DataImageSize, int DataImageType /* LOADIMAGE_TYPE_FILE等 */, int BmpFlag, int ReverseFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData);
 
 	/**
 	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージを読み込み、基本イメージデータ若しくはBMPデータを構築する
 	 */
-	extern int CreateGraphImageOrDIBGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, const (void)* DataImage, int DataImageSize, int DataImageType /* LOADIMAGE_TYPE_FILE 等 */, int BmpFlag, int ReverseFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData);
+	extern int CreateGraphImageOrDIBGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, const (void)* DataImage, int DataImageSize, int DataImageType /* LOADIMAGE_TYPE_FILE等 */, int BmpFlag, int ReverseFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData);
 
 	/**
 	 * 画像データから構築したストリーム読み込み用データを使用して基本イメージデータを構築する
@@ -16082,14 +16081,14 @@ extern (C++, DxLib) {
 	 * 高速読み込みルーチンを使用するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:使用する( デフォルト )  FALSE:使用しない
+	 *      Flag = TRUE:使用する(デフォルト)  FALSE:使用しない
 	 */
 	extern int SetUseFastLoadFlag(int Flag);
 
 	/**
-	 * 画像減色時の画像劣化緩和処理モードを設定する( デフォルトでは緩和処理無しの DX_SHAVEDMODE_NONE )
+	 * 画像減色時の画像劣化緩和処理モードを設定する(デフォルトでは緩和処理無しのDX_SHAVEDMODE_NONE)
 	 */
-	extern int SetGraphDataShavedMode(int ShavedMode /* DX_SHAVEDMODE_NONE 等 */);
+	extern int SetGraphDataShavedMode(int ShavedMode /* DX_SHAVEDMODE_NONE等 */);
 
 	/**
 	 * 画像減色時の画像劣化緩和処理モードを取得する
@@ -16100,7 +16099,7 @@ extern (C++, DxLib) {
 	 * 画像ファイル読み込み時に乗算済みアルファ画像に変換するかどうかを設定する
 	 *
 	 * Params:
-	 *      UseFlag = TRUE:変換処理を行う  FALSE:変換処理を行わない( デフォルト )
+	 *      UseFlag = TRUE:変換処理を行う  FALSE:変換処理を行わない(デフォルト)
 	 */
 	extern int SetUsePremulAlphaConvertLoad(int UseFlag);
 
@@ -16117,7 +16116,7 @@ extern (C++, DxLib) {
 	extern int CreateBaseImageWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, const (void)* FileImage, int FileImageSize, int DataType /*=LOADIMAGE_TYPE_FILE*/, .BASEIMAGE* BaseImage, int ReverseFlag);
 
 	/**
-	 * CreateBaseImage の旧名称
+	 * CreateBaseImageの旧名称
 	 */
 	extern int CreateGraphImage(const (dxlib_d.DxDataType.TCHAR)* FileName, const (void)* DataImage, int DataImageSize, int DataImageType, .BASEIMAGE* GraphImage, int ReverseFlag);
 
@@ -16137,12 +16136,12 @@ extern (C++, DxLib) {
 	extern int CreateBaseImageToMem(const (void)* FileImage, int FileImageSize, .BASEIMAGE* BaseImage, int ReverseFlag = dxlib_d.DxDataType.FALSE);
 
 	/**
-	 * ARGB各チャンネル 32bit 浮動小数点型 カラーの基本イメージデータを作成する
+	 * ARGB各チャンネル32bit浮動小数点型カラーの基本イメージデータを作成する
 	 */
 	extern int CreateARGBF32ColorBaseImage(int SizeX, int SizeY, .BASEIMAGE* BaseImage);
 
 	/**
-	 * ARGB各チャンネル 16bit 浮動小数点型 カラーの基本イメージデータを作成する
+	 * ARGB各チャンネル16bit浮動小数点型カラーの基本イメージデータを作成する
 	 */
 	extern int CreateARGBF16ColorBaseImage(int SizeX, int SizeY, .BASEIMAGE* BaseImage);
 
@@ -16199,12 +16198,12 @@ extern (C++, DxLib) {
 	/**
 	 * 基本イメージデータのイメージサイズを取得する
 	 *
-	 * Returns: イメージサイズ( 単位:byte )
+	 * Returns: イメージサイズ(単位:byte)
 	 */
 	extern int GetBaseImageGraphDataSize(const (.BASEIMAGE)* BaseImage);
 
 	/**
-	 * 基本イメージデータの指定の部分だけを使う基本イメージデータの情報を作成する( BaseImage にはフォーマットが DX_BASEIMAGE_FORMAT_NORMAL でミップマップを使用していない画像のみ使用可能 )
+	 * 基本イメージデータの指定の部分だけを使う基本イメージデータの情報を作成する(BaseImageにはフォーマットがDX_BASEIMAGE_FORMAT_NORMALでミップマップを使用していない画像のみ使用可能)
 	 */
 	extern int DerivationBaseImage(const (.BASEIMAGE)* BaseImage, int x1, int y1, int x2, int y2, .BASEIMAGE* NewBaseImage);
 
@@ -16214,22 +16213,22 @@ extern (C++, DxLib) {
 	extern int ReleaseBaseImage(.BASEIMAGE* BaseImage);
 
 	/**
-	 * ReleaseBaseImage の旧名称
+	 * ReleaseBaseImageの旧名称
 	 */
 	extern int ReleaseGraphImage(.BASEIMAGE* GraphImage);
 
 	/**
-	 * DX_BASEIMAGE_FORMAT_NORMAL 以外の形式のイメージを DX_BASEIMAGE_FORMAT_NORMAL 形式のイメージに変換する
+	 * DX_BASEIMAGE_FORMAT_NORMAL以外の形式のイメージをDX_BASEIMAGE_FORMAT_NORMAL形式のイメージに変換する
 	 */
 	extern int ConvertNormalFormatBaseImage(.BASEIMAGE* BaseImage, int ReleaseOrigGraphData = dxlib_d.DxDataType.TRUE);
 
 	/**
-	 * 通常のαチャンネル付き画像を乗算済みαチャンネル付き画像に変換する( ピクセルフォーマットが ARGB8 以外の場合は ARGB8 に変換されます )
+	 * 通常のαチャンネル付き画像を乗算済みαチャンネル付き画像に変換する(ピクセルフォーマットがARGB8以外の場合はARGB8に変換されます)
 	 */
 	extern int ConvertPremulAlphaBaseImage(.BASEIMAGE* BaseImage);
 
 	/**
-	 * 乗算済みαチャンネル付き画像を通常のαチャンネル付き画像に変換する( ピクセルフォーマットが ARGB8 以外の場合は ARGB8 に変換されます )
+	 * 乗算済みαチャンネル付き画像を通常のαチャンネル付き画像に変換する(ピクセルフォーマットがARGB8以外の場合はARGB8に変換されます)
 	 */
 	extern int ConvertInterpAlphaBaseImage(.BASEIMAGE* BaseImage);
 
@@ -16239,7 +16238,7 @@ extern (C++, DxLib) {
 	extern int GetDrawScreenBaseImage(int x1, int y1, int x2, int y2, .BASEIMAGE* BaseImage);
 
 	/**
-	 * 描画対象の画面から指定領域を基本イメージデータに転送する( 転送先座標指定版 )
+	 * 描画対象の画面から指定領域を基本イメージデータに転送する(転送先座標指定版)
 	 */
 	extern int GetDrawScreenBaseImageDestPos(int x1, int y1, int x2, int y2, .BASEIMAGE* BaseImage, int DestX, int DestY);
 
@@ -16324,7 +16323,7 @@ extern (C++, DxLib) {
 	extern int BltBaseImageWithTransColor(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int DestX, int DestY, .BASEIMAGE* SrcBaseImage, .BASEIMAGE* DestBaseImage, int Tr, int Tg, int Tb, int Ta);
 
 	/**
-	 * 基本イメージデータを別の基本イメージデータにアルファ値のブレンドを考慮した上で転送する( 出力先が ARGB8 形式以外の場合はエラーになります )
+	 * 基本イメージデータを別の基本イメージデータにアルファ値のブレンドを考慮した上で転送する(出力先がARGB8形式以外の場合はエラーになります)
 	 *
 	 * Params:
 	 *      SrcX = ?
@@ -16335,7 +16334,7 @@ extern (C++, DxLib) {
 	 *      DestY = ?
 	 *      SrcBaseImage = ?
 	 *      DestBaseImage = ?
-	 *      Opacity = 透明度:0( 完全透明 ) ~ 255( 完全不透明 )
+	 *      Opacity = 透明度:0(完全透明)~255(完全不透明)
 	 */
 	extern int BltBaseImageWithAlphaBlend(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int DestX, int DestY, .BASEIMAGE* SrcBaseImage, .BASEIMAGE* DestBaseImage, int Opacity = 255);
 
@@ -16362,21 +16361,21 @@ extern (C++, DxLib) {
 	extern int CheckPixelAlphaBaseImage(const (.BASEIMAGE)* BaseImage);
 
 	/**
-	 * 基本イメージデータで使用されているパレット番号の最大値を取得する( パレット画像では無い場合は -1 が返る )
+	 * 基本イメージデータで使用されているパレット番号の最大値を取得する(パレット画像では無い場合は-1が返る)
 	 */
 	extern int GetBaseImageUseMaxPaletteNo(const (.BASEIMAGE)* BaseImage);
 
 	version (DX_NON_JPEGREAD) {
 	} else {
 		/**
-		 * JPEGファイルの Exif情報を取得する、ExifBuffer を null に渡すと、戻り値の情報のサイズのみ取得できます
+		 * JPEGファイルのExif情報を取得する、ExifBufferをnullに渡すと、戻り値の情報のサイズのみ取得できます
 		 *
 		 * Returns: -1:エラー  -1以外:Exif情報のサイズ
 		 */
 		extern int ReadJpegExif(const (dxlib_d.DxDataType.TCHAR)* JpegFilePath, dxlib_d.DxDataType.BYTE* ExifBuffer_Array, size_t ExifBufferSize);
 
 		/**
-		 * JPEGファイルの Exif情報を取得する、ExifBuffer を null に渡すと、戻り値の情報のサイズのみ取得できます
+		 * JPEGファイルのExif情報を取得する、ExifBufferをnullに渡すと、戻り値の情報のサイズのみ取得できます
 		 *
 		 * Returns: 戻り値  -1:エラー  -1以外:Exif情報のサイズ
 		 */
@@ -16457,7 +16456,7 @@ extern (C++, DxLib) {
 	extern .COLOR_U8 GetColorU8(int Red, int Green, int Blue, int Alpha);
 
 	/**
-	 * DrawPixel 等の描画関数で使用するカラー値を取得する
+	 * DrawPixel等の描画関数で使用するカラー値を取得する
 	 */
 	extern uint GetColor(int Red, int Green, int Blue);
 
@@ -16487,12 +16486,12 @@ extern (C++, DxLib) {
 	extern int CreatePaletteColorData(.COLORDATA* ColorDataBuf);
 
 	/**
-	 * ARGB各チャンネル 32bit 浮動小数点型カラーのカラーフォーマットを構築する
+	 * ARGB各チャンネル32bit浮動小数点型カラーのカラーフォーマットを構築する
 	 */
 	extern int CreateARGBF32ColorData(.COLORDATA* ColorDataBuf);
 
 	/**
-	 * ARGB各チャンネル 16bit 浮動小数点型カラーのカラーフォーマットを構築する
+	 * ARGB各チャンネル16bit浮動小数点型カラーのカラーフォーマットを構築する
 	 */
 	extern int CreateARGBF16ColorData(.COLORDATA* ColorDataBuf);
 
@@ -16552,7 +16551,7 @@ extern (C++, DxLib) {
 	extern int CreateColorData(.COLORDATA* ColorDataBuf, int ColorBitDepth, dxlib_d.DxDataType.DWORD RedMask, dxlib_d.DxDataType.DWORD GreenMask, dxlib_d.DxDataType.DWORD BlueMask, dxlib_d.DxDataType.DWORD AlphaMask, int ChannelNum = 0, int ChannelBitDepth = 0, int FloatTypeFlag = dxlib_d.DxDataType.FALSE);
 
 	/**
-	 * NoneMask 以外の要素を埋めた COLORDATA 構造体の情報を元に NoneMask をセットする
+	 * NoneMask以外の要素を埋めたCOLORDATA構造体の情報を元にNoneMaskをセットする
 	 */
 	extern void SetColorDataNoneMask(.COLORDATA* ColorData);
 
@@ -16586,28 +16585,28 @@ extern (C++, DxLib) {
 		extern int LoadSoftImageWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 		/**
-		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する( 読み込んだ画像が RGBA8 以外のフォーマットだった場合は RGBA8 カラーに変換 )
+		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する(読み込んだ画像がRGBA8以外のフォーマットだった場合はRGBA8カラーに変換)
 		 *
 		 * Returns: -1:エラー  -1以外:イメージハンドル
 		 */
 		extern int LoadARGB8ColorSoftImage(const (dxlib_d.DxDataType.TCHAR)* FileName);
 
 		/**
-		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する( 読み込んだ画像が RGBA8 以外のフォーマットだった場合は RGBA8 カラーに変換 )
+		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する(読み込んだ画像がRGBA8以外のフォーマットだった場合はRGBA8カラーに変換)
 		 *
 		 * Returns: -1:エラー  -1以外:イメージハンドル
 		 */
 		extern int LoadARGB8ColorSoftImageWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 		/**
-		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する( 読み込んだ画像が XGBA8 以外のフォーマットだった場合は XGBA8 カラーに変換 )
+		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する(読み込んだ画像がXGBA8以外のフォーマットだった場合はXGBA8カラーに変換)
 		 *
 		 * Returns: -1:エラー  -1以外:イメージハンドル
 		 */
 		extern int LoadXRGB8ColorSoftImage(const (dxlib_d.DxDataType.TCHAR)* FileName);
 
 		/**
-		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する( 読み込んだ画像が XGBA8 以外のフォーマットだった場合は XGBA8 カラーに変換 )
+		 * 画像ファイルを読み込みソフトウエアイメージハンドルを作成する(読み込んだ画像がXGBA8以外のフォーマットだった場合はXGBA8カラーに変換)
 		 *
 		 * Returns: -1:エラー  -1以外:イメージハンドル
 		 */
@@ -16621,14 +16620,14 @@ extern (C++, DxLib) {
 		extern int LoadSoftImageToMem(const (void)* FileImage, int FileImageSize);
 
 		/**
-		 * メモリ上に展開された画像ファイルイメージからソフトウエアイメージハンドルを作成する( 読み込んだ画像が RGBA8 以外のフォーマットだった場合は RGBA8 カラーに変換 )
+		 * メモリ上に展開された画像ファイルイメージからソフトウエアイメージハンドルを作成する(読み込んだ画像がRGBA8以外のフォーマットだった場合はRGBA8カラーに変換)
 		 *
 		 * Returns: -1:エラー  -1以外:イメージハンドル
 		 */
 		extern int LoadARGB8ColorSoftImageToMem(const (void)* FileImage, int FileImageSize);
 
 		/**
-		 * メモリ上に展開された画像ファイルイメージからソフトウエアイメージハンドルを作成する( 読み込んだ画像が XGBA8 以外のフォーマットだった場合は XGBA8 カラーに変換 )
+		 * メモリ上に展開された画像ファイルイメージからソフトウエアイメージハンドルを作成する(読み込んだ画像がXGBA8以外のフォーマットだった場合はXGBA8カラーに変換)
 		 *
 		 * Returns: -1:エラー  -1以外:イメージハンドル
 		 */
@@ -16642,57 +16641,57 @@ extern (C++, DxLib) {
 		extern int MakeSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( RGBA 各チャンネル 32bit 浮動小数点型 カラー )
+		 * ソフトウエアイメージハンドルの作成(RGBA各チャンネル32bit浮動小数点型カラー)
 		 */
 		extern int MakeARGBF32ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( RGBA 各チャンネル 16bit 浮動小数点型 カラー )
+		 * ソフトウエアイメージハンドルの作成(RGBA各チャンネル16bit浮動小数点型カラー)
 		 */
 		extern int MakeARGBF16ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( RGBA8 カラー )
+		 * ソフトウエアイメージハンドルの作成(RGBA8カラー)
 		 */
 		extern int MakeARGB8ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( XRGB8 カラー )
+		 * ソフトウエアイメージハンドルの作成(XRGB8カラー)
 		 */
 		extern int MakeXRGB8ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( ARGB4 カラー )
+		 * ソフトウエアイメージハンドルの作成(ARGB4カラー)
 		 */
 		extern int MakeARGB4ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( A1R5G5B5 カラー )
+		 * ソフトウエアイメージハンドルの作成(A1R5G5B5カラー)
 		 */
 		extern int MakeA1R5G5B5ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( X1R5G5B5 カラー )
+		 * ソフトウエアイメージハンドルの作成(X1R5G5B5カラー)
 		 */
 		extern int MakeX1R5G5B5ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( R5G5B5A1 カラー )
+		 * ソフトウエアイメージハンドルの作成(R5G5B5A1カラー)
 		 */
 		extern int MakeR5G5B5A1ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( R5G6B5 カラー )
+		 * ソフトウエアイメージハンドルの作成(R5G6B5カラー)
 		 */
 		extern int MakeR5G6B5ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( RGB8 カラー )
+		 * ソフトウエアイメージハンドルの作成(RGB8カラー)
 		 */
 		extern int MakeRGB8ColorSoftImage(int SizeX, int SizeY);
 
 		/**
-		 * ソフトウエアイメージハンドルの作成( パレット256色 カラー )
+		 * ソフトウエアイメージハンドルの作成(パレット256色カラー)
 		 */
 		extern int MakePAL8ColorSoftImage(int SizeX, int SizeY, int UseAlpha = dxlib_d.DxDataType.FALSE);
 
@@ -16733,7 +16732,7 @@ extern (C++, DxLib) {
 		extern int GetDrawScreenSoftImage(int x1, int y1, int x2, int y2, int SIHandle);
 
 		/**
-		 * 描画対象の画面から指定領域をソフトウエアイメージハンドルに転送する( 転送先座標指定版 )
+		 * 描画対象の画面から指定領域をソフトウエアイメージハンドルに転送する(転送先座標指定版)
 		 */
 		extern int GetDrawScreenSoftImageDestPos(int x1, int y1, int x2, int y2, int SIHandle, int DestX, int DestY);
 
@@ -16790,12 +16789,12 @@ extern (C++, DxLib) {
 		extern int DrawPixelSoftImageF(int SIHandle, int x, int y, float r, float g, float b, float a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や ARGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標やARGB8以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void DrawPixelSoftImage_Unsafe_XRGB8(int SIHandle, int x, int y, int r, int g, int b);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や XRGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標やXRGB8以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void DrawPixelSoftImage_Unsafe_ARGB8(int SIHandle, int x, int y, int r, int g, int b, int a);
 
@@ -16810,12 +16809,12 @@ extern (C++, DxLib) {
 		extern int GetPixelSoftImageF(int SIHandle, int x, int y, float* r, float* g, float* b, float* a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や XRGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標やXRGB8以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void GetPixelSoftImage_Unsafe_XRGB8(int SIHandle, int x, int y, int* r, int* g, int* b);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や ARGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標やARGB8以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void GetPixelSoftImage_Unsafe_ARGB8(int SIHandle, int x, int y, int* r, int* g, int* b, int* a);
 
@@ -16840,7 +16839,7 @@ extern (C++, DxLib) {
 		extern int BltSoftImageWithTransColor(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int SrcSIHandle, int DestX, int DestY, int DestSIHandle, int Tr, int Tg, int Tb, int Ta);
 
 		/**
-		 * ソフトウエアイメージハンドルを別のソフトウエアイメージハンドルにアルファ値のブレンドを考慮した上で転送する( Opacity は透明度:0( 完全透明 ) ~ 255( 完全不透明 ) )( 出力先が ARGB8 形式以外の場合はエラーになります )
+		 * ソフトウエアイメージハンドルを別のソフトウエアイメージハンドルにアルファ値のブレンドを考慮した上で転送する(Opacityは透明度:0(完全透明)~255(完全不透明))(出力先がARGB8形式以外の場合はエラーになります)
 		 */
 		extern int BltSoftImageWithAlphaBlend(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int SrcSIHandle, int DestX, int DestY, int DestSIHandle, int Opacity = 255);
 
@@ -16862,24 +16861,24 @@ extern (C++, DxLib) {
 		version (DX_NON_FONT) {
 		} else {
 			/**
-			 * ソフトウエアイメージハンドルに文字列を描画する( デフォルトフォントハンドルを使用する )
+			 * ソフトウエアイメージハンドルに文字列を描画する(デフォルトフォントハンドルを使用する)
 			 */
 			extern int BltStringSoftImage(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, int DestSIHandle, int DestEdgeSIHandle = -1, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 			/**
-			 * ソフトウエアイメージハンドルに文字列を描画する( デフォルトフォントハンドルを使用する )
+			 * ソフトウエアイメージハンドルに文字列を描画する(デフォルトフォントハンドルを使用する)
 			 */
 			extern int BltStringSoftImageWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, int DestSIHandle, int DestEdgeSIHandle = -1, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 			/**
-			 * ソフトウエアイメージハンドルに文字列を描画する( フォントハンドル使用版 )
+			 * ソフトウエアイメージハンドルに文字列を描画する(フォントハンドル使用版)
 			 */
-			extern int BltStringSoftImageToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, int DestSIHandle, int DestEdgeSIHandle /* 縁が必要ない場合は -1 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE);
+			extern int BltStringSoftImageToHandle(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, int DestSIHandle, int DestEdgeSIHandle /* 縁が必要ない場合は-1 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 
 			/**
-			 * ソフトウエアイメージハンドルに文字列を描画する( フォントハンドル使用版 )
+			 * ソフトウエアイメージハンドルに文字列を描画する(フォントハンドル使用版)
 			 */
-			extern int BltStringSoftImageToHandleWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, int DestSIHandle, int DestEdgeSIHandle /* 縁が必要ない場合は -1 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE);
+			extern int BltStringSoftImageToHandleWithStrLen(int x, int y, const (dxlib_d.DxDataType.TCHAR)* StrData, size_t StrDataLength, int DestSIHandle, int DestEdgeSIHandle /* 縁が必要ない場合は-1 */, int FontHandle, int VerticalFlag = dxlib_d.DxDataType.FALSE);
 		}
 
 		/**
@@ -17025,12 +17024,12 @@ extern (C++, DxLib) {
 		extern dxlib_d.DxDataType.LONGLONG GetStreamSoundCurrentTime(int SoundHandle);
 
 		/**
-		 * ストリーム再生タイプのサウンドハンドルの周期的な処理を行う関数( 内部で自動的に呼ばれます )
+		 * ストリーム再生タイプのサウンドハンドルの周期的な処理を行う関数(内部で自動的に呼ばれます)
 		 */
 		extern int ProcessStreamSoundMem(int SoundHandle);
 
 		/**
-		 * 有効なストリーム再生タイプのサウンドハンドルに対して ProcessStreamSoundMem を実行する( 内部で自動的に呼ばれます )
+		 * 有効なストリーム再生タイプのサウンドハンドルに対して ProcessStreamSoundMemを実行する(内部で自動的に呼ばれます)
 		 */
 		extern int ProcessStreamSoundMemAll();
 
@@ -17065,27 +17064,27 @@ extern (C++, DxLib) {
 		extern int LoadSoundMemBaseWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int BufferNum, int UnionHandle = -1);
 
 		/**
-		 * LoadSoundMemBase の別名関数
+		 * LoadSoundMemBaseの別名関数
 		 */
 		extern int LoadSoundMem(const (dxlib_d.DxDataType.TCHAR)* FileName, int BufferNum = 3, int UnionHandle = -1);
 
 		/**
-		 * LoadSoundMemBase の別名関数
+		 * LoadSoundMemBaseの別名関数
 		 */
 		extern int LoadSoundMemWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int BufferNum = 3, int UnionHandle = -1);
 
 		/**
-		 * LoadSoundMem を使用して下さい
+		 * LoadSoundMemを使用して下さい
 		 */
 		extern int LoadSoundMemToBufNumSitei(const (dxlib_d.DxDataType.TCHAR)* FileName, int BufferNum);
 
 		/**
-		 * LoadSoundMem を使用して下さい
+		 * LoadSoundMemを使用して下さい
 		 */
 		extern int LoadSoundMemToBufNumSiteiWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int BufferNum);
 
 		/**
-		 * 同じサウンドデータを使用するサウンドハンドルを作成する( DX_SOUNDDATATYPE_MEMNOPRESS タイプのサウンドハンドルのみ可能 )
+		 * 同じサウンドデータを使用するサウンドハンドルを作成する(DX_SOUNDDATATYPE_MEMNOPRESS タイプのサウンドハンドルのみ可能)
 		 */
 		extern int DuplicateSoundMem(int SrcSoundHandle, int BufferNum = 3);
 
@@ -17095,7 +17094,7 @@ extern (C++, DxLib) {
 		extern int LoadSoundMemByMemImageBase(const (void)* FileImage, size_t FileImageSize, int BufferNum, int UnionHandle = -1);
 
 		/**
-		 * LoadSoundMemByMemImageBase の別名関数
+		 * LoadSoundMemByMemImageBaseの別名関数
 		 */
 		extern int LoadSoundMemByMemImage(const (void)* FileImage, size_t FileImageSize, int BufferNum = 3, int UnionHandle = -1);
 
@@ -17105,7 +17104,7 @@ extern (C++, DxLib) {
 		extern int LoadSoundMemByMemImage2(const (void)* WaveImage, size_t WaveImageSize, const (.WAVEFORMATEX)* WaveFormat, size_t WaveHeaderSize);
 
 		/**
-		 * LoadSoundMemByMemImageBase を使用して下さい
+		 * LoadSoundMemByMemImageBaseを使用して下さい
 		 */
 		extern int LoadSoundMemByMemImageToBufNumSitei(const (void)* FileImage, size_t FileImageSize, int BufferNum);
 
@@ -17140,12 +17139,12 @@ extern (C++, DxLib) {
 		extern int CheckSoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルのパンを設定する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルのパンを設定する(100分の1デシベル単位0~10000)
 		 */
 		extern int SetPanSoundMem(int PanPal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルのパンを設定する( -255 ~ 255 )
+		 * サウンドハンドルのパンを設定する(-255~255)
 		 */
 		extern int ChangePanSoundMem(int PanPal, int SoundHandle);
 
@@ -17155,42 +17154,42 @@ extern (C++, DxLib) {
 		extern int GetPanSoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルのボリュームを設定する(100分の1デシベル単位0~10000)
 		 */
 		extern int SetVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを設定する( 0 ~ 255 )
+		 * サウンドハンドルのボリュームを設定する(0~255)
 		 */
 		extern int ChangeVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを取得する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルのボリュームを取得する(100分の1デシベル単位0~10000)
 		 */
 		extern int GetVolumeSoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを取得する( 0 ~ 255 )
+		 * サウンドハンドルのボリュームを取得する(0~255)
 		 */
 		extern int GetVolumeSoundMem2(int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを設定する(100分の1デシベル単位0~10000)
 		 */
 		extern int SetChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを設定する( 0 ~ 255 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを設定する(0~255)
 		 */
 		extern int ChangeChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを取得する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを取得する(100分の1デシベル単位0~10000)
 		 */
 		extern int GetChannelVolumeSoundMem(int Channel, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを取得する( 0 ~ 255 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを取得する(0~255)
 		 */
 		extern int GetChannelVolumeSoundMem2(int Channel, int SoundHandle);
 
@@ -17210,32 +17209,32 @@ extern (C++, DxLib) {
 		extern int ResetFrequencySoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するパンを設定する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルの次の再生にのみ使用するパンを設定する(100分の1デシベル単位0~10000)
 		 */
 		extern int SetNextPlayPanSoundMem(int PanPal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するパンを設定する( -255 ~ 255 )
+		 * サウンドハンドルの次の再生にのみ使用するパンを設定する(-255~255)
 		 */
 		extern int ChangeNextPlayPanSoundMem(int PanPal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する(100分の1デシベル単位0~10000)
 		 */
 		extern int SetNextPlayVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する( 0 ~ 255 )
+		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する(0~255)
 		 */
 		extern int ChangeNextPlayVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
+		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する(100分の1デシベル単位0~10000)
 		 */
 		extern int SetNextPlayChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する( 0 ~ 255 )
+		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する(0~255)
 		 */
 		extern int ChangeNextPlayChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
@@ -17285,7 +17284,7 @@ extern (C++, DxLib) {
 		extern dxlib_d.DxDataType.LONGLONG GetSoundTotalTime(int SoundHandle);
 
 		/**
-		 * SetLoopTimePosSoundMem の別名関数
+		 * SetLoopTimePosSoundMemの別名関数
 		 */
 		extern int SetLoopPosSoundMem(dxlib_d.DxDataType.LONGLONG LoopTime, int SoundHandle);
 
@@ -17342,7 +17341,7 @@ extern (C++, DxLib) {
 		/**
 		 * サウンドハンドルの3Dサウンド用のリバーブパラメータをプリセットを使用して設定する
 		 */
-		extern int Set3DPresetReverbParamSoundMem(int PresetNo /* DX_REVERB_PRESET_DEFAULT 等 */, int SoundHandle);
+		extern int Set3DPresetReverbParamSoundMem(int PresetNo /* DX_REVERB_PRESET_DEFAULT等 */, int SoundHandle);
 
 		/**
 		 * 全ての3Dサウンドのサウンドハンドルにリバーブパラメータを設定する
@@ -17360,7 +17359,7 @@ extern (C++, DxLib) {
 		 *      PresetNo = ?
 		 *      PlaySoundOnly = TRUE:再生中のサウンドにのみ設定する  FALSE:再生していないサウンドにも設定する
 		 */
-		extern int Set3DPresetReverbParamSoundMemAll(int PresetNo /* DX_REVERB_PRESET_DEFAULT 等 */, int PlaySoundOnly = dxlib_d.DxDataType.FALSE);
+		extern int Set3DPresetReverbParamSoundMemAll(int PresetNo /* DX_REVERB_PRESET_DEFAULT等 */, int PlaySoundOnly = dxlib_d.DxDataType.FALSE);
 
 		/**
 		 * サウンドハンドルに設定されている3Dサウンド用のリバーブパラメータを取得する
@@ -17370,7 +17369,7 @@ extern (C++, DxLib) {
 		/**
 		 * プリセットの3Dサウンド用のリバーブパラメータを取得する
 		 */
-		extern int Get3DPresetReverbParamSoundMem(.SOUND3D_REVERB_PARAM* ParamBuffer, int PresetNo /* DX_REVERB_PRESET_DEFAULT 等 */);
+		extern int Get3DPresetReverbParamSoundMem(.SOUND3D_REVERB_PARAM* ParamBuffer, int PresetNo /* DX_REVERB_PRESET_DEFAULT等 */);
 
 		/**
 		 * サウンドハンドルの3Dサウンド用の再生位置を設定する
@@ -17442,77 +17441,77 @@ extern (C++, DxLib) {
 		// 設定関係関数
 
 		/**
-		 * 作成するサウンドハンドルの再生タイプを設定する( DX_SOUNDDATATYPE_MEMNOPRESS 等 )
+		 * 作成するサウンドハンドルの再生タイプを設定する(DX_SOUNDDATATYPE_MEMNOPRESS等)
 		 */
 		extern int SetCreateSoundDataType(int SoundDataType);
 
 		/**
-		 * 作成するサウンドハンドルの再生タイプを取得する( DX_SOUNDDATATYPE_MEMNOPRESS 等 )
+		 * 作成するサウンドハンドルの再生タイプを取得する(DX_SOUNDDATATYPE_MEMNOPRESS等)
 		 */
 		extern int GetCreateSoundDataType();
 
 		/**
-		 * 作成するサウンドハンドルのピッチ( 音の長さを変えずに音程を変更する )レートを設定する( 単位はセント( 100.0fで半音、1200.0fで1オクターヴ )、プラスの値で音程が高く、マイナスの値で音程が低くなります )
+		 * 作成するサウンドハンドルのピッチ(音の長さを変えずに音程を変更する)レートを設定する(単位はセント(100.0fで半音、1200.0fで1オクターヴ)、プラスの値で音程が高く、マイナスの値で音程が低くなります)
 		 */
 		extern int SetCreateSoundPitchRate(float Cents);
 
 		/**
-		 * 作成するサウンドハンドルのピッチ( 音の長さを変えずに音程を変更する )レートを取得する( 単位はセント( 100.0fで半音、1200.0fで1オクターヴ )、プラスの値で音程が高く、マイナスの値で音程が低くなります )
+		 * 作成するサウンドハンドルのピッチ(音の長さを変えずに音程を変更する)レートを取得する(単位はセント(100.0fで半音、1200.0fで1オクターヴ)、プラスの値で音程が高く、マイナスの値で音程が低くなります)
 		 */
 		extern float GetCreateSoundPitchRate();
 
 		/**
-		 * 作成するサウンドハンドルのタイムストレッチ( 音程を変えずに音の長さを変更する )レートを設定する( 単位は倍率、2.0f で音の長さが2倍に、0.5f で音の長さが半分になります )
+		 * 作成するサウンドハンドルのタイムストレッチ(音程を変えずに音の長さを変更する)レートを設定する(単位は倍率、2.0fで音の長さが2倍に、0.5fで音の長さが半分になります)
 		 */
 		extern int SetCreateSoundTimeStretchRate(float Rate);
 
 		/**
-		 * 作成するサウンドハンドルのタイムストレッチ( 音程を変えずに音の長さを変更する )レートを取得する( 単位は倍率、2.0f で音の長さが2倍に、0.5f で音の長さが半分になります )
+		 * 作成するサウンドハンドルのタイムストレッチ(音程を変えずに音の長さを変更する)レートを取得する(単位は倍率、2.0fで音の長さが2倍に、0.5fで音の長さが半分になります)
 		 */
 		extern float GetCreateSoundTimeStretchRate();
 
 		/**
-		 * 作成するサウンドハンドルのループ範囲を設定する( ミリ秒単位 )
+		 * 作成するサウンドハンドルのループ範囲を設定する(ミリ秒単位)
 		 */
 		extern int SetCreateSoundLoopAreaTimePos(dxlib_d.DxDataType.LONGLONG LoopStartTime, dxlib_d.DxDataType.LONGLONG LoopEndTime);
 
 		/**
-		 * 作成するサウンドハンドルのループ範囲を取得する( ミリ秒単位 )
+		 * 作成するサウンドハンドルのループ範囲を取得する(ミリ秒単位)
 		 */
 		extern int GetCreateSoundLoopAreaTimePos(dxlib_d.DxDataType.LONGLONG* LoopStartTime, dxlib_d.DxDataType.LONGLONG* LoopEndTime);
 
 		/**
-		 * 作成するサウンドハンドルのループ範囲を設定する( サンプル単位 )
+		 * 作成するサウンドハンドルのループ範囲を設定する(サンプル単位)
 		 */
 		extern int SetCreateSoundLoopAreaSamplePos(dxlib_d.DxDataType.LONGLONG LoopStartSamplePosition, dxlib_d.DxDataType.LONGLONG LoopEndSamplePosition);
 
 		/**
-		 * 作成するサウンドハンドルのループ範囲を取得する( サンプル単位 )
+		 * 作成するサウンドハンドルのループ範囲を取得する(サンプル単位)
 		 */
 		extern int GetCreateSoundLoopAreaSamplePos(dxlib_d.DxDataType.LONGLONG* LoopStartSamplePosition, dxlib_d.DxDataType.LONGLONG* LoopEndSamplePosition);
 
 		/**
-		 * LoadSoundMem などで読み込むサウンドデータにループ範囲情報があっても無視するかどうかを設定する
+		 * LoadSoundMemなどで読み込むサウンドデータにループ範囲情報があっても無視するかどうかを設定する
 		 *
 		 * Params:
-		 *      IgnoreFlag = TRUE:無視する  FALSE:無視しない( デフォルト )
+		 *      IgnoreFlag = TRUE:無視する  FALSE:無視しない(デフォルト)
 		 */
 		extern int SetCreateSoundIgnoreLoopAreaInfo(int IgnoreFlag);
 
 		/**
-		 * LoadSoundMem などで読み込むサウンドデータにループ範囲情報があっても無視するかどうかを取得する
+		 * LoadSoundMemなどで読み込むサウンドデータにループ範囲情報があっても無視するかどうかを取得する
 		 *
-		 * Returns: TRUE:無視する  FALSE:無視しない( デフォルト )
+		 * Returns: TRUE:無視する  FALSE:無視しない(デフォルト)
 		 */
 		extern int GetCreateSoundIgnoreLoopAreaInfo();
 
 		/**
-		 * 使用しないサウンドデータ読み込み処理のマスクを設定する( DX_READSOUNDFUNCTION_PCM 等 )
+		 * 使用しないサウンドデータ読み込み処理のマスクを設定する(DX_READSOUNDFUNCTION_PCM等)
 		 */
 		extern int SetDisableReadSoundFunctionMask(int Mask);
 
 		/**
-		 * 使用しないサウンドデータ読み込み処理のマスクを取得する( DX_READSOUNDFUNCTION_PCM 等 )
+		 * 使用しないサウンドデータ読み込み処理のマスクを取得する(DX_READSOUNDFUNCTION_PCM等)
 		 */
 		extern int GetDisableReadSoundFunctionMask();
 
@@ -17522,20 +17521,20 @@ extern (C++, DxLib) {
 		extern int SetEnableSoundCaptureFlag(int Flag);
 
 		/**
-		 * ChangeVolumeSoundMem, ChangeNextPlayVolumeSoundMem, ChangeMovieVolumeToGraph の音量計算式を Ver3.10c以前のものを使用するかどうかを設定する
+		 * ChangeVolumeSoundMem, ChangeNextPlayVolumeSoundMem, ChangeMovieVolumeToGraphの音量計算式をVer3.10c以前のものを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:Ver3.10c以前の計算式を使用  FALSE:3.10d以降の計算式を使用( デフォルト )
+		 *      Flag = TRUE:Ver3.10c以前の計算式を使用  FALSE:3.10d以降の計算式を使用(デフォルト)
 		 */
 		extern int SetUseOldVolumeCalcFlag(int Flag);
 
 		/**
-		 * GetSoundCurrentTime などを使用した場合に取得できる再生時間のタイプを設定する
+		 * GetSoundCurrentTimeなどを使用した場合に取得できる再生時間のタイプを設定する
 		 */
-		extern int SetSoundCurrentTimeType(int Type /* DX_SOUNDCURRENTTIME_TYPE_LOW_LEVEL など */);
+		extern int SetSoundCurrentTimeType(int Type /* DX_SOUNDCURRENTTIME_TYPE_LOW_LEVELなど */);
 
 		/**
-		 * GetSoundCurrentTime などを使用した場合に取得できる再生時間のタイプを取得する
+		 * GetSoundCurrentTimeなどを使用した場合に取得できる再生時間のタイプを取得する
 		 */
 		extern int GetSoundCurrentTimeType();
 
@@ -17543,12 +17542,12 @@ extern (C++, DxLib) {
 		 * 次に作成するサウンドハンドルを3Dサウンド用にするかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:3Dサウンド用にする  FALSE:3Dサウンド用にしない( デフォルト )
+		 *      Flag = TRUE:3Dサウンド用にする  FALSE:3Dサウンド用にしない(デフォルト)
 		 */
 		extern int SetCreate3DSoundFlag(int Flag);
 
 		/**
-		 * 3D空間の1メートルに相当する距離を設定する、DxLib_Init を呼び出す前でのみ呼び出し可能( デフォルト:1.0f )
+		 * 3D空間の1メートルに相当する距離を設定する、DxLib_Initを呼び出す前でのみ呼び出し可能(デフォルト:1.0f)
 		 *
 		 * Params:
 		 *      Distance = ?
@@ -17556,7 +17555,7 @@ extern (C++, DxLib) {
 		extern int Set3DSoundOneMetre(float Distance);
 
 		/**
-		 * 3Dサウンドのリスナーの位置とリスナーの前方位置を設定する( リスナーの上方向はY軸固定 )
+		 * 3Dサウンドのリスナーの位置とリスナーの前方位置を設定する(リスナーの上方向はY軸固定)
 		 */
 		extern int Set3DSoundListenerPosAndFrontPos_UpVecY(.VECTOR Position, .VECTOR FrontPosition);
 
@@ -17613,12 +17612,12 @@ extern (C++, DxLib) {
 		extern int PlaySoundFileWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int PlayType);
 
 		/**
-		 * PlaySoundFile の旧名称
+		 * PlaySoundFileの旧名称
 		 */
 		extern int PlaySound(const (dxlib_d.DxDataType.TCHAR)* FileName, int PlayType);
 
 		/**
-		 * PlaySoundFile の旧名称
+		 * PlaySoundFileの旧名称
 		 */
 		extern int PlaySoundWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int PlayType);
 
@@ -17628,7 +17627,7 @@ extern (C++, DxLib) {
 		extern int CheckSoundFile();
 
 		/**
-		 * CheckSoundFile の旧名称
+		 * CheckSoundFileの旧名称
 		 */
 		extern int CheckSound();
 
@@ -17638,7 +17637,7 @@ extern (C++, DxLib) {
 		extern int StopSoundFile();
 
 		/**
-		 * StopSoundFile の旧名称
+		 * StopSoundFileの旧名称
 		 */
 		extern int StopSound();
 
@@ -17648,7 +17647,7 @@ extern (C++, DxLib) {
 		extern int SetVolumeSoundFile(int VolumePal);
 
 		/**
-		 * SetVolumeSound の旧名称
+		 * SetVolumeSoundの旧名称
 		 */
 		extern int SetVolumeSound(int VolumePal);
 
@@ -17675,47 +17674,47 @@ extern (C++, DxLib) {
 		extern int LoadSoftSoundFromMemImage(const (void)* FileImage, size_t FileImageSize);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( フォーマットは引数のソフトウエアサウンドハンドルと同じものにする )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(フォーマットは引数のソフトウエアサウンドハンドルと同じものにする)
 		 */
 		extern int MakeSoftSound(int UseFormat_SoftSoundHandle, dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:2 量子化ビット数:16bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:2 量子化ビット数:16bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSound2Ch16Bit44KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:2 量子化ビット数:16bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:2 量子化ビット数:16bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSound2Ch16Bit22KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:2 量子化ビット数:8bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:2 量子化ビット数:8bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSound2Ch8Bit44KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:2 量子化ビット数:8bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:2 量子化ビット数:8bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSound2Ch8Bit22KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:1 量子化ビット数:16bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:1 量子化ビット数:16bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSound1Ch16Bit44KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:1 量子化ビット数:16bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:1 量子化ビット数:16bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSound1Ch16Bit22KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:1 量子化ビット数:8bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:1 量子化ビット数:8bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSound1Ch8Bit44KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
 		/**
-		 * ソフトウエアで扱う空の波形データハンドルを作成する( チャンネル数:1 量子化ビット数:8bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う空の波形データハンドルを作成する(チャンネル数:1 量子化ビット数:8bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSound1Ch8Bit22KHz(dxlib_d.DxDataType.LONGLONG SampleNum);
 
@@ -17758,7 +17757,7 @@ extern (C++, DxLib) {
 		extern int ReadSoftSoundData(int SoftSoundHandle, dxlib_d.DxDataType.LONGLONG SamplePosition, int* Channel1, int* Channel2);
 
 		/**
-		 * ソフトウエアで扱う波形データハンドルのサンプルを読み取る( float型版 )
+		 * ソフトウエアで扱う波形データハンドルのサンプルを読み取る(float型版)
 		 */
 		extern int ReadSoftSoundDataF(int SoftSoundHandle, dxlib_d.DxDataType.LONGLONG SamplePosition, float* Channel1, float* Channel2);
 
@@ -17768,7 +17767,7 @@ extern (C++, DxLib) {
 		extern int WriteSoftSoundData(int SoftSoundHandle, dxlib_d.DxDataType.LONGLONG SamplePosition, int Channel1, int Channel2);
 
 		/**
-		 * ソフトウエアで扱う波形データハンドルのサンプルを書き込む( float型版 )
+		 * ソフトウエアで扱う波形データハンドルのサンプルを書き込む(float型版)
 		 */
 		extern int WriteSoftSoundDataF(int SoftSoundHandle, dxlib_d.DxDataType.LONGLONG SamplePosition, float Channel1, float Channel2);
 
@@ -17788,12 +17787,12 @@ extern (C++, DxLib) {
 		extern void* GetSoftSoundDataImage(int SoftSoundHandle);
 
 		/**
-		 * ソフトウエアで扱う波形データハンドルの指定の範囲を高速フーリエ変換を行い、各周波数域の振幅を取得する( SampleNum は 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536 の何れかである必要があります、Channel を -1 にすると二つのチャンネルを合成した結果になります )
+		 * ソフトウエアで扱う波形データハンドルの指定の範囲を高速フーリエ変換を行い、各周波数域の振幅を取得する(SampleNumは16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536の何れかである必要があります、Channelを-1にすると二つのチャンネルを合成した結果になります)
 		 */
 		extern int GetFFTVibrationSoftSound(int SoftSoundHandle, int Channel, dxlib_d.DxDataType.LONGLONG SamplePosition, int SampleNum, float* Buffer_Array, int BufferLength);
 
 		/**
-		 * ソフトウエアで扱う波形データハンドルの指定の範囲を高速フーリエ変換を行い、各周波数域の振幅を取得する、結果の実数と虚数を別々に取得することができるバージョン( SampleNum は 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536 の何れかである必要があります、Channel を -1 にすると二つのチャンネルを合成した結果になります )
+		 * ソフトウエアで扱う波形データハンドルの指定の範囲を高速フーリエ変換を行い、各周波数域の振幅を取得する、結果の実数と虚数を別々に取得することができるバージョン(SampleNumは16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536の何れかである必要があります、Channelを-1にすると二つのチャンネルを合成した結果になります)
 		 */
 		extern int GetFFTVibrationSoftSoundBase(int SoftSoundHandle, int Channel, dxlib_d.DxDataType.LONGLONG SamplePosition, int SampleNum, float* RealBuffer_Array, float* ImagBuffer_Array, int BufferLength);
 
@@ -17803,47 +17802,47 @@ extern (C++, DxLib) {
 		extern int InitSoftSoundPlayer();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( フォーマットは引数のソフトウエアサウンドハンドルと同じものにする )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(フォーマットは引数のソフトウエアサウンドハンドルと同じものにする)
 		 */
 		extern int MakeSoftSoundPlayer(int UseFormat_SoftSoundHandle);
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:2 量子化ビット数:16bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:2 量子化ビット数:16bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSoundPlayer2Ch16Bit44KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:2 量子化ビット数:16bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:2 量子化ビット数:16bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSoundPlayer2Ch16Bit22KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:2 量子化ビット数:8bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:2 量子化ビット数:8bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSoundPlayer2Ch8Bit44KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:2 量子化ビット数:8bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:2 量子化ビット数:8bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSoundPlayer2Ch8Bit22KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:1 量子化ビット数:16bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:1 量子化ビット数:16bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSoundPlayer1Ch16Bit44KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:1 量子化ビット数:16bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:1 量子化ビット数:16bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSoundPlayer1Ch16Bit22KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:1 量子化ビット数:8bit サンプリング周波数:44.1KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:1 量子化ビット数:8bitサンプリング周波数:44.1KHz)
 		 */
 		extern int MakeSoftSoundPlayer1Ch8Bit44KHz();
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する( チャンネル数:1 量子化ビット数:8bit サンプリング周波数:22KHz )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルを作成する(チャンネル数:1 量子化ビット数:8bitサンプリング周波数:22KHz)
 		 */
 		extern int MakeSoftSoundPlayer1Ch8Bit22KHz();
 
@@ -17858,7 +17857,7 @@ extern (C++, DxLib) {
 		extern int DeleteSoftSoundPlayer(int SSoundPlayerHandle);
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルに波形データを追加する( フォーマットが同じではない場合はエラー )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルに波形データを追加する(フォーマットが同じではない場合はエラー)
 		 */
 		extern int AddDataSoftSoundPlayer(int SSoundPlayerHandle, int SoftSoundHandle, dxlib_d.DxDataType.LONGLONG AddSamplePosition, int AddSampleNum);
 
@@ -17895,7 +17894,7 @@ extern (C++, DxLib) {
 		extern int StopSoftSoundPlayer(int SSoundPlayerHandle);
 
 		/**
-		 * ソフトウエアで扱う波形データのプレイヤーハンドルの状態を初期状態に戻す( 追加された波形データは削除され、再生状態だった場合は停止する )
+		 * ソフトウエアで扱う波形データのプレイヤーハンドルの状態を初期状態に戻す(追加された波形データは削除され、再生状態だった場合は停止する)
 		 */
 		extern int ResetSoftSoundPlayer(int SSoundPlayerHandle);
 
@@ -17966,7 +17965,7 @@ extern (C++, DxLib) {
 		extern int InitMusicMem();
 
 		/**
-		 * MIDIハンドルの周期的処理( 内部で呼ばれます )
+		 * MIDIハンドルの周期的処理(内部で呼ばれます)
 		 */
 		extern int ProcessMusicMem();
 
@@ -18024,7 +18023,7 @@ extern (C++, DxLib) {
 	 * 同名のDXアーカイブファイルとフォルダが存在した場合、どちらを優先させるかを設定する
 	 *
 	 * Params:
-	 *      Priority = 1:フォルダを優先  0:DXアーカイブファイルを優先( デフォルト )
+	 *      Priority = 1:フォルダを優先  0:DXアーカイブファイルを優先(デフォルト)
 	 */
 	extern int SetDXArchivePriority(int Priority = 0);
 
@@ -18101,36 +18100,36 @@ extern (C++, DxLib) {
 	extern int DXArchiveReleaseWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength);
 
 	/**
-	 * DXAファイルの中に指定のファイルが存在するかどうかを調べる、TargetFilePath はDXAファイルをカレントフォルダとした場合のパス
+	 * DXAファイルの中に指定のファイルが存在するかどうかを調べる、TargetFilePathはDXAファイルをカレントフォルダとした場合のパス
 	 *
 	 * Returns: -1:エラー  0:無い  1:ある
 	 */
 	extern int DXArchiveCheckFile(const (dxlib_d.DxDataType.TCHAR)* FilePath, const (dxlib_d.DxDataType.TCHAR)* TargetFilePath);
 
 	/**
-	 * DXAファイルの中に指定のファイルが存在するかどうかを調べる、TargetFilePath はDXAファイルをカレントフォルダとした場合のパス
+	 * DXAファイルの中に指定のファイルが存在するかどうかを調べる、TargetFilePathはDXAファイルをカレントフォルダとした場合のパス
 	 *
 	 * Returns: -1:エラー  0:無い  1:ある
 	 */
 	extern int DXArchiveCheckFileWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength, const (dxlib_d.DxDataType.TCHAR)* TargetFilePath, size_t TargetFilePathLength);
 
 	/**
-	 * メモリ上に展開されたDXAファイルを指定のファイルパスにあることにする( EmulateFilePath は見立てる dxa ファイルのパス、例えばDXAファイルイメージを Image.dxa というファイル名で c:\Temp にあることにしたい場合は EmulateFilePath に "c:\\Temp\\Image.dxa" を渡す、SetDXArchiveExtension で拡張子を変更している場合は EmulateFilePath に渡すファイルパスの拡張子もそれに合わせる必要あり )
+	 * メモリ上に展開されたDXAファイルを指定のファイルパスにあることにする(EmulateFilePathは見立てるdxaファイルのパス、例えばDXAファイルイメージをImage.dxaというファイル名でc:\Tempにあることにしたい場合はEmulateFilePathに"c:\\Temp\\Image.dxa"を渡す、SetDXArchiveExtensionで拡張子を変更している場合はEmulateFilePathに渡すファイルパスの拡張子もそれに合わせる必要あり)
 	 */
 	extern int DXArchiveSetMemImage(void* ArchiveImage, int ArchiveImageSize, const (dxlib_d.DxDataType.TCHAR)* EmulateFilePath, int ArchiveImageCopyFlag = dxlib_d.DxDataType.FALSE, int ArchiveImageReadOnly = dxlib_d.DxDataType.TRUE);
 
 	/**
-	 * メモリ上に展開されたDXAファイルを指定のファイルパスにあることにする( EmulateFilePath は見立てる dxa ファイルのパス、例えばDXAファイルイメージを Image.dxa というファイル名で c:\Temp にあることにしたい場合は EmulateFilePath に "c:\\Temp\\Image.dxa" を渡す、SetDXArchiveExtension で拡張子を変更している場合は EmulateFilePath に渡すファイルパスの拡張子もそれに合わせる必要あり )
+	 * メモリ上に展開されたDXAファイルを指定のファイルパスにあることにする(EmulateFilePathは見立てるdxaファイルのパス、例えばDXAファイルイメージをImage.dxaというファイル名でc:\Tempにあることにしたい場合はEmulateFilePathに"c:\\Temp\\Image.dxa"を渡す、SetDXArchiveExtensionで拡張子を変更している場合はEmulateFilePathに渡すファイルパスの拡張子もそれに合わせる必要あり)
 	 */
 	extern int DXArchiveSetMemImageWithStrLen(void* ArchiveImage, int ArchiveImageSize, const (dxlib_d.DxDataType.TCHAR)* EmulateFilePath, size_t EmulateFilePathLength, int ArchiveImageCopyFlag = dxlib_d.DxDataType.FALSE, int ArchiveImageReadOnly = dxlib_d.DxDataType.TRUE);
 
 	/**
-	 * DXArchiveSetMemImage の設定を解除する
+	 * DXArchiveSetMemImageの設定を解除する
 	 */
 	extern int DXArchiveReleaseMemImage(void* ArchiveImage);
 
 	/**
-	 * バイナリデータを元に CRC32 のハッシュ値を計算する
+	 * バイナリデータを元にCRC32のハッシュ値を計算する
 	 */
 	extern dxlib_d.DxDataType.DWORD HashCRC32(const (void)* SrcData, size_t SrcDataSize);
 
@@ -18167,7 +18166,7 @@ extern (C++, DxLib) {
 		extern int MV1DuplicateModel(int SrcMHandle);
 
 		/**
-		 * 指定のモデルをモデル基本データも含め複製する( MV1DuplicateModel はモデル基本データは共有しますが、こちらは複製元のモデルとは一切共有データの無いモデルハンドルを作成します )
+		 * 指定のモデルをモデル基本データも含め複製する(MV1DuplicateModelはモデル基本データは共有しますが、こちらは複製元のモデルとは一切共有データの無いモデルハンドルを作成します)
 		 *
 		 * Returns: -1:エラー  0以上:モデルハンドル
 		 */
@@ -18187,12 +18186,12 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際に法線の再計算を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う  FALSE:行わない( デフォルト )
+		 *      Flag = TRUE:行う  FALSE:行わない(デフォルト)
 		 */
 		extern int MV1SetLoadModelReMakeNormal(int Flag);
 
 		/**
-		 * モデルを読み込む際に行う法泉の再計算で使用するスムージング角度を設定する( 単位はラジアン )
+		 * モデルを読み込む際に行う法泉の再計算で使用するスムージング角度を設定する(単位はラジアン)
 		 */
 		extern int MV1SetLoadModelReMakeNormalSmoothingAngle(float SmoothingAngle = 1.562069f);
 
@@ -18200,7 +18199,7 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際にスケーリングデータを無視するかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:無視する  FALSE:無視しない( デフォルト )
+		 *      Flag = TRUE:無視する  FALSE:無視しない(デフォルト)
 		 */
 		extern int MV1SetLoadModelIgnoreScaling(int Flag);
 
@@ -18208,22 +18207,22 @@ extern (C++, DxLib) {
 		 * モデルを読み込む際に座標データの最適化を行うかどうかを設定する
 		 *
 		 * Params:
-		 *      Flag = TRUE:行う  FALSE:行わない( デフォルト )
+		 *      Flag = TRUE:行う  FALSE:行わない(デフォルト)
 		 */
 		extern int MV1SetLoadModelPositionOptimize(int Flag);
 
 		/**
-		 * モデルを読み込む際にポリゴンの辺が接していて、且つ法線の方向が異なる辺に面積0のポリゴンを埋め込むかどうかを設定する、( MV1ファイルの読み込みではこの関数の設定は無視され、ポリゴンの埋め込みは実行されません )
+		 * モデルを読み込む際にポリゴンの辺が接していて、且つ法線の方向が異なる辺に面積0のポリゴンを埋め込むかどうかを設定する、(MV1ファイルの読み込みではこの関数の設定は無視され、ポリゴンの埋め込みは実行されません)
 		 *
 		 * Params:
-		 *      Flag = TRUE:埋め込む FALSE:埋め込まない( デフォルト )
+		 *      Flag = TRUE:埋め込む FALSE:埋め込まない(デフォルト)
 		 */
 		extern int MV1SetLoadModelNotEqNormalSide_AddZeroAreaPolygon(int Flag);
 
 		/**
 		 * 読み込むモデルの物理演算モードを設定する
 		 */
-		extern int MV1SetLoadModelUsePhysicsMode(int PhysicsMode /* DX_LOADMODEL_PHYSICS_LOADCALC 等 */);
+		extern int MV1SetLoadModelUsePhysicsMode(int PhysicsMode /* DX_LOADMODEL_PHYSICS_LOADCALC等 */);
 
 		/**
 		 * 読み込むモデルの物理演算に適用する重力パラメータを設定する
@@ -18236,17 +18235,17 @@ extern (C++, DxLib) {
 		extern float MV1GetLoadModelPhysicsWorldGravity();
 
 		/**
-		 * 読み込むモデルの物理演算モードが事前計算( DX_LOADMODEL_PHYSICS_LOADCALC )だった場合に適用される重力の設定をする
+		 * 読み込むモデルの物理演算モードが事前計算(DX_LOADMODEL_PHYSICS_LOADCALC)だった場合に適用される重力の設定をする
 		 */
 		extern int MV1SetLoadCalcPhysicsWorldGravity(int GravityNo, .VECTOR Gravity);
 
 		/**
-		 * 読み込むモデルの物理演算モードが事前計算( DX_LOADMODEL_PHYSICS_LOADCALC )だった場合に適用される重力を取得する
+		 * 読み込むモデルの物理演算モードが事前計算(DX_LOADMODEL_PHYSICS_LOADCALC)だった場合に適用される重力を取得する
 		 */
 		extern .VECTOR MV1GetLoadCalcPhysicsWorldGravity(int GravityNo);
 
 		/**
-		 * 読み込むモデルの物理演算モードが事前計算( DX_LOADMODEL_PHYSICS_LOADCALC )だった場合に適用される物理演算の時間進行の精度を設定する( 0:60FPS  1:120FPS  2:240FPS  3:480FPS  4:960FPS  5:1920FPS )
+		 * 読み込むモデルの物理演算モードが事前計算(DX_LOADMODEL_PHYSICS_LOADCALC)だった場合に適用される物理演算の時間進行の精度を設定する(0:60FPS  1:120FPS  2:240FPS  3:480FPS  4:960FPS  5:1920FPS)
 		 *
 		 * Params:
 		 *      Precision = ?
@@ -18254,50 +18253,50 @@ extern (C++, DxLib) {
 		extern int MV1SetLoadModelPhysicsCalcPrecision(int Precision);
 
 		/**
-		 * PMD, PMX ファイルを読み込んだ際のアニメーションの FPS モードを設定する
+		 * PMD, PMXファイルを読み込んだ際のアニメーションのFPSモードを設定する
 		 */
-		extern int MV1SetLoadModel_PMD_PMX_AnimationFPSMode(int FPSMode /* DX_LOADMODEL_PMD_PMX_ANIMATION_FPSMODE_30 等 */);
+		extern int MV1SetLoadModel_PMD_PMX_AnimationFPSMode(int FPSMode /* DX_LOADMODEL_PMD_PMX_ANIMATION_FPSMODE_30等 */);
 
 		/**
-		 * 読み込むモデルの物理演算を特定の剛体のみ無効にするための名前のワードを追加する、追加できるワード文字列の最大長は 63 文字、追加できるワードの数は最大 256 個
+		 * 読み込むモデルの物理演算を特定の剛体のみ無効にするための名前のワードを追加する、追加できるワード文字列の最大長は63文字、追加できるワードの数は最大256個
 		 */
 		extern int MV1AddLoadModelDisablePhysicsNameWord(const (dxlib_d.DxDataType.TCHAR)* NameWord);
 
 		/**
-		 * 読み込むモデルの物理演算を特定の剛体のみ無効にするための名前のワードを追加する、追加できるワード文字列の最大長は 63 文字、追加できるワードの数は最大 256 個
+		 * 読み込むモデルの物理演算を特定の剛体のみ無効にするための名前のワードを追加する、追加できるワード文字列の最大長は63文字、追加できるワードの数は最大256個
 		 */
 		extern int MV1AddLoadModelDisablePhysicsNameWordWithStrLen(const (dxlib_d.DxDataType.TCHAR)* NameWord, size_t NameWordLength);
 
 		/**
-		 * MV1AddLoadModelDisablePhysicsNameWord で追加した剛体の無効ワードをリセットして無効ワード無しの初期状態に戻す
+		 * MV1AddLoadModelDisablePhysicsNameWordで追加した剛体の無効ワードをリセットして無効ワード無しの初期状態に戻す
 		 */
 		extern int MV1ResetLoadModelDisablePhysicsNameWord();
 
 		/**
-		 * MV1AddLoadModelDisablePhysicsNameWord で追加した剛体の無効ワードの適用ルールを変更する
+		 * MV1AddLoadModelDisablePhysicsNameWordで追加した剛体の無効ワードの適用ルールを変更する
 		 */
-		extern int MV1SetLoadModelDisablePhysicsNameWordMode(int DisableNameWordMode /* DX_LOADMODEL_PHYSICS_DISABLENAMEWORD_ALWAYS 等 */);
+		extern int MV1SetLoadModelDisablePhysicsNameWordMode(int DisableNameWordMode /* DX_LOADMODEL_PHYSICS_DISABLENAMEWORD_ALWAYS等 */);
 
 		/**
-		 * 読み込むモデルに適用するアニメーションファイルのパスを設定する、NULLを渡すと設定リセット( 現在は PMD,PMX のみに効果あり )
+		 * 読み込むモデルに適用するアニメーションファイルのパスを設定する、NULLを渡すと設定リセット(現在はPMD,PMXのみに効果あり)
 		 */
 		extern int MV1SetLoadModelAnimFilePath(const (dxlib_d.DxDataType.TCHAR)* FileName);
 
 		/**
-		 * 読み込むモデルに適用するアニメーションファイルのパスを設定する、NULLを渡すと設定リセット( 現在は PMD,PMX のみに効果あり )
+		 * 読み込むモデルに適用するアニメーションファイルのパスを設定する、NULLを渡すと設定リセット(現在はPMD,PMXのみに効果あり)
 		 */
 		extern int MV1SetLoadModelAnimFilePathWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 		/**
-		 * 読み込むモデルを同時複数描画に対応させるかどうかを設定する、( 「対応させる」にすると描画が高速になる可能性がある代わりに消費VRAMが増えます )
+		 * 読み込むモデルを同時複数描画に対応させるかどうかを設定する、(「対応させる」にすると描画が高速になる可能性がある代わりに消費VRAMが増えます)
 		 *
 		 * Params:
-		 *      Flag = TRUE:対応させる  FALSE:対応させない( デフォルト )
+		 *      Flag = TRUE:対応させる  FALSE:対応させない(デフォルト)
 		 */
 		extern int MV1SetLoadModelUsePackDraw(int Flag);
 
 		/**
-		 * 読み込むモデルのひとつのトライアングルリストで使用できる最大ボーン数を設定する( UseMaxBoneNum で指定できる値の範囲は 8 ~ 54、 0 を指定するとデフォルト動作に戻る )
+		 * 読み込むモデルのひとつのトライアングルリストで使用できる最大ボーン数を設定する(UseMaxBoneNumで指定できる値の範囲は8~54、0を指定するとデフォルト動作に戻る)
 		 */
 		extern int MV1SetLoadModelTriangleListUseMaxBoneNum(int UseMaxBoneNum);
 
@@ -18364,17 +18363,17 @@ extern (C++, DxLib) {
 		// 描画設定関係
 
 		/**
-		 * モデルの描画に SetUseVertexShader, SetUsePixelShader で指定したシェーダーを使用するかどうかを設定する
+		 * モデルの描画にSetUseVertexShader, SetUsePixelShaderで指定したシェーダーを使用するかどうかを設定する
 		 *
 		 * Params:
-		 *      UseFlag = TRUE:使用する  FALSE:使用しない( デフォルト )
+		 *      UseFlag = TRUE:使用する  FALSE:使用しない(デフォルト)
 		 */
 		extern int MV1SetUseOrigShader(int UseFlag);
 
 		/**
 		 * モデルの半透明要素がある部分についての描画モードを設定する
 		 */
-		extern int MV1SetSemiTransDrawMode(int DrawMode /* DX_SEMITRANSDRAWMODE_ALWAYS 等 */);
+		extern int MV1SetSemiTransDrawMode(int DrawMode /* DX_SEMITRANSDRAWMODE_ALWAYS等 */);
 
 		// モデル基本制御関係
 
@@ -18419,12 +18418,12 @@ extern (C++, DxLib) {
 		extern .VECTOR MV1GetScale(int MHandle);
 
 		/**
-		 * モデルの回転値をセット( X軸回転→Y軸回転→Z軸回転方式 )
+		 * モデルの回転値をセット(X軸回転→Y軸回転→Z軸回転方式)
 		 */
 		extern int MV1SetRotationXYZ(int MHandle, .VECTOR Rotate);
 
 		/**
-		 * モデルの回転値を取得( X軸回転→Y軸回転→Z軸回転方式 )
+		 * モデルの回転値を取得(X軸回転→Y軸回転→Z軸回転方式)
 		 */
 		extern .VECTOR MV1GetRotationXYZ(int MHandle);
 
@@ -18434,7 +18433,7 @@ extern (C++, DxLib) {
 		extern int MV1SetRotationZYAxis(int MHandle, .VECTOR ZAxisDirection, .VECTOR YAxisDirection, float ZAxisTwistRotate);
 
 		/**
-		 * モデルのY軸の回転値を指定のベクトルの向きを元に設定する、モデルはZ軸のマイナス方向を向いていることを想定するので、そうではない場合は OffsetYAngle で補正する、X軸回転、Z軸回転は0で固定
+		 * モデルのY軸の回転値を指定のベクトルの向きを元に設定する、モデルはZ軸のマイナス方向を向いていることを想定するので、そうではない場合はOffsetYAngleで補正する、X軸回転、Z軸回転は0で固定
 		 */
 		extern int MV1SetRotationYUseDir(int MHandle, .VECTOR Direction, float OffsetYAngle);
 
@@ -18485,7 +18484,7 @@ extern (C++, DxLib) {
 		extern int MV1GetVisible(int MHandle);
 
 		/**
-		 * モデルのメッシュの種類( DX_MV1_MESHCATEGORY_NORMAL など )毎の表示、非表示を設定する
+		 * モデルのメッシュの種類(DX_MV1_MESHCATEGORY_NORMALなど)毎の表示、非表示を設定する
 		 *
 		 * Params:
 		 *      MHandle = ?
@@ -18495,49 +18494,49 @@ extern (C++, DxLib) {
 		extern int MV1SetMeshCategoryVisible(int MHandle, int MeshCategory, int VisibleFlag);
 
 		/**
-		 * モデルのメッシュの種類( DX_MV1_MESHCATEGORY_NORMAL など )毎の表示、非表示を取得する
+		 * モデルのメッシュの種類(DX_MV1_MESHCATEGORY_NORMALなど)毎の表示、非表示を取得する
 		 *
 		 * Returns: TRUE:表示  FALSE:非表示
 		 */
 		extern int MV1GetMeshCategoryVisible(int MHandle, int MeshCategory);
 
 		/**
-		 * モデルのディフューズカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * モデルのディフューズカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetDifColorScale(int MHandle, .COLOR_F Scale);
 
 		/**
-		 * モデルのディフューズカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * モデルのディフューズカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetDifColorScale(int MHandle);
 
 		/**
-		 * モデルのスペキュラカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * モデルのスペキュラカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetSpcColorScale(int MHandle, .COLOR_F Scale);
 
 		/**
-		 * モデルのスペキュラカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * モデルのスペキュラカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetSpcColorScale(int MHandle);
 
 		/**
-		 * モデルのエミッシブカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * モデルのエミッシブカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetEmiColorScale(int MHandle, .COLOR_F Scale);
 
 		/**
-		 * モデルのエミッシブカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * モデルのエミッシブカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetEmiColorScale(int MHandle);
 
 		/**
-		 * モデルのアンビエントカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * モデルのアンビエントカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetAmbColorScale(int MHandle, .COLOR_F Scale);
 
 		/**
-		 * モデルのアンビエントカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * モデルのアンビエントカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetAmbColorScale(int MHandle);
 
@@ -18549,17 +18548,17 @@ extern (C++, DxLib) {
 		extern int MV1GetSemiTransState(int MHandle);
 
 		/**
-		 * モデルの不透明度を設定する( 不透明 1.0f ~ 透明 0.0f )
+		 * モデルの不透明度を設定する(不透明1.0f~透明 0.0f)
 		 */
 		extern int MV1SetOpacityRate(int MHandle, float Rate);
 
 		/**
-		 * モデルの不透明度を取得する( 不透明 1.0f ~ 透明 0.0f )
+		 * モデルの不透明度を取得する(不透明1.0f~透明 0.0f)
 		 */
 		extern float MV1GetOpacityRate(int MHandle);
 
 		/**
-		 * モデルを描画する際にRGB値に対してA値を乗算するかどうかを設定する( 描画結果が乗算済みアルファ画像になります )
+		 * モデルを描画する際にRGB値に対してA値を乗算するかどうかを設定する(描画結果が乗算済みアルファ画像になります)
 		 *
 		 * Params:
 		 *      MHandle = ?
@@ -18568,7 +18567,7 @@ extern (C++, DxLib) {
 		extern int MV1SetUseDrawMulAlphaColor(int MHandle, int Flag);
 
 		/**
-		 * モデルを描画する際にRGB値に対してA値を乗算するかどうかを取得する( 描画結果が乗算済みアルファ画像になります )
+		 * モデルを描画する際にRGB値に対してA値を乗算するかどうかを取得する(描画結果が乗算済みアルファ画像になります)
 		 *
 		 * Returns: TRUE:RGB値に対してA値を乗算する  FALSE:乗算しない(デフォルト)
 		 */
@@ -18587,7 +18586,7 @@ extern (C++, DxLib) {
 		/**
 		 * モデルの描画時のZ値の比較モードを設定する
 		 */
-		extern int MV1SetZBufferCmpType(int MHandle, int CmpType /* DX_CMP_NEVER 等 */);
+		extern int MV1SetZBufferCmpType(int MHandle, int CmpType /* DX_CMP_NEVER等 */);
 
 		/**
 		 * モデルの描画時の書き込むZ値のバイアスを設定する
@@ -18613,7 +18612,7 @@ extern (C++, DxLib) {
 		extern int MV1SetUseVertSpcColor(int MHandle, int UseFlag);
 
 		/**
-		 * モデルのテクスチャのサンプルフィルターモードを変更する( FilterMode は DX_DRAWMODE_NEAREST 等 )
+		 * モデルのテクスチャのサンプルフィルターモードを変更する(FilterModeはDX_DRAWMODE_NEAREST等)
 		 *
 		 * Params:
 		 *      MHandle = ?
@@ -18642,12 +18641,12 @@ extern (C++, DxLib) {
 		extern int MV1SetPhysicsWorldGravity(int MHandle, .VECTOR Gravity);
 
 		/**
-		 * モデルの物理演算を指定時間分経過したと仮定して計算する( MillisecondTime で指定する時間の単位はミリ秒 )
+		 * モデルの物理演算を指定時間分経過したと仮定して計算する(MillisecondTimeで指定する時間の単位はミリ秒)
 		 */
 		extern int MV1PhysicsCalculation(int MHandle, float MillisecondTime);
 
 		/**
-		 * モデルの物理演算の状態をリセットする( 位置がワープしたとき用 )
+		 * モデルの物理演算の状態をリセットする(位置がワープしたとき用)
 		 */
 		extern int MV1PhysicsResetState(int MHandle);
 
@@ -18656,7 +18655,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      UseFlag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      UseFlag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int MV1SetUseShapeFlag(int MHandle, int UseFlag);
 
@@ -18707,12 +18706,12 @@ extern (C++, DxLib) {
 		extern float MV1GetAttachAnimBlendRate(int MHandle, int AttachIndex);
 
 		/**
-		 * アタッチしているアニメーションのブレンド率を設定する( フレーム単位 )
+		 * アタッチしているアニメーションのブレンド率を設定する(フレーム単位)
 		 */
 		extern int MV1SetAttachAnimBlendRateToFrame(int MHandle, int AttachIndex, int FrameIndex, float Rate, int SetChild = dxlib_d.DxDataType.TRUE);
 
 		/**
-		 * アタッチしているアニメーションのブレンド率を設定する( フレーム単位 )
+		 * アタッチしているアニメーションのブレンド率を設定する(フレーム単位)
 		 */
 		extern float MV1GetAttachAnimBlendRateToFrame(int MHandle, int AttachIndex, int FrameIndex);
 
@@ -18727,7 +18726,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      AttachIndex = ?
-		 *      UseFlag = TRUE:使用する( デフォルト )  FALSE:使用しない
+		 *      UseFlag = TRUE:使用する(デフォルト)  FALSE:使用しない
 		 */
 		extern int MV1SetAttachAnimUseShapeFlag(int MHandle, int AttachIndex, int UseFlag);
 
@@ -18818,17 +18817,17 @@ extern (C++, DxLib) {
 		extern int MV1GetAnimKeySetNum(int MHandle);
 
 		/**
-		 * 指定のアニメーションキーセットのタイプを取得する( MV1_ANIMKEY_TYPE_QUATERNION 等 )
+		 * 指定のアニメーションキーセットのタイプを取得する(MV1_ANIMKEY_TYPE_QUATERNION等)
 		 */
 		extern int MV1GetAnimKeySetType(int MHandle, int AnimKeySetIndex);
 
 		/**
-		 * 指定のアニメーションキーセットのデータタイプを取得する( MV1_ANIMKEY_DATATYPE_ROTATE 等 )
+		 * 指定のアニメーションキーセットのデータタイプを取得する(MV1_ANIMKEY_DATATYPE_ROTATE等)
 		 */
 		extern int MV1GetAnimKeySetDataType(int MHandle, int AnimKeySetIndex);
 
 		/**
-		 * 指定のアニメーションキーセットのキーの時間データタイプを取得する( MV1_ANIMKEY_TIME_TYPE_ONE 等 )
+		 * 指定のアニメーションキーセットのキーの時間データタイプを取得する(MV1_ANIMKEY_TIME_TYPE_ONE等)
 		 */
 		extern int MV1GetAnimKeySetTimeType(int MHandle, int AnimKeySetIndex);
 
@@ -18848,52 +18847,52 @@ extern (C++, DxLib) {
 		extern int MV1GetAnimKeyDataIndexFromTime(int MHandle, int AnimKeySetIndex, float Time);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_QUATERNION では無かった場合は失敗する
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_QUATERNIONでは無かった場合は失敗する
 		 */
 		extern .FLOAT4 MV1GetAnimKeyDataToQuaternion(int MHandle, int AnimKeySetIndex, int Index);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_QUATERNION では無かった場合は失敗する( 時間指定版 )
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_QUATERNIONでは無かった場合は失敗する(時間指定版)
 		 */
 		extern .FLOAT4 MV1GetAnimKeyDataToQuaternionFromTime(int MHandle, int AnimKeySetIndex, float Time);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_VECTOR では無かった場合は失敗する
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_VECTORでは無かった場合は失敗する
 		 */
 		extern .VECTOR MV1GetAnimKeyDataToVector(int MHandle, int AnimKeySetIndex, int Index);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_VECTOR では無かった場合は失敗する( 時間指定版 )
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_VECTORでは無かった場合は失敗する(時間指定版)
 		 */
 		extern .VECTOR MV1GetAnimKeyDataToVectorFromTime(int MHandle, int AnimKeySetIndex, float Time);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_MATRIX4X4C か MV1_ANIMKEY_TYPE_MATRIX3X3 では無かった場合は失敗する
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_MATRIX4X4C か MV1_ANIMKEY_TYPE_MATRIX3X3では無かった場合は失敗する
 		 */
 		extern .MATRIX MV1GetAnimKeyDataToMatrix(int MHandle, int AnimKeySetIndex, int Index);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_MATRIX4X4C か MV1_ANIMKEY_TYPE_MATRIX3X3 では無かった場合は失敗する( 時間指定版 )
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_MATRIX4X4C か MV1_ANIMKEY_TYPE_MATRIX3X3では無かった場合は失敗する(時間指定版)
 		 */
 		extern .MATRIX MV1GetAnimKeyDataToMatrixFromTime(int MHandle, int AnimKeySetIndex, float Time);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_FLAT では無かった場合は失敗する
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_FLATでは無かった場合は失敗する
 		 */
 		extern float MV1GetAnimKeyDataToFlat(int MHandle, int AnimKeySetIndex, int Index);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_FLAT では無かった場合は失敗する( 時間指定版 )
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_FLATでは無かった場合は失敗する(時間指定版)
 		 */
 		extern float MV1GetAnimKeyDataToFlatFromTime(int MHandle, int AnimKeySetIndex, float Time);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_LINEAR では無かった場合は失敗する
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_LINEARでは無かった場合は失敗する
 		 */
 		extern float MV1GetAnimKeyDataToLinear(int MHandle, int AnimKeySetIndex, int Index);
 
 		/**
-		 * 指定のアニメーションキーセットのキーを取得する、キータイプが MV1_ANIMKEY_TYPE_LINEAR では無かった場合は失敗する( 時間指定版 )
+		 * 指定のアニメーションキーセットのキーを取得する、キータイプがMV1_ANIMKEY_TYPE_LINEARでは無かった場合は失敗する(時間指定版)
 		 */
 		extern float MV1GetAnimKeyDataToLinearFromTime(int MHandle, int AnimKeySetIndex, float Time);
 
@@ -18914,7 +18913,7 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      Type = DX_MATERIAL_TYPE_NORMAL など
+		 *      Type = DX_MATERIAL_TYPE_NORMALなど
 		 */
 		extern int MV1SetMaterialTypeAll(int MHandle, int Type);
 
@@ -18931,26 +18930,26 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のマテリアルのタイプを取得する
 		 *
-		 * Returns: DX_MATERIAL_TYPE_NORMAL など
+		 * Returns: DX_MATERIAL_TYPE_NORMALなど
 		 */
 		extern int MV1GetMaterialType(int MHandle, int MaterialIndex);
 
 		/**
-		 * 全てのマテリアルのタイプ別パラメータを変更する( マテリアルタイプ DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_TWO_COLOR などで使用 )
+		 * 全てのマテリアルのタイプ別パラメータを変更する(マテリアルタイプ DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_TWO_COLORなどで使用)
 		 */
 		extern int MV1SetMaterialTypeParamAll(int MHandle, ...);
 
 		/**
-		 * 指定のマテリアルのタイプ別パラメータを変更する( マテリアルタイプ DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_TWO_COLOR などで使用 )
+		 * 指定のマテリアルのタイプ別パラメータを変更する(マテリアルタイプ DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_TWO_COLORなどで使用)
 		 */
 		extern int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, ...);
 
-		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_UNORM            の場合 */ float MinParam = 正規化の下限値( この値以下が 0.0f になる ), float MaxParam = 正規化の上限値( この値以上が 1.0f になる ));
-		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CLIP_UNORM       の場合 */ float MinParam = 正規化の下限値( この値以下が 0.0f になる ), float MaxParam = 正規化の上限値( この値以上が 1.0f になる ), float ClipParam = 閾値( この値未満が 0.0f になる ));
-		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CMP_GREATEREQUAL の場合 */ float CmpParam = 比較値( この値以上の場合は 1.0f が、未満の場合は 0.0f が書き込まれる ));
-		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_POWER_UNORM                の場合 */ float MinParam = 正規化の下限値( この値以下が 0.0f になる ), float MaxParam = 正規化の上限値( この値以上が 1.0f になる ));
-		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_POWER_CLIP_UNORM           の場合 */ float MinParam = 正規化の下限値( この値以下が 0.0f になる ), float MaxParam = 正規化の上限値( この値以上が 1.0f になる ), float ClipParam = 閾値( この値未満が 0.0f になる ));
-		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_POWER_CMP_GREATEREQUAL     の場合 */ float CmpParam = 比較値( この値以上の場合は 1.0f が、未満の場合は 0.0f が書き込まれる ));
+		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_UNORMの場合 */ float MinParam = 正規化の下限値(この値以下が0.0fになる), float MaxParam = 正規化の上限値(この値以上が1.0fになる));
+		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CLIP_UNORMの場合 */ float MinParam = 正規化の下限値(この値以下が0.0fになる), float MaxParam = 正規化の上限値(この値以上が1.0fになる), float ClipParam = 閾値(この値未満が0.0fになる));
+		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CMP_GREATEREQUALの場合 */ float CmpParam = 比較値(この値以上の場合は1.0fが、未満の場合は0.0fが書き込まれる));
+		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_POWER_UNORMの場合 */ float MinParam = 正規化の下限値(この値以下が0.0fになる), float MaxParam = 正規化の上限値(この値以上が1.0fになる));
+		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_POWER_CLIP_UNORMの場合 */ float MinParam = 正規化の下限値(この値以下が0.0fになる), float MaxParam = 正規化の上限値(この値以上が1.0fになる), float ClipParam = 閾値(この値未満が0.0fになる));
+		// int MV1SetMaterialTypeParam(int MHandle, int MaterialIndex, /* DX_MATERIAL_TYPE_MAT_SPEC_POWER_CMP_GREATEREQUALの場合 */ float CmpParam = 比較値(この値以上の場合は1.0fが、未満の場合は0.0fが書き込まれる));
 
 		/**
 		 * 指定のマテリアルのディフューズカラーを設定する
@@ -19068,47 +19067,47 @@ extern (C++, DxLib) {
 		extern int MV1GetMaterialSphereMapTexture(int MHandle, int MaterialIndex);
 
 		/**
-		 * 全てのマテリアルのトゥーンレンダリングで使用するディフューズグラデーションマップとディフューズカラーの合成方法を設定する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 全てのマテリアルのトゥーンレンダリングで使用するディフューズグラデーションマップとディフューズカラーの合成方法を設定する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1SetMaterialDifGradBlendTypeAll(int MHandle, int BlendType);
 
 		/**
-		 * 指定のマテリアルのトゥーンレンダリングで使用するディフューズグラデーションマップとディフューズカラーの合成方法を設定する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 指定のマテリアルのトゥーンレンダリングで使用するディフューズグラデーションマップとディフューズカラーの合成方法を設定する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1SetMaterialDifGradBlendType(int MHandle, int MaterialIndex, int BlendType);
 
 		/**
-		 * 指定のマテリアルのトゥーンレンダリングで使用するディフューズグラデーションマップとディフューズカラーの合成方法を取得する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 指定のマテリアルのトゥーンレンダリングで使用するディフューズグラデーションマップとディフューズカラーの合成方法を取得する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1GetMaterialDifGradBlendType(int MHandle, int MaterialIndex);
 
 		/**
-		 * 全てのマテリアルのトゥーンレンダリングで使用するスペキュラグラデーションマップとスペキュラカラーの合成方法を設定する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 全てのマテリアルのトゥーンレンダリングで使用するスペキュラグラデーションマップとスペキュラカラーの合成方法を設定する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1SetMaterialSpcGradBlendTypeAll(int MHandle, int BlendType);
 
 		/**
-		 * 指定のマテリアルのトゥーンレンダリングで使用するスペキュラグラデーションマップとスペキュラカラーの合成方法を設定する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 指定のマテリアルのトゥーンレンダリングで使用するスペキュラグラデーションマップとスペキュラカラーの合成方法を設定する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1SetMaterialSpcGradBlendType(int MHandle, int MaterialIndex, int BlendType);
 
 		/**
-		 * 指定のマテリアルのトゥーンレンダリングで使用するスペキュラグラデーションマップとスペキュラカラーの合成方法を取得する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 指定のマテリアルのトゥーンレンダリングで使用するスペキュラグラデーションマップとスペキュラカラーの合成方法を取得する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1GetMaterialSpcGradBlendType(int MHandle, int MaterialIndex);
 
 		/**
-		 * 全てのマテリアルのトゥーンレンダリングで使用するスフィアマップの合成方法を設定する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 全てのマテリアルのトゥーンレンダリングで使用するスフィアマップの合成方法を設定する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1SetMaterialSphereMapBlendTypeAll(int MHandle, int BlendType);
 
 		/**
-		 * 指定のマテリアルのトゥーンレンダリングで使用するスフィアマップの合成方法を設定する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 指定のマテリアルのトゥーンレンダリングで使用するスフィアマップの合成方法を設定する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1SetMaterialSphereMapBlendType(int MHandle, int MaterialIndex, int BlendType);
 
 		/**
-		 * 指定のマテリアルのトゥーンレンダリングで使用するスフィアマップの合成方法を取得する( DX_MATERIAL_BLENDTYPE_ADDITIVE など )
+		 * 指定のマテリアルのトゥーンレンダリングで使用するスフィアマップの合成方法を取得する(DX_MATERIAL_BLENDTYPE_ADDITIVEなど)
 		 */
 		extern int MV1GetMaterialSphereMapBlendType(int MHandle, int MaterialIndex);
 
@@ -19158,17 +19157,17 @@ extern (C++, DxLib) {
 		extern .COLOR_F MV1GetMaterialOutLineColor(int MHandle, int MaterialIndex);
 
 		/**
-		 * 全てのマテリアルの描画ブレンドモードを設定する( DX_BLENDMODE_ALPHA 等 )
+		 * 全てのマテリアルの描画ブレンドモードを設定する(DX_BLENDMODE_ALPHA等)
 		 */
 		extern int MV1SetMaterialDrawBlendModeAll(int MHandle, int BlendMode);
 
 		/**
-		 * 指定のマテリアルの描画ブレンドモードを設定する( DX_BLENDMODE_ALPHA 等 )
+		 * 指定のマテリアルの描画ブレンドモードを設定する(DX_BLENDMODE_ALPHA等)
 		 */
 		extern int MV1SetMaterialDrawBlendMode(int MHandle, int MaterialIndex, int BlendMode);
 
 		/**
-		 * 指定のマテリアルの描画ブレンドモードを取得する( DX_BLENDMODE_ALPHA 等 )
+		 * 指定のマテリアルの描画ブレンドモードを取得する(DX_BLENDMODE_ALPHA等)
 		 */
 		extern int MV1GetMaterialDrawBlendMode(int MHandle, int MaterialIndex);
 
@@ -19192,9 +19191,9 @@ extern (C++, DxLib) {
 		 *
 		 * Params:
 		 *      MHandle = ?
-		 *      Enable = αテストを行うかどうか( TRUE:行う  FALSE:行わない( デフォルト ) )
-		 *      Mode = テストモード( DX_CMP_GREATER等 )
-		 *      Param = 描画アルファ値との比較に使用する値( 0~255 )
+		 *      Enable = αテストを行うかどうか(TRUE:行う  FALSE:行わない(デフォルト))
+		 *      Mode = テストモード(DX_CMP_GREATER等)
+		 *      Param = 描画アルファ値との比較に使用する値(0~255)
 		 */
 		extern int MV1SetMaterialDrawAlphaTestAll(int MHandle, int Enable, int Mode, int Param);
 
@@ -19204,9 +19203,9 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      MaterialIndex = ?
-		 *      Enable = αテストを行うかどうか( TRUE:行う  FALSE:行わない( デフォルト ) )
-		 *      Mode = テストモード( DX_CMP_GREATER等 )
-		 *      Param = 描画アルファ値との比較に使用する値( 0~255 )
+		 *      Enable = αテストを行うかどうか(TRUE:行う  FALSE:行わない(デフォルト))
+		 *      Mode = テストモード(DX_CMP_GREATER等)
+		 *      Param = 描画アルファ値との比較に使用する値(0~255)
 		 */
 		extern int MV1SetMaterialDrawAlphaTest(int MHandle, int MaterialIndex, int Enable, int Mode, int Param);
 
@@ -19220,12 +19219,12 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のマテリアルの描画時のアルファテストのテストモードを取得する
 		 *
-		 * Returns: テストモード( DX_CMP_GREATER等 )
+		 * Returns: テストモード(DX_CMP_GREATER等)
 		 */
 		extern int MV1GetMaterialDrawAlphaTestMode(int MHandle, int MaterialIndex);
 
 		/**
-		 * 指定のマテリアルの描画時のアルファテストの描画アルファ地との比較に使用する値( 0~255 )を取得する
+		 * 指定のマテリアルの描画時のアルファテストの描画アルファ地との比較に使用する値(0~255)を取得する
 		 */
 		extern int MV1GetMaterialDrawAlphaTestParam(int MHandle, int MaterialIndex);
 
@@ -19272,7 +19271,7 @@ extern (C++, DxLib) {
 		extern const (dxlib_d.DxDataType.TCHAR)* MV1GetTextureAlphaFilePath(int MHandle, int TexIndex);
 
 		/**
-		 * テクスチャで使用するグラフィックハンドルを変更する( GrHandle を -1 にすると解除 )
+		 * テクスチャで使用するグラフィックハンドルを変更する(GrHandleを-1にすると解除)
 		 */
 		extern int MV1SetTextureGraphHandle(int MHandle, int TexIndex, int GrHandle, int SemiTransFlag);
 
@@ -19282,21 +19281,21 @@ extern (C++, DxLib) {
 		extern int MV1GetTextureGraphHandle(int MHandle, int TexIndex);
 
 		/**
-		 * テクスチャのアドレスモードを設定する( AddUMode の値は DX_TEXADDRESS_WRAP 等 )
+		 * テクスチャのアドレスモードを設定する(AddUModeの値はDX_TEXADDRESS_WRAP等)
 		 */
 		extern int MV1SetTextureAddressMode(int MHandle, int TexIndex, int AddrUMode, int AddrVMode);
 
 		/**
 		 * テクスチャのU値のアドレスモードを取得する
 		 *
-		 * Returns: DX_TEXADDRESS_WRAP 等
+		 * Returns: DX_TEXADDRESS_WRAP等
 		 */
 		extern int MV1GetTextureAddressModeU(int MHandle, int TexIndex);
 
 		/**
 		 * テクスチャのV値のアドレスモードを取得する
 		 *
-		 * Returns: DX_TEXADDRESS_WRAP 等
+		 * Returns: DX_TEXADDRESS_WRAP等
 		 */
 		extern int MV1GetTextureAddressModeV(int MHandle, int TexIndex);
 
@@ -19387,14 +19386,14 @@ extern (C++, DxLib) {
 		extern int MV1SearchFrameWithStrLen(int MHandle, const (dxlib_d.DxDataType.TCHAR)* FrameName, size_t FrameNameLength);
 
 		/**
-		 * フレームの名前から指定のフレームの子フレームのフレームインデックスを取得する( 名前指定版 )( FrameIndex を -1 にすると親を持たないフレームを ChildIndex で指定する )
+		 * フレームの名前から指定のフレームの子フレームのフレームインデックスを取得する(名前指定版)(FrameIndexを-1にすると親を持たないフレームをChildIndexで指定する)
 		 *
 		 * Returns: 無かった場合は-1
 		 */
 		extern int MV1SearchFrameChild(int MHandle, int FrameIndex = -1, const (dxlib_d.DxDataType.TCHAR)* ChildName = null);
 
 		/**
-		 * フレームの名前から指定のフレームの子フレームのフレームインデックスを取得する( 名前指定版 )( FrameIndex を -1 にすると親を持たないフレームを ChildIndex で指定する )
+		 * フレームの名前から指定のフレームの子フレームのフレームインデックスを取得する(名前指定版)(FrameIndexを-1にすると親を持たないフレームをChildIndexで指定する)
 		 *
 		 * Returns: 無かった場合は-1
 		 */
@@ -19417,17 +19416,17 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のフレームの親フレームのインデックスを得る
 		 *
-		 * Returns: 親がいない場合は -2
+		 * Returns: 親がいない場合は-2
 		 */
 		extern int MV1GetFrameParent(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームの子フレームの数を取得する( FrameIndex を -1 にすると親を持たないフレームの数が返ってくる )
+		 * 指定のフレームの子フレームの数を取得する(FrameIndexを-1にすると親を持たないフレームの数が返ってくる)
 		 */
 		extern int MV1GetFrameChildNum(int MHandle, int FrameIndex = -1);
 
 		/**
-		 * 指定のフレームの子フレームのフレームインデックスを取得する( 番号指定版 )( FrameIndex を -1 にすると親を持たないフレームを ChildIndex で指定する )
+		 * 指定のフレームの子フレームのフレームインデックスを取得する(番号指定版)(FrameIndexを-1にすると親を持たないフレームをChildIndexで指定する)
 		 *
 		 * Returns: エラーの場合は-1
 		 */
@@ -19474,32 +19473,32 @@ extern (C++, DxLib) {
 		extern .MATRIX_D MV1GetFrameLocalWorldMatrixD(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームの座標変換行列( ローカル行列 )を設定する
+		 * 指定のフレームの座標変換行列(ローカル行列)を設定する
 		 */
 		extern int MV1SetFrameUserLocalMatrix(int MHandle, int FrameIndex, .MATRIX Matrix);
 
 		/**
-		 * 指定のフレームの座標変換行列( ローカル行列 )を設定する
+		 * 指定のフレームの座標変換行列(ローカル行列)を設定する
 		 */
 		extern int MV1SetFrameUserLocalMatrixD(int MHandle, int FrameIndex, .MATRIX_D Matrix);
 
 		/**
-		 * 指定のフレームの座標変換行列( ローカル行列 )をデフォルトに戻す
+		 * 指定のフレームの座標変換行列(ローカル行列)をデフォルトに戻す
 		 */
 		extern int MV1ResetFrameUserLocalMatrix(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームの座標変換行列( ローカル座標からワールド座標に変換する行列 )を設定する
+		 * 指定のフレームの座標変換行列(ローカル座標からワールド座標に変換する行列)を設定する
 		 */
 		extern int MV1SetFrameUserLocalWorldMatrix(int MHandle, int FrameIndex, .MATRIX Matrix);
 
 		/**
-		 * 指定のフレームの座標変換行列( ローカル座標からワールド座標に変換する行列 )を設定する
+		 * 指定のフレームの座標変換行列(ローカル座標からワールド座標に変換する行列)を設定する
 		 */
 		extern int MV1SetFrameUserLocalWorldMatrixD(int MHandle, int FrameIndex, .MATRIX_D Matrix);
 
 		/**
-		 * 指定のフレームの座標変換行列( ローカル座標からワールド座標に変換する行列 )をデフォルトに戻す
+		 * 指定のフレームの座標変換行列(ローカル座標からワールド座標に変換する行列)をデフォルトに戻す
 		 */
 		extern int MV1ResetFrameUserLocalWorldMatrix(int MHandle, int FrameIndex);
 
@@ -19571,42 +19570,42 @@ extern (C++, DxLib) {
 		extern int MV1GetFrameVisible(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームのディフューズカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のフレームのディフューズカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetFrameDifColorScale(int MHandle, int FrameIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のフレームのスペキュラカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のフレームのスペキュラカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetFrameSpcColorScale(int MHandle, int FrameIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のフレームのエミッシブカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のフレームのエミッシブカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetFrameEmiColorScale(int MHandle, int FrameIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のフレームのアンビエントカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のフレームのアンビエントカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetFrameAmbColorScale(int MHandle, int FrameIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のフレームのディフューズカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のフレームのディフューズカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetFrameDifColorScale(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームのスペキュラカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のフレームのスペキュラカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetFrameSpcColorScale(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームのエミッシブカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のフレームのエミッシブカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetFrameEmiColorScale(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームのアンビエントカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のフレームのアンビエントカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetFrameAmbColorScale(int MHandle, int FrameIndex);
 
@@ -19618,12 +19617,12 @@ extern (C++, DxLib) {
 		extern int MV1GetFrameSemiTransState(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームの不透明度を設定する( 不透明 1.0f ~ 透明 0.0f )
+		 * 指定のフレームの不透明度を設定する(不透明1.0f~透明 0.0f)
 		 */
 		extern int MV1SetFrameOpacityRate(int MHandle, int FrameIndex, float Rate);
 
 		/**
-		 * 指定のフレームの不透明度を取得する( 不透明 1.0f ~ 透明 0.0f )
+		 * 指定のフレームの不透明度を取得する(不透明1.0f~透明 0.0f)
 		 */
 		extern float MV1GetFrameOpacityRate(int MHandle, int FrameIndex);
 
@@ -19699,57 +19698,57 @@ extern (C++, DxLib) {
 		extern int MV1GetMeshVisible(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュのディフューズカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のメッシュのディフューズカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetMeshDifColorScale(int MHandle, int MeshIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のメッシュのスペキュラカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のメッシュのスペキュラカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetMeshSpcColorScale(int MHandle, int MeshIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のメッシュのエミッシブカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のメッシュのエミッシブカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetMeshEmiColorScale(int MHandle, int MeshIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のメッシュのアンビエントカラーのスケール値を設定する( デフォルト値は 1.0f )
+		 * 指定のメッシュのアンビエントカラーのスケール値を設定する(デフォルト値は1.0f)
 		 */
 		extern int MV1SetMeshAmbColorScale(int MHandle, int MeshIndex, .COLOR_F Scale);
 
 		/**
-		 * 指定のメッシュのディフューズカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のメッシュのディフューズカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetMeshDifColorScale(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュのスペキュラカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のメッシュのスペキュラカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetMeshSpcColorScale(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュのエミッシブカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のメッシュのエミッシブカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetMeshEmiColorScale(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュのアンビエントカラーのスケール値を取得する( デフォルト値は 1.0f )
+		 * 指定のメッシュのアンビエントカラーのスケール値を取得する(デフォルト値は1.0f)
 		 */
 		extern .COLOR_F MV1GetMeshAmbColorScale(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュの不透明度を設定する( 不透明 1.0f ~ 透明 0.0f )
+		 * 指定のメッシュの不透明度を設定する(不透明1.0f~透明 0.0f)
 		 */
 		extern int MV1SetMeshOpacityRate(int MHandle, int MeshIndex, float Rate);
 
 		/**
-		 * 指定のメッシュの不透明度を取得する( 不透明 1.0f ~ 透明 0.0f )
+		 * 指定のメッシュの不透明度を取得する(不透明1.0f~透明 0.0f)
 		 */
 		extern float MV1GetMeshOpacityRate(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュの描画ブレンドモードを設定する( DX_BLENDMODE_ALPHA 等 )
+		 * 指定のメッシュの描画ブレンドモードを設定する(DX_BLENDMODE_ALPHA等)
 		 */
 		extern int MV1SetMeshDrawBlendMode(int MHandle, int MeshIndex, int BlendMode);
 
@@ -19759,7 +19758,7 @@ extern (C++, DxLib) {
 		extern int MV1SetMeshDrawBlendParam(int MHandle, int MeshIndex, int BlendParam);
 
 		/**
-		 * 指定のメッシュの描画ブレンドモードを取得する( DX_BLENDMODE_ALPHA 等 )
+		 * 指定のメッシュの描画ブレンドモードを取得する(DX_BLENDMODE_ALPHA等)
 		 */
 		extern int MV1GetMeshDrawBlendMode(int MHandle, int MeshIndex);
 
@@ -19786,12 +19785,12 @@ extern (C++, DxLib) {
 		extern int MV1GetMeshBaseVisible(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュのバックカリングを行うかどうかを設定する( DX_CULLING_LEFT 等 )
+		 * 指定のメッシュのバックカリングを行うかどうかを設定する(DX_CULLING_LEFT等)
 		 */
 		extern int MV1SetMeshBackCulling(int MHandle, int MeshIndex, int CullingFlag);
 
 		/**
-		 * 指定のメッシュのバックカリングを行うかどうかを取得する( DX_CULLING_LEFT 等 )
+		 * 指定のメッシュのバックカリングを行うかどうかを取得する(DX_CULLING_LEFT等)
 		 */
 		extern int MV1GetMeshBackCulling(int MHandle, int MeshIndex);
 
@@ -19905,7 +19904,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      ShapeIndex = ?
-		 *      Rate = 0.0f:0% ~ 1.0f:100%
+		 *      Rate = 0.0f:0%~1.0f:100%
 		 *      Type = ?
 		 */
 		extern int MV1SetShapeRate(int MHandle, int ShapeIndex, float Rate, int Type = DX_MV1_SHAPERATE_ADD);
@@ -19913,14 +19912,14 @@ extern (C++, DxLib) {
 		/**
 		 * 指定シェイプの有効率を取得する
 		 *
-		 * Returns: 0.0f:0% ~ 1.0f:100%
+		 * Returns: 0.0f:0%~1.0f:100%
 		 */
 		extern float MV1GetShapeRate(int MHandle, int ShapeIndex);
 
 		/**
-		 * 指定シェイプの有効率を取得する( MV1SetShapeRate で指定した値がそのまま戻り値となる MV1GetShapeRate と異なりアニメーションのシェイプ情報なども加味した値が戻り値となります )
+		 * 指定シェイプの有効率を取得する(MV1SetShapeRateで指定した値がそのまま戻り値となるMV1GetShapeRateと異なりアニメーションのシェイプ情報なども加味した値が戻り値となります)
 		 *
-		 * Returns: 0.0f:0% ~ 1.0f:100%
+		 * Returns: 0.0f:0%~1.0f:100%
 		 */
 		extern float MV1GetShapeApplyRate(int MHandle, int ShapeIndex);
 
@@ -19932,7 +19931,7 @@ extern (C++, DxLib) {
 		extern int MV1GetTriangleListNum(int MHandle);
 
 		/**
-		 * 指定のトライアングルリストの頂点データタイプを取得する( DX_MV1_VERTEX_TYPE_1FRAME 等 )
+		 * 指定のトライアングルリストの頂点データタイプを取得する(DX_MV1_VERTEX_TYPE_1FRAME等)
 		 */
 		extern int MV1GetTriangleListVertexType(int MHandle, int TListIndex);
 
@@ -19952,7 +19951,7 @@ extern (C++, DxLib) {
 		extern int MV1GetTriangleListLocalWorldMatrixNum(int MHandle, int TListIndex);
 
 		/**
-		 * 指定のトライアングルリストが使用する座標変換行列( ローカル→ワールド )を取得する
+		 * 指定のトライアングルリストが使用する座標変換行列(ローカル→ワールド)を取得する
 		 */
 		extern .MATRIX MV1GetTriangleListLocalWorldMatrix(int MHandle, int TListIndex, int LWMatrixIndex);
 
@@ -19991,7 +19990,7 @@ extern (C++, DxLib) {
 		extern .MV1_COLL_RESULT_POLY MV1CollCheck_Line(int MHandle, int FrameIndex, .VECTOR PosStart, .VECTOR PosEnd, int MeshIndex = -1);
 
 		/**
-		 * 線とモデルの当たり判定( 戻り値が MV1_COLL_RESULT_POLY_DIM )
+		 * 線とモデルの当たり判定(戻り値がMV1_COLL_RESULT_POLY_DIM)
 		 */
 		extern .MV1_COLL_RESULT_POLY_DIM MV1CollCheck_LineDim(int MHandle, int FrameIndex, .VECTOR PosStart, .VECTOR PosEnd, int MeshIndex = -1);
 
@@ -20048,278 +20047,278 @@ extern (C++, DxLib) {
 	version (DX_NON_LIVE2D_CUBISM4) {
 	} else {
 		/**
-		 * Live2DCubismCore.dll のファイルパスを設定する
+		 * Live2DCubismCore.dllのファイルパスを設定する
 		 */
 		extern int Live2D_SetCubism4CoreDLLPath(const (dxlib_d.DxDataType.TCHAR)* CoreDLLFilePath);
 
 		/**
-		 * Live2DCubismCore.dll のファイルパスを設定する
+		 * Live2DCubismCore.dllのファイルパスを設定する
 		 */
 		extern int Live2D_SetCubism4CoreDLLPathWithStrLen(const (dxlib_d.DxDataType.TCHAR)* CoreDLLFilePath, size_t CoreDLLFilePathLength);
 
 		/**
-		 * Live2DCubismCore.dll のファイルパスを設定する
+		 * Live2DCubismCore.dllのファイルパスを設定する
 		 */
 		extern int Live2D_SetCubism3CoreDLLPath(const (dxlib_d.DxDataType.TCHAR)* CoreDLLFilePath);
 
 		/**
-		 * Live2DCubismCore.dll のファイルパスを設定する
+		 * Live2DCubismCore.dllのファイルパスを設定する
 		 */
 		extern int Live2D_SetCubism3CoreDLLPathWithStrLen(const (dxlib_d.DxDataType.TCHAR)* CoreDLLFilePath, size_t CoreDLLFilePathLength);
 
 		/**
-		 * Live2D の描画処理を開始する
+		 * Live2Dの描画処理を開始する
 		 */
 		extern int Live2D_RenderBegin();
 
 		/**
-		 * Live2D の描画処理を終了する
+		 * Live2Dの描画処理を終了する
 		 */
 		extern int Live2D_RenderEnd();
 
 		/**
-		 * Live2D のモデルファイルを読み込む
+		 * Live2Dのモデルファイルを読み込む
 		 *
 		 * Returns: 0以上:Live2Dモデルハンドル  マイナス値:エラー発生
 		 */
 		extern int Live2D_LoadModel(const (dxlib_d.DxDataType.TCHAR)* FilePath);
 
 		/**
-		 * Live2D のモデルファイルを読み込む
+		 * Live2Dのモデルファイルを読み込む
 		 *
 		 * Returns: 0以上:Live2Dモデルハンドル  マイナス値:エラー発生
 		 */
 		extern int Live2D_LoadModelWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength);
 
 		/**
-		 * Live2D のモデルを削除する
+		 * Live2Dのモデルを削除する
 		 */
 		extern int Live2D_DeleteModel(int Live2DModelHandle);
 
 		/**
-		 * すべての Live2D のモデルを削除する
+		 * すべてのLive2Dのモデルを削除する
 		 */
 		extern int Live2D_InitModel();
 
 		/**
-		 * Live2D のモデルの状態を更新する
+		 * Live2Dのモデルの状態を更新する
 		 */
 		extern int Live2D_Model_Update(int Live2DModelHandle, float DeltaTimeSeconds);
 
 		/**
-		 * Live2D のモデルの位置を設定する
+		 * Live2Dのモデルの位置を設定する
 		 */
 		extern int Live2D_Model_SetTranslate(int Live2DModelHandle, float x, float y);
 
 		/**
-		 * Live2D のモデルの拡大率を設定する
+		 * Live2Dのモデルの拡大率を設定する
 		 */
 		extern int Live2D_Model_SetExtendRate(int Live2DModelHandle, float ExRateX, float ExRateY);
 
 		/**
-		 * Live2D のモデルの回転を設定する
+		 * Live2Dのモデルの回転を設定する
 		 */
 		extern int Live2D_Model_SetRotate(int Live2DModelHandle, float RotAngle);
 
 		/**
-		 * Live2D のモデルを描画する
+		 * Live2Dのモデルを描画する
 		 */
 		extern int Live2D_Model_Draw(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの指定のモーションを再生する
+		 * Live2Dのモデルの指定のモーションを再生する
 		 */
 		extern int Live2D_Model_StartMotion(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* group, int no);
 
 		/**
-		 * Live2D のモデルの指定のモーションを再生する
+		 * Live2Dのモデルの指定のモーションを再生する
 		 */
 		extern int Live2D_Model_StartMotionWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* group, size_t groupLength, int no);
 
 		/**
-		 * Live2D のモデルのモーション再生が終了しているかを取得する
+		 * Live2Dのモデルのモーション再生が終了しているかを取得する
 		 *
 		 * Returns: TRUE:再生が終了している  FALSE:再生中
 		 */
 		extern int Live2D_Model_IsMotionFinished(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの指定の表情モーションを設定する
+		 * Live2Dのモデルの指定の表情モーションを設定する
 		 */
 		extern int Live2D_Model_SetExpression(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* expressionID);
 
 		/**
-		 * Live2D のモデルの指定の表情モーションを設定する
+		 * Live2Dのモデルの指定の表情モーションを設定する
 		 */
 		extern int Live2D_Model_SetExpressionWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* expressionID, size_t expressionIDLength);
 
 		/**
-		 * 指定の座標が Live2D のモデルの指定の当たり判定の矩形範囲内か判定する
+		 * 指定の座標がLive2Dのモデルの指定の当たり判定の矩形範囲内か判定する
 		 *
 		 * Returns: TRUE:矩形範囲内  FALSE:矩形範囲外
 		 */
 		extern int Live2D_Model_HitTest(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* hitAreaName, float x, float y);
 
 		/**
-		 * 指定の座標が Live2D のモデルの指定の当たり判定の矩形範囲内か判定する
+		 * 指定の座標がLive2Dのモデルの指定の当たり判定の矩形範囲内か判定する
 		 *
 		 * Returns: TRUE:矩形範囲内  FALSE:矩形範囲外
 		 */
 		extern int Live2D_Model_HitTestWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* hitAreaName, size_t hitAreaNameLength, float x, float y);
 
 		/**
-		 * Live2D のモデルに設定されているパラメータの数を取得する
+		 * Live2Dのモデルに設定されているパラメータの数を取得する
 		 */
 		extern int Live2D_Model_GetParameterCount(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルに設定されているパラメータのIDを取得する
+		 * Live2Dのモデルに設定されているパラメータのIDを取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetParameterId(int Live2DModelHandle, int index);
 
 		/**
-		 * Live2D のモデルに設定されているパラメータを取得する
+		 * Live2Dのモデルに設定されているパラメータを取得する
 		 */
 		extern float Live2D_Model_GetParameterValue(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* parameterId);
 
 		/**
-		 * Live2D のモデルに設定されているパラメータを取得する
+		 * Live2Dのモデルに設定されているパラメータを取得する
 		 */
 		extern float Live2D_Model_GetParameterValueWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* parameterId, size_t parameterIdLength);
 
 		/**
-		 * Live2D のモデルに設定されているパラメータを設定する
+		 * Live2Dのモデルに設定されているパラメータを設定する
 		 */
 		extern int Live2D_Model_SetParameterValue(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* parameterId, float value);
 
 		/**
-		 * Live2D のモデルに設定されているパラメータを設定する
+		 * Live2Dのモデルに設定されているパラメータを設定する
 		 */
 		extern int Live2D_Model_SetParameterValueWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* parameterId, size_t parameterIdLength, float value);
 
 		/**
-		 * Live2D のモデルに設定された当たり判定の数を取得する
+		 * Live2Dのモデルに設定された当たり判定の数を取得する
 		 */
 		extern int Live2D_Model_GetHitAreasCount(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの当たり判定に設定された名前を取得する
+		 * Live2Dのモデルの当たり判定に設定された名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetHitAreaName(int Live2DModelHandle, int index);
 
 		/**
-		 * Live2D のモデルの物理演算設定ファイルの名前を取得する
+		 * Live2Dのモデルの物理演算設定ファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetPhysicsFileName(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルのパーツ切り替え設定ファイルの名前を取得する
+		 * Live2Dのモデルのパーツ切り替え設定ファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetPoseFileName(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの表情設定ファイルの数を取得する
+		 * Live2Dのモデルの表情設定ファイルの数を取得する
 		 */
 		extern int Live2D_Model_GetExpressionCount(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの表情設定ファイルを識別するIDを取得する
+		 * Live2Dのモデルの表情設定ファイルを識別するIDを取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetExpressionName(int Live2DModelHandle, int index);
 
 		/**
-		 * Live2D のモデルの表情設定ファイルの名前を取得する
+		 * Live2Dのモデルの表情設定ファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetExpressionFileName(int Live2DModelHandle, int index);
 
 		/**
-		 * Live2D のモデルのモーショングループの数を取得する
+		 * Live2Dのモデルのモーショングループの数を取得する
 		 */
 		extern int Live2D_Model_GetMotionGroupCount(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルのモーショングループの名前を取得する
+		 * Live2Dのモデルのモーショングループの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetMotionGroupName(int Live2DModelHandle, int index);
 
 		/**
-		 * Live2D のモデルのモーショングループに含まれるモーションの数を取得する
+		 * Live2Dのモデルのモーショングループに含まれるモーションの数を取得する
 		 */
 		extern int Live2D_Model_GetMotionCount(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName);
 
 		/**
-		 * Live2D のモデルのモーショングループに含まれるモーションの数を取得する
+		 * Live2Dのモデルのモーショングループに含まれるモーションの数を取得する
 		 */
 		extern int Live2D_Model_GetMotionCountWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, size_t groupNameLength);
 
 		/**
-		 * Live2D のモデルのグループ名とインデックス値からモーションファイルの名前を取得する
+		 * Live2Dのモデルのグループ名とインデックス値からモーションファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetMotionFileName(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, int index);
 
 		/**
-		 * Live2D のモデルのグループ名とインデックス値からモーションファイルの名前を取得する
+		 * Live2Dのモデルのグループ名とインデックス値からモーションファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetMotionFileNameWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, size_t groupNameLength, int index);
 
 		/**
-		 * Live2D のモデルのモーションに対応するサウンドファイルの名前を取得する
+		 * Live2Dのモデルのモーションに対応するサウンドファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetMotionSoundFileName(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, int index);
 
 		/**
-		 * Live2D のモデルのモーションに対応するサウンドファイルの名前を取得する
+		 * Live2Dのモデルのモーションに対応するサウンドファイルの名前を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetMotionSoundFileNameWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, size_t groupNameLength, int index);
 
 		/**
-		 * Live2D のモデルのモーション開始時のフェードイン処理時間を取得する
+		 * Live2Dのモデルのモーション開始時のフェードイン処理時間を取得する
 		 */
 		extern float Live2D_Model_GetMotionFadeInTimeValue(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, int index);
 
 		/**
-		 * Live2D のモデルのモーション開始時のフェードイン処理時間を取得する
+		 * Live2Dのモデルのモーション開始時のフェードイン処理時間を取得する
 		 */
 		extern float Live2D_Model_GetMotionFadeInTimeValueWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, size_t groupNameLength, int index);
 
 		/**
-		 * Live2D のモデルのモーション終了時のフェードアウト処理時間を取得する
+		 * Live2Dのモデルのモーション終了時のフェードアウト処理時間を取得する
 		 */
 		extern float Live2D_Model_GetMotionFadeOutTimeValue(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, int index);
 
 		/**
-		 * Live2D のモデルのモーション終了時のフェードアウト処理時間を取得する
+		 * Live2Dのモデルのモーション終了時のフェードアウト処理時間を取得する
 		 */
 		extern float Live2D_Model_GetMotionFadeOutTimeValueWithStrLen(int Live2DModelHandle, const (dxlib_d.DxDataType.TCHAR)* groupName, size_t groupNameLength, int index);
 
 		/**
-		 * Live2D のモデルのユーザデータのファイル名を取得する
+		 * Live2Dのモデルのユーザデータのファイル名を取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetUserDataFile(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの目パチに関連付けられたパラメータの数を取得する
+		 * Live2Dのモデルの目パチに関連付けられたパラメータの数を取得する
 		 */
 		extern int Live2D_Model_GetEyeBlinkParameterCount(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルの目パチに関連付けられたパラメータのIDを取得する
+		 * Live2Dのモデルの目パチに関連付けられたパラメータのIDを取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetEyeBlinkParameterId(int Live2DModelHandle, int index);
 
 		/**
-		 * Live2D のモデルのリップシンクに関連付けられたパラメータの数を取得する
+		 * Live2Dのモデルのリップシンクに関連付けられたパラメータの数を取得する
 		 */
 		extern int Live2D_Model_GetLipSyncParameterCount(int Live2DModelHandle);
 
 		/**
-		 * Live2D のモデルのリップシンクに関連付けられたパラメータのIDを取得する
+		 * Live2Dのモデルのリップシンクに関連付けられたパラメータのIDを取得する
 		 */
 		extern const (dxlib_d.DxDataType.TCHAR)* Live2D_Model_GetLipSyncParameterId(int Live2DModelHandle, int index);
 	}
 }
 
-// ネームスペース DxLib を使用する ------------------------------------------------------
+// ネームスペースDxLibを使用する ------------------------------------------------------
 version (DX_NON_NAMESPACE) {
 } else {
 	version (DX_NON_USING_NAMESPACE_DXLIB) {

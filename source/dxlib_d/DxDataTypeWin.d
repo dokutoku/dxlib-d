@@ -35,8 +35,8 @@ private static import core.sys.windows.winnt;
 private static import core.sys.windows.winuser;
 private static import dxlib_d.DxLib;
 
-// DXライブラリに必要な lib ファイルを、プロジェクトのカレントフォルダや
-// コンパイラのデフォルト LIB パスに設定せずに使用される場合は以下の
+// DXライブラリに必要なlibファイルを、プロジェクトのカレントフォルダや
+// コンパイラのデフォルトLIBパスに設定せずに使用される場合は以下の
 // コメントを外してください
 //version = DX_LIB_NOT_DEFAULTPATH;
 
@@ -61,13 +61,13 @@ version (DX_MAKE) {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLibW_x64_d.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLibW_x64_d.lib");
 								} else {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLib_x64_d.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLib_x64_d.lib");
 								}
 							} else {
@@ -78,13 +78,13 @@ version (DX_MAKE) {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLibW_x64.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLibW_x64.lib");
 								} else {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLib_x64.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLib_x64.lib");
 								}
 							}
@@ -97,13 +97,13 @@ version (DX_MAKE) {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLibW_d.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLibW_d.lib");
 								} else {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLib_d.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLib_d.lib");
 								}
 							} else {
@@ -114,13 +114,13 @@ version (DX_MAKE) {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLibW.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLibW.lib");
 								} else {
 									//  DXライブラリ使用指定
 									pragma(lib, "DxLib.lib");
 
-									//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+									//  標準Cライブラリを使用する部分のlibファイルの使用指定
 									pragma(lib, "DxUseCLib.lib");
 								}
 							}
@@ -138,10 +138,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLibW_vs2015_x64_MDd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x64_ItrDbgLv0_MDd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x64_MDd.lib");
 											}
 										} else {
@@ -149,10 +149,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLib_vs2015_x64_MDd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x64_ItrDbgLv0_MDd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x64_MDd.lib");
 											}
 										}
@@ -164,13 +164,13 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x64_MD.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2015_x64_MD.lib");
 										} else {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x64_MD.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2015_x64_MD.lib");
 										}
 									}
@@ -184,10 +184,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLibW_vs2015_x86_MDd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x86_ItrDbgLv0_MDd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x86_MDd.lib");
 											}
 										} else {
@@ -195,10 +195,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLib_vs2015_x86_MDd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x86_ItrDbgLv0_MDd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x86_MDd.lib");
 											}
 										}
@@ -210,13 +210,13 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x86_MD.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2015_x86_MD.lib");
 										} else {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x86_MD.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2015_x86_MD.lib");
 										}
 									}
@@ -232,10 +232,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLibW_vs2015_x64_MTd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x64_ItrDbgLv0_MTd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x64_MTd.lib");
 											}
 										} else {
@@ -243,10 +243,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLib_vs2015_x64_MTd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x64_ItrDbgLv0_MTd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x64_MTd.lib");
 											}
 										}
@@ -258,13 +258,13 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x64_MT.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2015_x64_MT.lib");
 										} else {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x64_MT.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2015_x64_MT.lib");
 										}
 									}
@@ -278,10 +278,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLibW_vs2015_x86_MTd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x86_ItrDbgLv0_MTd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLibW_vs2015_x86_MTd.lib");
 											}
 										} else {
@@ -289,10 +289,10 @@ version (DX_MAKE) {
 											pragma(lib, "DxLib_vs2015_x86_MTd.lib");
 
 											static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x86_ItrDbgLv0_MTd.lib");
 											} else {
-												//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+												//  標準Cライブラリを使用する部分のlibファイルの使用指定
 												pragma(lib, "DxUseCLib_vs2015_x86_MTd.lib");
 											}
 										}
@@ -304,13 +304,13 @@ version (DX_MAKE) {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLibW_vs2015_x86_MT.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2015_x86_MT.lib");
 										} else {
 											//  DXライブラリ使用指定
 											pragma(lib, "DxLib_vs2015_x86_MT.lib");
 
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2015_x86_MT.lib");
 										}
 									}
@@ -327,10 +327,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLibW_vs2012_x64_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2013_x64_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2013_x64_d.lib");
 										}
 									} else {
@@ -338,10 +338,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLib_vs2012_x64_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2013_x64_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2013_x64_d.lib");
 										}
 									}
@@ -353,13 +353,13 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x64.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLibW_vs2013_x64.lib");
 									} else {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x64.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLib_vs2013_x64.lib");
 									}
 								}
@@ -373,10 +373,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLibW_vs2012_x86_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2013_x86_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2013_x86_d.lib");
 										}
 									} else {
@@ -384,10 +384,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLib_vs2012_x86_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2013_x86_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2013_x86_d.lib");
 										}
 									}
@@ -399,13 +399,13 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x86.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLibW_vs2013_x86.lib");
 									} else {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x86.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLib_vs2013_x86.lib");
 									}
 								}
@@ -421,10 +421,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLibW_vs2012_x64_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2012_x64_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2012_x64_d.lib");
 										}
 									} else {
@@ -432,10 +432,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLib_vs2012_x64_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2012_x64_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2012_x64_d.lib");
 										}
 									}
@@ -447,13 +447,13 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x64.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLibW_vs2012_x64.lib");
 									} else {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x64.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLib_vs2012_x64.lib");
 									}
 								}
@@ -467,10 +467,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLibW_vs2012_x86_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2012_x86_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLibW_vs2012_x86_d.lib");
 										}
 									} else {
@@ -478,10 +478,10 @@ version (DX_MAKE) {
 										pragma(lib, "DxLib_vs2012_x86_d.lib");
 
 										static if ((__traits(compiles, core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL)) && (core.stdcpp.xutility._ITERATOR_DEBUG_LEVEL == 0)) {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2012_x86_ItrDbgLv0_d.lib");
 										} else {
-											//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+											//  標準Cライブラリを使用する部分のlibファイルの使用指定
 											pragma(lib, "DxUseCLib_vs2012_x86_d.lib");
 										}
 									}
@@ -493,13 +493,13 @@ version (DX_MAKE) {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLibW_vs2012_x86.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLibW_vs2012_x86.lib");
 									} else {
 										//  DXライブラリ使用指定
 										pragma(lib, "DxLib_vs2012_x86.lib");
 
-										//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+										//  標準Cライブラリを使用する部分のlibファイルの使用指定
 										pragma(lib, "DxUseCLib_vs2012_x86.lib");
 									}
 								}
@@ -514,13 +514,13 @@ version (DX_MAKE) {
 						//  DXライブラリ使用指定
 						pragma(lib, "DxLibW.lib");
 
-						//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+						//  標準Cライブラリを使用する部分のlibファイルの使用指定
 						pragma(lib, "DxUseCLibW.lib");
 					} else {
 						//  DXライブラリ使用指定
 						pragma(lib, "DxLib.lib");
 
-						//  標準Cライブラリを使用する部分の lib ファイルの使用指定
+						//  標準Cライブラリを使用する部分のlibファイルの使用指定
 						pragma(lib, "DxUseCLib.lib");
 					}
 				}
@@ -598,13 +598,13 @@ version (DX_MAKE) {
 						version (DX_USE_VC8_BULLET_PHYSICS_LIB) {
 							version (Win64) {
 								debug {
-									// Visual C++ 8.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 8.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc8_x64_d.lib");
 
 									pragma(lib, "libbulletdynamics_vc8_x64_d.lib");
 									pragma(lib, "libbulletmath_vc8_x64_d.lib");
 								} else {
-									// Visual C++ 8.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 8.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc8_x64.lib");
 
 									pragma(lib, "libbulletdynamics_vc8_x64.lib");
@@ -612,13 +612,13 @@ version (DX_MAKE) {
 								}
 							} else {
 								debug {
-									// Visual C++ 8.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 8.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc8_d.lib");
 
 									pragma(lib, "libbulletdynamics_vc8_d.lib");
 									pragma(lib, "libbulletmath_vc8_d.lib");
 								} else {
-									// Visual C++ 8.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 8.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc8.lib");
 
 									pragma(lib, "libbulletdynamics_vc8.lib");
@@ -628,13 +628,13 @@ version (DX_MAKE) {
 						} else {
 							version (Win64) {
 								debug {
-									// Visual C++ 8.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 8.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc8_x64_d.lib");
 
 									pragma(lib, "libbulletdynamics_vc8_x64_d.lib");
 									pragma(lib, "libbulletmath_vc8_x64_d.lib");
 								} else {
-									// Visual C++ 8.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 8.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc8_x64.lib");
 
 									pragma(lib, "libbulletdynamics_vc8_x64.lib");
@@ -642,13 +642,13 @@ version (DX_MAKE) {
 								}
 							} else {
 								debug {
-									// Visual C++ 6.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 6.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc6_d.lib");
 
 									pragma(lib, "libbulletdynamics_vc6_d.lib");
 									pragma(lib, "libbulletmath_vc6_d.lib");
 								} else {
-									// Visual C++ 6.0 でコンパイルした Bullet Physics ライブラリ
+									// Visual C++ 6.0でコンパイルしたBullet Physics ライブラリ
 									pragma(lib, "libbulletcollision_vc6.lib");
 
 									pragma(lib, "libbulletdynamics_vc6.lib");
@@ -1744,26 +1744,26 @@ extern (C++, DxLib) {
 	enum DIRECTINPUT_VERSION = 0x0700;
 
 	/**
-	 * ACM を使用した読み込み処理
+	 * ACMを使用した読み込み処理
 	 */
 	enum DX_READSOUNDFUNCTION_ACM = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 0);
 
 	/**
-	 * ACM を使用した MP3 の読み込み処理
+	 * ACMを使用したMP3の読み込み処理
 	 */
 	enum DX_READSOUNDFUNCTION_MP3 = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 1);
 
 	/**
-	 * DirectShow を使用した MP3 の読み込み処理
+	 * DirectShowを使用したMP3の読み込み処理
 	 */
 	enum DX_READSOUNDFUNCTION_DSMP3 = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 2);
 
 	/**
-	 * Media Foundation を使用した読み込み処理
+	 * Media Foundationを使用した読み込み処理
 	 */
 	enum DX_READSOUNDFUNCTION_MF = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 3);
 
-	// Direct3D9 用テクスチャフォーマット
+	// Direct3D9用テクスチャフォーマット
 	enum DX_TEXTUREFORMAT_DIRECT3D9_R8G8B8 = 1;
 	enum DX_TEXTUREFORMAT_DIRECT3D9_A8R8G8B8 = 2;
 	enum DX_TEXTUREFORMAT_DIRECT3D9_X8R8G8B8 = 3;
@@ -1810,12 +1810,12 @@ extern (C++, DxLib) {
 	enum DX_ERRORCODE_WIN_FAILED_ASYNCLOAD_CREATE_THREAD = 0x01010004;
 
 	/**
-	 * DirectDraw7 の取得に失敗
+	 * DirectDraw7の取得に失敗
 	 */
 	enum DX_ERRORCODE_WIN_FAILED_CREATE_DIRECTDRAW7 = 0x01020001;
 
 	/**
-	 * DirectDraw7 の初期化に失敗
+	 * DirectDraw7の初期化に失敗
 	 */
 	enum DX_ERRORCODE_WIN_FAILED_INITIALIZE_DIRECTDRAW7 = 0x01020002;
 
@@ -1825,7 +1825,7 @@ extern (C++, DxLib) {
 	enum DX_ERRORCODE_WIN_NOT_COMPATIBLE_SCREEN_COLOR_MODE = 0x01020003;
 
 	/**
-	 * Win32API の ChangeDisplaySettings を使用した画面モードの変更に失敗
+	 * Win32APIのChangeDisplaySettingsを使用した画面モードの変更に失敗
 	 */
 	enum DX_ERRORCODE_WIN_FAILED_CHANGE_DISPLAY_SETTINGS = 0x01020004;
 

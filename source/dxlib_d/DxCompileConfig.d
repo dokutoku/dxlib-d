@@ -8,7 +8,7 @@
 
 /*
 <<注意>>
-  このヘッダファイルの #define のコメントアウト状態を変更しても、
+  このヘッダファイルの#defineのコメントアウト状態を変更しても、
   DXライブラリ自体の再コンパイルを行わないと効果はありません。
 */
 /**
@@ -40,17 +40,16 @@ version (__APPLE__) {
 // 多重インクルード防止用マクロ
 // スタティックライブラリ生成時ライブラリ機能制限用定義 -----------------------
 
-// namespace DxLib を使用しない場合は次のコメントを外してください
+// namespace DxLibを使用しない場合は次のコメントを外してください
 //version = DX_NON_NAMESPACE;
 
-// DxLib.h に書かれている using namespace DxLib ; を使用しない場合は次のコメントを外してください
+// DxLib.hに書かれているusing namespace DxLib;を使用しない場合は次のコメントを外してください
 //version = DX_NON_USING_NAMESPACE_DXLIB;
 
 // インラインアセンブラを使用しないソースコードでコンパイルする場合は以下のコメントアウトを外してください
 //version = DX_NON_INLINE_ASM;
 
-// DXライブラリのプログラムから文字列を一切排除する場合はコメントを外してください
-// (バイナリエディタで実行ファイルを開いてもDXライブラリを使用していることが分かり難くなります(よく調べれば当然分かりますが)
+// DXライブラリのプログラムから文字列を一切排除する場合はコメントを外してください(バイナリエディタで実行ファイルを開いてもDXライブラリを使用していることが分かり難くなります(よく調べれば当然分かりますが)
 //  因みに、エラー出力が一切されなくなりますので管理人の対応時に支障をきたすかもしれません)
 //version = DX_NON_LITERAL_STRING;
 
@@ -60,8 +59,7 @@ version (__APPLE__) {
 // ネットワーク関連の関数だけスレッドセーフにする場合はコメントを外して下さい
 version = DX_THREAD_SAFE_NETWORK_ONLY;
 
-// DXアーカイブがいらない方は次のコメントを外してください
-// ( DXアーカイブを無効にすると、DXアーカイブを内部で使っている関係上 DX_NON_MODEL と DX_NON_FILTER と DX_NON_MOVIE と DX_NON_NORMAL_DRAW_SHADER も有効になります )
+// DXアーカイブがいらない方は次のコメントを外してください(DXアーカイブを無効にすると、DXアーカイブを内部で使っている関係上 DX_NON_MODELとDX_NON_FILTERとDX_NON_MOVIEとDX_NON_NORMAL_DRAW_SHADER も有効になります)
 //version = DX_NON_DXA;
 
 // ムービー機能がいらない方は次のコメントを外してください
@@ -71,18 +69,18 @@ version = DX_THREAD_SAFE_NETWORK_ONLY;
 //version = DX_NON_TGA;
 
 // JPEG画像の読みこみ機能がいらない方は次のコメントを外してください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_JPEGREAD;
 
 // PNG画像の読みこみ機能がいらない方は次のコメントを外してください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_PNGREAD;
 
 // TIFF画像の読みこみ機能がいらない方は次のコメントを外してください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_TIFFREAD;
 
-// GraphFilter や GraphBlend を使用しない方は次のコメントを外して下さい
+// GraphFilterやGraphBlendを使用しない方は次のコメントを外して下さい
 //version = DX_NON_FILTER;
 
 // 通常描画にプログラマブルシェーダーを使用しない方は次のコメントを外してください
@@ -94,16 +92,16 @@ version = DX_THREAD_SAFE_NETWORK_ONLY;
 // ソフトウエア2D描画がいらない方は次のコメントを外してください
 //version = DX_NON_2DDRAW;
 
-// 標準 WAVE ファイル以外の音声ファイルを使用しない方は次のコメントを外してください
+// 標準WAVEファイル以外の音声ファイルを使用しない方は次のコメントを外してください
 //version = DX_NON_ACM;
 
-// DirectShow を使用した MP3 ファイルのデコードを行わない場合は次のコメントをはずしてください
+// DirectShowを使用したMP3ファイルのデコードを行わない場合は次のコメントをはずしてください
 //version = DX_NON_DSHOW_MP3;
 
-// DirectShow を使用した動画ファイルのデコードを行わない場合は次のコメントをはずしてください
+// DirectShowを使用した動画ファイルのデコードを行わない場合は次のコメントをはずしてください
 //version = DX_NON_DSHOW_MOVIE;
 
-// Media Foundation を使用した動画ファイルのデコードを行わない場合は次のコメントをはずしてください
+// Media Foundationを使用した動画ファイルのデコードを行わない場合は次のコメントをはずしてください
 //version = DX_NON_MEDIA_FOUNDATION;
 
 // キーボードの基本的な入力機能以外はいらない方は次のコメントを外してください
@@ -119,22 +117,22 @@ version = DX_THREAD_SAFE_NETWORK_ONLY;
 //version = DX_NON_MASK;
 
 // Ogg Vorbis データを使用しない方は次のコメントをはずしてください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_OGGVORBIS;
 
 // Ogg Theora データを使用しない方は次のコメントをはずしてください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_OGGTHEORA;
 
 // Opus データを使用しない方は次のコメントをはずしてください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_OPUS;
 
-// ASIO を使用しない方は次のコメントをはずしてください
+// ASIOを使用しない方は次のコメントをはずしてください
 //version = DX_NON_ASIO;
 
-// 乱数発生器に Mersenne Twister を使用しない場合は以下のコメントを外して下さい
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// 乱数発生器にMersenne Twisterを使用しない場合は以下のコメントを外して下さい
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_MERSENNE_TWISTER;
 
 // DXライブラリ内の確保メモリのダンプ機能を有効にする場合は次のコメントを外してください
@@ -143,24 +141,24 @@ version = DX_USE_DXLIB_MEM_DUMP;
 // モデルデータを扱う機能を使用しない方は次のコメントを外してください
 //version = DX_NON_MODEL;
 
-// Bullet Physics をリンクしない場合は次のコメントを外してください
-// ※DxUseCLib.lib も再コンパイルする必要があります
+// Bullet Physicsをリンクしない場合は次のコメントを外してください
+// ※DxUseCLib.libも再コンパイルする必要があります
 //version = DX_NON_BULLET_PHYSICS;
 
-// FBXファイルを読み込む機能を使用する方は次のコメントを外してください( 使用には FBX SDK のセットアップが必要です )
+// FBXファイルを読み込む機能を使用する方は次のコメントを外してください(使用にはFBX SDKのセットアップが必要です)
 //version = DX_LOAD_FBX_MODEL;
 
 // ビープ音機能がいらない方は次のコメントを外してください
 //version = DX_NON_BEEP;
 
 // タスクスイッチをOFFにする機能がいらない方は次のコメントを外してください
-// ( タスクスイッチOFF機能は使用不可です )
+// (タスクスイッチOFF機能は使用不可です)
 //version = DX_NON_STOPTASKSWITCH;
 
 // ログ出力を行わない場合は次のコメントを外して下さい
 //version = DX_NON_LOG;
 
-// printfDx を無効にする場合は次のコメントを外して下さい
+// printfDxを無効にする場合は次のコメントを外して下さい
 //version = DX_NON_PRINTF_DX;
 
 // 非同期読み込みを無効にする場合は次のコメントを外して下さい
@@ -175,7 +173,7 @@ version = DX_USE_DXLIB_MEM_DUMP;
 // フォント描画機能を無効にする場合は次のコメントを外して下さい
 //version = DX_NON_FONT;
 
-// サウンド再生機能( ソフトウエアサウンド、MIDI含む )を無効にする場合は次のコメントを外して下さい
+// サウンド再生機能(ソフトウエアサウンド、MIDI含む)を無効にする場合は次のコメントを外して下さい
 //version = DX_NON_SOUND;
 
 // 入力機能を無効にする場合は次のコメントを外して下さい
@@ -184,13 +182,13 @@ version = DX_USE_DXLIB_MEM_DUMP;
 // マルチスレッドを使用しない場合は次のコメントを外してください
 //version = DX_NON_MULTITHREAD;
 
-// 各ハンドルのエラーチェックを無効にする場合は次のコメントを外してください( 若干高速化される代わりに無効なハンドルを関数に渡すと即不正なメモリアクセスエラーが発生するようになります )
+// 各ハンドルのエラーチェックを無効にする場合は次のコメントを外してください(若干高速化される代わりに無効なハンドルを関数に渡すと即不正なメモリアクセスエラーが発生するようになります)
 //version = DX_NON_HANDLE_ERROR_CHECK;
 
-// Direct3D11 を使用しない場合は以下のコメントを外してください( 現在開発中なので、必ずコメントを外した状態にしてください )
+// Direct3D11を使用しない場合は以下のコメントを外してください(現在開発中なので、必ずコメントを外した状態にしてください)
 //version = DX_NON_DIRECT3D11;
 
-// Direct3D9 を使用しない場合は以下のコメントを外してください
+// Direct3D9を使用しない場合は以下のコメントを外してください
 //version = DX_NON_DIRECT3D9;
 
 // 軽量バージョンのDXライブラリを生成する場合は次のコメントを外してください

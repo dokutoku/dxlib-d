@@ -27,12 +27,12 @@ private static import dxlib_d.DxLib;
 
 extern (C++, DxLib) {
 	/**
-	 * アプリで使用している NativeActivity を取得する
+	 * アプリで使用しているNativeActivityを取得する
 	 */
 	extern const (ANativeActivity)* GetNativeActivity();
 
 	/**
-	 * Android の APIレベルを取得する
+	 * AndroidのAPIレベルを取得する
 	 */
 	extern int GetAndroidAPILevel();
 
@@ -44,9 +44,9 @@ extern (C++, DxLib) {
 	/**
 	 * ソフトの外部データ保存用のディレクトリパスを取得する
 	 *      PathBuffer = パスを保存するバッファ
-	 *      PathBufferBytes = パスを保存するバッファのサイズ( 単位:バイト )
-	 *      PathIndex = 外部データ保存用のディレクトリパスの番号( 複数個ある場合があるので )
-	 *      IsRemovableFlag = PathIndex で指定したパスが取り外し可能なデバイスかどうかを保存する int型変数のアドレス( 格納された値 TRUE:取り外し可能( SDカード等 )  FALSE:取り外し不可能( 内蔵ストレージ等 ) )
+	 *      PathBufferBytes = パスを保存するバッファのサイズ(単位:バイト)
+	 *      PathIndex = 外部データ保存用のディレクトリパスの番号(複数個ある場合があるので)
+	 *      IsRemovableFlag = PathIndexで指定したパスが取り外し可能なデバイスかどうかを保存するint型変数のアドレス(格納された値 TRUE:取り外し可能(SDカード等)  FALSE:取り外し不可能(内蔵ストレージ等))
 	 */
 	extern int GetExternalDataPath(dxlib_d.DxDataTypeAndroid.TCHAR* PathBuffer, int PathBufferBytes, int PathIndex = 0, int* IsRemovableFlag = null);
 
@@ -71,9 +71,9 @@ extern (C++, DxLib) {
 
 	/**
 	 * メモリ情報を取得する
-	 *      TotalMemory = 総メモリ容量を代入する変数( 単位:byte )、( 情報の取得が不要な場合は null を渡す )
-	 *      FreeMrmoyy = 空きメモリ容量を代入する変数( 単位:byte )、( 情報の取得が不要な場合は null を渡す )
-	 *      UseMemory = アプリが使用しているメモリ容量を代入する変数( 単位:byte )、( 情報の取得が不要な場合は null を渡す )、( 使用メモリ量の取得は非常に処理負荷が高いので、不要な場合は必ず null を渡すようにしてください )
+	 *      TotalMemory = 総メモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)
+	 *      FreeMrmoyy = 空きメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)
+	 *      UseMemory = アプリが使用しているメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)、(使用メモリ量の取得は非常に処理負荷が高いので、不要な場合は必ずnullを渡すようにしてください)
 	 */
 	extern int GetAndroidMemoryInfo(dxlib_d.DxDataTypeAndroid.LONGLONG* TotalMemory, dxlib_d.DxDataTypeAndroid.LONGLONG* FreeMemory, dxlib_d.DxDataTypeAndroid.LONGLONG* UseMemory);
 
@@ -86,7 +86,7 @@ extern (C++, DxLib) {
 	 * ディスプレイを本体設定に従って時間経過でスリープ状態になることを許可するかどうかを設定する
 	 *
 	 * Params:
-	 *      Flag = TRUE:スリープ状態になることを許可しない  FALSE:スリープ状態を許可する( デフォルト )
+	 *      Flag = TRUE:スリープ状態になることを許可しない  FALSE:スリープ状態を許可する(デフォルト)
 	 */
 	extern int SetKeepScreenOnFlag(int Flag);
 
@@ -97,10 +97,10 @@ extern (C++, DxLib) {
 
 	/**
 	 * センサーから得られる方角を取得する
-	 * 縦持ち( 地面に対して端末を垂直に持った状態 )の場合に正しく値が取得できます
-	 * 戻り値の x:方角( 単位:ラジアン  0.0f:北  π/2.0f:東  -π/2.0f:西  -π or π:南 )
-	 * 戻り値の y:前後の傾斜( 単位:ラジアン  0.0f:端末が縦持ちで垂直( 逆さまで垂直の場合含む )の状態  π/2.0f:前方方向に90度倒した状態( 画面が空を向いている状態 )  -π/2.0f:後方方向に90度倒した状態( 画面が地面を向いている状態 ) )
-	 * 戻り値の z:左右の傾斜( 単位:ラジアン  0.0f:端末が縦持ちで垂直の状態  π/2.0f:右方向に90度倒した状態  -π/2.0f:左方向に90度倒した状態  -π or π:端末が上下さかさまで垂直の状態 )
+	 * 縦持ち(地面に対して端末を垂直に持った状態)の場合に正しく値が取得できます
+	 * 戻り値のx:方角(単位:ラジアン  0.0f:北  π/2.0f:東  -π/2.0f:西  -π or π:南)
+	 * 戻り値のy:前後の傾斜(単位:ラジアン  0.0f:端末が縦持ちで垂直(逆さまで垂直の場合含む)の状態  π/2.0f:前方方向に90度倒した状態(画面が空を向いている状態)  -π/2.0f:後方方向に90度倒した状態(画面が地面を向いている状態))
+	 * 戻り値のz:左右の傾斜(単位:ラジアン  0.0f:端末が縦持ちで垂直の状態  π/2.0f:右方向に90度倒した状態  -π/2.0f:左方向に90度倒した状態  -π or π:端末が上下さかさまで垂直の状態)
 	 */
 	extern dxlib_d.DxLib.VECTOR GetOrientationVector();
 
@@ -108,7 +108,7 @@ extern (C++, DxLib) {
 	 * センサーのベクトル値を取得する
 	 *
 	 * Params:
-	 *      SensorType = DX_ANDROID_SENSOR_ACCELEROMETER など
+	 *      SensorType = DX_ANDROID_SENSOR_ACCELEROMETERなど
 	 */
 	extern dxlib_d.DxLib.VECTOR GetAndroidSensorVector(int SensorType);
 
@@ -116,13 +116,13 @@ extern (C++, DxLib) {
 	 * センサーが有効かどうかを取得する
 	 *
 	 * Params:
-	 *      SensorType = DX_ANDROID_SENSOR_ACCELEROMETER など
+	 *      SensorType = DX_ANDROID_SENSOR_ACCELEROMETERなど
 	 *
 	 * Returns: TRUE:有効 FALSE:無効
 	 */
 	extern int CheckAndroidSensor(int SensorType);
 
-	// 振動機能関係( 使用するには AndroidManifest.xml に <uses-permission android:name="android.permission.VIBRATE" /> を書き加える必要があります )
+	// 振動機能関係(使用するにはAndroidManifest.xmlに<uses-permission android:name="android.permission.VIBRATE" />を書き加える必要があります)
 
 	/**
 	 * 振動機能があるか取得する
@@ -132,7 +132,7 @@ extern (C++, DxLib) {
 	extern int Vibrator_hasVibrator();
 
 	/**
-	 * 振動機能に振幅制御( 振動の強さ制御 )機能があるかどうかを取得する
+	 * 振動機能に振幅制御(振動の強さ制御)機能があるかどうかを取得する
 	 *
 	 * Returns: TRUE:振幅制御ができる  FALSE:振幅制御はできない
 	 */
@@ -140,25 +140,25 @@ extern (C++, DxLib) {
 
 	/**
 	 * 振動を開始する
-	 *      Milliseconds = 振動させる時間( 単位:ミリ秒 )
-	 *      Amplitude = 振動の強さ( 0( 振動なし ) ~ 255( 最大振幅 ) )、振動の強さの制御に対応していない場合は無視されます
+	 *      Milliseconds = 振動させる時間(単位:ミリ秒)
+	 *      Amplitude = 振動の強さ(0(振動なし)~255(最大振幅))、振動の強さの制御に対応していない場合は無視されます
 	 */
 	extern int Vibrator_vibrate(int Milliseconds, int Amplitude);
 
 	/**
 	 * 振動パターン付きの振動を開始する
-	 *      Timings = 振動パターンを定義する時間( 単位:ミリ秒 )の配列( Timings[0]:振動を開始するまでの待ち時間、Timings[1]:振動し続ける時間、Timings[2]:振動を停止している時間、Timings[3]:振動し続ける時間、Timings[4]:振動を停止している時間  以下繰り返し )
-	 *      TimingsLength = Timings の配列の長さ
-	 *      Repeat = 振動パターンを繰り返す場合の配列の要素番号( 例 0:最初から繰り返し  1:配列要素の1から繰り返し )、-1 で繰り返し無し
+	 *      Timings = 振動パターンを定義する時間(単位:ミリ秒)の配列(Timings[0]:振動を開始するまでの待ち時間、Timings[1]:振動し続ける時間、Timings[2]:振動を停止している時間、Timings[3]:振動し続ける時間、Timings[4]:振動を停止している時間  以下繰り返し)
+	 *      TimingsLength = Timingsの配列の長さ
+	 *      Repeat = 振動パターンを繰り返す場合の配列の要素番号(例 0:最初から繰り返し  1:配列要素の1から繰り返し)、-1で繰り返し無し
 	 */
 	extern int Vibrator_vibrate_with_OnOffTimings(int* Timings, int TimingsLength, int Repeat);
 
 	/**
-	 * 振幅制御付き( 振動の強さ指定付き )振動を開始する( Vibrator_hasAmplitudeControl の戻り値が TRUE の場合のみ使用可能 )
-	 *      Timings = 振動の強さを変更するタイミング( 単位:ミリ秒 )の配列
-	 *      Amplitudes = 振動の強さ( 0( 振動なし ) ~ 255( 最大振幅 ) )の配列
-	 *      ArrayLength = Timings と Amplitudes の配列の長さ( 配列の長さはどちらも同じである必要があります )
-	 *      Repeat = Timings と Amplitudes で示される振動パターンを繰り返す場合の配列の要素番号( 例 0:最初から繰り返し  1:配列要素の1から繰り返し )、-1 で繰り返し無し
+	 * 振幅制御付き(振動の強さ指定付き)振動を開始する(Vibrator_hasAmplitudeControlの戻り値がTRUEの場合のみ使用可能)
+	 *      Timings = 振動の強さを変更するタイミング(単位:ミリ秒)の配列
+	 *      Amplitudes = 振動の強さ(0(振動なし)~255(最大振幅))の配列
+	 *      ArrayLength = TimingsとAmplitudesの配列の長さ(配列の長さはどちらも同じである必要があります)
+	 *      Repeat = TimingsとAmplitudesで示される振動パターンを繰り返す場合の配列の要素番号(例 0:最初から繰り返し  1:配列要素の1から繰り返し)、-1で繰り返し無し
 	 */
 	extern int Vibrator_vibrate_with_Amplitudes(int* Timings, int* Amplitudes, int ArrayLength, int Repeat);
 
@@ -169,38 +169,38 @@ extern (C++, DxLib) {
 
 	/**
 	 * 曜日や週に関する情報を取得する
-	 *      DayOfWeek = 曜日( 1:日曜日 2:月曜日 3:火曜日 4:水曜日 5:木曜日 6:金曜日 7:土曜日 )
-	 *      WeekOfMonth = 今日が今月の何週目なのかの値( 1:1週目  2:2週目  3:3週目  4:4週目  5:5週目 )
-	 *      DayOfWeekInMonth = 今日の曜日が今月何回目に当たるか、の値( 1:1回目  2:2回目  3:3回目  4:4回目 ... )
+	 *      DayOfWeek = 曜日(1:日曜日 2:月曜日 3:火曜日 4:水曜日 5:木曜日 6:金曜日 7:土曜日)
+	 *      WeekOfMonth = 今日が今月の何週目なのかの値(1:1週目  2:2週目  3:3週目  4:4週目  5:5週目)
+	 *      DayOfWeekInMonth = 今日の曜日が今月何回目に当たるか、の値(1:1回目  2:2回目  3:3回目  4:4回目 ...)
 	 */
 	extern int GetAndroidWeekInfo(int* DayOfWeek, int* WeekOfMonth, int* DayOfWeekInMonth);
 
 	/**
-	 * res/values/strings.xml の string リソースを取得する
-	 *      ValueName = string 情報名
-	 *      StringBuffer = ValueName が示す文字列を格納するバッファの先頭アドレス
-	 *      StringBufferBytes = StringBuffer のサイズ( 単位:バイト )
+	 * res/values/strings.xmlのstringリソースを取得する
+	 *      ValueName = string情報名
+	 *      StringBuffer = ValueNameが示す文字列を格納するバッファの先頭アドレス
+	 *      StringBufferBytes = StringBufferのサイズ(単位:バイト)
 	 *
-	 * Returns: -1:指定の string 情報は無かった  -1以外:StringBuffer に必要なバッファのサイズ( 単位:バイト )
+	 * Returns: -1:指定のstring情報は無かった  -1以外:StringBufferに必要なバッファのサイズ(単位:バイト)
 	 */
 	extern int GetAndroidResource_Strings_String(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
 	extern int GetAndroidResource_Strings_StringWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
 
 	/**
-	 * AndroidManifest.xml に書かれた <meta-data android:name="test0" android:value="abcde" /> などのメタデータの文字列を取得する
+	 * AndroidManifest.xmlに書かれた<meta-data android:name="test0" android:value="abcde" />などのメタデータの文字列を取得する
 	 *      ValueName = メタデータ名
-	 *      StringBuffer = ValueName が示す文字列を格納するバッファの先頭アドレス
-	 *      StringBufferBytes = StringBuffer のサイズ( 単位:バイト )
+	 *      StringBuffer = ValueNameが示す文字列を格納するバッファの先頭アドレス
+	 *      StringBufferBytes = StringBufferのサイズ(単位:バイト)
 	 *
-	 * Returns: -1:指定のメタデータは無かった  -1以外:StringBuffer に必要なバッファのサイズ( 単位:バイト )
+	 * Returns: -1:指定のメタデータは無かった  -1以外:StringBufferに必要なバッファのサイズ(単位:バイト)
 	 */
 	extern int GetAndroidMetaData_String(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
 	extern int GetAndroidMetaData_StringWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataTypeAndroid.TCHAR* StringBuffer, int StringBufferBytes);
 
 	/*
-	 * AndroidManifest.xml に書かれた <meta-data android:name="bool0" android:value="true" /> などの Boolean型のメタデータを取得する
+	 * AndroidManifest.xmlに書かれた<meta-data android:name="bool0" android:value="true" />などのBoolean型のメタデータを取得する
 	 * ValueName:メタデータ名
-	 * Returns: -1:指定のメタデータは無かった  TRUE:指定のメタデータは true だった   FALSE:指定のメタデータは false だった
+	 * Returns: -1:指定のメタデータは無かった  TRUE:指定のメタデータはtrueだった   FALSE:指定のメタデータはfalseだった
 	 */
 	//extern int GetAndroidMetaData_Boolean(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName);
 	//extern int GetAndroidMetaData_BooleanWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* ValueName, size_t ValueNameLength);
@@ -209,15 +209,15 @@ extern (C++, DxLib) {
 	 * 通知を発行する
 	 *      Title = タイトル
 	 *      SubTitle = サブタイトル
-	 *      Icon = アイコン ( -1 でデフォルトのアイコン )
-	 *      ShowWhen = 通知時刻を表示するか ( TRUE:表示する  FALSE:表示しない )
-	 *      AutoCancel = 通知がタップされたら通知を削除するか ( TRUE:タップされたら通知を削除する   FALSE:Cancel されるまで通知を削除しない )
+	 *      Icon = アイコン(-1でデフォルトのアイコン)
+	 *      ShowWhen = 通知時刻を表示するか(TRUE:表示する  FALSE:表示しない)
+	 *      AutoCancel = 通知がタップされたら通知を削除するか(TRUE:タップされたら通知を削除する   FALSE:Cancel されるまで通知を削除しない)
 	 *      NotifyID = 通知ID
-	 *      Vibrate = 振動パターン用の int型配列( 時間の単位はミリ秒 )、null の場合は振動なし( Vibrate[0]:振動停止時間  Vibrate[1]:振動時間  Vibrate[2]:振動停止時間  Vibrate[3]:振動時間  ... 以下繰り返し )
+	 *      Vibrate = 振動パターン用のint型配列(時間の単位はミリ秒)、nullの場合は振動なし(Vibrate[0]:振動停止時間  Vibrate[1]:振動時間  Vibrate[2]:振動停止時間  Vibrate[3]:振動時間  ... 以下繰り返し)
 	 *      VibrateLength = Vibrate 配列の要素数
-	 *      LightColor = 通知時のライトの色( GetColor で取得 )、LightOnTime か LightOffTime が 0 の場合はライトの点灯無し
-	 *      LightOnTime = ライトの点灯時間( 単位:ミリ秒 )
-	 *      LightOffTime = ライトの消灯時間( 単位:ミリ秒 )
+	 *      LightColor = 通知時のライトの色(GetColorで取得)、LightOnTime か LightOffTimeが0の場合はライトの点灯無し
+	 *      LightOnTime = ライトの点灯時間(単位:ミリ秒)
+	 *      LightOffTime = ライトの消灯時間(単位:ミリ秒)
 	extern int AndroidNotification(const (dxlib_d.DxDataTypeAndroid.TCHAR)* Title, const (dxlib_d.DxDataTypeAndroid.TCHAR)* SubTitle, int Icon = -1, int ShowWhen = dxlib_d.DxDataTypeAndroid.TRUE, int AutoCancel = dxlib_d.DxDataTypeAndroid.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
 	extern int AndroidNotificationWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* Title, size_t TitleLength, const (dxlib_d.DxDataTypeAndroid.TCHAR)* SubTitle, size_t SubTitleLength, int Icon = -1, int ShowWhen = dxlib_d.DxDataTypeAndroid.TRUE, int AutoCancel = dxlib_d.DxDataTypeAndroid.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
 
@@ -233,19 +233,18 @@ extern (C++, DxLib) {
 	extern int AndroidNotificationCancelAll();
 
 	/**
-	 * 指定の URL をブラウザで開く( BrowserAppPackageName か BrowserAppClassName が null の場合は標準ブラウザで開く )
+	 * 指定のURLをブラウザで開く(BrowserAppPackageName か BrowserAppClassNameがnullの場合は標準ブラウザで開く)
 	 *      URL = 開くURL
-	 *      BrowserAppPackageName = ブラウザのパッケージ名( null で標準ブラウザ )
-	 *      BrowserAppClassName = ブラウザのクラス名( null で標準ブラウザ )
+	 *      BrowserAppPackageName = ブラウザのパッケージ名(nullで標準ブラウザ)
+	 *      BrowserAppClassName = ブラウザのクラス名(nullで標準ブラウザ)
 	 */
 	extern int AndroidJumpURL(const (dxlib_d.DxDataTypeAndroid.TCHAR)* URL, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppPackageName = null, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppClassName = null);
 	extern int AndroidJumpURLWithStrLen(const (dxlib_d.DxDataTypeAndroid.TCHAR)* URL, size_t URLLength, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppPackageName = null, size_t BrowserAppPackageNameLength = 0, const (dxlib_d.DxDataTypeAndroid.TCHAR)* BrowserAppClassName = null, size_t BrowserAppClassNameLength = 0);
 
 	/**
-	 * Wifi の電波強度を取得する
-	 * ( 使用するには AndroidManifest.xml に <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> を書き加える必要があります )
+	 * Wifiの電波強度を取得する(使用するにはAndroidManifest.xmlに<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />を書き加える必要があります)
 	 *
-	 * Returns: 電波の強度 0 ~ 100
+	 * Returns: 電波の強度0~100
 	 */
 	extern int GetWifiSignalLevel();
 
@@ -263,7 +262,7 @@ extern (C++, DxLib) {
 	 * アプリを終了した際に、プロセスを完全に終了するかを設定する
 	 *
 	 * Params:
-	 *      KillProcessFlag = TRUE:アプリを終了したら、プロセスを完全に終了する  FALSE:アプリを終了しても、プロセスは完全には終了されない( デフォルト )
+	 *      KillProcessFlag = TRUE:アプリを終了したら、プロセスを完全に終了する  FALSE:アプリを終了しても、プロセスは完全には終了されない(デフォルト)
 	 */
 	extern int SetUseAndroidKillProcessFlag(int KillProcessFlag);
 
@@ -292,12 +291,12 @@ extern (C++, DxLib) {
 	extern uint GetGraphOpenGLESTextureObject(int GrHandle);
 
 	/**
-	 * DXライブラリが行った OpenGL ES の設定を再度行う( 特殊用途 )
+	 * DXライブラリが行ったOpenGL ESの設定を再度行う(特殊用途)
 	 */
 	extern int RefreshDxLibOpenGLESSetting();
 
 	/**
-	 * イコライザー機能を使用するかどうかを設定する( DxLib_Init 呼び出し前のみ実行可能 )
+	 * イコライザー機能を使用するかどうかを設定する(DxLib_Init呼び出し前のみ実行可能)
 	 * UseFlag  TRUE:使用する  FALSE:使用しない
 	 */
 	extern int SetUseEqualizer(int UseFlag);
@@ -331,15 +330,15 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      BandIndex = ?
-	 *      pMin = 最小周波数( 単位:ヘルツ )
-	 *      pMax = 最大周波数( 単位:ヘルツ )
+	 *      pMin = 最小周波数(単位:ヘルツ)
+	 *      pMax = 最大周波数(単位:ヘルツ)
 	 */
 	extern int GetEqualizerBandFreqRange(int BandIndex, int* pMin, int* pMax);
 
 	/**
 	 * イコライザーの指定された周波数帯域の中心周波数を取得します
 	 *
-	 * Returns: 中心周波数( 単位:ヘルツ )
+	 * Returns: 中心周波数(単位:ヘルツ)
 	 */
 	extern int GetEqualizerBandCenterFreq(int BandIndex);
 

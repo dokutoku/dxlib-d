@@ -158,7 +158,7 @@ pure nothrow @safe @nogc
 		return (cast(.DWORD)(cast(.BYTE)(ch0))) | (cast(.DWORD)(cast(.BYTE)(ch1)) << 8) | (cast(.DWORD)(cast(.BYTE)(ch2)) << 16) | (cast(.DWORD)(cast(.BYTE)(ch3)) << 24);
 	}
 
-// ATRAC9 を使用した読み込み処理
+// ATRAC9を使用した読み込み処理
 enum DX_READSOUNDFUNCTION_AT9 = 1 << (dxlib_d.DxLib.DX_READSOUNDFUNCTION_DEFAULT_NUM + 0);
 
 // 構造体定義 --------------------------------------------------------------------
