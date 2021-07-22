@@ -1429,12 +1429,12 @@ enum
 	DX_MV1_VERTEX_TYPE_1FRAME = 0,
 
 	/**
-	 * 1〜4フレームの影響を受ける頂点
+	 * 1~4フレームの影響を受ける頂点
 	 */
 	DX_MV1_VERTEX_TYPE_4FRAME = 1,
 
 	/**
-	 * 5〜8フレームの影響を受ける頂点
+	 * 5~8フレームの影響を受ける頂点
 	 */
 	DX_MV1_VERTEX_TYPE_8FRAME = 2,
 
@@ -1449,12 +1449,12 @@ enum
 	DX_MV1_VERTEX_TYPE_NMAP_1FRAME = 4,
 
 	/**
-	 * 法線マップ用の情報が含まれる1〜4フレームの影響を受ける頂点
+	 * 法線マップ用の情報が含まれる1~4フレームの影響を受ける頂点
 	 */
 	DX_MV1_VERTEX_TYPE_NMAP_4FRAME = 5,
 
 	/**
-	 * 法線マップ用の情報が含まれる5〜8フレームの影響を受ける頂点
+	 * 法線マップ用の情報が含まれる5~8フレームの影響を受ける頂点
 	 */
 	DX_MV1_VERTEX_TYPE_NMAP_8FRAME = 6,
 
@@ -2237,7 +2237,7 @@ enum
 	DX_MATERIAL_TYPE_TOON_2 = 2,
 
 	/**
-	 * マテリアルのスペキュラ色の輝度の指定の範囲の値を 0.0f 〜 1.0f の値に正規化して書き込むマテリアル
+	 * マテリアルのスペキュラ色の輝度の指定の範囲の値を 0.0f ~ 1.0f の値に正規化して書き込むマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_UNORM = 3,
 
@@ -2252,7 +2252,7 @@ enum
 	DX_MATERIAL_TYPE_MAT_SPEC_LUMINANCE_CMP_GREATEREQUAL = 5,
 
 	/**
-	 * マテリアルのスペキュラハイライトの鮮明度の指定の範囲の値を 0.0f 〜 1.0f の値に正規化して書き込むマテリアル
+	 * マテリアルのスペキュラハイライトの鮮明度の指定の範囲の値を 0.0f ~ 1.0f の値に正規化して書き込むマテリアル
 	 */
 	DX_MATERIAL_TYPE_MAT_SPEC_POWER_UNORM = 6,
 
@@ -5518,12 +5518,12 @@ extern (C++, DxLib) {
 		float SegA_SegB_MinDist_Square = 0;
 
 		/**
-		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0f 〜 1.0f 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
+		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0f ~ 1.0f 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
 		 */
 		float SegA_MinDist_Pos1_Pos2_t = 0;
 
 		/**
-		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0f 〜 1.0f 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
+		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0f ~ 1.0f 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
 		 */
 		float SegB_MinDist_Pos1_Pos2_t = 0;
 
@@ -5551,12 +5551,12 @@ extern (C++, DxLib) {
 		double SegA_SegB_MinDist_Square = 0;
 
 		/**
-		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0 〜 1.0 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
+		 * 線分Aと線分Bに最も接近する座標の線分Aの t ( 0.0 ~ 1.0 、最近点座標 = (( SegAPos2 - SegAPos1 ) * t) + SegAPos1 )
 		 */
 		double SegA_MinDist_Pos1_Pos2_t = 0;
 
 		/**
-		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0 〜 1.0 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
+		 * 線分Bが線分Aに最も接近する座標の線分Bの t ( 0.0 ~ 1.0 、最近点座標 = (( SegBPos2 - SegBPos1 ) * t) + SegBPos1 )
 		 */
 		double SegB_MinDist_Pos1_Pos2_t = 0;
 
@@ -5584,7 +5584,7 @@ extern (C++, DxLib) {
 		float Seg_Point_MinDist_Square = 0;
 
 		/**
-		 * 線分が点に最も接近する座標の線分の t ( 0.0f 〜 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が点に最も接近する座標の線分の t ( 0.0f ~ 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
 		float Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5607,7 +5607,7 @@ extern (C++, DxLib) {
 		double Seg_Point_MinDist_Square = 0;
 
 		/**
-		 * 線分が点に最も接近する座標の線分の t ( 0.0 〜 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が点に最も接近する座標の線分の t ( 0.0 ~ 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
 		double Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5630,7 +5630,7 @@ extern (C++, DxLib) {
 		float Seg_Tri_MinDist_Square = 0;
 
 		/**
-		 * 線分が三角形に最も接近する座標の線分の t ( 0.0f 〜 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が三角形に最も接近する座標の線分の t ( 0.0f ~ 1.0f 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
 		float Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -5673,7 +5673,7 @@ extern (C++, DxLib) {
 		double Seg_Tri_MinDist_Square = 0;
 
 		/**
-		 * 線分が三角形に最も接近する座標の線分の t ( 0.0 〜 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
+		 * 線分が三角形に最も接近する座標の線分の t ( 0.0 ~ 1.0 、最近点座標 = (( SegPos2 - SegPos1 ) * t) + SegPos1 )
 		 */
 		double Seg_MinDist_Pos1_Pos2_t = 0;
 
@@ -6022,27 +6022,27 @@ extern (C++, DxLib) {
 	package struct tagSOUND3D_REVERB_PARAM
 	{
 		/**
-		 * リバーブとなる出力の割合( 指定可能範囲 0.0f 〜 100.0f )
+		 * リバーブとなる出力の割合( 指定可能範囲 0.0f ~ 100.0f )
 		 */
 		float WetDryMix = 0;
 
 		/**
-		 * ダイレクト パスに対する初期反射の遅延時間、単位はミリ秒( 指定可能範囲 0 〜 300 )
+		 * ダイレクト パスに対する初期反射の遅延時間、単位はミリ秒( 指定可能範囲 0 ~ 300 )
 		 */
 		uint ReflectionsDelay;
 
 		/**
-		 * 初期反射に対するリバーブの遅延時間、単位はミリ秒( 指定可能範囲 0 〜 85 )
+		 * 初期反射に対するリバーブの遅延時間、単位はミリ秒( 指定可能範囲 0 ~ 85 )
 		 */
 		dxlib_d.DxDataType.BYTE ReverbDelay;
 
 		/**
-		 * 左後方出力および右後方出力の遅延時間、単位はミリ秒( 指定可能範囲 0 〜 5 )
+		 * 左後方出力および右後方出力の遅延時間、単位はミリ秒( 指定可能範囲 0 ~ 5 )
 		 */
 		dxlib_d.DxDataType.BYTE RearDelay;
 
 		/**
-		 * シミュレーション空間における視聴者に対する左入力の位置( 指定可能範囲 0 〜 30 )
+		 * シミュレーション空間における視聴者に対する左入力の位置( 指定可能範囲 0 ~ 30 )
 		 * PositionLeft を最小値に設定した場合、左入力は視聴者の近くに配置されます。
 		 * この位置では、サウンド フィールドにおいて初期反射が優勢になり、残響減衰は弱まって、振幅が小さくなります。
 		 * PositionLeft を最大値に設定した場合、左入力はシミュレーション室内で視聴者から最大限遠い位置に配置されます。
@@ -6051,32 +6051,32 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.BYTE PositionLeft;
 
 		/**
-		 * PositionLeft と同効果の右入力値( 指定可能範囲 0 〜 30 )、右入力にのみ影響を与える
+		 * PositionLeft と同効果の右入力値( 指定可能範囲 0 ~ 30 )、右入力にのみ影響を与える
 		 */
 		dxlib_d.DxDataType.BYTE PositionRight;
 
 		/**
-		 * 音源から視聴者までの距離によるインプレッションを増減させる値( 指定可能範囲 0 〜 30 )
+		 * 音源から視聴者までの距離によるインプレッションを増減させる値( 指定可能範囲 0 ~ 30 )
 		 */
 		dxlib_d.DxDataType.BYTE PositionMatrixLeft;
 
 		/**
-		 * 音源から視聴者までの距離によるインプレッションを増減させま値( 指定可能範囲 0 〜 30 )
+		 * 音源から視聴者までの距離によるインプレッションを増減させま値( 指定可能範囲 0 ~ 30 )
 		 */
 		dxlib_d.DxDataType.BYTE PositionMatrixRight;
 
 		/**
-		 * 個々の壁の反射特性値( 指定可能範囲 0 〜 15 )、( 堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
+		 * 個々の壁の反射特性値( 指定可能範囲 0 ~ 15 )、( 堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
 		 */
 		dxlib_d.DxDataType.BYTE EarlyDiffusion;
 
 		/**
-		 * 個々の壁のリバーブ特性値( 指定可能範囲 0 〜 15 )、( 堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
+		 * 個々の壁のリバーブ特性値( 指定可能範囲 0 ~ 15 )、( 堅く平らな表面をシミュレートするには小さな値を設定し、散乱性の表面をシミュレートするには大きな値を設定します。)
 		 */
 		dxlib_d.DxDataType.BYTE LateDiffusion;
 
 		/**
-		 * 1 kHz における減衰時間を基準にして低周波数の減衰時間調整値( 指定可能範囲 0 〜 12 )
+		 * 1 kHz における減衰時間を基準にして低周波数の減衰時間調整値( 指定可能範囲 0 ~ 12 )
 		 *
 		 * 値とゲイン (dB) の関係
 		 * 値          0  1  2  3  4  5  6  7  8  9 10 11 12
@@ -6086,7 +6086,7 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.BYTE LowEQGain;
 
 		/**
-		 * LowEQGain パラメーターにより制御されるローパス フィルターの折点周波数の設定値( 指定可能範囲 0 〜 9 )
+		 * LowEQGain パラメーターにより制御されるローパス フィルターの折点周波数の設定値( 指定可能範囲 0 ~ 9 )
 		 *
 		 * 値と周波数 (Hz) の関係
 		 * 値          0   1   2   3   4   5   6   7   8   9
@@ -6095,7 +6095,7 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.BYTE LowEQCutoff;
 
 		/**
-		 * 1 kHz における減衰時間を基準にして高周波数の減衰時間調整値( 指定可能範囲 0 〜 8 )
+		 * 1 kHz における減衰時間を基準にして高周波数の減衰時間調整値( 指定可能範囲 0 ~ 8 )
 		 *
 		 * 値とゲイン (dB) の関係
 		 * 値          0  1  2  3  4  5  6  7 8
@@ -6105,7 +6105,7 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.BYTE HighEQGain;
 
 		/**
-		 * HighEQGain パラメーターにより制御されるハイパス フィルターの折点周波数設定値( 指定可能範囲 0 〜 14 )
+		 * HighEQGain パラメーターにより制御されるハイパス フィルターの折点周波数設定値( 指定可能範囲 0 ~ 14 )
 		 *
 		 * 値と周波数 (kHz) の関係
 		 * 値          0    1    2     3    4     5    6     7    8     9   10    11   12    13   14
@@ -6114,37 +6114,37 @@ extern (C++, DxLib) {
 		dxlib_d.DxDataType.BYTE HighEQCutoff;
 
 		/**
-		 * 室内エフェクトのローパス フィルターの折点周波数、単位は Hz ( 指定可能範囲 20.0f 〜 20000.0f )
+		 * 室内エフェクトのローパス フィルターの折点周波数、単位は Hz ( 指定可能範囲 20.0f ~ 20000.0f )
 		 */
 		float RoomFilterFreq = 0;
 
 		/**
-		 * 初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f 〜 0.0f )
+		 * 初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f ~ 0.0f )
 		 */
 		float RoomFilterMain = 0;
 
 		/**
-		 * 折点周波数 (RoomFilterFreq) での初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f 〜 0.0f )
+		 * 折点周波数 (RoomFilterFreq) での初期反射と後期フィールド残響の両方に適用されるローパス フィルターのパス バンド強度レベル、単位は dB ( 指定可能範囲 -100.0f ~ 0.0f )
 		 */
 		float RoomFilterHF = 0;
 
 		/**
-		 * 初期反射の強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f 〜 20.0f )
+		 * 初期反射の強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f ~ 20.0f )
 		 */
 		float ReflectionsGain = 0;
 
 		/**
-		 * リバーブの強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f 〜 20.0f )
+		 * リバーブの強度/レベルを調整値、単位は dB ( 指定可能範囲 -100.0f ~ 20.0f )
 		 */
 		float ReverbGain = 0;
 
 		/**
-		 * 1 kHz における残響減衰時間、単位は秒 ( 指定可能範囲 0.1f 〜 上限値特になし )、これは、フル スケールの入力信号が 60 dB 減衰するまでの時間です。
+		 * 1 kHz における残響減衰時間、単位は秒 ( 指定可能範囲 0.1f ~ 上限値特になし )、これは、フル スケールの入力信号が 60 dB 減衰するまでの時間です。
 		 */
 		float DecayTime = 0;
 
 		/**
-		 * 後期フィールド残響のモード密度を制御値、単位はパーセント( 指定可能範囲 0.0f 〜 100.0f )
+		 * 後期フィールド残響のモード密度を制御値、単位はパーセント( 指定可能範囲 0.0f ~ 100.0f )
 		 * 無色 (colorless) の空間では、Density を最大値 (100.0f ) に設定する必要があります。
 		 * Density を小さくすると、サウンドはくぐもった音 (くし形フィルターが適用された音) になります。
 		 * これはサイロをシミュレーションするときに有効なエフェクトです。
@@ -6152,7 +6152,7 @@ extern (C++, DxLib) {
 		float Density = 0;
 
 		/**
-		 * 音響空間の見かけ上のサイズ、単位はフィート( 指定可能範囲 1.0f (30.48 cm) 〜 100.0f (30.48 m) )
+		 * 音響空間の見かけ上のサイズ、単位はフィート( 指定可能範囲 1.0f (30.48 cm) ~ 100.0f (30.48 m) )
 		 */
 		float RoomSize = 0;
 	}
@@ -6656,37 +6656,37 @@ extern (C++, DxLib) {
 	package struct tagDINPUT_JOYSTATE
 	{
 		/**
-		 * スティックのX軸パラメータ( -1000〜1000 )
+		 * スティックのX軸パラメータ( -1000~1000 )
 		 */
 		int X;
 
 		/**
-		 * スティックのY軸パラメータ( -1000〜1000 )
+		 * スティックのY軸パラメータ( -1000~1000 )
 		 */
 		int Y;
 
 		/**
-		 * スティックのZ軸パラメータ( -1000〜1000 )
+		 * スティックのZ軸パラメータ( -1000~1000 )
 		 */
 		int Z;
 
 		/**
-		 * スティックのX軸回転パラメータ( -1000〜1000 )
+		 * スティックのX軸回転パラメータ( -1000~1000 )
 		 */
 		int Rx;
 
 		/**
-		 * スティックのY軸回転パラメータ( -1000〜1000 )
+		 * スティックのY軸回転パラメータ( -1000~1000 )
 		 */
 		int Ry;
 
 		/**
-		 * スティックのZ軸回転パラメータ( -1000〜1000 )
+		 * スティックのZ軸回転パラメータ( -1000~1000 )
 		 */
 		int Rz;
 
 		/**
-		 * スライダー二つ( 0〜65535 )
+		 * スライダー二つ( 0~65535 )
 		 */
 		int[2] Slider;
 
@@ -6714,32 +6714,32 @@ extern (C++, DxLib) {
 		ubyte[16] Buttons;
 
 		/**
-		 * 左トリガー( 0〜255 )
+		 * 左トリガー( 0~255 )
 		 */
 		ubyte LeftTrigger;
 
 		/**
-		 * 右トリガー( 0〜255 )
+		 * 右トリガー( 0~255 )
 		 */
 		ubyte RightTrigger;
 
 		/**
-		 * 左スティックの横軸値( -32768 〜 32767 )
+		 * 左スティックの横軸値( -32768 ~ 32767 )
 		 */
 		short ThumbLX;
 
 		/**
-		 * 左スティックの縦軸値( -32768 〜 32767 )
+		 * 左スティックの縦軸値( -32768 ~ 32767 )
 		 */
 		short ThumbLY;
 
 		/**
-		 * 右スティックの横軸値( -32768 〜 32767 )
+		 * 右スティックの横軸値( -32768 ~ 32767 )
 		 */
 		short ThumbRX;
 
 		/**
-		 * 右スティックの縦軸値( -32768 〜 32767 )
+		 * 右スティックの縦軸値( -32768 ~ 32767 )
 		 */
 		short ThumbRY;
 	}
@@ -7302,7 +7302,7 @@ extern (C++, DxLib) {
 		extern int GetASyncLoadNum();
 
 		/**
-		 * 非同期読み込み処理を行うスレッドの数を設定する( ThreadNum に指定できる数は 1 〜 32 )
+		 * 非同期読み込み処理を行うスレッドの数を設定する( ThreadNum に指定できる数は 1 ~ 32 )
 		 */
 		extern int SetASyncLoadThreadNum(int ThreadNum);
 	}
@@ -8856,7 +8856,7 @@ extern (C++, DxLib) {
 		extern int SetJoypadInputToKeyInput(int InputType, int PadInput, int KeyInput1, int KeyInput2 = -1, int KeyInput3 = -1, int KeyInput4 = -1);
 
 		/**
-		 * ジョイパッドの無効ゾーンの設定を行う( InputType:設定を変更するパッドの識別子( DX_INPUT_PAD1等 )   Zone:新しい無効ゾーン( 0.0 〜 1.0 )、デフォルト値は 0.35 )
+		 * ジョイパッドの無効ゾーンの設定を行う( InputType:設定を変更するパッドの識別子( DX_INPUT_PAD1等 )   Zone:新しい無効ゾーン( 0.0 ~ 1.0 )、デフォルト値は 0.35 )
 		 *
 		 * Params:
 		 *      InputType = ?
@@ -8870,7 +8870,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      InputType = 設定を変更するパッドの識別子( DX_INPUT_PAD1等 )
 		 *
-		 * Returns: 無効ゾーン( 0.0 〜 1.0 )
+		 * Returns: 無効ゾーン( 0.0 ~ 1.0 )
 		 */
 		extern double GetJoypadDeadZone(int InputType);
 
@@ -8999,7 +8999,7 @@ extern (C++, DxLib) {
 		extern int ShadowMap_DrawEnd();
 
 		/**
-		 * 描画で使用するシャドウマップを指定する、有効なスロットは0〜2、SmHandle に -1 を渡すと指定のスロットのシャドウマップを解除
+		 * 描画で使用するシャドウマップを指定する、有効なスロットは0~2、SmHandle に -1 を渡すと指定のスロットのシャドウマップを解除
 		 */
 		extern int SetUseShadowMap(int SmSlotIndex, int SmHandle);
 
@@ -9740,9 +9740,9 @@ extern (C++, DxLib) {
 		 * 作成するグラフィックハンドルに適用する透過色を設定する
 		 *
 		 * Params:
-		 *      Red = 透過色を光の3原色で表したもの( 0〜255 )
-		 *      Green = 透過色を光の3原色で表したもの( 0〜255 )
-		 *      Blue = 透過色を光の3原色で表したもの( 0〜255 )
+		 *      Red = 透過色を光の3原色で表したもの( 0~255 )
+		 *      Green = 透過色を光の3原色で表したもの( 0~255 )
+		 *      Blue = 透過色を光の3原色で表したもの( 0~255 )
 		 */
 		extern int SetTransColor(int Red, int Green, int Blue);
 
@@ -10604,7 +10604,7 @@ extern (C++, DxLib) {
 		extern int GetDrawBlendMode(int* BlendMode, int* BlendParam);
 
 		/**
-		 * 描画時のアルファテストの設定を行う( TestMode:テストモード( DX_CMP_GREATER等 -1でデフォルト動作に戻す )  TestParam:描画アルファ値との比較に使用する値( 0〜255 ) )
+		 * 描画時のアルファテストの設定を行う( TestMode:テストモード( DX_CMP_GREATER等 -1でデフォルト動作に戻す )  TestParam:描画アルファ値との比較に使用する値( 0~255 ) )
 		 *
 		 * Params:
 		 *      TestMode = ?
@@ -10613,7 +10613,7 @@ extern (C++, DxLib) {
 		extern int SetDrawAlphaTest(int TestMode, int TestParam);
 
 		/**
-		 * 描画時のアルファテストの設定を取得する( TestMode:テストモード( DX_CMP_GREATER等 -1でデフォルト動作に戻す )  TestParam:描画アルファ値との比較に使用する値( 0〜255 ) )
+		 * 描画時のアルファテストの設定を取得する( TestMode:テストモード( DX_CMP_GREATER等 -1でデフォルト動作に戻す )  TestParam:描画アルファ値との比較に使用する値( 0~255 ) )
 		 *
 		 * Params:
 		 *      TestMode = ?
@@ -10631,8 +10631,8 @@ extern (C++, DxLib) {
 		 */
 		extern int SetBlendGraphParam(int BlendGraph, int BlendType, ...);
 
-		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_NORMAL, int Ratio = ( 0( ブレンド率0% )〜255( ブレンド率100% ) ));
-		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_WIPE, int BorderParam = 境界位置(0〜255), int BorderRange = 境界幅(指定できる値は1、64、128、255の4つ));
+		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_NORMAL, int Ratio = ( 0( ブレンド率0% )~255( ブレンド率100% ) ));
+		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_WIPE, int BorderParam = 境界位置(0~255), int BorderRange = 境界幅(指定できる値は1、64、128、255の4つ));
 		// int SetBlendGraphParam(int BlendGraph, int BlendType = DX_BLENDGRAPHTYPE_ALPHA);
 
 		/**
@@ -11076,22 +11076,22 @@ extern (C++, DxLib) {
 		extern int GetFogColor(int* r, int* g, int* b);
 
 		/**
-		 * フォグが始まる距離と終了する距離を設定する( 0.0f 〜 1.0f )
+		 * フォグが始まる距離と終了する距離を設定する( 0.0f ~ 1.0f )
 		 */
 		extern int SetFogStartEnd(float start, float end);
 
 		/**
-		 * フォグが始まる距離と終了する距離を取得する( 0.0f 〜 1.0f )
+		 * フォグが始まる距離と終了する距離を取得する( 0.0f ~ 1.0f )
 		 */
 		extern int GetFogStartEnd(float* start, float* end);
 
 		/**
-		 * フォグの密度を設定する( 0.0f 〜 1.0f )
+		 * フォグの密度を設定する( 0.0f ~ 1.0f )
 		 */
 		extern int SetFogDensity(float density);
 
 		/**
-		 * フォグの密度を取得する( 0.0f 〜 1.0f )
+		 * フォグの密度を取得する( 0.0f ~ 1.0f )
 		 */
 		extern float GetFogDensity();
 
@@ -11111,10 +11111,10 @@ extern (C++, DxLib) {
 		 * メインウインドウの背景色を設定する
 		 *
 		 * Params:
-		 *      Red= 0〜255
-		 *      Green = 0〜255
-		 *      Blue = 0〜255
-		 *      Alpha = 0〜255
+		 *      Red= 0~255
+		 *      Green = 0~255
+		 *      Blue = 0~255
+		 *      Alpha = 0~255
 		 */
 		extern int SetBackgroundColor(int Red, int Green, int Blue, int Alpha = 0);
 
@@ -11122,10 +11122,10 @@ extern (C++, DxLib) {
 		 * メインウインドウの背景色を取得する
 		 *
 		 * Params:
-		 *      Red= 0〜255
-		 *      Green = 0〜255
-		 *      Blue = 0〜255
-		 *      Alpha = 0〜255
+		 *      Red= 0~255
+		 *      Green = 0~255
+		 *      Blue = 0~255
+		 *      Alpha = 0~255
 		 */
 		extern int GetBackgroundColor(int* Red, int* Green, int* Blue, int* Alpha = null);
 
@@ -11324,7 +11324,7 @@ extern (C++, DxLib) {
 		extern int GetDisplayModeNum(int DisplayIndex = 0);
 
 		/**
-		 * 変更可能なディスプレイモードの情報を取得する( ModeIndex は 0 〜 GetDisplayModeNum の戻り値-1 )
+		 * 変更可能なディスプレイモードの情報を取得する( ModeIndex は 0 ~ GetDisplayModeNum の戻り値-1 )
 		 */
 		extern .DISPLAYMODEDATA GetDisplayMode(int ModeIndex, int DisplayIndex = 0);
 
@@ -11469,8 +11469,8 @@ extern (C++, DxLib) {
 		version (DX_NON_SAVEFUNCTION) {
 		} else {
 			// 描画先画面保存関数
-			// Jpeg_Quality         = 0:低画質〜100:高画質
-			// Png_CompressionLevel = 0:無圧縮〜  9:最高圧縮
+			// Jpeg_Quality         = 0:低画質~100:高画質
+			// Png_CompressionLevel = 0:無圧縮~  9:最高圧縮
 
 			/**
 			 * 現在描画対象になっている画面をファイルで保存する
@@ -11503,28 +11503,28 @@ extern (C++, DxLib) {
 			extern int SaveDrawScreenToDDSWithStrLen(int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 			/**
-			 * 現在描画対象になっている画面をJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0〜100
+			 * 現在描画対象になっている画面をJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0~100
 			 */
 			extern int SaveDrawScreenToJPEG(int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, int Quality = 80, int Sample2x1 = dxlib_d.DxDataType.TRUE);
 
 			/**
-			 * 現在描画対象になっている画面をJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0〜100
+			 * 現在描画対象になっている画面をJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0~100
 			 */
 			extern int SaveDrawScreenToJPEGWithStrLen(int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int Quality = 80, int Sample2x1 = dxlib_d.DxDataType.TRUE);
 
 			/**
-			 * 現在描画対象になっている画面をPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0〜9
+			 * 現在描画対象になっている画面をPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0~9
 			 */
 			extern int SaveDrawScreenToPNG(int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, int CompressionLevel = -1);
 
 			/**
-			 * 現在描画対象になっている画面をPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0〜9
+			 * 現在描画対象になっている画面をPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0~9
 			 */
 			extern int SaveDrawScreenToPNGWithStrLen(int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int CompressionLevel = -1);
 
 			// 描画対象にできるグラフィックハンドル保存関数
-			// Jpeg_Quality         = 0:低画質〜100:高画質
-			// Png_CompressionLevel = 0:無圧縮〜  9:最高圧縮
+			// Jpeg_Quality         = 0:低画質~100:高画質
+			// Png_CompressionLevel = 0:無圧縮~  9:最高圧縮
 
 			/**
 			 * 描画対象にできるグラフィックハンドルをファイルで保存する
@@ -11557,22 +11557,22 @@ extern (C++, DxLib) {
 			extern int SaveDrawValidGraphToDDSWithStrLen(int GrHandle, int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 			/**
-			 * 描画対象にできるグラフィックハンドルをJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0〜100
+			 * 描画対象にできるグラフィックハンドルをJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0~100
 			 */
 			extern int SaveDrawValidGraphToJPEG(int GrHandle, int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, int Quality = 80, int Sample2x1 = dxlib_d.DxDataType.TRUE);
 
 			/**
-			 * 描画対象にできるグラフィックハンドルをJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0〜100
+			 * 描画対象にできるグラフィックハンドルをJPEG形式で保存する Quality = 画質、値が大きいほど低圧縮高画質,0~100
 			 */
 			extern int SaveDrawValidGraphToJPEGWithStrLen(int GrHandle, int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int Quality = 80, int Sample2x1 = dxlib_d.DxDataType.TRUE);
 
 			/**
-			 * 描画対象にできるグラフィックハンドルをPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0〜9
+			 * 描画対象にできるグラフィックハンドルをPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0~9
 			 */
 			extern int SaveDrawValidGraphToPNG(int GrHandle, int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, int CompressionLevel = -1);
 
 			/**
-			 * 描画対象にできるグラフィックハンドルをPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0〜9
+			 * 描画対象にできるグラフィックハンドルをPNG形式で保存する CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0~9
 			 */
 			extern int SaveDrawValidGraphToPNGWithStrLen(int GrHandle, int x1, int y1, int x2, int y2, const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int CompressionLevel = -1);
 		}
@@ -12098,17 +12098,17 @@ extern (C++, DxLib) {
 			 */
 			extern int GraphFilterRectBlt(int SrcGrHandle, int DestGrHandle, int SrcX1, int SrcY1, int SrcX2, int SrcY2, int DestX, int DestY, int FilterType /* DX_GRAPH_FILTER_GAUSS 等 */, ...);
 
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_MONO, int Cb = 青色差( -255 〜 255 ), int Cr = 赤色差( -255 〜 255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_MONO, int Cb = 青色差( -255 ~ 255 ), int Cr = 赤色差( -255 ~ 255 ));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GAUSS, int PixelWidth = 使用ピクセル幅( 8 , 16 , 32 の何れか ), int Param = ぼかしパラメータ( 100 で約1ピクセル分の幅 ));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_DOWN_SCALE, int DivNum = 元のサイズの何分の1か、という値( 2 , 4 , 8 の何れか ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_CLIP, int CmpType = クリップタイプ( DX_CMP_LESS:CmpParam以下をクリップ  又は  DX_CMP_GREATER:CmpParam以上をクリップ ), int CmpParam = クリップパラメータ( 0 〜 255 ), int ClipFillFlag = クリップしたピクセルを塗りつぶすかどうか( TRUE:塗りつぶす  FALSE:塗りつぶさない ), uint ClipFillColor = クリップしたピクセルに塗る色値( GetColor で取得する )( ClipFillFlag が FALSE の場合は使用しない ), int ClipFillAlpha = クリップしたピクセルに塗るα値( 0 〜 255 )( ClipFillFlag が FALSE の場合は使用しない ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_SCALE, int MinBright = 変換後に真っ暗になる明るさ( 0 〜 255 ), int MaxBright = 変換後に真っ白になる明るさ( 0 〜 255 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_HSB, int HueType = Hue の意味( 0:相対値  1:絶対値 ), int Hue = 色相パラメータ( HueType が 0 の場合 = ピクセルの色相に対する相対値( -180 〜 180 )   HueType が 1 の場合 = 色相の絶対値( 0 〜 360 ) ), int Saturation = 彩度( -255 〜 ), int Bright = 輝度( -255 〜 255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_CLIP, int CmpType = クリップタイプ( DX_CMP_LESS:CmpParam以下をクリップ  又は  DX_CMP_GREATER:CmpParam以上をクリップ ), int CmpParam = クリップパラメータ( 0 ~ 255 ), int ClipFillFlag = クリップしたピクセルを塗りつぶすかどうか( TRUE:塗りつぶす  FALSE:塗りつぶさない ), uint ClipFillColor = クリップしたピクセルに塗る色値( GetColor で取得する )( ClipFillFlag が FALSE の場合は使用しない ), int ClipFillAlpha = クリップしたピクセルに塗るα値( 0 ~ 255 )( ClipFillFlag が FALSE の場合は使用しない ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_BRIGHT_SCALE, int MinBright = 変換後に真っ暗になる明るさ( 0 ~ 255 ), int MaxBright = 変換後に真っ白になる明るさ( 0 ~ 255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_HSB, int HueType = Hue の意味( 0:相対値  1:絶対値 ), int Hue = 色相パラメータ( HueType が 0 の場合 = ピクセルの色相に対する相対値( -180 ~ 180 )   HueType が 1 の場合 = 色相の絶対値( 0 ~ 360 ) ), int Saturation = 彩度( -255 ~ ), int Bright = 輝度( -255 ~ 255 ));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_INVERT);
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_LEVEL, int Min = 変換元の下限値( 0 〜 255 ), int Max = 変換元の上限値( 0 〜 255 ), int Gamma = ガンマ値( 100 でガンマ補正無し、0 とそれ以下の値は不可 ), int AfterMin = 変換後の最低値( 0 〜 255 ), int AfterMax = 変換後の最大値( 0 〜 255 ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_TWO_COLOR, int Threshold = 閾値( 0 〜 255 ), uint LowColor = 閾値より値が低かったピクセルの変換後の色値( GetColor で取得する ), int LowAlpha = 閾値より値が低かったピクセルの変換後のα値( 0 〜 255 ), uint HighColor = 閾値より値が高かったピクセルの変換後の色値( GetColor で取得する ), int HighAlpha = 閾値より値が高かったピクセルの変換後のα値( 0 〜 255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_LEVEL, int Min = 変換元の下限値( 0 ~ 255 ), int Max = 変換元の上限値( 0 ~ 255 ), int Gamma = ガンマ値( 100 でガンマ補正無し、0 とそれ以下の値は不可 ), int AfterMin = 変換後の最低値( 0 ~ 255 ), int AfterMax = 変換後の最大値( 0 ~ 255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_TWO_COLOR, int Threshold = 閾値( 0 ~ 255 ), uint LowColor = 閾値より値が低かったピクセルの変換後の色値( GetColor で取得する ), int LowAlpha = 閾値より値が低かったピクセルの変換後のα値( 0 ~ 255 ), uint HighColor = 閾値より値が高かったピクセルの変換後の色値( GetColor で取得する ), int HighAlpha = 閾値より値が高かったピクセルの変換後のα値( 0 ~ 255 ));
 			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_GRADIENT_MAP, int MapGrHandle = グラデーションマップのグラフィックハンドル( 元画像の輝度からグラデーションマップ画像の x 座標を算出しますので縦幅は1dotでもOK ), int Reverse = グラデーションマップ左右反転フラグ( TRUE:グラデーションマップを左右反転して使う  FALSE:左右反転しない ));
-			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_REPLACEMENT, int TargetR, int TargetG, int TargetB, int TargetA = 置換対象の色( 0～255 ), int R, int G, int B, int A = 置換後の色( 0～255 ));
+			// int GraphFilter(int GrHandle, int FilterType = DX_GRAPH_FILTER_REPLACEMENT, int TargetR, int TargetG, int TargetB, int TargetA = 置換対象の色( 0~255 ), int R, int G, int B, int A = 置換後の色( 0~255 ));
 
 			/*
 			 * 通常のアルファチャンネル付き画像を乗算済みアルファ画像に変換するフィルタ
@@ -12248,12 +12248,12 @@ extern (C++, DxLib) {
 			extern int GetMovieStateToGraph(int GraphHandle);
 
 			/**
-			 * 動画ファイルの音量を設定する(0〜10000)
+			 * 動画ファイルの音量を設定する(0~10000)
 			 */
 			extern int SetMovieVolumeToGraph(int Volume, int GraphHandle);
 
 			/**
-			 * 動画ファイルの音量を設定する(0〜255)
+			 * 動画ファイルの音量を設定する(0~255)
 			 */
 			extern int ChangeMovieVolumeToGraph(int Volume, int GraphHandle);
 
@@ -16279,7 +16279,7 @@ extern (C++, DxLib) {
 	extern int GetPixelPalCodeBaseImage(const (.BASEIMAGE)* BaseImage, int x, int y);
 
 	/**
-	 * 基本イメージデータの指定の座標の色を変更する(各色要素は0〜255)
+	 * 基本イメージデータの指定の座標の色を変更する(各色要素は0~255)
 	 */
 	extern int SetPixelBaseImage(.BASEIMAGE* BaseImage, int x, int y, int r, int g, int b, int a);
 
@@ -16289,7 +16289,7 @@ extern (C++, DxLib) {
 	extern int SetPixelBaseImageF(.BASEIMAGE* BaseImage, int x, int y, float r, float g, float b, float a);
 
 	/**
-	 * 基本イメージデータの指定の座標の色を取得する(各色要素は0〜255)
+	 * 基本イメージデータの指定の座標の色を取得する(各色要素は0~255)
 	 */
 	extern int GetPixelBaseImage(const (.BASEIMAGE)* BaseImage, int x, int y, int* r, int* g, int* b, int* a);
 
@@ -16299,12 +16299,12 @@ extern (C++, DxLib) {
 	extern int GetPixelBaseImageF(const (.BASEIMAGE)* BaseImage, int x, int y, float* r, float* g, float* b, float* a);
 
 	/**
-	 * 基本イメージデータの指定の座標に線を描画する(各色要素は0〜255)
+	 * 基本イメージデータの指定の座標に線を描画する(各色要素は0~255)
 	 */
 	extern int DrawLineBaseImage(.BASEIMAGE* BaseImage, int x1, int y1, int x2, int y2, int r, int g, int b, int a);
 
 	/**
-	 * 基本イメージデータの指定の座標に円を描画する(各色要素は0〜255)
+	 * 基本イメージデータの指定の座標に円を描画する(各色要素は0~255)
 	 */
 	extern int DrawCircleBaseImage(.BASEIMAGE* BaseImage, int x, int y, int radius, int r, int g, int b, int a, int FillFlag = dxlib_d.DxDataType.TRUE);
 
@@ -16335,7 +16335,7 @@ extern (C++, DxLib) {
 	 *      DestY = ?
 	 *      SrcBaseImage = ?
 	 *      DestBaseImage = ?
-	 *      Opacity = 透明度:0( 完全透明 ) 〜 255( 完全不透明 )
+	 *      Opacity = 透明度:0( 完全透明 ) ~ 255( 完全不透明 )
 	 */
 	extern int BltBaseImageWithAlphaBlend(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int DestX, int DestY, .BASEIMAGE* SrcBaseImage, .BASEIMAGE* DestBaseImage, int Opacity = 255);
 
@@ -16738,7 +16738,7 @@ extern (C++, DxLib) {
 		extern int GetDrawScreenSoftImageDestPos(int x1, int y1, int x2, int y2, int SIHandle, int DestX, int DestY);
 
 		/**
-		 * ソフトウエアイメージハンドルを指定色で塗りつぶす(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルを指定色で塗りつぶす(各色要素は0~255)
 		 */
 		extern int FillSoftImage(int SIHandle, int r, int g, int b, int a);
 
@@ -16748,17 +16748,17 @@ extern (C++, DxLib) {
 		extern int ClearRectSoftImage(int SIHandle, int x, int y, int w, int h);
 
 		/**
-		 * ソフトウエアイメージハンドルのパレットを取得する(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルのパレットを取得する(各色要素は0~255)
 		 */
 		extern int GetPaletteSoftImage(int SIHandle, int PaletteNo, int* r, int* g, int* b, int* a);
 
 		/**
-		 * ソフトウエアイメージハンドルのパレットを設定する(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルのパレットを設定する(各色要素は0~255)
 		 */
 		extern int SetPaletteSoftImage(int SIHandle, int PaletteNo, int r, int g, int b, int a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(パレット画像用、有効値は0〜255)
+		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(パレット画像用、有効値は0~255)
 		 */
 		extern int DrawPixelPalCodeSoftImage(int SIHandle, int x, int y, int palNo);
 
@@ -16780,7 +16780,7 @@ extern (C++, DxLib) {
 		extern int GetPitchSoftImage(int SIHandle);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)
 		 */
 		extern int DrawPixelSoftImage(int SIHandle, int x, int y, int r, int g, int b, int a);
 
@@ -16790,17 +16790,17 @@ extern (C++, DxLib) {
 		extern int DrawPixelSoftImageF(int SIHandle, int x, int y, float r, float g, float b, float a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0〜255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や ARGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や ARGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void DrawPixelSoftImage_Unsafe_XRGB8(int SIHandle, int x, int y, int r, int g, int b);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0〜255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や XRGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標にドットを描画する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や XRGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void DrawPixelSoftImage_Unsafe_ARGB8(int SIHandle, int x, int y, int r, int g, int b, int a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)
 		 */
 		extern int GetPixelSoftImage(int SIHandle, int x, int y, int* r, int* g, int* b, int* a);
 
@@ -16810,22 +16810,22 @@ extern (C++, DxLib) {
 		extern int GetPixelSoftImageF(int SIHandle, int x, int y, float* r, float* g, float* b, float* a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0〜255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や XRGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や XRGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void GetPixelSoftImage_Unsafe_XRGB8(int SIHandle, int x, int y, int* r, int* g, int* b);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0〜255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や ARGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
+		 * ソフトウエアイメージハンドルの指定座標の色を取得する(各色要素は0~255)、エラーチェックをしない代わりに高速ですが、範囲外の座標や ARGB8 以外のフォーマットのソフトハンドルを渡すと不正なメモリアクセスで強制終了します
 		 */
 		extern void GetPixelSoftImage_Unsafe_ARGB8(int SIHandle, int x, int y, int* r, int* g, int* b, int* a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標に線を描画する(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルの指定座標に線を描画する(各色要素は0~255)
 		 */
 		extern int DrawLineSoftImage(int SIHandle, int x1, int y1, int x2, int y2, int r, int g, int b, int a);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定座標に円を描画する(各色要素は0〜255)
+		 * ソフトウエアイメージハンドルの指定座標に円を描画する(各色要素は0~255)
 		 */
 		extern int DrawCircleSoftImage(int SIHandle, int x, int y, int radius, int r, int g, int b, int a, int FillFlag = dxlib_d.DxDataType.TRUE);
 
@@ -16840,7 +16840,7 @@ extern (C++, DxLib) {
 		extern int BltSoftImageWithTransColor(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int SrcSIHandle, int DestX, int DestY, int DestSIHandle, int Tr, int Tg, int Tb, int Ta);
 
 		/**
-		 * ソフトウエアイメージハンドルを別のソフトウエアイメージハンドルにアルファ値のブレンドを考慮した上で転送する( Opacity は透明度:0( 完全透明 ) 〜 255( 完全不透明 ) )( 出力先が ARGB8 形式以外の場合はエラーになります )
+		 * ソフトウエアイメージハンドルを別のソフトウエアイメージハンドルにアルファ値のブレンドを考慮した上で転送する( Opacity は透明度:0( 完全透明 ) ~ 255( 完全不透明 ) )( 出力先が ARGB8 形式以外の場合はエラーになります )
 		 */
 		extern int BltSoftImageWithAlphaBlend(int SrcX, int SrcY, int SrcSizeX, int SrcSizeY, int SrcSIHandle, int DestX, int DestY, int DestSIHandle, int Opacity = 255);
 
@@ -16917,7 +16917,7 @@ extern (C++, DxLib) {
 				 * Params:
 				 *      FilePath = ?
 				 *      SIHandle = ?
-				 *      CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0〜9
+				 *      CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0~9
 				 */
 				extern int SaveSoftImageToPng(const (dxlib_d.DxDataType.TCHAR)* FilePath, int SIHandle, int CompressionLevel);
 
@@ -16928,7 +16928,7 @@ extern (C++, DxLib) {
 				 *      ? = ?
 				 *      ? = ?
 				 *      ? = ?
-				 *      CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0〜9
+				 *      CompressionLevel = 圧縮率、値が大きいほど高圧縮率高負荷、0は無圧縮,0~9
 				 */
 				extern int SaveSoftImageToPngWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength, int SIHandle, int CompressionLevel);
 			}
@@ -16936,12 +16936,12 @@ extern (C++, DxLib) {
 			version (DX_NON_JPEGREAD) {
 			} else {
 				/**
-				 * ソフトウエアイメージハンドルをJPEG画像ファイルとして保存する Quality = 画質、値が大きいほど低圧縮高画質,0〜100
+				 * ソフトウエアイメージハンドルをJPEG画像ファイルとして保存する Quality = 画質、値が大きいほど低圧縮高画質,0~100
 				 */
 				extern int SaveSoftImageToJpeg(const (dxlib_d.DxDataType.TCHAR)* FilePath, int SIHandle, int Quality, int Sample2x1);
 
 				/**
-				 * ソフトウエアイメージハンドルをJPEG画像ファイルとして保存する Quality = 画質、値が大きいほど低圧縮高画質,0〜100
+				 * ソフトウエアイメージハンドルをJPEG画像ファイルとして保存する Quality = 画質、値が大きいほど低圧縮高画質,0~100
 				 */
 				extern int SaveSoftImageToJpegWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FilePath, size_t FilePathLength, int SIHandle, int Quality, int Sample2x1);
 			}
@@ -17140,12 +17140,12 @@ extern (C++, DxLib) {
 		extern int CheckSoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルのパンを設定する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルのパンを設定する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int SetPanSoundMem(int PanPal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルのパンを設定する( -255 〜 255 )
+		 * サウンドハンドルのパンを設定する( -255 ~ 255 )
 		 */
 		extern int ChangePanSoundMem(int PanPal, int SoundHandle);
 
@@ -17155,42 +17155,42 @@ extern (C++, DxLib) {
 		extern int GetPanSoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを設定する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルのボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int SetVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを設定する( 0 〜 255 )
+		 * サウンドハンドルのボリュームを設定する( 0 ~ 255 )
 		 */
 		extern int ChangeVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを取得する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルのボリュームを取得する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int GetVolumeSoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルのボリュームを取得する( 0 〜 255 )
+		 * サウンドハンドルのボリュームを取得する( 0 ~ 255 )
 		 */
 		extern int GetVolumeSoundMem2(int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを設定する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int SetChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを設定する( 0 〜 255 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを設定する( 0 ~ 255 )
 		 */
 		extern int ChangeChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを取得する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを取得する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int GetChannelVolumeSoundMem(int Channel, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの指定のチャンネルのボリュームを取得する( 0 〜 255 )
+		 * サウンドハンドルの指定のチャンネルのボリュームを取得する( 0 ~ 255 )
 		 */
 		extern int GetChannelVolumeSoundMem2(int Channel, int SoundHandle);
 
@@ -17210,32 +17210,32 @@ extern (C++, DxLib) {
 		extern int ResetFrequencySoundMem(int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するパンを設定する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルの次の再生にのみ使用するパンを設定する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int SetNextPlayPanSoundMem(int PanPal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するパンを設定する( -255 〜 255 )
+		 * サウンドハンドルの次の再生にのみ使用するパンを設定する( -255 ~ 255 )
 		 */
 		extern int ChangeNextPlayPanSoundMem(int PanPal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int SetNextPlayVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する( 0 〜 255 )
+		 * サウンドハンドルの次の再生にのみ使用するボリュームを設定する( 0 ~ 255 )
 		 */
 		extern int ChangeNextPlayVolumeSoundMem(int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する( 100分の1デシベル単位 0 〜 10000 )
+		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する( 100分の1デシベル単位 0 ~ 10000 )
 		 */
 		extern int SetNextPlayChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
 		/**
-		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する( 0 〜 255 )
+		 * サウンドハンドルの次の再生にのみ使用するチャンネルのボリュームを設定する( 0 ~ 255 )
 		 */
 		extern int ChangeNextPlayChannelVolumeSoundMem(int Channel, int VolumePal, int SoundHandle);
 
@@ -18297,7 +18297,7 @@ extern (C++, DxLib) {
 		extern int MV1SetLoadModelUsePackDraw(int Flag);
 
 		/**
-		 * 読み込むモデルのひとつのトライアングルリストで使用できる最大ボーン数を設定する( UseMaxBoneNum で指定できる値の範囲は 8 〜 54、 0 を指定するとデフォルト動作に戻る )
+		 * 読み込むモデルのひとつのトライアングルリストで使用できる最大ボーン数を設定する( UseMaxBoneNum で指定できる値の範囲は 8 ~ 54、 0 を指定するとデフォルト動作に戻る )
 		 */
 		extern int MV1SetLoadModelTriangleListUseMaxBoneNum(int UseMaxBoneNum);
 
@@ -18549,12 +18549,12 @@ extern (C++, DxLib) {
 		extern int MV1GetSemiTransState(int MHandle);
 
 		/**
-		 * モデルの不透明度を設定する( 不透明 1.0f 〜 透明 0.0f )
+		 * モデルの不透明度を設定する( 不透明 1.0f ~ 透明 0.0f )
 		 */
 		extern int MV1SetOpacityRate(int MHandle, float Rate);
 
 		/**
-		 * モデルの不透明度を取得する( 不透明 1.0f 〜 透明 0.0f )
+		 * モデルの不透明度を取得する( 不透明 1.0f ~ 透明 0.0f )
 		 */
 		extern float MV1GetOpacityRate(int MHandle);
 
@@ -19194,7 +19194,7 @@ extern (C++, DxLib) {
 		 *      MHandle = ?
 		 *      Enable = αテストを行うかどうか( TRUE:行う  FALSE:行わない( デフォルト ) )
 		 *      Mode = テストモード( DX_CMP_GREATER等 )
-		 *      Param = 描画アルファ値との比較に使用する値( 0〜255 )
+		 *      Param = 描画アルファ値との比較に使用する値( 0~255 )
 		 */
 		extern int MV1SetMaterialDrawAlphaTestAll(int MHandle, int Enable, int Mode, int Param);
 
@@ -19206,7 +19206,7 @@ extern (C++, DxLib) {
 		 *      MaterialIndex = ?
 		 *      Enable = αテストを行うかどうか( TRUE:行う  FALSE:行わない( デフォルト ) )
 		 *      Mode = テストモード( DX_CMP_GREATER等 )
-		 *      Param = 描画アルファ値との比較に使用する値( 0〜255 )
+		 *      Param = 描画アルファ値との比較に使用する値( 0~255 )
 		 */
 		extern int MV1SetMaterialDrawAlphaTest(int MHandle, int MaterialIndex, int Enable, int Mode, int Param);
 
@@ -19225,7 +19225,7 @@ extern (C++, DxLib) {
 		extern int MV1GetMaterialDrawAlphaTestMode(int MHandle, int MaterialIndex);
 
 		/**
-		 * 指定のマテリアルの描画時のアルファテストの描画アルファ地との比較に使用する値( 0〜255 )を取得する
+		 * 指定のマテリアルの描画時のアルファテストの描画アルファ地との比較に使用する値( 0~255 )を取得する
 		 */
 		extern int MV1GetMaterialDrawAlphaTestParam(int MHandle, int MaterialIndex);
 
@@ -19618,12 +19618,12 @@ extern (C++, DxLib) {
 		extern int MV1GetFrameSemiTransState(int MHandle, int FrameIndex);
 
 		/**
-		 * 指定のフレームの不透明度を設定する( 不透明 1.0f 〜 透明 0.0f )
+		 * 指定のフレームの不透明度を設定する( 不透明 1.0f ~ 透明 0.0f )
 		 */
 		extern int MV1SetFrameOpacityRate(int MHandle, int FrameIndex, float Rate);
 
 		/**
-		 * 指定のフレームの不透明度を取得する( 不透明 1.0f 〜 透明 0.0f )
+		 * 指定のフレームの不透明度を取得する( 不透明 1.0f ~ 透明 0.0f )
 		 */
 		extern float MV1GetFrameOpacityRate(int MHandle, int FrameIndex);
 
@@ -19739,12 +19739,12 @@ extern (C++, DxLib) {
 		extern .COLOR_F MV1GetMeshAmbColorScale(int MHandle, int MeshIndex);
 
 		/**
-		 * 指定のメッシュの不透明度を設定する( 不透明 1.0f 〜 透明 0.0f )
+		 * 指定のメッシュの不透明度を設定する( 不透明 1.0f ~ 透明 0.0f )
 		 */
 		extern int MV1SetMeshOpacityRate(int MHandle, int MeshIndex, float Rate);
 
 		/**
-		 * 指定のメッシュの不透明度を取得する( 不透明 1.0f 〜 透明 0.0f )
+		 * 指定のメッシュの不透明度を取得する( 不透明 1.0f ~ 透明 0.0f )
 		 */
 		extern float MV1GetMeshOpacityRate(int MHandle, int MeshIndex);
 
@@ -19905,7 +19905,7 @@ extern (C++, DxLib) {
 		 * Params:
 		 *      MHandle = ?
 		 *      ShapeIndex = ?
-		 *      Rate = 0.0f:0% 〜 1.0f:100%
+		 *      Rate = 0.0f:0% ~ 1.0f:100%
 		 *      Type = ?
 		 */
 		extern int MV1SetShapeRate(int MHandle, int ShapeIndex, float Rate, int Type = DX_MV1_SHAPERATE_ADD);
@@ -19913,14 +19913,14 @@ extern (C++, DxLib) {
 		/**
 		 * 指定シェイプの有効率を取得する
 		 *
-		 * Returns: 0.0f:0% 〜 1.0f:100%
+		 * Returns: 0.0f:0% ~ 1.0f:100%
 		 */
 		extern float MV1GetShapeRate(int MHandle, int ShapeIndex);
 
 		/**
 		 * 指定シェイプの有効率を取得する( MV1SetShapeRate で指定した値がそのまま戻り値となる MV1GetShapeRate と異なりアニメーションのシェイプ情報なども加味した値が戻り値となります )
 		 *
-		 * Returns: 0.0f:0% 〜 1.0f:100%
+		 * Returns: 0.0f:0% ~ 1.0f:100%
 		 */
 		extern float MV1GetShapeApplyRate(int MHandle, int ShapeIndex);
 

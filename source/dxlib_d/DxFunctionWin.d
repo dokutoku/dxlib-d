@@ -619,7 +619,7 @@ extern (C++, DxLib) {
 	 *      Height = 縦ドット数
 	 *      MaskData = ドット情報配列の先頭アドレス
 	 *      Pitch = 1ラインあたりのbyteサイズ
-	 *      Byte = 1ドット辺りのbyteサイズ( 対応しているのは 1〜4 )、ドットの数値が0かそれ以外かで判別
+	 *      Byte = 1ドット辺りのbyteサイズ( 対応しているのは 1~4 )、ドットの数値が0かそれ以外かで判別
 	 */
 	extern dxlib_d.DxDataTypeWin.HRGN CreateRgnFromGraph(int Width, int Height, const (void)* MaskData, int Pitch, int Byte);
 
@@ -628,9 +628,9 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      BaseImage = 基本イメージデータのアドレス
-	 *      TransColorR = 透過色( 0〜255 )
-	 *      TransColorG = 透過色( 0〜255 )
-	 *      TransColorB = 透過色( 0〜255 )
+	 *      TransColorR = 透過色( 0~255 )
+	 *      TransColorG = 透過色( 0~255 )
+	 *      TransColorB = 透過色( 0~255 )
 	 */
 	extern dxlib_d.DxDataTypeWin.HRGN CreateRgnFromBaseImage(dxlib_d.DxLib.BASEIMAGE* BaseImage, int TransColorR, int TransColorG, int TransColorB);
 
