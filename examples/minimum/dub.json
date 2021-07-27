@@ -55,6 +55,11 @@
 				"/NODEFAULTLIB:libcd.lib",
 				"/NODEFAULTLIB:libcmt.lib"
 			],
+			"lflags-windows-ldc":
+			[
+				"/safeseh:no",
+				"/NODEFAULTLIB:libvcruntime.lib"
+			],
 			"versions-windows":
 			[
 				"Unicode",
@@ -99,6 +104,10 @@
 				"/NODEFAULTLIB:libcd.lib",
 				"/NODEFAULTLIB:libcmtd.lib"
 			],
+			"lflags-windows-ldc":
+			[
+				"/safeseh:no"
+			],
 			"versions-windows":
 			[
 				"Unicode",
@@ -142,6 +151,10 @@
 				"/NODEFAULTLIB:libc.lib",
 				"/NODEFAULTLIB:libcd.lib",
 				"/NODEFAULTLIB:libcmt.lib"
+			],
+			"lflags-windows-ldc":
+			[
+				"/NODEFAULTLIB:libvcruntime.lib"
 			],
 			"versions-windows":
 			[
@@ -231,6 +244,11 @@
 				"/NODEFAULTLIB:libcd.lib",
 				"/NODEFAULTLIB:libcmt.lib"
 			],
+			"lflags-windows-ldc":
+			[
+				"/safeseh:no",
+				"/NODEFAULTLIB:libvcruntime.lib"
+			],
 			"versions-windows":
 			[
 				"ANSI",
@@ -275,6 +293,10 @@
 				"/NODEFAULTLIB:libcd.lib",
 				"/NODEFAULTLIB:libcmtd.lib"
 			],
+			"lflags-windows-ldc":
+			[
+				"/safeseh:no"
+			],
 			"versions-windows":
 			[
 				"ANSI",
@@ -318,6 +340,10 @@
 				"/NODEFAULTLIB:libc.lib",
 				"/NODEFAULTLIB:libcd.lib",
 				"/NODEFAULTLIB:libcmt.lib"
+			],
+			"lflags-windows-ldc":
+			[
+				"/NODEFAULTLIB:libvcruntime.lib"
 			],
 			"versions-windows":
 			[
