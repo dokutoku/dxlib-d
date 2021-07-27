@@ -8067,19 +8067,19 @@ extern (C++, DxLib) {
 		/**
 		 * HTTP通信で使用するプロキシ設定を行う
 		 */
-		@disable
+		version (none)
 		extern int SetProxySetting(int UseFlag, const (char)* Address, int Port);
 
 		/**
 		 * HTTP通信で使用するプロキシ設定を取得する
 		 */
-		@disable
+		version (none)
 		extern int GetProxySetting(int* UseFlagBuffer, char* AddressBuffer, int* PortBuffer);
 
 		/**
 		 * IEのプロキシ設定を適応する
 		 */
-		@disable
+		version (none)
 		extern int SetIEProxySetting();
 
 		/**
@@ -8150,7 +8150,7 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: -1:エラー  dxlib_d.DxDataType.TRUE:送信可能  dxlib_d.DxDataType.FALSE:送信不可能
 		 */
-		@disable
+		version (none)
 		extern int CheckNetWorkSendUDP(int NetUDPHandle);
 
 		/**
@@ -8165,49 +8165,49 @@ extern (C++, DxLib) {
 		/**
 		 * HTTPを使用してネットワーク上のファイルをダウンロードする
 		 */
-		@disable
+		version (none)
 		extern int HTTP_FileDownload(const (char)* FileURL, const (char)* SavePath = null, void** SaveBufferP = null, int* FileSize = null, char** ParamList = null);
 
 		/**
 		 * HTTPを使用してネットワーク上のファイルのサイズを得る
 		 */
-		@disable
+		version (none)
 		extern int HTTP_GetFileSize(const (char)* FileURL);
 
 		/**
 		 * HTTPを使用したネットワーク上のファイルをダウンロードする処理を開始する
 		 */
-		@disable
+		version (none)
 		extern int HTTP_StartFileDownload(const (char)* FileURL, const (char)* SavePath, void** SaveBufferP = null, char** ParamList = null);
 
 		/**
 		 * HTTPを使用したネットワーク上のファイルのサイズを得る処理を開始する
 		 */
-		@disable
+		version (none)
 		extern int HTTP_StartGetFileSize(const (char)* FileURL);
 
 		/**
 		 * HTTPの処理を終了し、ハンドルを解放する
 		 */
-		@disable
+		version (none)
 		extern int HTTP_Close(int HttpHandle);
 
 		/**
 		 * 全てのハンドルに対して HTTP_Closeを行う
 		 */
-		@disable
+		version (none)
 		extern int HTTP_CloseAll();
 
 		/**
 		 * HTTP 処理の現在の状態を得る(NET_RES_COMPLETE等)
 		 */
-		@disable
+		version (none)
 		extern int HTTP_GetState(int HttpHandle);
 
 		/**
 		 * HTTP 処理でエラーが発生した場合、エラーの内容を得る(HTTP_ERR_NONE等)
 		 */
-		@disable
+		version (none)
 		extern int HTTP_GetError(int HttpHandle);
 
 		/**
@@ -8215,25 +8215,25 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: -1:エラー・若しくはまだファイルのサイズを取得していない  0以上:ファイルのサイズ
 		 */
-		@disable
+		version (none)
 		extern int HTTP_GetDownloadFileSize(int HttpHandle);
 
 		/**
 		 * HTTP 処理で既にダウンロードしたファイルのサイズを取得する
 		 */
-		@disable
+		version (none)
 		extern int HTTP_GetDownloadedFileSize(int HttpHandle);
 
 		/**
 		 * fgetsのネットワークハンドル版(-1:取得できず 0:取得できた)
 		 */
-		@disable
+		version (none)
 		extern int fgetsForNetHandle(int NetHandle, char* strbuffer);
 
 		/**
 		 * URLを解析する
 		 */
-		@disable
+		version (none)
 		extern int URLAnalys(const (char)* URL, char* HostBuf = null, char* PathBuf = null, char* FileNameBuf = null, int* PortBuf = null);
 
 		/**
@@ -8241,7 +8241,7 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: -1:エラー  0以上:変換後の文字列のサイズ
 		 */
-		@disable
+		version (none)
 		extern int URLConvert(char* URL, int ParamConvert = dxlib_d.DxDataType.TRUE, int NonConvert = dxlib_d.DxDataType.FALSE);
 
 		/**
@@ -8249,7 +8249,7 @@ extern (C++, DxLib) {
 		 *
 		 * Returns: -1:エラー  0以上:パラメータの文字列の長さ
 		 */
-		@disable
+		version (none)
 		extern int URLParamAnalysis(char** ParamList, char** ParamStringP);
 	}
 
@@ -16037,19 +16037,19 @@ extern (C++, DxLib) {
 	/**
 	 * ユーザー定義の画像データ読み込み関数を登録する
 	 */
-	@disable
+	version (none)
 	extern int AddUserGraphLoadFunction(int function(FILE* fp, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
 	 * ユーザー定義の画像データ読み込み関数を登録する
 	 */
-	@disable
+	version (none)
 	extern int AddUserGraphLoadFunction2(int function(void* Image, int ImageSize, int ImageType, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
 	 * ユーザー定義の画像データ読み込み関数Ver3を登録する
 	 */
-	@disable
+	version (none)
 	extern int AddUserGraphLoadFunction3(int function(void* DataImage, int DataImageSize, int DataImageType, int BmpFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
@@ -16060,19 +16060,19 @@ extern (C++, DxLib) {
 	/**
 	 * ユーザー定義の画像データ読み込み関数を登録から抹消する
 	 */
-	@disable
+	version (none)
 	extern int SubUserGraphLoadFunction(int function(FILE* fp, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
 	 * ユーザー定義の画像データ読み込み関数を登録から抹消する
 	 */
-	@disable
+	version (none)
 	extern int SubUserGraphLoadFunction2(int function(void* Image, int ImageSize, int ImageType, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
 	 * ユーザー定義の画像データ読み込み関数Ver3を登録から抹消する
 	 */
-	@disable
+	version (none)
 	extern int SubUserGraphLoadFunction3(int function(void* DataImage, int DataImageSize, int DataImageType, int BmpFlag, .BASEIMAGE* BaseImage, dxlib_d.DxDataType.BITMAPINFO** BmpInfo, void** GraphData) UserLoadFunc);
 
 	/**
