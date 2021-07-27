@@ -3,7 +3,8 @@ module minimum;
 import core.stdc.locale;
 import dxlib_d;
 
-int main()
+nothrow @nogc
+int hello_dxlib()
 
 	do
 	{
@@ -43,3 +44,23 @@ int main()
 
 		return 0;
 	}
+
+version (Windows) {
+	extern (Windows)
+	nothrow @nogc
+	int WinMain(dxlib_d.DxDataType.HINSTANCE hInstance, dxlib_d.DxDataType.HINSTANCE hPrevInstance, dxlib_d.DxDataType.LPSTR lpCmdLine, int nCmdShow)
+
+		do
+		{
+			return .hello_dxlib();
+		}
+} else {
+	extern (C)
+	nothrow @nogc
+	int main()
+
+		do
+		{
+			return .hello_dxlib();
+		}
+}
