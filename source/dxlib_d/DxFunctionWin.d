@@ -1,6 +1,6 @@
 // -------------------------------------------------------------------------------
 //
-//         DXライブラリ        Windows専用関数プロトタイプ宣言用ヘッダファイル
+//         DXライブラリ        Windows専用関数プロトタイプ宣言用
 //
 //                 Ver 3.22c
 //
@@ -29,11 +29,7 @@ extern (C++, DxLib) {
 	 */
 	extern int GetResourceInfo(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType, void** DataPointerP, size_t* DataSizeP);
 
-	/**
-	 * 指定の名前、タイプのリソースのアドレスとサイズを取得する
-	 *
-	 * Returns: -1:失敗  0:成功
-	 */
+	///Ditto
 	extern int GetResourceInfoWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength, void** DataPointerP, size_t* DataSizeP);
 
 	/**
@@ -149,8 +145,20 @@ extern (C++, DxLib) {
 
 	/**
 	 * PCの情報を取得する
+	 *
+	 * Params:
+	 *      OSString = ?
+	 *      DirectXString = ?
+	 *      CPUString = ?
+	 *      CPUSpeed = 単位MHz
+	 *      FreeMemorySize = 単位MByte
+	 *      TotalMemorySize = ?
+	 *      VideoDriverFileName = ?
+	 *      VideoDriverString = ?
+	 *      FreeVideoMemorySize = 単位MByte
+	 *      TotalVideoMemorySize = ?
 	 */
-	extern int GetPcInfo(dxlib_d.DxDataType.TCHAR* OSString, dxlib_d.DxDataType.TCHAR* DirectXString, dxlib_d.DxDataType.TCHAR* CPUString, int* CPUSpeed /* 単位MHz */, double* FreeMemorySize /* 単位MByte */, double* TotalMemorySize, dxlib_d.DxDataType.TCHAR* VideoDriverFileName, dxlib_d.DxDataType.TCHAR* VideoDriverString, double* FreeVideoMemorySize /* 単位MByte */, double* TotalVideoMemorySize);
+	extern int GetPcInfo(dxlib_d.DxDataType.TCHAR* OSString, dxlib_d.DxDataType.TCHAR* DirectXString, dxlib_d.DxDataType.TCHAR* CPUString, int* CPUSpeed, double* FreeMemorySize, double* TotalMemorySize, dxlib_d.DxDataType.TCHAR* VideoDriverFileName, dxlib_d.DxDataType.TCHAR* VideoDriverString, double* FreeVideoMemorySize, double* TotalVideoMemorySize);
 
 	/**
 	 * MMXが使えるかどうかの情報を得る
@@ -230,9 +238,9 @@ extern (C++, DxLib) {
 	extern int GetNotDrawFlag();
 
 	/**
-	 * WM_PAINT メッセージが来たかどうかを取得する
+	 * WM_PAINTメッセージが来たかどうかを取得する
 	 *
-	 * Returns: dxlib_d.DxDataType.TRUE:WM_PAINTメッセージが来た(一度取得すると以後、再び WM_PAINTメッセージが来るまでdxlib_d.DxDataType.FALSEが返ってくるようになる)  dxlib_d.DxDataType.FALSE:WM_PAINT メッセージは来ていない
+	 * Returns: dxlib_d.DxDataType.TRUE:WM_PAINTメッセージが来た(一度取得すると以後、再び WM_PAINTメッセージが来るまでdxlib_d.DxDataType.FALSEが返ってくるようになる)  dxlib_d.DxDataType.FALSE:WM_PAINTメッセージは来ていない
 	 */
 	extern int GetPaintMessageFlag();
 
@@ -257,17 +265,18 @@ extern (C++, DxLib) {
 
 	/**
 	 * DXライブラリの文字列処理で前提とする文字列セットを設定する
+	 *
+	 * Params:
+	 *      CharSet = DX_CHARSET_SHFTJIS等
 	 */
-	extern int SetUseCharSet(int CharSet /* = DX_CHARSET_SHFTJIS等 */);
+	extern int SetUseCharSet(int CharSet);
 
 	/**
 	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む(FileNameにnullを渡すことで解除)
 	 */
 	extern int LoadPauseGraph(const (dxlib_d.DxDataType.TCHAR)* FileName);
 
-	/**
-	 * アクティブウインドウが他のソフトに移っている際に表示する画像をファイルから読み込む(FileNameにnullを渡すことで解除)
-	 */
+	///Ditto
 	extern int LoadPauseGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength);
 
 	/**
@@ -293,9 +302,7 @@ extern (C++, DxLib) {
 	 */
 	extern int SetWindowText(const (dxlib_d.DxDataType.TCHAR)* WindowText);
 
-	/**
-	 * メインウインドウのウインドウテキストを変更する
-	 */
+	///Ditto
 	extern int SetWindowTextWithStrLen(const (dxlib_d.DxDataType.TCHAR)* WindowText, size_t WindowTextLength);
 
 	/**
@@ -303,9 +310,7 @@ extern (C++, DxLib) {
 	 */
 	extern int SetMainWindowText(const (dxlib_d.DxDataType.TCHAR)* WindowText);
 
-	/**
-	 * SetWindowTextの別名関数
-	 */
+	///Ditto
 	extern int SetMainWindowTextWithStrLen(const (dxlib_d.DxDataType.TCHAR)* WindowText, size_t WindowTextLength);
 
 	/**
@@ -313,9 +318,7 @@ extern (C++, DxLib) {
 	 */
 	extern int SetMainWindowClassName(const (dxlib_d.DxDataType.TCHAR)* ClassName);
 
-	/**
-	 * メインウインドウのクラス名を設定する(DxLib_Initの前でのみ使用可能)
-	 */
+	///Ditto
 	extern int SetMainWindowClassNameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ClassName, size_t ClassNameLength);
 
 	/**
@@ -350,8 +353,12 @@ extern (C++, DxLib) {
 
 	/**
 	 * メインウインドウの奥行き位置を変更する
+	 *
+	 * Params:
+	 *      ZType = DX_WIN_ZTYPE_TOP等
+	 *      WindowActivateFlag = ?
 	 */
-	extern int SetWindowZOrder(int ZType /* = DX_WIN_ZTYPE_TOP等 */, int WindowActivateFlag = dxlib_d.DxDataType.TRUE);
+	extern int SetWindowZOrder(int ZType, int WindowActivateFlag = dxlib_d.DxDataType.TRUE);
 
 	/**
 	 * メインウインドウの端を掴んでウインドウのサイズを変更できるようにするかどうかの設定を行う
@@ -392,9 +399,7 @@ extern (C++, DxLib) {
 	 */
 	extern int SetSysCommandOffFlag(int Flag, const (dxlib_d.DxDataType.TCHAR)* HookDllPath = null);
 
-	/**
-	 * タスクスイッチを有効にするかどうかを設定する
-	 */
+	///Ditto
 	extern int SetSysCommandOffFlagWithStrLen(int Flag, const (dxlib_d.DxDataType.TCHAR)* HookDllPath = null, size_t HookDllPathLength = 0);
 
 	/**
@@ -573,7 +578,7 @@ extern (C++, DxLib) {
 	extern int SetResourceModule(dxlib_d.DxDataTypeWin.HMODULE ResourceModule);
 
 	/**
-	 * WM_PAINT メッセージが来た際に『DXライブラリのWM_PAINTメッセージが来た際の処理』を行うかどうかを設定する(別スレッドで描画処理を行う場合などで使用)
+	 * WM_PAINTメッセージが来た際に『DXライブラリのWM_PAINTメッセージが来た際の処理』を行うかどうかを設定する(別スレッドで描画処理を行う場合などで使用)
 	 */
 	extern int SetUseDxLibWM_PAINTProcess(int Flag);
 
@@ -656,32 +661,25 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      BitmapName = ツールバーのボタンに使用する画像ファイルパス、ResourceIDに-1以外を渡す場合はnullにする
+	 *      BitmapNameLength = ?
 	 *      DivNum = ボタン画像中のボタンの数
 	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapNameにnullを渡すとこの引数が使用される
 	 */
 	extern int SetupToolBar(const (dxlib_d.DxDataType.TCHAR)* BitmapName, int DivNum, int ResourceID = -1);
 
-	/**
-	 * ツールバーの準備、BitmapNameにnull, ResourceIDに-1を渡すとツールバーを解除
-	 *
-	 * Params:
-	 *      BitmapName = ツールバーのボタンに使用する画像ファイルパス、ResourceIDに-1以外を渡す場合はnullにする
-	 *      BitmapNameLength = ?
-	 *      DivNum = ボタン画像中のボタンの数
-	 *      ResourceID = ツールバーのボタンに使用するビットマップリソースのID、BitmapNameにnullを渡すとこの引数が使用される
-	 */
+	///Ditto
 	extern int SetupToolBarWithStrLen(const (dxlib_d.DxDataType.TCHAR)* BitmapName, size_t BitmapNameLength, int DivNum, int ResourceID = -1);
 
 	/**
 	 * ツールバーにボタンを追加する
 	 *
 	 * Params:
-	 *      Type = ボタンタイプ(TOOLBUTTON_TYPE_NORMAL等(解説は#defineの定義を参照してください))
-	 *      State = 初期状態(TOOLBUTTON_STATE_ENABLE等(解説は#defineの定義を参照してください))
+	 *      Type = ボタンタイプ(TOOLBUTTON_TYPE_NORMAL等(解説はenumの定義を参照してください))
+	 *      State = 初期状態(TOOLBUTTON_STATE_ENABLE等(解説はenumの定義を参照してください))
 	 *      ImageIndex = 使用するボタンの画像番号
 	 *      ID = ボタンに割り当てる識別番号
 	 */
-	extern int AddToolBarButton(int Type /* TOOLBUTTON_TYPE_NORMAL等 */, int State /* TOOLBUTTON_STATE_ENABLE等 */, int ImageIndex, int ID);
+	extern int AddToolBarButton(int Type, int State, int ImageIndex, int ID);
 
 	/**
 	 * ツールバーに隙間を追加する
@@ -703,9 +701,9 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ID = AddToolBarButtonで設定したボタンの識別番号
-	 *      State = 設定する状態(TOOLBUTTON_STATE_ENABLE等(解説は#defineの定義を参照してください))
+	 *      State = 設定する状態(TOOLBUTTON_STATE_ENABLE等(解説はenumの定義を参照してください))
 	 */
-	extern int SetToolBarButtonState(int ID, int State /* TOOLBUTTON_STATE_ENABLE等 */);
+	extern int SetToolBarButtonState(int ID, int State);
 
 	/**
 	 * ツールバーのボタンを全て削除する
@@ -735,6 +733,7 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名(AddMenuItemでNewItemNameに渡した名前)、ItemIDを使用する場合はnullを渡す
+	 *      ItemNameLength = ?
 	 *      ItemID = メニュー項目の識別番号(AddMenuItemの引数 NewItemIDで指定したもの)、ItemNameを使用する場合は-1を渡す
 	 *      KeyCode = ショートカットキーのキー(KEY_INPUT_L等)
 	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
@@ -743,18 +742,7 @@ extern (C++, DxLib) {
 	 */
 	extern int AddKeyAccel(const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
-	/**
-	 * ショートカットキーを追加する
-	 *
-	 * Params:
-	 *      ItemName = ショートカットキーを割り当てるメニューのアイテム名(AddMenuItemでNewItemNameに渡した名前)、ItemIDを使用する場合はnullを渡す
-	 *      ItemNameLength = ?
-	 *      ItemID = メニュー項目の識別番号(AddMenuItemの引数 NewItemIDで指定したもの)、ItemNameを使用する場合は-1を渡す
-	 *      KeyCode = ショートカットキーのキー(KEY_INPUT_L等)
-	 *      CtrlFlag = 同時にCTRLキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
-	 *      AltFlag = 同時にALTキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
-	 *      ShiftFlag = 同時にSHIFTキーを押す必要があるようにするかどうか(dxlib_d.DxDataType.TRUE:押す必要がある  dxlib_d.DxDataType.FALSE:押さなくても良い)
-	 */
+	///Ditto
 	extern int AddKeyAccelWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
@@ -762,9 +750,7 @@ extern (C++, DxLib) {
 	 */
 	extern int AddKeyAccel_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
-	/**
-	 * ショートカットキーを追加する(各引数の解説はAddKeyAccelと同じ、ItemIDが無くなっただけ)
-	 */
+	///Ditto
 	extern int AddKeyAccel_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int KeyCode, int CtrlFlag, int AltFlag, int ShiftFlag);
 
 	/**
@@ -781,20 +767,7 @@ extern (C++, DxLib) {
 	 * メニューに項目を追加する
 	 *
 	 * Params:
-	 *      AddType = 項目タイプ(MENUITEM_ADD_CHILD等(解説は#defineの定義を参照してください))
-	 *      ItemName = AddTypeがMENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、nullを指定するとItemIDが使用される
-	 *      ItemID = ItemNameの代わりに識別番号で指定するもの、AddType毎の違いはItemNameの解説の通り、-1を指定するとItemNameが使用される
-	 *      SeparatorFlag = 区切り線を追加するかどうか(dxlib_d.DxDataType.TRUE:区切り線を追加、この場合NewItemNameとNewItemIDは無視される  dxlib_d.DxDataType.FALSE:追加するのは区切り線ではない)
-	 *      NewItemName = 新しい項目の名前
-	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
-	 */
-	extern int AddMenuItem(int AddType /* MENUITEM_ADD_CHILD等 */, const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID, int SeparatorFlag, const (dxlib_d.DxDataType.TCHAR)* NewItemName = null, int NewItemID = -1);
-
-	/**
-	 * メニューに項目を追加する
-	 *
-	 * Params:
-	 *      AddType = 項目タイプ(MENUITEM_ADD_CHILD等(解説は#defineの定義を参照してください))
+	 *      AddType = 項目タイプ(MENUITEM_ADD_CHILD等(解説はenumの定義を参照してください))
 	 *      ItemName = AddTypeがMENUITEM_ADD_CHILDの場合は親となる項目の名前、MENUITEM_ADD_INSERTの場合は挿入位置となる項目の名前、nullを指定するとItemIDが使用される
 	 *      ItemNameLength = ?
 	 *      ItemID = ItemNameの代わりに識別番号で指定するもの、AddType毎の違いはItemNameの解説の通り、-1を指定するとItemNameが使用される
@@ -803,16 +776,10 @@ extern (C++, DxLib) {
 	 *      NewItemNameLength = ?
 	 *      NewItemID = 新しい項目の識別番号、-1を指定すると内部で適当な番号が割り当てられる
 	 */
-	extern int AddMenuItemWithStrLen(int AddType /* MENUITEM_ADD_CHILD等 */, const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int SeparatorFlag, const (dxlib_d.DxDataType.TCHAR)* NewItemName = null, size_t NewItemNameLength = 0, int NewItemID = -1);
+	extern int AddMenuItem(int AddType, const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID, int SeparatorFlag, const (dxlib_d.DxDataType.TCHAR)* NewItemName = null, int NewItemID = -1);
 
-	/**
-	 * メニューから選択項目を削除する
-	 *
-	 * Params:
-	 *      ItemName = 削除する項目の名前(AddMenuItemでNewItemNameに渡した名前)、nullを指定するとItemIDが使用される
-	 *      ItemID = 削除する項目の識別番号(AddMenuItemでNewItemIDに渡した番号)、-1を指定するとItemNameが使用される
-	 */
-	extern int DeleteMenuItem(const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID);
+	///Ditto
+	extern int AddMenuItemWithStrLen(int AddType, const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int SeparatorFlag, const (dxlib_d.DxDataType.TCHAR)* NewItemName = null, size_t NewItemNameLength = 0, int NewItemID = -1);
 
 	/**
 	 * メニューから選択項目を削除する
@@ -822,6 +789,9 @@ extern (C++, DxLib) {
 	 *      ItemNameLength = ?
 	 *      ItemID = 削除する項目の識別番号(AddMenuItemでNewItemIDに渡した番号)、-1を指定するとItemNameが使用される
 	 */
+	extern int DeleteMenuItem(const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID);
+
+	///Ditto
 	extern int DeleteMenuItemWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
 
 	/**
@@ -831,11 +801,7 @@ extern (C++, DxLib) {
 	 */
 	extern int CheckMenuItemSelect(const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID);
 
-	/**
-	 * メニューが選択されたかどうかを取得する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください)
-	 *
-	 * Returns: 0:選択されていない  1:選択された
-	 */
+	///Ditto
 	extern int CheckMenuItemSelectWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID);
 
 	/**
@@ -843,20 +809,13 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ItemName = ?
+	 *      ItemNameLength = ?
 	 *      ItemID = ?
 	 *      EnableFlag = 項目が選択できるかどうか(dxlib_d.DxDataType.TRUE:選択できる   dxlib_d.DxDataType.FALSE:選択できない)
 	 */
 	extern int SetMenuItemEnable(const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID, int EnableFlag);
 
-	/**
-	 * メニューの項目を選択出来るかどうかを設定する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください)
-	 *
-	 * Params:
-	 *      ItemName = ?
-	 *      ItemNameLength = ?
-	 *      ItemID = ?
-	 *      EnableFlag = 項目が選択できるかどうか(dxlib_d.DxDataType.TRUE:選択できる   dxlib_d.DxDataType.FALSE:選択できない)
-	 */
+	///Ditto
 	extern int SetMenuItemEnableWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int EnableFlag);
 
 	/**
@@ -864,20 +823,13 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ItemName = ?
+	 *      ItemNameLength = ?
 	 *      ItemID = ?
-	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等(解説は#defineの定義を参照してください)
+	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等(解説はenumの定義を参照してください)
 	 */
 	extern int SetMenuItemMark(const (dxlib_d.DxDataType.TCHAR)* ItemName, int ItemID, int Mark);
 
-	/**
-	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する(ItemNameとItemIDについては関数DeleteMenuItemの注釈を参照してください))
-	 *
-	 * Params:
-	 *      ItemName = ?
-	 *      ItemNameLength = ?
-	 *      ItemID = ?
-	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等(解説は#defineの定義を参照してください)
-	 */
+	///Ditto
 	extern int SetMenuItemMarkWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int ItemID, int Mark);
 
 	/**
@@ -892,19 +844,13 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ParentItemName = 親となる項目の名前、親が持つリストの末端に新しい項目を追加します
-	 *      NewItemName = 新しい項目の名前
-	 */
-	extern int AddMenuItem_Name(const (dxlib_d.DxDataType.TCHAR)* ParentItemName, const (dxlib_d.DxDataType.TCHAR)* NewItemName);
-
-	/**
-	 * メニューに選択項目を追加する
-	 *
-	 * Params:
-	 *      ParentItemName = 親となる項目の名前、親が持つリストの末端に新しい項目を追加します
 	 *      ParentItemNameLength = ?
 	 *      NewItemName = 新しい項目の名前
 	 *      NewItemNameLength = ?
 	 */
+	extern int AddMenuItem_Name(const (dxlib_d.DxDataType.TCHAR)* ParentItemName, const (dxlib_d.DxDataType.TCHAR)* NewItemName);
+
+	///Ditto
 	extern int AddMenuItem_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ParentItemName, size_t ParentItemNameLength, const (dxlib_d.DxDataType.TCHAR)* NewItemName, size_t NewItemNameLength);
 
 	/**
@@ -912,16 +858,11 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ParentItemName = 区切り線を付ける項目リストの親の名前、リストの末端に区切り線を追加します
+	 *      ParentItemNameLength = ?
 	 */
 	extern int AddMenuLine_Name(const (dxlib_d.DxDataType.TCHAR)* ParentItemName);
 
-	/**
-	 * メニューのリストに区切り線を追加する
-	 *
-	 * Params:
-	 *      ParentItemName = 区切り線を付ける項目リストの親の名前、リストの末端に区切り線を追加します
-	 *      ParentItemNameLength = ?
-	 */
+	///Ditto
 	extern int AddMenuLine_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ParentItemName, size_t ParentItemNameLength);
 
 	/**
@@ -929,9 +870,7 @@ extern (C++, DxLib) {
 	 */
 	extern int InsertMenuItem_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName, const (dxlib_d.DxDataType.TCHAR)* NewItemName);
 
-	/**
-	 * 指定の項目と、指定の項目の一つ上の項目との間に新しい項目を追加する
-	 */
+	///Ditto
 	extern int InsertMenuItem_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, const (dxlib_d.DxDataType.TCHAR)* NewItemName, size_t NewItemNameLength);
 
 	/**
@@ -939,9 +878,7 @@ extern (C++, DxLib) {
 	 */
 	extern int InsertMenuLine_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName);
 
-	/**
-	 * 指定の項目と、指定の項目の一つ上の項目との間に区切り線を追加する
-	 */
+	///Ditto
 	extern int InsertMenuLine_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
@@ -949,9 +886,7 @@ extern (C++, DxLib) {
 	 */
 	extern int DeleteMenuItem_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName);
 
-	/**
-	 * メニューから選択項目を削除する
-	 */
+	///Ditto
 	extern int DeleteMenuItem_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
@@ -961,11 +896,7 @@ extern (C++, DxLib) {
 	 */
 	extern int CheckMenuItemSelect_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName);
 
-	/**
-	 * メニューが選択されたかどうかを取得する
-	 *
-	 * Returns: 0:選択されていない  1:選択された
-	 */
+	///Ditto
 	extern int CheckMenuItemSelect_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
@@ -973,18 +904,12 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ItemName = ?
+	 *      ItemNameLength = ?
 	 *      EnableFlag = 1:選択できる  0:選択できない
 	 */
 	extern int SetMenuItemEnable_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName, int EnableFlag);
 
-	/**
-	 * メニューの項目を選択出来るかどうかを設定する
-	 *
-	 * Params:
-	 *      ItemName = ?
-	 *      ItemNameLength = ?
-	 *      EnableFlag = 1:選択できる  0:選択できない
-	 */
+	///Ditto
 	extern int SetMenuItemEnable_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int EnableFlag);
 
 	/**
@@ -992,18 +917,12 @@ extern (C++, DxLib) {
 	 *
 	 * Params:
 	 *      ItemName = ?
+	 *      ItemNameLength = ?
 	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等)
 	 */
 	extern int SetMenuItemMark_Name(const (dxlib_d.DxDataType.TCHAR)* ItemName, int Mark);
 
-	/**
-	 * メニューの項目にチェックマークやラジオボタンを表示するかどうかを設定する
-	 *
-	 * Params:
-	 *      ItemName = ?
-	 *      ItemNameLength = ?
-	 *      Mark = 設定するマーク(MENUITEM_MARK_NONE等)
-	 */
+	///Ditto
 	extern int SetMenuItemMark_NameWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength, int Mark);
 
 	/**
@@ -1011,9 +930,7 @@ extern (C++, DxLib) {
 	 */
 	extern int AddMenuItem_ID(int ParentItemID, const (dxlib_d.DxDataType.TCHAR)* NewItemName, int NewItemID = -1);
 
-	/**
-	 * メニューに選択項目を追加する
-	 */
+	///Ditto
 	extern int AddMenuItem_IDWithStrLen(int ParentItemID, const (dxlib_d.DxDataType.TCHAR)* NewItemName, size_t NewItemNameLength, int NewItemID = -1);
 
 	/**
@@ -1076,9 +993,7 @@ extern (C++, DxLib) {
 	 */
 	extern int GetMenuItemID(const (dxlib_d.DxDataType.TCHAR)* ItemName);
 
-	/**
-	 * メニューの項目名から項目識別番号を取得する
-	 */
+	///Ditto
 	extern int GetMenuItemIDWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ItemName, size_t ItemNameLength);
 
 	/**
@@ -1241,50 +1156,38 @@ extern (C++, DxLib) {
 		 */
 		extern int LoadGraphToResource(int ResourceID);
 
+		///Ditto
+		extern int LoadGraphToResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType);
+
+		///Ditto
+		extern int LoadGraphToResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength);
+
 		/**
 		 * 画像リソースを分割してグラフィックハンドルを作成する
 		 */
 		extern int LoadDivGraphToResource(int ResourceID, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
+
+		///Ditto
+		extern int LoadDivGraphToResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
+
+		///Ditto
+		extern int LoadDivGraphToResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
 
 		/**
 		 * 画像リソースを分割してグラフィックハンドルを作成する(float型)
 		 */
 		extern int LoadDivGraphFToResource(int ResourceID, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
-		/**
-		 * 画像リソースからグラフィックハンドルを作成する
-		 */
-		extern int LoadGraphToResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType);
-
-		/**
-		 * 画像リソースからグラフィックハンドルを作成する
-		 */
-		extern int LoadGraphToResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength);
-
-		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する
-		 */
-		extern int LoadDivGraphToResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
-
-		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する
-		 */
-		extern int LoadDivGraphToResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, int XSize, int YSize, int* HandleArray);
-
-		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する(float型)
-		 */
+		///Ditto
 		extern int LoadDivGraphFToResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
-		/**
-		 * 画像リソースを分割してグラフィックハンドルを作成する(float型)
-		 */
+		///Ditto
 		extern int LoadDivGraphFToResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength, int AllNum, int XNum, int YNum, float XSize, float YSize, int* HandleArray);
 
 		version (DX_NON_DIRECT3D11) {
 		} else {
 			/**
-			 * ID3D11Texture2D からグラフィックハンドルを作成する
+			 * ID3D11Texture2Dからグラフィックハンドルを作成する
 			 */
 			extern int CreateGraphFromID3D11Texture2D(const (void)* pID3D11Texture2D);
 		}
@@ -1292,17 +1195,17 @@ extern (C++, DxLib) {
 		// 画像情報関係関数
 
 		/**
-		 * グラフィックハンドルが持つ ID3D11Texture2Dを取得する(Direct3D11を使用している場合のみ有効)(戻り値をID3D11Texture2D*にキャストしてください)
+		 * グラフィックハンドルが持つID3D11Texture2Dを取得する(Direct3D11を使用している場合のみ有効)(戻り値をID3D11Texture2D*にキャストしてください)
 		 */
 		extern const (void)* GetGraphID3D11Texture2D(int GrHandle);
 
 		/**
-		 * グラフィックハンドルが持つ ID3D11RenderTargetViewを取得する(Direct3D11を使用していて、且つ MakeScreenで作成したグラフィックハンドルでのみ有効)(戻り値をID3D11RenderTargetView*にキャストしてください)
+		 * グラフィックハンドルが持つID3D11RenderTargetViewを取得する(Direct3D11を使用していて、且つ MakeScreenで作成したグラフィックハンドルでのみ有効)(戻り値をID3D11RenderTargetView*にキャストしてください)
 		 */
 		extern const (void)* GetGraphID3D11RenderTargetView(int GrHandle);
 
 		/**
-		 * グラフィックハンドルが持つ ID3D11DepthStencilViewを取得する(Direct3D11を使用していて、且つ MakeScreenで作成したグラフィックハンドルでのみ有効)(戻り値をID3D11DepthStencilView*にキャストしてください)
+		 * グラフィックハンドルが持つID3D11DepthStencilViewを取得する(Direct3D11を使用していて、且つ MakeScreenで作成したグラフィックハンドルでのみ有効)(戻り値をID3D11DepthStencilView*にキャストしてください)
 		 */
 		extern const (void)* GetGraphID3D11DepthStencilView(int GrHandle);
 
@@ -1441,17 +1344,17 @@ extern (C++, DxLib) {
 		extern const (void)* GetUseDDrawObj();
 
 		/**
-		 * 有効な DirectDrawデバイスのGUIDを取得する
+		 * 有効なDirectDrawデバイスのGUIDを取得する
 		 */
 		extern const (dxlib_d.DxDataTypeWin.GUID)* GetDirectDrawDeviceGUID(int Number);
 
 		/**
-		 * 有効な DirectDrawデバイスの名前を取得する
+		 * 有効なDirectDrawデバイスの名前を取得する
 		 */
 		extern int GetDirectDrawDeviceDescription(int Number, char* StringBuffer);
 
 		/**
-		 * 有効な DirectDrawデバイスの数を取得する
+		 * 有効なDirectDrawデバイスの数を取得する
 		 */
 		extern int GetDirectDrawDeviceNum();
 
@@ -1535,21 +1438,17 @@ extern (C++, DxLib) {
 		/**
 		 * 指定のフォントファイルをシステムに追加する
 		 *
-		 * Returns: null:失敗  NULL以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です)
+		 * Returns: null:失敗  null以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です)
 		 */
 		extern dxlib_d.DxDataTypeWin.HANDLE AddFontFile(const (dxlib_d.DxDataType.TCHAR)* FontFilePath);
 
-		/**
-		 * 指定のフォントファイルをシステムに追加する
-		 *
-		 * Returns: null:失敗  NULL以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です)
-		 */
+		///Ditto
 		extern dxlib_d.DxDataTypeWin.HANDLE AddFontFileWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FontFilePath, size_t FontFilePathLength);
 
 		/**
 		 * 指定のメモリアドレスに展開したフォントファイルイメージをシステムに追加する)
 		 *
-		 * Returns: null:失敗  NULL以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です
+		 * Returns: null:失敗  null以外:フォントハンドル(WindowsOSのものなので、DXライブラリのフォントハンドルとは別物です
 		 */
 		extern dxlib_d.DxDataTypeWin.HANDLE AddFontFileFromMem(const (void)* FontFileImage, int FontFileImageSize);
 
@@ -1562,13 +1461,24 @@ extern (C++, DxLib) {
 		} else {
 			/**
 			 * フォントデータファイルを作成する
+			 *
+			 * Params:
+			 *      SaveFilePath = ?
+			 *      SaveFilePathLength = ?
+			 *      FontName = ?
+			 *      FontNameLength = ?
+			 *      Size = ?
+			 *      BitDepth = DX_FONTIMAGE_BIT_1等
+			 *      Thick = ?
+			 *      Italic = ?
+			 *      CharSet = ?
+			 *      SaveCharaList = ?
+			 *      SaveCharaListLength = ?
 			 */
-			extern int CreateFontDataFile(const (dxlib_d.DxDataType.TCHAR)* SaveFilePath, const (dxlib_d.DxDataType.TCHAR)* FontName, int Size, int BitDepth /* DX_FONTIMAGE_BIT_1等 */, int Thick, int Italic = dxlib_d.DxDataType.FALSE, int CharSet = -1, const (dxlib_d.DxDataType.TCHAR)* SaveCharaList = null);
+			extern int CreateFontDataFile(const (dxlib_d.DxDataType.TCHAR)* SaveFilePath, const (dxlib_d.DxDataType.TCHAR)* FontName, int Size, int BitDepth, int Thick, int Italic = dxlib_d.DxDataType.FALSE, int CharSet = -1, const (dxlib_d.DxDataType.TCHAR)* SaveCharaList = null);
 
-			/**
-			 * フォントデータファイルを作成する
-			 */
-			extern int CreateFontDataFileWithStrLen(const (dxlib_d.DxDataType.TCHAR)* SaveFilePath, size_t SaveFilePathLength, const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int Size, int BitDepth /* DX_FONTIMAGE_BIT_1等 */, int Thick, int Italic = dxlib_d.DxDataType.FALSE, int CharSet = -1, const (dxlib_d.DxDataType.TCHAR)* SaveCharaList = null, size_t SaveCharaListLength = 0);
+			///Ditto
+			extern int CreateFontDataFileWithStrLen(const (dxlib_d.DxDataType.TCHAR)* SaveFilePath, size_t SaveFilePathLength, const (dxlib_d.DxDataType.TCHAR)* FontName, size_t FontNameLength, int Size, int BitDepth, int Thick, int Italic = dxlib_d.DxDataType.FALSE, int CharSet = -1, const (dxlib_d.DxDataType.TCHAR)* SaveCharaList = null, size_t SaveCharaListLength = 0);
 		}
 	}
 
@@ -1579,9 +1489,7 @@ extern (C++, DxLib) {
 	 */
 	extern dxlib_d.DxDataType.HBITMAP CreateDIBGraph(const (dxlib_d.DxDataType.TCHAR)* FileName, int ReverseFlag, dxlib_d.DxLib.COLORDATA* SrcColor);
 
-	/**
-	 * 画像ファイルからDIBデータを作成する
-	 */
+	///Ditto
 	extern dxlib_d.DxDataType.HBITMAP CreateDIBGraphWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, int ReverseFlag, dxlib_d.DxLib.COLORDATA* SrcColor);
 
 	/**
@@ -1594,9 +1502,7 @@ extern (C++, DxLib) {
 	 */
 	extern int CreateDIBGraph_plus_Alpha(const (dxlib_d.DxDataType.TCHAR)* FileName, dxlib_d.DxDataType.HBITMAP* RGBBmp, dxlib_d.DxDataType.HBITMAP* AlphaBmp, int ReverseFlag = dxlib_d.DxDataType.FALSE, dxlib_d.DxLib.COLORDATA* SrcColor = null);
 
-	/**
-	 * 画像ファイルからDIBデータとマスク用DIBデータを作成する
-	 */
+	///Ditto
 	extern int CreateDIBGraph_plus_AlphaWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, dxlib_d.DxDataType.HBITMAP* RGBBmp, dxlib_d.DxDataType.HBITMAP* AlphaBmp, int ReverseFlag = dxlib_d.DxDataType.FALSE, dxlib_d.DxLib.COLORDATA* SrcColor = null);
 
 	/**
@@ -1604,9 +1510,7 @@ extern (C++, DxLib) {
 	 */
 	extern dxlib_d.DxDataType.HBITMAP CreateDIBGraphVer2(const (dxlib_d.DxDataType.TCHAR)* FileName, const (void)* MemImage, int MemImageSize, int ImageType, int ReverseFlag, dxlib_d.DxLib.COLORDATA* SrcColor);
 
-	/**
-	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージからDIBデータを作成する
-	 */
+	///Ditto
 	extern dxlib_d.DxDataType.HBITMAP CreateDIBGraphVer2WithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, const (void)* MemImage, int MemImageSize, int ImageType, int ReverseFlag, dxlib_d.DxLib.COLORDATA* SrcColor);
 
 	/**
@@ -1614,9 +1518,7 @@ extern (C++, DxLib) {
 	 */
 	extern int CreateDIBGraphVer2_plus_Alpha(const (dxlib_d.DxDataType.TCHAR)* FileName, const (void)* MemImage, int MemImageSize, const (void)* AlphaImage, int AlphaImageSize, int ImageType, dxlib_d.DxDataType.HBITMAP* RGBBmp, dxlib_d.DxDataType.HBITMAP* AlphaBmp, int ReverseFlag, dxlib_d.DxLib.COLORDATA* SrcColor);
 
-	/**
-	 * 画像ファイル若しくはメモリ上に展開された画像ファイルイメージからDIBデータとマスク用DIBデータを作成する
-	 */
+	///Ditto
 	extern int CreateDIBGraphVer2_plus_AlphaWithStrLen(const (dxlib_d.DxDataType.TCHAR)* FileName, size_t FileNameLength, const (void)* MemImage, int MemImageSize, const (void)* AlphaImage, int AlphaImageSize, int ImageType, dxlib_d.DxDataType.HBITMAP* RGBBmp, dxlib_d.DxDataType.HBITMAP* AlphaBmp, int ReverseFlag, dxlib_d.DxLib.COLORDATA* SrcColor);
 
 	/**
@@ -1636,22 +1538,22 @@ extern (C++, DxLib) {
 	// 基本イメージデータ構造体関係
 
 	/**
-	 * 基本イメージデータを使用して UpdateLayerdWindowを行う
+	 * 基本イメージデータを使用してUpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForBaseImage(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage);
 
 	/**
-	 * 基本イメージデータの指定の範囲を使用して UpdateLayerdWindowを行う
+	 * 基本イメージデータの指定の範囲を使用してUpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForBaseImageRect(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage, int x1, int y1, int x2, int y2);
 
 	/**
-	 * 乗算済みアルファの基本イメージデータを使用して UpdateLayerdWindowを行う
+	 * 乗算済みアルファの基本イメージデータを使用してUpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForPremultipliedAlphaBaseImage(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage);
 
 	/**
-	 * 乗算済みアルファの基本イメージデータの指定の範囲を使用して UpdateLayerdWindowを行う
+	 * 乗算済みアルファの基本イメージデータの指定の範囲を使用してUpdateLayerdWindowを行う
 	 */
 	extern int UpdateLayerdWindowForPremultipliedAlphaBaseImageRect(const (dxlib_d.DxLib.BASEIMAGE)* BaseImage, int x1, int y1, int x2, int y2);
 
@@ -1666,22 +1568,22 @@ extern (C++, DxLib) {
 	version (DX_NON_SOFTIMAGE) {
 	} else {
 		/**
-		 * ソフトウエアイメージハンドルを使用して UpdateLayerdWindowを行う
+		 * ソフトウエアイメージハンドルを使用してUpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForSoftImage(int SIHandle);
 
 		/**
-		 * ソフトウエアイメージハンドルの指定の範囲を使用して UpdateLayerdWindowを行う
+		 * ソフトウエアイメージハンドルの指定の範囲を使用してUpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForSoftImageRect(int SIHandle, int x1, int y1, int x2, int y2);
 
 		/**
-		 * 乗算済みアルファのソフトウエアイメージハンドルを使用して UpdateLayerdWindowを行う
+		 * 乗算済みアルファのソフトウエアイメージハンドルを使用してUpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForPremultipliedAlphaSoftImage(int SIHandle);
 
 		/**
-		 * 乗算済みアルファのソフトウエアイメージハンドルの指定の範囲を使用して UpdateLayerdWindowを行う
+		 * 乗算済みアルファのソフトウエアイメージハンドルの指定の範囲を使用してUpdateLayerdWindowを行う
 		 */
 		extern int UpdateLayerdWindowForPremultipliedAlphaSoftImageRect(int SIHandle, int x1, int y1, int x2, int y2);
 
@@ -1703,9 +1605,7 @@ extern (C++, DxLib) {
 		 */
 		extern int LoadSoundMemByResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType, int BufferNum = 1);
 
-		/**
-		 * サウンドリソースからサウンドハンドルを作成する
-		 */
+		///Ditto
 		extern int LoadSoundMemByResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength, int BufferNum = 1);
 
 		// 設定関係関数
@@ -1765,9 +1665,7 @@ extern (C++, DxLib) {
 		 */
 		extern int LoadMusicMemByResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType);
 
-		/**
-		 * リソース上のMIDIファイルからMIDIハンドルを作成する
-		 */
+		///Ditto
 		extern int LoadMusicMemByResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength);
 
 		/**
@@ -1775,9 +1673,7 @@ extern (C++, DxLib) {
 		 */
 		extern int PlayMusicByResource(const (dxlib_d.DxDataType.TCHAR)* ResourceName, const (dxlib_d.DxDataType.TCHAR)* ResourceType, int PlayType);
 
-		/**
-		 * リソースからMIDIファイルを読み込んで演奏する
-		 */
+		///Ditto
 		extern int PlayMusicByResourceWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ResourceName, size_t ResourceNameLength, const (dxlib_d.DxDataType.TCHAR)* ResourceType, size_t ResourceTypeLength, int PlayType);
 	}
 }

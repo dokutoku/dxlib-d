@@ -1,6 +1,6 @@
 // -------------------------------------------------------------------------------
 //
-//         DXライブラリ        Android専用関数プロトタイプ宣言用ヘッダファイル
+//         DXライブラリ        Android専用関数プロトタイプ宣言用
 //
 //                 Ver 3.22c
 //
@@ -71,8 +71,10 @@ extern (C++, DxLib) {
 
 	/**
 	 * メモリ情報を取得する
+	 *
+	 * Params:
 	 *      TotalMemory = 総メモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)
-	 *      FreeMrmoyy = 空きメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)
+	 *      FreeMemory = 空きメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)
 	 *      UseMemory = アプリが使用しているメモリ容量を代入する変数(単位:byte)、(情報の取得が不要な場合はnullを渡す)、(使用メモリ量の取得は非常に処理負荷が高いので、不要な場合は必ずnullを渡すようにしてください)
 	 */
 	extern int GetAndroidMemoryInfo(dxlib_d.DxDataType.LONGLONG* TotalMemory, dxlib_d.DxDataType.LONGLONG* FreeMemory, dxlib_d.DxDataType.LONGLONG* UseMemory);
@@ -140,6 +142,8 @@ extern (C++, DxLib) {
 
 	/**
 	 * 振動を開始する
+	 *
+	 * Params:
 	 *      Milliseconds = 振動させる時間(単位:ミリ秒)
 	 *      Amplitude = 振動の強さ(0(振動なし)~255(最大振幅))、振動の強さの制御に対応していない場合は無視されます
 	 */
@@ -147,6 +151,8 @@ extern (C++, DxLib) {
 
 	/**
 	 * 振動パターン付きの振動を開始する
+	 *
+	 * Params:
 	 *      Timings = 振動パターンを定義する時間(単位:ミリ秒)の配列(Timings[0]:振動を開始するまでの待ち時間、Timings[1]:振動し続ける時間、Timings[2]:振動を停止している時間、Timings[3]:振動し続ける時間、Timings[4]:振動を停止している時間  以下繰り返し)
 	 *      TimingsLength = Timingsの配列の長さ
 	 *      Repeat = 振動パターンを繰り返す場合の配列の要素番号(例 0:最初から繰り返し  1:配列要素の1から繰り返し)、-1で繰り返し無し
@@ -155,6 +161,8 @@ extern (C++, DxLib) {
 
 	/**
 	 * 振幅制御付き(振動の強さ指定付き)振動を開始する(Vibrator_hasAmplitudeControlの戻り値がdxlib_d.DxDataType.TRUEの場合のみ使用可能)
+	 *
+	 * Params:
 	 *      Timings = 振動の強さを変更するタイミング(単位:ミリ秒)の配列
 	 *      Amplitudes = 振動の強さ(0(振動なし)~255(最大振幅))の配列
 	 *      ArrayLength = TimingsとAmplitudesの配列の長さ(配列の長さはどちらも同じである必要があります)
@@ -169,6 +177,8 @@ extern (C++, DxLib) {
 
 	/**
 	 * 曜日や週に関する情報を取得する
+	 *
+	 * Params:
 	 *      DayOfWeek = 曜日(1:日曜日 2:月曜日 3:火曜日 4:水曜日 5:木曜日 6:金曜日 7:土曜日)
 	 *      WeekOfMonth = 今日が今月の何週目なのかの値(1:1週目  2:2週目  3:3週目  4:4週目  5:5週目)
 	 *      DayOfWeekInMonth = 今日の曜日が今月何回目に当たるか、の値(1:1回目  2:2回目  3:3回目  4:4回目 ...)
@@ -177,29 +187,42 @@ extern (C++, DxLib) {
 
 	/**
 	 * res/values/strings.xmlのstringリソースを取得する
+	 *
+	 * Params:
 	 *      ValueName = string情報名
+	 *      ValueNameLength = ?
 	 *      StringBuffer = ValueNameが示す文字列を格納するバッファの先頭アドレス
 	 *      StringBufferBytes = StringBufferのサイズ(単位:バイト)
 	 *
 	 * Returns: -1:指定のstring情報は無かった  -1以外:StringBufferに必要なバッファのサイズ(単位:バイト)
 	 */
 	extern int GetAndroidResource_Strings_String(const (dxlib_d.DxDataType.TCHAR)* ValueName, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
+
+	///Ditto
 	extern int GetAndroidResource_Strings_StringWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
 
 	/**
 	 * AndroidManifest.xmlに書かれた<meta-data android:name="test0" android:value="abcde" />などのメタデータの文字列を取得する
+	 *
+	 * Params:
 	 *      ValueName = メタデータ名
+	 *      ValueNameLength = ?
 	 *      StringBuffer = ValueNameが示す文字列を格納するバッファの先頭アドレス
 	 *      StringBufferBytes = StringBufferのサイズ(単位:バイト)
 	 *
 	 * Returns: -1:指定のメタデータは無かった  -1以外:StringBufferに必要なバッファのサイズ(単位:バイト)
 	 */
 	extern int GetAndroidMetaData_String(const (dxlib_d.DxDataType.TCHAR)* ValueName, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
+
+	///Ditto
 	extern int GetAndroidMetaData_StringWithStrLen(const (dxlib_d.DxDataType.TCHAR)* ValueName, size_t ValueNameLength, dxlib_d.DxDataType.TCHAR* StringBuffer, int StringBufferBytes);
 
 	/*
 	 * AndroidManifest.xmlに書かれた<meta-data android:name="bool0" android:value="true" />などのBoolean型のメタデータを取得する
-	 * ValueName:メタデータ名
+	 *
+	 * Params:
+	 *      ValueName = メタデータ名
+	 *
 	 * Returns: -1:指定のメタデータは無かった  dxlib_d.DxDataType.TRUE:指定のメタデータはtrueだった   dxlib_d.DxDataType.FALSE:指定のメタデータはfalseだった
 	 */
 	//extern int GetAndroidMetaData_Boolean(const (dxlib_d.DxDataType.TCHAR)* ValueName);
@@ -207,22 +230,31 @@ extern (C++, DxLib) {
 
 	/**
 	 * 通知を発行する
+	 *
+	 * Params:
 	 *      Title = タイトル
+	 *      TitleLength = ?
 	 *      SubTitle = サブタイトル
+	 *      SubTitleLength = ?
 	 *      Icon = アイコン(-1でデフォルトのアイコン)
 	 *      ShowWhen = 通知時刻を表示するか(dxlib_d.DxDataType.TRUE:表示する  dxlib_d.DxDataType.FALSE:表示しない)
 	 *      AutoCancel = 通知がタップされたら通知を削除するか(dxlib_d.DxDataType.TRUE:タップされたら通知を削除する   dxlib_d.DxDataType.FALSE:Cancel されるまで通知を削除しない)
 	 *      NotifyID = 通知ID
 	 *      Vibrate = 振動パターン用のint型配列(時間の単位はミリ秒)、nullの場合は振動なし(Vibrate[0]:振動停止時間  Vibrate[1]:振動時間  Vibrate[2]:振動停止時間  Vibrate[3]:振動時間  ... 以下繰り返し)
 	 *      VibrateLength = Vibrate 配列の要素数
-	 *      LightColor = 通知時のライトの色(GetColorで取得)、LightOnTime か LightOffTimeが0の場合はライトの点灯無し
+	 *      LightColor = 通知時のライトの色(GetColorで取得)、LightOnTimeかLightOffTimeが0の場合はライトの点灯無し
 	 *      LightOnTime = ライトの点灯時間(単位:ミリ秒)
 	 *      LightOffTime = ライトの消灯時間(単位:ミリ秒)
+	 */
 	extern int AndroidNotification(const (dxlib_d.DxDataType.TCHAR)* Title, const (dxlib_d.DxDataType.TCHAR)* SubTitle, int Icon = -1, int ShowWhen = dxlib_d.DxDataType.TRUE, int AutoCancel = dxlib_d.DxDataType.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
+
+	///Ditto
 	extern int AndroidNotificationWithStrLen(const (dxlib_d.DxDataType.TCHAR)* Title, size_t TitleLength, const (dxlib_d.DxDataType.TCHAR)* SubTitle, size_t SubTitleLength, int Icon = -1, int ShowWhen = dxlib_d.DxDataType.TRUE, int AutoCancel = dxlib_d.DxDataType.TRUE, int NotifyId = 0, int* Vibrate = null, int VibrateLength = 0, uint LightColor = 0, int LightOnTime = 0, int LightOffTime = 0);
 
 	/**
 	 * 通知をキャンセルする
+	 *
+	 * Params:
 	 *      NotifyID = 通知ID
 	 */
 	extern int AndroidNotificationCancel(int NotifyId);
@@ -233,12 +265,18 @@ extern (C++, DxLib) {
 	extern int AndroidNotificationCancelAll();
 
 	/**
-	 * 指定のURLをブラウザで開く(BrowserAppPackageName か BrowserAppClassNameがnullの場合は標準ブラウザで開く)
+	 * 指定のURLをブラウザで開く(BrowserAppPackageNameかBrowserAppClassNameがnullの場合は標準ブラウザで開く)
+	 *
+	 * Params:
 	 *      URL = 開くURL
+	 *      URLLength = ?
 	 *      BrowserAppPackageName = ブラウザのパッケージ名(nullで標準ブラウザ)
 	 *      BrowserAppClassName = ブラウザのクラス名(nullで標準ブラウザ)
+	 *      BrowserAppClassNameLength = ?
 	 */
 	extern int AndroidJumpURL(const (dxlib_d.DxDataType.TCHAR)* URL, const (dxlib_d.DxDataType.TCHAR)* BrowserAppPackageName = null, const (dxlib_d.DxDataType.TCHAR)* BrowserAppClassName = null);
+
+	///Ditto
 	extern int AndroidJumpURLWithStrLen(const (dxlib_d.DxDataType.TCHAR)* URL, size_t URLLength, const (dxlib_d.DxDataType.TCHAR)* BrowserAppPackageName = null, size_t BrowserAppPackageNameLength = 0, const (dxlib_d.DxDataType.TCHAR)* BrowserAppClassName = null, size_t BrowserAppClassNameLength = 0);
 
 	/**
@@ -297,7 +335,9 @@ extern (C++, DxLib) {
 
 	/**
 	 * イコライザー機能を使用するかどうかを設定する(DxLib_Init呼び出し前のみ実行可能)
-	 * UseFlag  dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
+	 *
+	 * Params:
+	 *      UseFlag = dxlib_d.DxDataType.TRUE:使用する  dxlib_d.DxDataType.FALSE:使用しない
 	 */
 	extern int SetUseEqualizer(int UseFlag);
 
