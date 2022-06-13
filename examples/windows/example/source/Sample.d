@@ -2,15 +2,28 @@
 // 初期状態ではサウンドノベル風文字列描画サンプルが入力されています。
 //  べつのサンプルプログラムを実行する場合は以下のプログラムをすべて
 // 削除して、新たにコピー&ペーストしてください。
-module windows_sample.app;
+module dxlib_d.example.windows_sample.app;
 
 
 version (Windows):
+
+version (DX_NON_FONT) {
+	static assert(false);
+}
+
+version (DX_NON_INPUT) {
+	static assert(false);
+}
+
+version (DX_NOTUSE_DRAWFUNCTION) {
+	static assert(false);
+}
 
 import core.stdc.math;
 import dxlib_d.DxDataType;
 import dxlib_d.DxFunctionWin;
 import dxlib_d.DxLib;
+import dxlib_d.example.common_init;
 
 // サウンドノベル風文字列描画、テキストバッファ使用バージョン
 
@@ -97,27 +110,34 @@ version (Unicode) {
 	}
 }
 
-extern (Windows)
+/**
+ * このアプリケーションの初期設定。DxLib_Initの前に宣言する必要がある。
+ */
 nothrow @nogc
-int WinMain(dxlib_d.DxDataType.HINSTANCE hInstance, dxlib_d.DxDataType.HINSTANCE hPrevInstance, dxlib_d.DxDataType.LPSTR lpCmdLine, int nCmdShow)
+void app_init()
 
 	do
 	{
 		//WIDTH × HEIGTH, 色ビット深度 32
 		dxlib_d.DxLib.SetGraphMode(WIDTH, HEIGTH, 32);
 
-		//全画面表示にしない
-		dxlib_d.DxFunctionWin.ChangeWindowMode(dxlib_d.DxDataType.TRUE);
+		version (Windows) {
+			//ウィンドウクラス名。他のDxlibソフトウェアと衝突しないような名前にする必要がある
+			dxlib_d.DxFunctionWin.SetMainWindowClassName("WindowsDxlibApplication");
 
-		version (ANSI) {
-			version (all) {
-				//UTF-8にする
-				dxlib_d.DxLib.SetUseCharCodeFormat(dxlib_d.DxLib.DX_CHARCODEFORMAT_UTF8);
-			}
+			//ウィンドウタイトルの名前
+			dxlib_d.DxFunctionWin.SetWindowText("WindowsDxlibApplication");
 		}
+	}
 
-		//ウィンドウが非アクティブ時にも動作させる
-		dxlib_d.DxLib.SetAlwaysRunFlag(dxlib_d.DxDataType.TRUE);
+extern (Windows)
+nothrow @nogc
+int WinMain(dxlib_d.DxDataType.HINSTANCE hInstance, dxlib_d.DxDataType.HINSTANCE hPrevInstance, dxlib_d.DxDataType.LPSTR lpCmdLine, int nCmdShow)
+
+	do
+	{
+		common_dxlib_init();
+		app_init();
 
 		// DXライブラリ初期化処理
 		if (dxlib_d.DxLib.DxLib_Init() == -1) {
@@ -162,7 +182,10 @@ int WinMain(dxlib_d.DxDataType.HINSTANCE hInstance, dxlib_d.DxDataType.HINSTANCE
 		version (Unicode) {
 			immutable int code = dxlib_d.DxLib.Get_wchar_t_CharCodeFormat();
 		} else {
-			immutable int code = dxlib_d.DxLib.GetUseCharCodeFormat();
+			//ANSIの場合はcommon_dxlib_init()関数内で文字エンコーディングをUTF-8にしている
+			assert(dxlib_d.DxLib.GetUseCharCodeFormat() == dxlib_d.DxLib.DX_CHARCODEFORMAT_UTF8);
+
+			immutable int code = dxlib_d.DxLib.DX_CHARCODEFORMAT_UTF8;
 		}
 
 		// ループ

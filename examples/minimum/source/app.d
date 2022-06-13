@@ -1,30 +1,53 @@
-module minimum;
+/**
+ * Dxlibで使う最小のアプリケーションサンプル
+ */
+module dxlib_d.example.minumum.app;
 
-import core.stdc.locale;
+
 import dxlib_d;
+import dxlib_d.example.common_init;
+
+/**
+ * このアプリケーションの初期設定。DxLib_Initの前に宣言する必要がある。
+ */
+nothrow @nogc
+void app_init()
+
+	do
+	{
+		version (DX_NOTUSE_DRAWFUNCTION) {
+		} else {
+			//800×600の32ビットカラーにする
+			SetGraphMode(800, 600, 32);
+		}
+
+		version (Windows) {
+			//ウィンドウクラス名。他のDxlibソフトウェアと衝突しないような名前にする必要がある
+			dxlib_d.DxFunctionWin.SetMainWindowClassName("MinimumDxlibApplication");
+
+			//ウィンドウタイトルの名前
+			dxlib_d.DxFunctionWin.SetWindowText("MinimumDxlibApplication");
+
+			version (DX_NOTUSE_DRAWFUNCTION) {
+			} else {
+				version (none) {
+					//Direct3Dのバージョンを11.1に指定する。
+					SetUseDirect3DVersion(DX_DIRECT3D_11_FEATURE_LEVEL_11_1);
+				}
+			}
+		}
+	}
 
 nothrow @nogc
 int hello_dxlib()
 
 	do
 	{
-		debug {
-		} else {
-			SetOutApplicationLogValidFlag(dxlib_d.DxDataType.FALSE);
-		}
+		//Dxlibの初期設定を変える
+		common_dxlib_init();
 
-		SetGraphMode(800, 600, 32);
-
-		version (Windows) {
-			dxlib_d.DxFunctionWin.ChangeWindowMode(dxlib_d.DxDataType.TRUE);
-		}
-
-		version (ANSI) {
-			SetUseCharCodeFormat(DX_CHARCODEFORMAT_UTF8);
-			setlocale(LC_ALL, ".utf8");
-		}
-
-		SetAlwaysRunFlag(dxlib_d.DxDataType.TRUE);
+		//このアプリケーションの初期設定
+		app_init();
 
 		if (DxLib_Init() == -1) {
 			return 1;
