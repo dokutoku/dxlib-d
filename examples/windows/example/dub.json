@@ -1,7 +1,7 @@
 {
 	"name": "windows-sample",
 	"authors": ["dokutoku"],
-	"copyright": "Copyright © 2020, dokutoku",
+	"copyright": "Copyright © 2022, dokutoku",
 	"description": "dxlib-d windows sample.",
 	"license": "proprietary",
 	"dependencies":
@@ -10,10 +10,12 @@
 	},
 	"buildTypes":
 	{
+		"plain": {"buildOptions": ["betterC"]},
 		"debug": {"buildOptions": ["betterC", "debugMode", "debugInfo"]},
 		"release": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline"]},
 		"release-debug": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline", "debugInfo"]},
-		"release-nobounds": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline", "noBoundsCheck"]}
+		"release-nobounds": {"buildOptions": ["betterC", "releaseMode", "optimize", "inline", "noBoundsCheck"]},
+		"syntax": {"buildOptions": ["betterC", "syntaxOnly"]}
 	},
 	"sourceFiles": ["../../common_init.d"],
 	"configurations":

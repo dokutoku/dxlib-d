@@ -26,7 +26,7 @@ void app_init()
 			dxlib_d.DxFunctionWin.SetMainWindowClassName("MinimumDxlibApplication");
 
 			//ウィンドウタイトルの名前
-			dxlib_d.DxFunctionWin.SetWindowText("MinimumDxlibApplication");
+			dxlib_d.DxFunctionWin.SetMainWindowText("MinimumDxlibApplication");
 
 			version (DX_NOTUSE_DRAWFUNCTION) {
 			} else {
