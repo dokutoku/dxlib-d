@@ -126,7 +126,7 @@ void app_init()
 			dxlib_d.DxFunctionWin.SetMainWindowClassName("WindowsDxlibApplication");
 
 			//ウィンドウタイトルの名前
-			dxlib_d.DxFunctionWin.SetWindowText("WindowsDxlibApplication");
+			dxlib_d.DxFunctionWin.SetMainWindowText("WindowsDxlibApplication");
 		}
 	}
 
